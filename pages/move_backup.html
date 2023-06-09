@@ -1,0 +1,3201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Hotjar Tracking Code for http://webapp.cloudfuze.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.setTimeout(function() {
+
+            window.$zopim || (function (d, s) {
+                var z = $zopim = function (c) {
+                    z._.push(c)
+                }, $ = z.s =
+                    d.createElement(s), e = d.getElementsByTagName(s)[0];
+                z.set = function (o) {
+                    z.set.
+                    _.push(o)
+                };
+                z._ = [];
+                z.set._ = [];
+                $.async = !0;
+                $.setAttribute('charset', 'utf-8');
+                $.src = '//v2.zopim.com/?2YRVJ9WdqLaWGrAOduJsbu5op02qZFJI';
+                z.t = +new Date;
+                $.
+                    type = 'text/javascript';
+                e.parentNode.insertBefore($, e)
+            })(document, 'script');
+            $zopim(function() {
+                var _usrdtls=JSON.parse(localStorage.getItem("CFUser"));
+                $zopim.livechat.setEmail(_usrdtls.primaryEmail);
+                $zopim.livechat.setName(localStorage.getItem("UserName"));
+            });
+
+        }, 8000);
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>CloudFuze</title>
+    <link rel="Shortcut Icon" type="image/ico" href="../img/favicon.png">
+    <link href="../stylesheets/application.css?ver=1231" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/loading.css" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/style.css?ver=1231" rel="stylesheet" type="text/css"/>
+    <link href="../font/cloudfuzefont.css" rel="stylesheet" type="text/css"/>
+    <link href="../font/cficons.css?ver=1231" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/bootstrap/bootstrap-progressbar-3.1.1.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/move.css?ver=1231" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/MetroNotifications_7.css" rel="stylesheet">
+    <link href="../stylesheets/upgrade.css" rel="stylesheet" />
+    <link href="../stylesheets/multiUser.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+    <!--[if lt IE 9]>
+    <script src="../../javascripts/html5shiv.js" type="text/javascript"></script>
+    <script src="../../javascripts/excanvas.js" type="text/javascript"></script>
+    <script src="../../javascripts/iefix.js" type="text/javascript"></script>
+    <link href="../../stylesheets/iefix.css" media="screen" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <!-- Login With Google -->
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <!-- Login With Google -->
+
+    <style>
+        table,tr,td{
+            border:none !important;
+        }
+        .list-group-item {
+            border: none;
+        }
+        /* .fileActive{
+             background: none !important;
+         }*/
+
+        .button:hover {
+            background: #ededed;
+            text-shadow: rgba(255, 255, 255, 0.5) 0 1px 1px;
+            border: 1px solid lightgrey;
+            box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0 0 inset;
+            background-image: -webkit-linear-gradient(top, #ffffff, #ededed);
+        }
+        .button.blue:hover {
+            text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
+            background: #147cb9;
+            border: 1px solid #126da2;
+        }
+
+        body {
+            font: normal 12px HelveticaNeue, Helvetica, Arial;
+        }
+
+        .breadcrumb > li + li:before {
+            content: "";
+        }
+        input[type="radio"]:checked:before {
+            content: "";
+            display: block;
+            position: relative;
+            top: 3px;
+            left: 3px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #3276b1;
+        }
+        .highlight {
+            margin-left: 10px;
+        }
+        .cloudSpinn{
+            cursor: pointer;
+            margin-top:2px;
+            height: 16px;
+            width: 16px;
+            display: inline-block;
+            background: url(../img/syncCloud.gif) no-repeat;
+            /* float: right; */
+            margin-bottom:2px;
+        }
+        .cloudSpinn1
+        {
+            height: 17px;
+            width: 17px;
+            display: inline-block;
+            background: url(../img/syncCloud1.gif) no-repeat;
+        }
+        .modal-backdrop, .modal-backdrop.fade.in {
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+        }
+        .moveCloudBlock .cf-refresh4
+        {
+            color:#000000 !important;
+        }
+        #moveReportsForUser tr{
+            border-bottom : 1px solid #ccc !important;
+        }
+        #moveReportsForUser .hide-report1{
+            border-bottom : 0px solid #ccc !important;
+        }
+        @-moz-document url-prefix() {
+            .cf-plus5:after,.cf-plus5disabled:after
+            {
+                content: url(../img/down.png);
+            }
+            .cf-minus5:after
+            {
+                content: url(../img/up.png);
+            }
+        }
+
+        .pricing li a
+        {
+            border: 1px solid #000;
+        }
+        .pricing .active a
+        {
+            border:2px solid orange !important;
+        }
+
+
+
+        .boxPricing {
+            position: relative;
+        }
+        .ribbonPricing {
+            position: absolute;
+            left: -16px; top: -16px;
+            z-index: 1;
+            overflow: hidden;
+            width: 75px;
+            height: 75px;
+            text-align: right;
+        }
+        .ribbonPricing span {
+            font-size: 10px;
+            font-weight: bold;
+            color: rgb(50, 118, 177);
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 20px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            width: 100px;
+            display: block;
+            border:1px solid #e2e2e2;
+            background: #f2f2f2;
+            box-shadow: 2px 3px 10px -5px rgb(50, 118, 177);
+            position: absolute;
+            top: 19px; left: -21px;
+        }
+        .ribbonPricing span::before {
+            content: "";
+            position: absolute; left: 0px; top: 100%;
+            z-index: -1;
+            border-left: 3px solid rgb(50, 118, 177);
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid rgb(50, 118, 177);
+        }
+        .ribbonPricing span::after {
+            content: "";
+            position: absolute; right: 0px; top: 100%;
+            z-index: -1;
+            border-left: 3px solid transparent;
+            border-right: 3px solid rgb(50, 118, 177);
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid rgb(50, 118, 177);
+        }
+        .btn-group .btn-primary
+        {
+            border: 2px solid #357ebd;
+        }
+        #moveSource{
+            margin-left: 7%!important;
+        }
+        #moveDestination{
+            margin-left: 7%!important;
+        }
+        #moveSource .ui-selected { background: #B6DDE6;}
+
+        #movePopup{
+            width: 600px;
+        }
+        #cloudsNotify{
+            height: 45px;
+        }
+        #closePrice{
+            margin-top: -86px;
+        }
+        #monthLite{
+            margin-top: -45px;
+            margin-left: -72px;
+        }
+        #monthStandard{
+            margin-top: -45px;
+            margin-left: -100px;
+        }
+        #monthAdvanced{
+            margin-top: -45px;
+            margin-left: -109px;
+        }
+        #yearlyBasic{
+            margin-top: -45px;
+            margin-left: -72px;
+        }
+        #yearlystandard{
+            margin-top: -45px;
+            margin-left: -100px;
+        }
+        #yearlyAdvanced{
+            margin-top: -45px;
+            margin-left: -109px;
+        }
+        .price{
+            font-size:28px;
+        }
+        .data{
+            font-size: 17px;
+        }
+        .plexUser{
+            font-size: 12px;
+        }
+        #CFmoveStatus{
+            width: 650px;
+            margin-top: -21%;
+        }
+        .pricing{
+            margin-left:6%;
+        }
+        #moveFileCheck {
+            margin-left: -12%;
+        }
+        #fromCloudDispName{
+            width: 190px;
+        }
+        #toCloudDispName{
+            width: 190px;
+        }
+        #fromCld{
+            padding-left: 40px;
+        }
+        #toCld{
+            padding-left: 40px;
+        }
+        #reportStatus{
+            padding-left: 10px;
+        }
+        #processed{
+            padding-left: 18px;
+        }
+        #closepricing{
+            margin: 5px;
+        }
+        #movecheckModal{
+            width: 150px;
+        }
+
+        /*for mobile*/
+        @media (max-width: 767px){
+            #movecheckModal{
+                width: 125px;
+            }
+            #headerText{
+                font-size: 15px;
+                margin-top: 25px;
+            }
+            #reportsButton{
+                margin-left: -7%;
+            }
+            #_totfiles{
+                border-right: 1px solid black!important;
+                padding-right: 3%;
+                padding-left: 3%;
+            }
+            #_movefiles{
+                border-right: 1px solid black!important;
+                padding-right: 3%;
+                padding-left: 3%;
+            }
+            #_movefolders{
+                text-align: center!important;
+                padding-left: 3%;
+                padding-right: 3%;
+            }
+            #tab-name{
+                line-height: 13px;
+            }
+            .ribbonPricing span {
+                line-height: 15px;
+            }
+            #migrateButton{
+                position: absolute;
+                left: 55%;
+                top: 2%;
+            }
+            #closepricing{
+                margin: -13px;
+            }
+            #moveReports{
+                width: auto!important;
+            }
+            #sourceBlock{
+                width: 90%!important;
+                margin-left: 4%;
+            }
+            #cloudsNotify{
+                height: 65px;
+            }
+            #destinationBlock{
+                width: 90%!important;
+                margin-left: 4%;
+                margin-bottom: 90%;
+            }
+            #movePopup{
+                width: 96%;
+            }
+            span.fileSpan{
+                position: relative;
+            }
+            i.fileIcon{
+                position: absolute;
+                left: 5%;
+                top: 12%;
+            }
+            p.fileP{
+                position: absolute;
+                left: 25%;
+                top: 12%;
+            }
+            .progress-bar.active, .progress.active .progress-bar {
+                -webkit-animation: progress-bar-stripes 2s linear infinite!important;
+                -o-animation: progress-bar-stripes 2s linear infinite!important;
+                animation: progress-bar-stripes 2s linear infinite!important;
+            }
+            .progress-bar-striped, .progress-striped .progress-bar {
+                background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)!important;
+                background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)!important;
+                background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)!important;
+                -webkit-background-size: 40px 40px!important;
+                background-size: 40px 40px!important;
+            }
+            .progress-bar {
+                float: left!important;
+                width: 100%!important;
+                height: 100%!important;
+                font-size: 12px!important;
+                line-height: 20px!important;
+                color: #fff!important;
+                text-align: center!important;
+                background-color: #337ab7!important;
+                -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)!important;
+                box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)!important;
+                -webkit-transition: width .6s ease!important;
+                -o-transition: width .6s ease!important;
+                transition: width .6s ease!important;
+            }
+            .cf_usr_btn .dropdown-content{
+                margin-left: -15%;
+            }
+            #moveSource{
+                width: 100%;
+                margin-left: 0!important;
+            }
+            #moveDestination{
+                width: 100%;
+                margin-left: 0!important;
+            }
+            #containerId{
+                position: relative;
+                margin-bottom: 13%!important;
+            }
+            #cont1{
+                position: absolute;
+                left: 3%;
+            }
+            #cont2{
+                position: absolute;
+                right: 41%;
+            }
+            #tab-price{
+                width: 100%;
+                overflow: auto;
+            }
+            #monthLite{
+                margin-top: -37px;
+                margin-left: -53px;
+            }
+            #monthStandard{
+                margin-top: -37px;
+                margin-left: -63px;
+            }
+            #monthAdvanced{
+                margin-top: -37px;
+                margin-left: -53px;
+            }
+            #yearlyBasic{
+                margin-top: -37px;
+                margin-left: -53px;
+            }
+            #yearlystandard{
+                margin-top: -37px;
+                margin-left: -63px;
+            }
+            #yearlyAdvanced{
+                margin-top: -37px;
+                margin-left: -53px;
+            }
+
+            .price{
+                font-size:17px;
+            }
+            .data{
+                font-size: 12px;
+            }
+            .plexUser{
+                font-size: 9px;
+            }
+            #closePrice{
+                margin-top: -111px;
+            }
+            #CFmoveStatus{
+                width: 96%;
+                margin-top: 5%;
+            }
+            .pricing{
+                width:100%;
+                margin-left:0;
+            }
+            #moveFileCheck {
+                margin-left: 3%;
+                margin-top: 17%;
+            }
+            #fromCloudDispName {
+                width: 190px;
+            }
+            #toCloudDispName{
+                width: 190px;
+            }
+            #fromCld{
+                padding-left: 0;
+                text-align: center;
+            }
+            #toCld{
+                padding-left: 0;
+                text-align: center;
+            }
+            #reportStatus{
+                padding-left: 0;
+                text-align: center;
+            }
+            #processed{
+                padding-left: 0;
+                text-align: center;
+            }
+
+        }
+        @media only screen and (max-width: 767px)  and (orientation: portrait) {
+            #migrateButton{
+                position: absolute;
+                left: 55%;
+                top: 2%;
+            }
+            #moveSource{
+                width: 100%;
+                margin-left: 0!important;
+            }
+            #moveDestination{
+                width: 100%;
+                margin-left: 0!important;
+            }
+            span.fileSpan{
+                position: relative;
+            }
+            i.fileIcon{
+                position: absolute;
+                left: 5%;
+                top: 12%;
+            }
+            p.fileP{
+                position: absolute;
+                left: 25%;
+                top: 12%;
+            }
+        }
+        @media only screen and (max-width: 1024px)  and (orientation: portrait) {
+            span.fileSpan{
+                position: relative;
+            }
+            i.fileIcon{
+                position: absolute;
+                left: 5%;
+                top: 12%;
+            }
+            p.fileP{
+                position: absolute;
+                left: 25%;
+                top: 12%;
+            }
+        }
+        @media only screen and (max-width: 360px) and (orientation: portrait)  {
+            /*  #movecheckModal{
+                  margin-left: 20%;
+                  float: none;
+              }*/
+            #headerText{
+                position: absolute;
+                margin-left: -3%;
+                top: -8%;
+            }
+            .span9{
+                margin-left:6%;
+            }
+            .container-fluid{
+                position: relative;
+            }
+        }
+        @media screen and (max-width: 823px)  and (orientation: landscape) {
+            #moveReports{
+                margin-left: 6%!important;
+            }
+            .span12{
+                display: table;
+            }
+            #ProccesingPopup {
+                background: white;
+                width: 56%;
+                border: 1px solid gray;
+                top: 23%;
+                padding: 3% 0 5%;
+                left: 21%;
+                font-size: 11px;
+            }
+            .backdrop{
+                height: 60%!important;
+            }
+            #movePopup{
+                height:80%;
+            }
+            .spinner{
+                top: 70% !important;
+            }
+            #moveFileCheck{
+                height: 290px !important;
+                margin-top: 0% !important;
+                margin-left: 15% !important;
+            }
+            #CFmoveStatus{
+                height:80%;
+            }
+            #calcpricemodalNew{
+                height:80%;
+            }
+
+
+            #moveReportsContainer{
+                max-height: 150px!important;
+            }
+        }
+        @media only screen and (max-width: 768px) and  (min-width: 767px) and (orientation: portrait) {
+            #movecheckModal{
+                position: absolute;
+                right: 1%;
+                bottom: 2%;
+            }
+            #cont2{
+                float:none!important;
+            }
+        }
+
+        /*for stripe payment*/
+        .StripeElement {
+            box-sizing: border-box;
+
+            height: 40px;
+
+            padding: 10px 12px;
+
+            border: 1px solid #06060678;
+            border-radius: 4px;
+            background-color: white;
+
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            -webkit-transition: box-shadow 150ms ease;
+            transition: box-shadow 150ms ease;
+        }
+
+        .StripeElement--focus {
+            box-shadow: 0 1px 3px 0 #cfd7df;
+        }
+
+        .StripeElement--invalid {
+            border-color: #fa755a;
+        }
+
+        .StripeElement--webkit-autofill {
+            background-color: #fefde5 !important;
+        }
+        /*for stripe payment END*/
+
+        /*pricing popup */
+        .pricingTable{
+            height: auto;
+        }
+        .pricingTable .pricingTable-headers {
+            padding: 3% 0;
+            background: #288ac7;
+            position: relative;
+            transition: all 0.3s ease 0s;
+        }
+        .pricingTable .heading {
+            font-size: 17px;
+            color: #fff;
+            text-transform: uppercase;
+            margin-top: 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        .pricing-contents{
+            border-left: 1px solid #d9d9d8;
+            border-right: 1px solid #d9d9d8;
+        }
+        .pricingTable .pricing-contents ul li {
+            font-size: 15px !important;
+            font-weight: 100 !important;
+            color: #777473;
+            padding: 10px 0 4px 15px;
+            border-bottom: 1px solid #d9d9d8;
+            text-align: left;
+        }
+        .pricingTable .read {
+            display: block;
+            font-size: 14px;
+            color: #fff;
+            background: #fcb315;
+            padding: 8px 25px;
+            margin: 12px auto;
+            transition: all 0.3s ease 0s;
+            width: 128px;
+            font-weight: bold;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+        .pricingTableOrg .readOrg {
+            display: block;
+            font-size: 12px;
+            color: #fff;
+            background: #fcb315;
+            padding: 9px;
+            margin: 12px auto;
+            transition: all 0.3s ease 0s;
+            width: 116px;
+            font-weight: bold;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+        .pricingTableOrg .readOrgCont {
+            display: block;
+            font-size: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            background: #fcb315;
+            padding: 8px 25px;
+            margin: 12px auto;
+            transition: all 0.3s ease 0s;
+            width: 211px;
+            font-weight: bold;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+        .pricingTableOrg{
+            height: 72vh;
+        }
+        .pricingTableOrg .pricingTable-headers {
+            padding: 3% 0;
+            background: #288ac7;
+            position: relative;
+            transition: all 0.3s ease 0s;
+        }
+        .pricingTableOrg .heading {
+            font-size: 17px;
+            color: #fff;
+            text-transform: uppercase;
+            margin-top: 17px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .pricing-contents{
+            border-left: 1px solid #d9d9d8;
+            border-right: 1px solid #d9d9d8;
+        }
+        .pricingTableOrg .pricing-contents ul li {
+            font-size: 15px !important;
+            font-weight: 100 !important;
+            color: #777473;
+            padding: 10px 0 4px 15px;
+            border-bottom: 1px solid #d9d9d8;
+            text-align: left;
+        }
+        /*pricing popup end */
+        #individualTab{
+            padding: 2% 2% ;
+        }
+        .priceChart{
+            padding: 0 1% !important;
+        }
+
+        .user_navigation{
+            margin-top: 8px;
+        }
+        #pricingTable{
+            width: 89%;
+        }
+        #plansPopUp{
+            position: absolute;
+            top: 36%;
+        }
+        #doYouPayPal{
+            font-size: 11px;
+            margin-left: 0%;
+            position: relative;
+            top: 25px;
+        }
+        #checkoutbuttonNew{
+            width: 48%;
+            margin-left: 42%;
+            padding: 8px;
+            color: black;
+            background-color:#b4b4b424;
+            font-size: 12px;
+            border-radius: 12px;
+        }
+        #payPalImg{
+            margin-left: -81px;
+        }
+        #couponcode{
+            border-radius: 0;
+            margin-top: 1.7%;
+            height: 5vh;
+        }
+        #moveMigrationPrices{
+            background: #fff;
+            color: #000;
+            text-shadow: none;
+            height: auto;
+            width: 60%;
+            margin-left: -27%;
+            overflow: hidden;
+        }
+        .summaryTr{
+            line-height: 7vh;
+        }
+        .cardTr{
+            line-height: 5vh;
+        }
+        #checkoutpng{
+            padding: 0 3% !important;
+        }
+        .checkoutMiddle{
+            padding-top: 4%;
+            padding-left: 5%;
+        }
+        .checkoutRight{
+            padding-top: 4% !important;
+        }
+        .checkoutLeft{
+            padding-top: 5% !important;
+        }
+        .applyCoupon {
+            margin-left: -1% !important;
+            padding: 2%  !important;
+            color: white  !important;
+            font-size: 15px  !important;
+            border: none  !important;
+            margin-top: 1%  !important;
+        }
+        .checkoutleftPoints-container{
+            padding:13% 4%;
+        }
+        .checkoutleftPoints{
+            padding:2% 0;
+        }
+        #ProccesingPopup{
+            background: white;
+            width: 30%;
+            border: 1px solid gray;
+            top: 57%;
+            padding:3% 0 5%;
+            left: 56%;
+        }
+        #ProccesingPopup .container{
+            width: 100%;
+            height: auto;
+            background: white;
+            padding: 8% 4%;
+            border-radius: 2%;
+        }
+        #ProccesingPopup p{
+            font-size: 14px;
+        }
+        #ThankPop {
+            background: white;
+            width: 35%;
+            border: 1px solid gray;
+            top: 57%;
+            left: 55%;
+            padding: 2% 2% 0;
+        }
+        #ThankPop img {
+            width: 45% !important;
+        }
+
+
+        #ThankPop a {
+            width: 20%;
+            margin-top: 4%;
+            text-align: center;
+            padding: 2%;
+            color: white;
+            display: block;
+            background-color:#288ac7;
+            margin: 8% auto;
+            font-size: 15px;
+            border: none;
+            border-radius: 3px;
+        }
+        #ThankPop .container{
+            width: 100%;
+            background: white;
+            padding: 5%;
+            border-radius: 2%;
+        }
+        #checkoutback{
+            padding: 4%;
+            text-align: center;
+            color: #288ac7;
+            float: right;
+            font-size: 17px;
+            border: none;
+            border-radius: 3px;
+        }
+        @media only screen and (max-width: 1024px)  and  (min-width: 768px) and (orientation: portrait) {
+            #checkoutpng {
+                height: 80vh !important;
+                overflow-y: scroll;
+            }
+            .checkoutleftPoints-container {
+                padding: 4% 7%;
+                font-size: 18px;
+            }
+            .checkoutMiddle{
+                padding-top: 0 !important;
+            }
+            #pricingTable{
+                width:100% !important;
+                padding-top:0 !important;
+            }
+            .summaryTr{
+                line-height: 5vh !important;
+            }
+            .checkoutRight{
+                padding: 4% !important;
+            }
+            #couponcode{
+                margin-top: 1% !important;
+                height: 4vh !important;
+            }
+
+        }
+
+        @media (max-width: 320px) and (orientation: portrait) {
+
+        }
+        @media only screen and (max-width: 823px)  and (orientation: landscape) {
+            #plansPopUp{
+                position: absolute;
+                top:29%;
+            }
+            .cf_usr_btn .dropdown-content {
+                margin-left: -10%;
+            }
+            .checkoutleftPoints-container{
+                padding: 2% 3% !important;
+            }
+            .checkoutleftPoints {
+                padding: 1% 0 !important;
+            }
+            .checkoutMiddle {
+                padding-top: 0%;
+                padding-left: 4%;
+            }
+            #plansPopUp{
+                top: 37% !important;
+            }
+            #couponcode {
+                border-radius: 0;
+                margin-top: 1%;
+                height: 11vh;
+            }
+
+            #moveMigrationPrices {
+                background: #fff;
+                color: #000;
+                text-shadow: none;
+                width: 54%;
+                height: 81vh;
+                overflow-y: auto;
+                /* overflow-y: scroll; */
+                /* margin-left: 2%; */
+                margin: 0 auto;
+                /* overflow: hidden; */
+            }
+            .summaryTr{
+                line-height: 8vh;
+            }
+            #checkoutpng{
+                height: 59vh !important;
+                overflow-y: scroll !important;
+            }
+            .checkoutLeft {
+                padding-top: 3% !important;
+            }
+            #individualTab {
+                padding: 2% 6%;
+            }
+            .pricingTable{
+                height:68vh !important;
+            }
+            #ProccesingPopup {
+                background: white;
+                width: 56%;
+                border: 1px solid gray;
+                top: 84%;
+                padding: 3% 0 5%;
+                left: 58%;
+                font-size: 11px;
+            }
+            #ThankPop {
+                background: white;
+                width: 56%;
+                border: 1px solid gray;
+                top: 84%;
+                left: 58%;
+                padding: 2%;
+            }
+        }
+
+
+        @media (max-width: 600px) and (orientation: portrait){
+            .cf_usr_btn .dropdown-content {
+                margin-left: -15%;
+            }
+            #ProccesingPopup{
+                background: white;
+                width: 78%;
+                border: 1px solid gray;
+                top: 33%;
+                padding: 3% 0 5%;
+                left: 10%;
+                font-size: 11px;
+            }
+            #ThankPop {
+                background: white;
+                width: 78%;
+                border: 1px solid gray;
+                top: 33%;
+                left: 10%;
+                padding: 2%;
+            }
+            .user_navigation{
+                margin-top: -32px;
+            }
+            #primary ul{
+                position: relative;
+            }
+            #primary ul{
+                position: relative;
+            }
+            #primary ul #cloudsTab{
+
+            }
+
+            #checkoutpng{
+                padding: 0 !important;
+            }
+            .checkoutMiddle{
+                padding: 4% 6% 0 !important;
+
+            }
+
+            .checkoutRight{
+                padding: 4% 5% 0 !important;
+
+            }
+            .checkoutLeft{
+                padding: 10% 2% 0 !important;
+            }
+            .applyCoupon {
+                margin-left: -1% !important;
+                padding: 4% !important;
+                color: white !important;
+                font-size: 11px !important;
+                border: none !important;
+                margin-top: 1% !important;
+            }
+            .checkoutleftPoints-container{
+                padding:3% 8%;
+            }
+
+            #move-header{
+                height: 74vh;
+            }
+            #pricingTable{
+                width: 100%;
+            }
+            #plansPopUp{
+                position: absolute;
+                top: 27%;
+            }
+            .summaryTr{
+                line-height: 5vh !important;
+            }
+            #doYouPayPal{
+                font-size: 11px;
+                margin-left: 15%;
+                position: relative;
+                top: 7px;
+            }
+            #moveMigrationPrices{
+                height: auto;
+                width: 80%;
+                margin: 0 auto;
+                /* overflow-y: scroll;*/
+            }
+            .pricingTable{
+                height: auto;
+            }
+            #individualTab{
+                height: 50vh !important;
+                overflow-y: scroll !important;
+            }
+            .modal-header .close{
+                margin:0 !important;
+                padding:0 !important;
+            }
+            .priceChart{
+                padding: 1% 6% !important;
+            }
+            #checkoutbuttonNew{
+                width: 56%;
+                margin-left: 17%;
+                margin-top: 3%;
+                padding: 8px;
+                color: black;
+                background-color: #b4b4b424;
+                font-size: 12px;
+                border-radius: 12px;
+            }
+            #payPalImg{
+                margin-left: -64px;
+                margin-top: 3%;
+            }
+        }
+        .user_navigation{
+            margin-top: 8px;
+        }
+        @media only screen and (max-width: 480px) and (orientation: portrait) {
+            .user_navigation{
+                margin-top: 4px;
+                margin-left: -60px;
+            }
+        }
+		
+						.dropbtn 
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+    </style>
+</head>
+<body style="display:none;overflow-y:hidden;" id="movePageMultiUsr">
+<div class="g-signin2" data-theme="dark" style="display:none"></div>
+
+<nav id="primary" class="main-nav">
+    <ul>
+        <!--<li>-->
+        <!--<a href="fileManager.html?ver=1231">-->
+        <!--<i class="icon-files"></i> Files-->
+        <!--</a>-->
+        <!--</li>-->
+        <li class="" style="position:relative">
+            <a href="cloudmanager.html?ver=1231">
+                <i class="icon-cloud"></i> Clouds
+            </a>
+        </li>
+        <li class="active">
+            <a href="move.html?ver=1231">
+                <i class="cf-move"></i> Migrate
+            </a>
+        </li>
+        <li class="">
+            <a href="backUp.html?ver=1231" style="line-height: 1.3">
+                <i class="cf-move" style="margin-bottom: 13px;"></i> Individual<br/>Backup</a>
+        </li>
+        <li id="teamOpted">
+            <a href="teammigration.html?ver=1231" style="line-height: 1.3">
+                <i class="cf-group2" style="margin-bottom: 13px;"></i> Team<br/>Migration
+            </a>
+        </li>
+        <li class="">
+            <a href="reports.html?ver=1231" style="line-height: 1.3">
+                <i class="cf-file8" style="margin-bottom: 13px;"></i> Team<br>Reports
+            </a>
+        </li>
+        <li class="">
+            <a href="syncReports.html?ver=1231" style="line-height: 1.3">
+                <i class="cf-file8" style="margin-bottom: 13px;"></i>Sync <br/>Reports
+            </a>
+        </li>
+
+
+        <!--- </li><li class="">
+             <a href="workspace.html?ver=1231" style="position: relative">
+                 <i class="cf-workspace"></i> Workspace<b class="badge"></b>
+             </a>
+         </li>--->
+    </ul>
+</nav>
+
+<section id="move-header" style="overflow-y: auto;">
+    <div class="top-nav" id="topHeader">
+        <div class="container-fluid"  style="overflow-x:unset">
+            <div align="right" style="float:right;">
+                <div class="span9">
+                    <div align="right" >
+                      <!--  <ul class="user_navigation" style="">
+                            <li style="margin-right: 10px">
+                                Hello,<span id="dash-uname" style="font-weight: bold;">CF(Trial User)</span>
+                                <b id="notify_count" style="display: none;" class="badge"></b>
+
+                            </li>
+                            <li class="cf_upgrd_btn" onclick="location.href='settings.html#price';">
+                                <a href="settings.html#price" style="color: #fff">Upgrade</a>
+                            </li>
+                            <li class="cf_usr_btn">
+                                <div class="dropdown">
+                                    <div class="dropbtn"><img src="../img/user.png" style="width: 25px;"></div>
+                                    <div class="dropdown-content">
+                                        <div class="settingspage" onclick="location.href='settings.html';">My Account</div>
+                                        <div id="cf-logout">Logout</div>
+                                    </div>
+                                </div>
+                            </li>
+					  </ul>-->
+					   <ul class="nav navbar-nav navbar-right user_navigation" id="rightNav" style="float: right;position:relative;">
+                <li id="progressBarDiv" style="position:absolute;left:-225%;top:20%">
+				<div class="" style="font-size: 10px;margin-top: -7%;margin-left: -98%;">Data <Span id="usedData"></span> used of <span id="totalData"></span></div>
+                    <div class="progress" style="border:none;width:150%;margin-left:-50%;margin-top:0%;height:7px;">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;background-color:#5cb85c">
+    </div>
+  </div>
+                </li>
+                <li  class="cf_upgrd_btn" onclick="location.href='settings.html#price'" style="right:42%;">
+                    <a href="settings.html#price" style="color: #fff;padding: 5%;">Upgrade</a>
+                </li>
+                <li class="cf_usr_btn" style="position:absolute;right:0%;">
+                    <div class="dropdown">
+                        <div class="dropbtn"><i class="fa fa-user-circle-o" style="color: black;font-size: 28px;"></i></div>
+                        <div class="dropdown-content droppy" style="right:2%;position:absolute;background-color:#eee;">
+						<div id="nameForUser" style="font-size:12px;padding:5px 5px;">
+                    Hello,<span id="dash-uname" style="font-weight: bold;">CF(Trial User)</span>
+                    </span>
+                </div>
+					<div class="settingspage" onclick="location.href='settings.html';" style="border-bottom: none;"><i class="fa fa-user" style="font-size:12px;margin-right: 3%;"></i>My Account</div>
+                            <!--<div class="trialUserPayment">Pricing</div>-->
+                            <div id="cf-logout" class="mYaccontlogout"><i class="fa fa-sign-out" style="font-size:12px;margin-right: 3%;"></i>Logout</div>
+                        </div>
+                    </div>
+                </li>
+					</ul>
+                    </div>
+                </div>
+            </div>
+            <h4 style="font-weight: bold;margin-bottom: 0px" id="headerText">Migrate</h4>
+        </div>
+        <div id="cf_notification" style="display: none">
+            <ul class="notification_head">
+                <li style="float: left" class="button mini blue buttonDisable" id="ignore">Ignore All</li>
+                <li style="float: right" class="button mini blue buttonDisable" id="clear">Clear All</li>
+            </ul>
+            <ul class="notification_body"><li style="font-weight: bold;text-align: center">You don't have any notifications.</li></ul>
+            <ul class="notification_footer">
+                <button class="button mini blue buttonDisable" page="1" size="10">Load More</button>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-12" style="position: absolute; margin-left: 40%; display: none;top: 0;" id="spinner2">
+        <img src="../img/ajax.gif" alt="Loading">
+    </div>
+    <div id="move_main" style="display: block">
+        <div class="col-md-12" style="width:100%;">
+            <div class="col-md-3" id="reportsButton">
+                <button id="moveReports" type="button" style="padding: 0px 9px 0px 10px;height: 50px;font-size: 18px;width: 200px;" class="button mini blue">Migration Reports</button>
+            </div>
+            <div id="moveErrmsg" class="span8"></div>
+            <div class="col-md-3" id="migrateButton" style="float: right;">
+                <button class="button mini rounded" id="movecheckModal" type="button" style="padding: 0 9px 0 10px;height: 50px;font-size: 20px;margin-right: 20px;float: right" disabled="">
+                    Migrate
+                </button>
+            </div>
+        </div>
+        <div style="margin-top:10px;overflow-y: visible;height: 400px;">
+            <div class="span6" id="sourceBlock" style="width:46%; margin-top: 10px;">
+                <div class="box" style="background:#fff;margin-bottom: 10px">
+                    <div class="tab-header srcFilesFldrCnt" style="background: #2bb5d8;color:white;text-shadow: none">
+                        <b style="display: block;float: left;width: 21%;">Source Cloud : </b>
+                        <i class="moveHeaderIcon" id=""></i>
+                        <span id="dynamicCloudName" style="margin-left:2%;font-weight: 200"></span>
+                        <span id="totalfiles" style="float:right;margin-right: 30px;" type="BOX"></span>
+                        <i style="font-size:15px;color: #fff;float: right;margin-top: 8px;margin-right: 55px;cursor: pointer;" class="dummySrc"></i>
+                        <!--  <i class="cf-refresh4" style="font-size:15px;float:right;margin-right: 30px;" id="refreshcloudmovesrc"></i> -->
+                    </div>
+
+                    <div class="tab-content" id="moveSource" srcNextPageToken="" innerSrcNextPageToken=""
+                         style="height:440px;max-height: 440px;overflow-x: hidden;">
+                    </div>
+                    <div id="movePageShowMore" movepagenumber="">Show More</div>
+                </div>
+            </div>
+            <div class="span6"  id="destinationBlock" style="width:46%; margin-top: 10px;">
+                <div class="box" style="background:#fff;margin-bottom: 10px">
+                    <div class="tab-header dstnFilesFldrCnt" style="background: #2bb5d8;color:white;text-shadow: none" >
+                        <b style="display: block;float: left;width: 26%;">Destination Cloud : </b>
+                        <i class="moveHeaderIcon"></i>
+                        <span id="dynamicDestCloudName" style="margin-left:2%;font-weight: 200;"></span>
+                        <span id="totalfilesdestination" style="float:right;margin-right: 30px;" type="BOX"></span>
+                        <i style="font-size:15px;color: #fff;float: right;margin-top: 8px;margin-right: 25px;cursor: pointer;" class="dummy"></i>
+                    </div>
+
+                    <div class="tab-content" id="moveDestination"  dstnNextPageToken="" innerDstnNextPageToken="" style="height:440px;max-height: 440px;overflow-x: hidden;"></div>
+                    <div id="movePageShowMore" movepagenumber="">Show More</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!--checkout start here-->
+
+    <div  id="checkoutpng" style="height: 95vh;display:none;">
+        <div class="col-md-12">
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-6">
+                <a type="submit"  id="checkoutback"  >Back to Migrate</a>
+            </div>
+        </div>
+        <!-- <div class="col-md-12">-->
+        <div>
+            <div class="col-md-3 checkoutLeft" class="" >
+                <img src="../images/CF.png" style="width: 96%;">
+                <div class="checkoutleftPoints-container">
+                    <div class="checkoutleftPoints">
+                        <i class="fa fa-check" style="color: green;font-size: 17px;"></i>
+                        <span style="font-weight: 600;margin-left: 6px;"> Ease of Use </span>
+                    </div>
+                    <div  class="checkoutleftPoints">
+                        <i class="fa fa-check" style="color: green;font-size: 17px;"></i>
+                        <span style="font-weight: 600;margin-left: 6px;"> Proven 24/5 Support</span>
+                    </div>
+                    <div  class="checkoutleftPoints">
+                        <i class="fa fa-check" style="color: green;font-size: 17px;"></i>
+                        <span style="font-weight: 600;margin-left: 6px;"> Super-Fast Data Transfers</span>
+                    </div>
+                    <div  class="checkoutleftPoints">
+                        <i class="fa fa-check" style="color: green;font-size: 17px;"></i>
+                        <span style="font-weight: 600;margin-left: 6px;"> Leading Public Cloud Storage Services</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 checkoutMiddle"  class="" >
+                <h3 style="font-weight: 600;">Payment Summary</h3>
+                <table style="border-collapse: inherit;padding-top: 5%;" id="pricingTable">
+                    <tbody>
+                    <!-- <tr style="font-size: 13px;line-height: 8vh;">
+                         <td style="position:relative;font-weight: 600;" id="subscribetypeNew"></td>
+                         <a id="plansPopUp" style="font-size: 10px;color: #0CAFEE;position: absolute;top: 40%;">Choose a different Plan</a>
+                         <td id="amntNew  background-color: #288ac7;"></td>
+                     </tr>-->
+
+                    <tr class="summaryTr" style="font-size: 13px;">
+                        <td style="position:relative;font-weight: 600;" id="subscribetypeNew">
+                            <span></span>
+                            <a id="plansPopUp" style="position:absolute;top:28%;left:0;color: #0CAFEE;">Choose a different Plan</a>
+                        </td>
+                        <td id="amntNew"></td>
+                    </tr>
+                    <tr style="font-size: 13px;">
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="summaryTr" style="font-size: 13px;">
+                        <td style="font-weight: 600;" id="DataYearRmonth"></td>
+                        <td id="amntsize"></td>
+                    </tr>
+                    <tr class="summaryTr" style="font-size: 13px;">
+                        <td style="font-weight: 600;">Discount</td>
+                        <td id="discountNew">0</td>
+                    </tr>
+                    <tr class="summaryTr" style="font-size: 13px;">
+                        <td style="font-weight: 600;">Total amount</td>
+                        <td id="totalamntNew"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <i style="">**overage charges of $0.4/GB are applicable when migration data <br>exceeds the selected plan</i>
+                <div style="padding-top: 8%;">
+
+                    <input type="text" placeholder="Enter coupon code" id="couponcode">
+                    <!-- <button type="button" class="btn btn-primary" id="applycouponNew">Apply Coupon</button>-->
+                    <button class="button large rounded blue applyCoupon"  id="applycouponNew">Apply Coupon</button>
+                    <div id="couponsmessage" style="font-size:16px;font-weight:600;color:green;"></div>
+                    <div id="couponsmessage1" style="font-size:14pt;font-weight:500;color:#024a5b;"></div>
+                    <div id="couponemessage" style="font-size:14pt;font-weight:500;color:#F90;"></div>
+                </div>
+
+            </div>
+            <div class="col-md-4 checkoutRight"  class="" >
+                <div style="border-left: 1px solid gray;height:90%;position: absolute;left: -9%;margin-left: -3px;top: 12% "></div>
+                <h3>Enter Card Details</h3>
+                <form method="post" id="payment-form">
+                    <table style="/* border:none; */border-collapse: inherit;padding-top: 5%;width: 100%;">
+                        <tbody>
+                        <tr class="cardTr" style="font-size: 13px;">
+                            <td ><span>Name on card</span><div><input type="text" placeholder="Enter Name on card"  id="UserEntName" style="width: 100%;border-radius: 3px;border: 1px solid gray;padding: 0 2%;" pattern="[a-zA-Z]*" title="Alphabets only" required></div>
+                                <div id="EmailErrMsg" style="color:red;"></div></td>
+                        </tr>
+                        <!-- <tr class="cardTr" style="font-size: 13px;">
+                             <td ><div><span>Email</span><div><input  type="email" style="width: 100%;border-radius: 3px;border: 1px solid gray;padding: 0 2%;" required></div></div></td>
+                         </tr>-->
+                        <tr class="cardTr" style="font-size: 13px;">
+                            <td ><div><span>Card information</span>
+                                <div id="card-element" class="StripeElement StripeElement--empty" style="width:100%;"><div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;"><iframe id="frameID" frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame5" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-526df1d2f610b7ed4891cd03d8cb5720.html#hidePostalCode=true&amp;style[base][color]=%2332325d&amp;style[base][fontFamily]=%22Helvetica+Neue%22%2C+Helvetica%2C+sans-serif&amp;style[base][fontSmoothing]=antialiased&amp;style[base][fontSize]=16px&amp;style[base][::placeholder][color]=%23aab7c4&amp;style[invalid][color]=%23fa755a&amp;style[invalid][iconColor]=%23fa755a&amp;componentName=card&amp;wait=false&amp;rtl=false&amp;keyMode=test&amp;origin=https%3A%2F%2Fstripe.com&amp;referrer=https%3A%2F%2Fstripe.com%2Fdocs%2Fstripe-js&amp;controllerId=__privateStripeController1" title="Secure payment input frame required" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; height: 19.2px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;"></div></div>
+                                <div id="card-errors" role="alert" style="color:red;"></div>
+
+                                <!-- placeholder for Elements -->
+                                <!--   <div id="card-element"></div>-->
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td><img id="cardsImg" src="../images/4cards.png" style="width: 40%;margin-top: 1%;"><span class="card-error-message" style="color:red;"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div style="padding-top: 8%;">
+                        <button type="submit" id="card-button" style="width: 100%;margin-left: 0px;padding: 8px;color: white;font-size: 15px;background-color: #288ac7;border: none;border-radius: 3px;" >Subscribe Now</button>
+                    </div>
+                </form>
+                <!--<div style="margin-top: 8%;margin-left: 38%;"><span>OR</span></div>
+                <div>
+                    <div><span id="doYouPayPal">Do you have paypal account?</span><button id="checkoutbuttonNew" ><span style="margin-left: -60px;"> Subscribe with </span></button>
+                        <img id="payPalImg" src="../images/pay.png" >
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <!-- </div>-->
+    </div>
+
+    <!--checkout ends here-->
+    <div id="ThankPop"   class="black-box modal  hide fade in" ><!--class="black-box modal  hide fade in"-->
+        <div class="container" >
+            <img  src="/images/tick.png" style="display: block;margin: auto;">
+            <h3 style="text-align: center;color:black;"><b>Payment successful</b></h3>
+
+            <p style="text-align: center;color:gray;">Thank you for choosing cloudfuze</p>
+            <a type="submit"  id="thankbutton"  >OK</a>
+        </div>
+    </div>
+    <!-- Pop up of change plan  color:black;-->
+    <div id="ProccesingPopup"   class="black-box modal  hide fade in" ><!--class="black-box modal  hide fade in"-->
+        <div class="container" >
+
+            <p style="text-align: center;color:black;text-shadow: none;">Please wait while we are confirming your payment...</p>
+            <p style="text-align: center;color:black;text-shadow: none;padding-bottom: 3%;">Do not click on back button or refresh</p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%;background-color: #288ac7 !important;    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)!important;    animation: progress-bar-stripes 2s linear infinite!important;background-size: 40px 40px!important;">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="RestrictionMOVE" class="black-box modal hide fade in" aria-hidden="true" style="background:white;color: #000;text-shadow: none;">
+        <div class="tab-header modal-header" style="background: #2bb5d8;font-size: 16px;">
+            <span style="text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);color: #fff;">Contact Support</span>
+        </div>
+        <div class="modal-body separator" style="border:0px;font-size: 16px;border-bottom: 1px solid #303030;">
+            Sharepoint Online Hybrid available as destination only for NFS as Source. Please contact us at <a style="color:#1C47CF;text-shadow: none;" href="mailto:support@cloudfuze.com">support@cloudfuze.com </a> for more details..
+        </div>
+        <div class="modal-footer">
+
+            <button class="button mini rounded blue" id="RestrictionMOVEOK" style="padding: 0px 10px;font-size: 14px" data-dismiss="modal">
+                Ok
+            </button>
+        </div>
+    </div>
+    <div id="RestrictionSrc" class="black-box modal hide fade in" aria-hidden="true" style="background:white;color: #000;text-shadow: none;">
+        <div class="tab-header modal-header" style="background: #2bb5d8;font-size: 16px;">
+            <span style="text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);color: #fff;">Contact Support</span>
+        </div>
+        <div class="modal-body separator" style="border:0px;font-size: 16px;border-bottom: 1px solid #303030;">
+            Sharepoint Online Hybrid  not available as Source.Please contact us at <a style="color:#1C47CF;text-shadow: none;" href="mailto:support@cloudfuze.com">support@cloudfuze.com </a> for more details..
+        </div>
+        <div class="modal-footer">
+
+            <button class="button mini rounded blue" id="RestrictionSrcOK" style="padding: 0px 10px;font-size: 14px" data-dismiss="modal">
+                Ok
+            </button>
+        </div>
+    </div>
+    <!-- Pop up of change plan  color:black;-->
+    <div id="moveMigrationPrices" class="black-box modal planPopUp hide fade in" >
+        <div class=" tab-header modal-header" style="background: #2bb5d8;border: none;">
+            <button style="margin:5px;" type="button" class="close" data-dismiss="modal">&times;</button>
+            <span style="margin-left: 0.5%;">Choose a Plan</span>
+        </div>
+        <div class="tab-content" style="overflow: unset;">
+            <h4 style="text-align: center" id="FilesDataLimit">CloudFuze allows you to migrate up to 50files/2GB of data during your trial period.</h4>
+            <h4 style="text-align: center">Please upgrade your account.</h4>
+            <div class="row" id="individualTab" style="">
+                <div class="col-sm-6 priceChart"   href="#tab-a0a1fab0eb790db3138">
+                    <div class="pricingTable">
+                        <div class="pricingTable-headers">
+                            <h3 class="heading" style="margin-bottom: 27px;" data-fontsize="15" data-lineheight="30">Lite</h3>
+                            <div class="row">
+                                <div class="col-sm-12" align="center">
+                                    <form id="form-id"><input id="individualYearly" style="margin-top: 0px; margin-right: 3px;" value='yearly' checked="checked" name="test1" type="radio"><span style="color: #fff; font-size: 15px; font-weight: bold;">Yearly</span><input id="individualMonthly" style="margin: 0px 3px 0px 24px;" value='monthly' name="test1" type="radio"><span style="color: #fff; font-size: 15px; font-weight: bold;">Monthly</span></form>
+                                    <div id="liteYearly" class="active" style="margin-top: 12px;">
+                                        <p class="term-length" style="font-weight: bold; color: #fff; font-size: 20px; margin-bottom: 15px; display: block; line-height: 40px;">$99.99</p>
+                                        <p style="color: #fff; font-size: 18px;">600 GB/Year</p>
+<br>
+										<span style="font-size: 14px;color: #fff;">($0.75 per additional 1 GB)</span>
+                                        <!--<p><a class="read" id="IndividualLiteYearlysubscribe">Subscribe</a></p>-->
+                                        <p><a class="read" id="basicannualsubscribe">Subscribe</a></p>
+                                        <button id="cnclbasicannualsubscribe" data-target="cnclannualsubscribemodal" class="btn divdisplay center-block safaricheckcncl" style="margin-top: 6%;text-shadow: none;font-weight: bold;background-color: #fcb315;color: #fff;border-radius: 25px;margin-bottom: 10px;">Cancel Subscription</button>
+                                    </div>
+                                    <div id="liteMonthly" style="margin-top: 12px;display: none;">
+                                        <p class="term-length" style="font-weight: bold; color: #fff; font-size: 20px; margin-bottom: 15px; display: block; line-height: 40px;">$9.99</p>
+                                        <p style="color: #fff; font-size: 18px;">50 GB/Month</p>
+<br>
+										<span style="font-size: 14px;color: #fff;">($0.75 per additional 1 GB)</span>
+                                        <p><a class="read" id="basicmonthlysubscribe">Subscribe</a></p>
+                                        <button id="cnclbasicmonthlysubscribe" data-target="cnclmonthlysubscribemodal" class="btn divdisplay center-block safaricheckcncl" style="margin-top: 6%;text-shadow: none;font-weight: bold;background-color: #fcb315;color: #fff;border-radius: 25px;margin-bottom: 10px;">Cancel Subscription</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--   <div class="col-sm-4 priceChart"  href="#tab-a0a1fab0eb790db3138">
+                        <div class="pricingTable">
+                            <div class="pricingTable-headers">
+                                <h3 class="heading" style="margin-bottom: 27px;" data-fontsize="15" data-lineheight="30">Standard</h3>
+                                <div class="row">
+                                    <div class="col-sm-12" align="center">
+                                        <form id="form-id"><input id="standardYearly" style="margin-top: 0px; margin-right: 3px;" value='yearly' checked="checked" name="test2" type="radio"><span style="color: #fff; font-size: 15px; font-weight: bold;">Yearly</span><input id="standardMonthly" value='monthly' style="margin: 0px 3px 0px 24px;" name="test2" type="radio"><span style="color: #fff; font-size: 15px; font-weight: bold;">Monthly</span></form>
+                                        <div id="stdYearly" class="active" style="margin-top: 12px;">
+                                            <p class="term-length" style="font-weight: bold; color: #fff; font-size: 20px; margin-bottom: 15px; display: block; line-height: 40px;">$199.99</p>
+                                            <p style="color: #fff; font-size: 18px;">1200 GB/Year</p>
+                                            <p><a class="read" id="stndannualsubscribe">Subscribe</a></p>
+                                            <button id="cnclstndannualsubscribe" data-target="cnclannualsubscribemodal" class="btn divdisplay center-block safaricheckcncl" style="margin-top: 6%;text-shadow: none;font-weight: bold;background-color: #fcb315;color: #fff;border-radius: 25px;margin-bottom: 10px;">Cancel Subscription</button>
+                                        </div>
+                                        <div id="stdMonthly" style="margin-top: 12px; display: none;">
+                                            <p class="term-length" style="font-weight: bold; color: #fff; font-size: 20px; margin-bottom: 15px; display: block; line-height: 40px;">$19.99</p>
+                                            <p style="color: #fff; font-size: 18px;">100 GB/Month</p>
+                                            <p><a class="read" id="stndmonthlysubscribe">Subscribe</a></p>
+                                            <button id="cnclstndmonthlysubscribe" data-target="cnclmonthlysubscribemodal" class="btn divdisplay center-block safaricheckcncl" style="margin-top: 6%;text-shadow: none;font-weight: bold;background-color: #fcb315;color: #fff;border-radius: 25px;margin-bottom: 10px;">Cancel Subscription</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+
+                <div class="col-sm-6 priceChart" >
+                    <div class="pricingTable">
+                        <div class="pricingTable-headers">
+                            <h3 class="heading" style="margin-bottom: 27px;" data-fontsize="20" data-lineheight="30">PRO</h3>
+                            <div class="row">
+                                <div class="col-sm-12" align="center">
+                                    <form id="form-id"><input id="proYearly" style="margin-top: 0px; margin-right: 3px;" value='yearly' checked="checked" name="test3" type="radio"><span style="color: #fff; font-size: 15px; font-weight: bold;">Yearly</span><input id="proMontly" style="margin: 0px 3px 0px 24px;" value='monthly' name="test3" type="radio"><span style="color: #fff; font-size: 15px; font-weight: bold;">Monthly</span></form>
+                                    <div id="proYearlychecked" class="active" style="margin-top: 12px;">
+                                        <p class="term-length" style="font-weight: bold; color: #fff; font-size: 20px; margin-bottom: 15px; display: block; line-height: 40px;">$349.99</p>
+                                        <p style="color: #fff; font-size: 18px;">2400 GB/Year</p>
+<br>
+										<span style="font-size: 14px;color: #fff;">($0.75 per additional 1 GB)</span>
+                                        <p><a class="read" id="advncdannualsubscribe">Subscribe</a></p>
+                                        <button id="cncladvncdannualsubscribe" data-target="cnclannualsubscribemodal" class="btn divdisplay center-block safaricheckcncl" style="margin-top: 6%;text-shadow: none;font-weight: bold;background-color: #fcb315;color: #fff;border-radius: 25px;margin-bottom: 10px;">Cancel Subscription</button>
+                                    </div>
+                                    <div id="proMnthlychecked" style="display: none; margin-top: 12px;">
+                                        <p class="term-length" style="font-weight: bold; color: #fff; font-size: 20px; margin-bottom: 15px; display: block; line-height: 40px;">$34.99</p>
+                                        <p style="color: #fff; font-size: 18px;">200 GB/Month</p>
+<br>
+										<span style="font-size: 14px;color: #fff;">($0.75 per additional 1 GB)</span>
+                                        <p><a class="read" id="advncdmonthlysubscribe">Subscribe</a></p>
+                                        <button id="cncladvncdmonthlysubscribe" data-target="cnclmonthlysubscribemodal" class="btn divdisplay center-block safaricheckcncl" style="margin-top: 6%;text-shadow: none;font-weight: bold;background-color: #fcb315;color: #fff;border-radius: 25px;margin-bottom: 10px;">Cancel Subscription</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div  style="font-size:14px;padding:0 2%" class="supportcontent"><p style="text-align: center;"> If you wish to migrate data for your team or wish to migrate large data, please contact us at <a href="mailto:sales@cloudfuze.com" style="color: rgb(51,51,51);font-weight: bold">sales@cloudfuze.com</a>.</p></div>
+
+        </div>
+        <!-- Pop up of change plan end  color:black;-->
+        <!--<div class="modal-footer">
+            <div class="">
+                <a class="button blue" id="move_migrate_pricing">Proceed to Checkout</a>
+            </div>
+        </div>-->
+    </div>
+    <div class="col-sm-12" id="move_multiUser">
+        <div class="row" id="move_multiUser_container" style="margin-bottom: 10px">
+            <div class="col-sm-12">
+                <div class="col-sm-12" id="move_multiUser_map">
+                    <ul class="list-group" style="margin-top:40px;min-height: 150px;margin-left: 30%">
+
+                    </ul>
+                </div>
+                <!--<div class="col-sm-12" style="margin-bottom: 20px">
+                    <button class="btn btn-primary" id="show_move_multiUser_map">Configure Cloud Mapping <i class="cf-sort-down"></i></button>
+                </div>-->
+                <div class="col-sm-12" id="move_multiUser_pair">
+                    <div class="pair_container">
+                        <!--<div class="pair_header"></div>-->
+                        <div class="pair_body">
+                            <div class="col-sm-4 rooms src">
+                                <div class="modal-header" style="background: #B6DDE6;border-radius: 0px;margin-left: -4%;width: 108%;border-color: #ccc;">
+                                    <span style="margin-left: 35%;font-size: 16px;color: #fff;">Source Cloud</span>
+                                </div>
+                                <ul class="list-group row" style="margin-left:25%"></ul>
+                            </div>
+                            <div class="col-sm-4 map_container">
+                                <div class="multiUser_link">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                            <span class="sr-only"></span>
+                                        </div>
+                                    </div>
+                                    <i class="cf-right-dark"></i>
+                                    <span class="move_multiUser_map_container disabled btn btn-success" data-toggle="tooltip" data-original-title="Sync Selected Rooms"><i class="userOk"></i>OK
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 clouds dest">
+                                <div class="modal-header" style="background: #B6DDE6;border-radius: 0px;border-color: #ccc;">
+                                    <span style="margin-left: 35%;font-size: 16px;color: #fff;">Destination Cloud</span>
+                                </div>
+                                <ul class="list-group" data-container="clouds"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span12" id="CF_no_clouds" style="margin-top: 20px">
+        <div class="box">
+            <div class="tab-header" style="background: #2bb5d8; color:white;text-shadow: none;">
+                Welcome
+            </div>
+            <div class="padded">
+                <h3 style="text-align: center;">Welcome to CloudFuze!</h3>
+                <h4 style="text-align: center;">To use this CloudFuze feature, you must first add storage account(s) to
+                    CloudFuze by clicking Add Cloud and completing the setup process.</h4>
+                <a href="cloudmanager.html?ver=1231" style="color:#FFFFFF;">
+                    <button class="button large blue" style="display:block;background-color:#2BB5D8; color:#FFFFFF;margin:0 auto;margin-top:1.8%;" id="AFTWButton">
+                        <h3 style="font-size: 24.5px;font-weight: bold;">Add Cloud Account</h3>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="moveReportsContainer" style="display: none;overflow-y: auto">
+        <div class="span12" id="containerId" style="margin-top: 20px;margin-bottom: 20px;width: 96.2%;">
+            <div class="span2" style="float:right;margin-left: 0px" id="cont1">
+                <button type="button" style="float:right;padding:8px;font-size: 15px" id="initiateNewMove" class="button mini blue">Initiate Migration</button>
+            </div>
+            <div class="span2" style="float:right;" id="cont2">
+                <button type="button" style="float:right;padding:8px;font-size: 15px" id="moveReportsRefresh" class="button mini blue">Refresh status</button>
+            </div>
+            <!--<div style="font-size: 16px;font-style: italic;text-align: center;line-height: 1.5;">Your migration has been initiated. You can monitor it on this page or  log off and see the migration report that will be emailed to you on completion.</div>-->
+        </div>
+
+        <!--<div class="span12 box" id="moveReportsForUser" style="width:96.2%;">
+
+        </div>-->
+        <table class="span12"  style="width:100%;margin-left:0">
+            <thead class="tab-header" style="background: #2bb5d8">
+            <tr>
+                <th style="width: 03%"></th>
+                <th style="width: 27%">File Name</th>
+                <th id="fromCld" style="width: 18%;">From Cloud</th>
+                <th id="toCld"  style="width: 18%;">To Cloud</th>
+                <th  id="reportStatus" style="width: 18%;">Status</th>
+                <th id="processed"  style="">Processed On</th>
+            </tr>
+            </thead>
+            <tbody id="moveReportsForUser">
+
+            </tbody>
+        </table>
+
+        <button id="showMoreReports" type="button" class="button blue" style="width:100%;display:none">Show more reports</button>
+    </div>
+    <div class="CFfooterLinks" style="color: black" id="FooterLinks">
+        <a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="color: black">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+            href="https://www.cloudfuze.com/privacy-policy/" target="_blank" style="color: black">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+            href="https://support.cloudfuze.com/hc/en-us" target="_blank" style="color: black">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;CloudFuze&nbsp;&copy;&nbsp;2020.
+        All rights reserved
+    </div>
+</section>
+
+<div id="movePopup" class="black-box modal hide fade in" aria-hidden="true"
+     style="background:white;color: #000;text-shadow: none;">
+    <div class="tab-header modal-header" style="background: #2bb5d8;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span>Migrate Files / Folders</span>
+    </div>
+    <div class="modal-body separator" style="border:0px">
+        <p>You are about to migrate the following file(s):</p>
+        <div style="width:100%;border: 1px solid #000;border-bottom: 0px;background: rgb(20,124,185);color: #fff;font-weight: bold;height: 25px;padding:4px">
+            <span style="margin: 25px;">Ready to migrate</span>
+            <span>File name</span>
+        </div>
+        <ul id="moveFilesList"
+            style="margin-bottom:0px;max-height: 120px;overflow-y: auto;height: 120px;border: 1px solid #000;"></ul>
+        <div style="width: 100%;border: 1px solid #000;border-top: 0px;background: rgba(20,124,185,0.3);color: #000;height: 30px;padding: 2px 2px 2px 25px;">
+            <div style="font-size:8pt;float:left" id="filePassDive">
+                <i class="cf-checkmark-circle" style="color:green"></i>&nbsp;&nbsp;
+                <span id="passCount"></span> out of <span id="totalCount"></span> file(s) / folder(s) can be migrated
+            </div>
+            <div style="font-size:8pt;float: left" id="fileFailDive">
+                <i class="cf-cancel-circle" style="color: red"></i>&nbsp;&nbsp;
+                <span id="failCount"></span> out of <span id="totalCount"></span> file(s) / folder(s) can not be migrated
+            </div>
+        </div>
+        <div id="cloudsNotify" style="display: block;float: left;width: 100%;">
+            <div style="width: 45%;float:left;padding-left:5%">
+                <i class="Driveicon" style="margin-top: 7px"></i>
+                <span id="fromCloudDispName" style="float: left;margin-top: 14px;display: block;width: 190px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis"></span>
+            </div>
+            <div style="width: 10%;float:left;">
+                <i class="cf-arrow-right11" style="float:left;font-size: 42px;display: block;color: green"></i>
+            </div>
+            <div style="width: 45%;float:left;padding-left:5%"  class="dstnName">
+                <i style="margin-top:7px" class="Driveicon"></i>
+                <span id="toCloudDispName" style="float: left;margin-top: 14px;display: block;width: 190px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis"></span>
+            </div>
+        </div>
+        <br>
+        <p><b>Notify</b></p>
+        <div class="sapn12" style="margin-left:25px">
+            <input type="checkbox" id="nofityMeCheckBox" style="width:15px;height:15px;margin: 0px 10px"><span>Me</span>
+        </div>
+        <div class="sapn12" style="margin-left:25px;height: 25px">
+            <input type="checkbox" id="nofityOthersCheckBox" style="width:15px;height:15px;margin: 0px 10px;float: left;margin-top:6px">
+            <span style="margin-top: 5px;float: left;margin-top:5px">Others</span>
+            <input id="moveNotifyEmails" placeholder="Please enter email addresses separated by commas." type="text" style="width:80%;display:none;height: 25px;margin: 0px 0px 0px 10px">
+        </div>
+        <hr style="margin:5px 0px 5px 0px;"/>
+        <div style="display:none;width: 100%;margin-bottom: 10px;">
+            <input type="checkbox" id="deleteSourceFiles" style="width:15px;height:15px;margin: 0px">&nbsp;&nbsp;
+            <b>Delete source files.</b>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <span style="color:red;position: fixed;margin-top: -31px;margin-left: -93px;"></span>
+        <div id="overlayDisableButton" style="width: 122px;height: 41px;position: fixed;margin-left: 445px;display: none"></div>
+        <button class="button mini rounded" style="padding: 9px 13px 7px 14px;font-size: 14px" data-dismiss="modal">
+            Cancel
+        </button>
+        <button class="button mini rounded blue" style="padding: 9px 13px 7px 14px;font-size: 14px" id="CFFileMove">
+            Confirm migration
+        </button>
+    </div>
+</div>
+<div id="CFShowLoading" class="modal-backdrop" style="display: none">
+    <div class="backdrop" style="position: relative;top: 30%;background: white;border: none;height: 38%;">
+        <img src="../img/loading_spinner.gif" style="height: 100px;width: 100px; position: absolute;top: 12%;left: 35%" />
+        <p id="loaderText" style="position: absolute;top: 45%; left: 11%;">Please wait while Loading...</p>
+    </div>
+</div>
+<!--<div id="CFmoveStatus" class="modal hide fade in" style="padding:1.5em;border: 1px solid #e2e2e2;">
+
+    <div class="landing-content" style="text-align: center;">
+        <h4>CloudFuze allows trial users to migrate maximum 10 files per day.</h4>
+        <h4>Please upgrade your account for file migration.</h4>
+        <button type="button" class="close" id="closePrice" data-dismiss="modal" aria-hidden="true" style="opacity: 0.5;margin-right: 2px;">&times;</button>
+        <div class="pricing" style="margin-top: 6%;">
+            <div class="btn-group btn-toggle" style="margin-top: -5%;text-align: center;margin-left: -6%;">
+                <button class="btn btn-default active" style="border-top-left-radius: 50px;border-bottom-left-radius: 50px;background: #ffffff;color:#000;width: 115px;height: 34px;">Billed Annually</button>
+                <button class="btn btn-primary" style="border-top-right-radius: 50px;border-bottom-right-radius: 50px;background: #FFFFFF;color:#000;width: 115px;height: 34px;">Billed Monthly</button>
+            </div>
+            <div class="tab-content" id="tab-price">
+                <div style="margin-top: 5%;" id="mnthlyPkg">
+                    <div style="width: 24%;border: 1px solid #000;height: 200px;line-height: 1.5;float: left;margin-left: 6%">
+                        <div class="data" style="margin-top: 50px"><span>Lite</span></div>
+                        <input type="radio" name="subscription"  id="monthLite" value="BasicMonthly" style="">
+                        <div class="price" style="margin-top: -17%;">$9.99</div>
+                        <div style="font-size: 12px;margin-top: 3%">upto 50 GB per month</div>
+                    </div>
+                    <div style="width: 24%;border: 1px solid #000;height: 200px;line-height: 1.5;float: left;margin-left: 5%;">
+                        <div class="boxPricing">
+                            <div class="ribbonPricing"><span>Best Value</span></div>
+                        </div>
+                        <div class="data" style="margin-top: 50px;"><span></span>Standard</span></div>
+                        <input type="radio" name="subscription"  id="monthStandard" value="StndMonthly" style="" checked>
+                        <div class="price" style="margin-top: -17%;">$19.99</div>
+                        <div style="font-size: 12px;margin-top: 2%">upto 100 GB per month</div>
+                    </div>
+                    <div style="width: 24%;border: 1px solid #000;height: 200px;line-height: 1.5;float: left;margin-left: 5%">
+                        <div class="data" style="margin-top: 50px"><span></span>Pro</span></div>
+                        <input type="radio" name="subscription"  id="monthAdvanced" value="AdvncdMonthly" style="">
+                        <div class="price" style="margin-top: -17%;">$34.99</div>
+                        <div  style="font-size: 12px;margin-top: 3%">upto 200 GB per month</div>
+                        <div class="plexUser" style="font-size: 12px;margin-top: 10%">If you are a Plex user, please select this plan.</div>
+                    </div>
+                </div>
+                <div style="margin-top: 5% !important;" id="yrlyPkg" class="tab-pane fade  in active">
+                    <div style="width: 24%;border: 1px solid #000;height: 200px;line-height: 1.5;float: left;margin-left: 6%">
+
+                        <div class="data" style="margin-top: 50px"><span>Lite</span></div>
+                        <input type="radio" name="subscription" id="yearlyBasic" value="BasicAnnually" style="">
+                        <div class="price" style="margin-top: -17%;">$99.99<span style="font-size: 15px;margin-left: 1%"></span></div>
+                        <div style="font-size: 12px;">upto 600 GB annually</div>
+                    </div>
+                    <div style="width: 24%;border: 1px solid #000;height: 200px;line-height: 1.5;float: left;margin-left: 5%;">
+                        <div class="boxPricing">
+                            <div class="ribbonPricing"><span>Best Value</span></div>
+                        </div>
+
+                        <div class="data" style="margin-top: 50px;"><span>Standard</span></div>
+                        <input type="radio" name="subscription"  id="yearlystandard" value="StndAnnually" style="" checked>
+                        <div class="price" style="margin-top: -17%;">$199.99<span style="font-size: 15px;margin-left: 1%"></span></div>
+                        <div style="font-size: 12px;margin-top:1%;">upto 1200 GB annually</div>
+                    </div>
+                    <div style="width: 24%;border: 1px solid #000;height: 200px;line-height: 1.5;float: left;margin-left: 5%">
+
+                        <div   class="data" style="margin-top: 50px"><span>Pro</span></div>
+                        <input type="radio" name="subscription"  id="yearlyAdvanced" value="AdvncdAnnually" style="">
+                        <div class="price" style="margin-top: -17%;">$349.99<span style="font-size: 15px;margin-left: 1%"></span></div>
+                        <div style="font-size: 12px;">upto 2400 GB annually</div>
+                        <div class="plexUser" style="font-size: 12px;margin-top: 10%">If you are a Plex user, please select this plan.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" style="margin-top:2%;width: 100px;height: 40px;text-align: center;border-radius: 0px;" id="paypalPmntBtn">Subscribe</button>
+        <div style="font-size:14px;margin-top: 2%;"> If you wish to migrate data for your team or wish to migrate large data, please contact us at <a href="mailto:sales@cloudfuze.com" style="color: rgb(51,51,51);font-weight: bold">sales@cloudfuze.com</a>.</div>
+    </div>
+</div>-->
+<div id="moveFileCheck" class="modal hide fade in" style="background: #fff;color: black;width:350px;height:400px;border:1px solid #000;text-align: center;display:none;-webkit-box-shadow:0px 0px 10px 0px #2bb5d8;padding:10px;">
+    <div style='text-align: center;margin-top: 8%;font-size: 20px;line-height: 1.5;'>CloudFuze is preparing your files/folders for Migration.</br> Please give us a few moments.</div>
+</div>
+<!--<div id="calcpricemodalNew" class="modal hide fade in" style="background: #ddd;color: #000;text-shadow: none;">
+    <div class=" tab-header modal-header" id="tab-name" style="background: #2bb5d8;">
+        <button id="closepricing" style="" type="button" class="close" data-dismiss="modal">&times;</button>
+        <span>Checkout</span>
+    </div>
+    <div class="tab-content">
+        <div style="padding:2%;">
+            <div>
+                <table class="table box" style="font-size: 12pt;font-weight: 600;">
+                    <thead><tr style="color:#2bb5d8"> <th>Detail</th><th>Price(<span data-currency="USD">$</span>)</th></tr></thead>
+                    <tbody>
+                    <tr><td id="subscribetypeNew"></td><td id="amntNew"></td></tr>
+                    <tr><td >Discount (-)</td><td id="discountNew"></td></tr>
+                    <tr><td> Total Amount</td><td id="totalamntNew"></td></tr>
+                    </tbody>
+                </table>
+                <i>**overage charges of $0.4/GB are applicable when migration data exceeds the selected plan</i>
+            </div>
+        </div>
+        <div id="couponsmessage" style="font-size:16px;font-weight:600;color:#000;text-align: center;"></div>
+        <div id="couponsmessage1" style="font-size:14pt;font-weight:500;color:#024a5b;text-align: center;"></div>
+        <div id="couponemessage" style="font-size:14pt;font-weight:500;color:#F90;text-align: center;"></div>
+        <div  style="padding-left: 1%;">
+            <h3>Have a coupon?</h3>
+            <input type="text" name="couponcode" value=""  id="couponcode"/>
+            <a class="button large rounded blue" id="applycouponNew"><h5 style="padding-top: 3px;">Apply Coupon</h5></a>
+        </div>
+
+        <div class="pull-right" style="padding-right: 1%;margin-bottom: 20px">
+            <a class="button large rounded blue" id="checkoutbuttonNew">
+                <h4>Proceed to Checkout</h4>
+            </a>
+        </div>
+    </div>
+    <div id="multiMoveCheck" class="modal hide fade in" style="background: #fff;color: black;width:350px;height:400px;border:1px solid #000;text-align: center;display:none;-webkit-box-shadow:0px 0px 10px 0px #2bb5d8;padding:10px;margin-left: -12%;">
+        <div style='text-align: center;margin-top: 8%;font-size: 20px;line-height: 1.5;'><b>We are auto mapping your users...<br>Please give us a moment.</b></div>
+    </div>
+
+    <div id="multiMoveCheck1" class="modal hide fade in" style="background: #fff;color: black;width:350px;height:400px;border:1px solid #000;text-align: center;display:none;-webkit-box-shadow:0px 0px 10px 0px #2bb5d8;padding:10px;margin-left: -12%;">
+        <div style='text-align: center;margin-top: 8%;font-size: 20px;line-height: 1.5;'><b>We are auto mapping your users...<br>Please give us a moment.</b></div>
+    </div>
+
+    <div id="paypalsuccessmodalinit" class="modal hide fade in" style="background: #ddd;color: #000;text-shadow: none;">
+        <div class=" tab-header modal-header" style="background: #2bb5d8;">
+            <span>Redirecting....</span>
+        </div>
+        <div class="tab-content">
+            <div style="text-align:center;">
+                <h3> <span>Please don't click back button, backspace or refresh your browser</span></h3>
+                <img src="../img/ajax.gif" />
+                <h4 style="line-height: 1.5;"><span>We are connecting you to payment gateway.Please wait....</span></h4>
+            </div>
+        </div>
+    </div>
+
+    <div id="mulUsrCheck" class="modal hide fade in" style="background: #fff;color: #000;text-shadow: none;border-radius: 0px;border: 0px solid #000;">
+        <div class=" tab-header modal-header" style="background: rgba(43, 181, 216, 0.8);border-radius: 0px;">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <span>Multi-User migration verfication</span>
+        </div>
+        <div class="tab-content" style="margin-bottom: 10%;margin-top: 10%">
+            <div style="text-align:center;">
+                <h4 style="line-height: 1.8"><span></span></h4>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!--Core Components-->
+<script src="../javascripts/vendor/jquery-3.0.0.js" type="text/javascript"></script>
+<script src="../javascripts/vendor/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../javascripts/vendor/bootstrap-3.3.5.js" type="text/javascript"></script>
+
+<!--Plugins-->
+<script src="../javascripts/timeago.js" type="text/javascript"></script>
+<script src="../javascripts/ZeroClipboard.js" type="text/javascript"></script>
+<script src="../javascripts/MetroNotifications_7.js" type="text/javascript"></script>
+<script src="../javascripts/spin.min.js" type="text/javascript"></script>
+<script src="../javascripts/jquery.twbsPagination.min.js" type="text/javascript"></script>
+<script src="../javascripts/jquery.noty.packaged.min.js" type="text/javascript"></script>
+
+<!--Theme Specific-->
+<script src="../javascripts/navigation.js" type="text/javascript"></script>
+
+<!--Static Variables-->
+<script src="../ajaxcalls/config.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/globalVar.js?ver=1231" type="text/javascript"></script>
+
+<!--Entire App Usage-->
+<script src="https://js.stripe.com/v3/"></script>
+<script src="../ajaxcalls/CFManageCloudAccounts.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/readyDocument.js?ver=1231" type="text/javascript"></script>
+<script src="../javascripts/actionevents.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/fileShareMetaData.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/homePageActionEvents.js?ver=1231" type="text/javascript"></script>
+<!--<script src="../ajaxcalls/CFEvents.js?ver=1231" type="text/javascript"></script>-->
+<script src="../ajaxcalls/paypalpmnt.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/pcrds.js?ver=1231" type="text/javascript"></script>
+<script type="text/javascript" src="https://cloudfuze.agilecrm.com/stats/min/agile-min.js"></script>
+<script type="text/javascript" >
+    _agile.set_account('hjfh55r70pg2avebm1hahdb0n4', 'cloudfuze');
+    _agile.track_page_view();
+    _agile_execute_web_rules();
+</script>
+
+
+<script src="../ajaxcalls/paypalPayment.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/multiUsr.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#moveFileCheck').click(function(event){
+            event.stopImmediatePropagation();
+        });
+        $('#upgrdIcon').on('click', function() {
+            window.location.href = "settings.html#move";
+        });
+        $('#RestrictionMOVEOK').on('click', function() {
+            $('#RestrictionMOVE').hide();
+        });
+        $('#RestrictionSrcOK').on('click', function() {
+            $('#RestrictionSrc').hide();
+        });
+        $('#thankbutton').on('click', function() {
+            $('#ThankPop').hide();
+            $('#ProccesingPopup').hide();
+            $("#checkoutpng").css("display","none");
+            $("#move_main").css("display"," ");
+
+        });
+        if (localStorage.getItem('UserId')) {
+            $('body').show();
+        }
+        else {
+            window.location.href = "index.html?ver=1231";
+        }
+        PageName = 'moveLanding';
+        var locationConsist = localStorage.getItem("movelocation");
+        if (locationConsist == 'schedules') {
+            $('#moveReports').trigger('click');
+        }
+        CFManageCloudAccountsAjaxCall.getAllClouds();
+        var dispanme = '';
+        sessionStorage.setItem('clouds', false);
+        $.each(AllCloudsInfo, function (i, cloud) {
+            var email = cloud.cloudUserId;
+            email = email.split('|');
+            email = email[1];
+            var _warning = cloud.cloudStatus == "INACTIVE" ? "cf-warning" : "";
+            //var cid='sourceCloudId='+cloud.id;
+            //var status=syncStatus(cid);
+
+            if (cloud.userDisplayName != null && (cloud.userDisplayName.trim().length > 0 || cloud.userDisplayName != '')) {
+                dispanme = cloud.userDisplayName;
+            }
+            else {
+                dispanme = email
+            }
+            var _msg="";
+            if(cloud.cloudName == "ONEDRIVE" && cloud.cloudStatus == "INACTIVE")
+                _msg="OneDrive API has been upgraded. Please re-connect your cloud.";
+            //cloud.cloudName != "BOX_BUSINESS" && cloud.cloudName != "DROPBOX_BUSINESS" && cloud.cloudName != "ONEDRIVE_BUSINESS_ADMIN"
+            if((MultiUserClouds.indexOf(cloud.cloudName) == -1)) // || cloud.userType == "ADMIN"
+            {
+                sessionStorage.setItem('clouds', true);
+                $('.span6 #moveSource').append('<div class="moveCloudBlock button ' + _warning + '" style="padding:0px" type="button" title="' + _msg +'">' +
+                    '<div class="move ' + cloud.cloudName + '" cid="' + cloud.id + '" pid="' + cloud.rootFolderId + '"></div>' +
+                    '<p id="userEmail">' + dispanme + '</p></div>');
+
+                $('.span6 #moveDestination').append('<div class="moveCloudBlock button ' + _warning + '" type="button" style="padding:0px" title="' + _msg +'">' +
+                    '<input type="radio"  name="destCloud" class="destCloudInput" style="margin: 5px;height: 15px;width: 15px;visibility: hidden">' +
+                    '<div class="move ' + cloud.cloudName + '"  cid="' + cloud.id + '" pid="' + cloud.rootFolderId + '" style="margin-left:15px"></div>' +
+                    '<p id="userEmail">' + dispanme + '</i></p></div>');
+            }
+
+            $('#moveDestination >div').droppable({
+                greedy: true, drop: dropEventHandler, over: function () {
+                    $(this).addClass('moveCloudBlockDragHover').removeClass('moveCloudBlock');
+                }, out: function () {
+                    $(this).removeClass('moveCloudBlockDragHover').addClass('moveCloudBlock');
+                }
+            });
+        });
+        selectEvent.init();
+        setTimeout(function () {
+            var height = $(window).height() - $('#FooterLinks').height() - 5 - $('#topHeader').height();
+            $('#moveReportsContainer').css('max-height', height);
+        }, 2000);
+        $(window).resize(function () {
+            $('#moveReportsContainer').css('max-height', $(window).height());
+        });
+        if (sessionStorage.getItem('clouds') == "false") {
+            $('#CF_no_clouds').show();
+            $('#move_main').hide();
+            $('#move_multiUser').hide();
+        }
+        else {
+            $('#CF_no_clouds').hide();
+            $('#move_main').show();
+            $('#move_multiUser').hide();
+        }
+        $('#moveReportsContainer').hide();
+        $('#headerText').text('Migrate');
+        $('#movecheckModal').prop('disabled', true).removeClass('blue');
+
+
+        var opts = {
+            lines: 11 // The number of lines to draw
+            , length: 31 // The length of each line
+            , width: 6 // The line thickness
+            , radius: 33 // The radius of the inner circle
+            , scale: 1 // Scales overall size of the spinner
+            , corners: 1 // Corner roundness (0..1)
+            , color: '#2bb5d8' // #rgb or #rrggbb or array of colors
+            , opacity: 0.25 // Opacity of the lines
+            , rotate: 0 // The rotation offset
+            , direction: 1 // 1: clockwise, -1: counterclockwise
+            , speed: 1 // Rounds per second
+            , trail: 60 // Afterglow percentage
+            , fps: 20 // Frames per second when using setTimeout() as a fallback for CSS
+            , zIndex: 2e9 // The z-index (defaults to 2000000000)
+            , className: 'spinner' // The CSS class to assign to the spinner
+            , top: '60%' // Top position relative to parent
+            , left: '47%' // Left position relative to parent
+            , shadow: false // Whether to render a shadow
+            , hwaccel: false // Whether to use hardware acceleration
+            , position: 'absolute' // Element positioning
+        }
+        var target = document.getElementById('moveFileCheck');
+        var target1 = document.getElementById('multiMoveCheck1');
+        var spinner = new Spinner(opts).spin(target);
+        var spinner = new Spinner(opts).spin(target1);
+
+        if(localStorage.getItem("mulUsrDst") != null && localStorage.getItem("mulUsrDst") != [])
+        {
+            var _temp=localStorage.getItem("mulUsrDst");
+            var _temp1=localStorage.getItem("mulUsrSrc");
+            var clds=AllCloudsInfo;
+            $.each(AllCloudsInfo, function (j, AllCloudsInfo) {
+                if(AllCloudsInfo.id == _temp )
+                {
+                    if(AllCloudsInfo.cloudName == "DROPBOX_BUSINESS" || AllCloudsInfo.cloudName == "ONEDRIVE_BUSINESS_ADMIN")
+                    {
+                        if(localStorage.getItem("mulUsrSrc") != null && localStorage.getItem("mulUsrSrc") != [])
+                        {
+                            //multiUserDispalyBack(localStorage.getItem("mulUsrSrc"),"source");
+                            //localStorage.removeItem("mulUsrSrc");
+                            $.each(clds, function (l, clds) {
+                                if(clds.id == _temp1 )
+                                {
+                                    if(AllCloudsInfo.cloudName == "DROPBOX_BUSINESS" || AllCloudsInfo.cloudName == "ONEDRIVE_BUSINESS_ADMIN")
+                                        window.location.href = "move_multiuser.html";
+                                }
+                            });
+                            multiUserDispalyBack(_temp,"destination");
+                        }
+                        else
+                            multiUserDispalyBack(_temp,"destination");
+
+                    }
+                }
+            });
+
+        }
+        if(localStorage.getItem("mulUsrSrc") != null && localStorage.getItem("mulUsrSrc") != [])
+        {
+
+            var _temp=localStorage.getItem("mulUsrSrc");
+            $.each(AllCloudsInfo, function (j, AllCloudsInfo) {
+                if(AllCloudsInfo.id == _temp )
+                {
+                    if(AllCloudsInfo.cloudName == "DROPBOX_BUSINESS" || AllCloudsInfo.cloudName == "ONEDRIVE_BUSINESS_ADMIN")
+                        multiUserDispalyBack(_temp,"source");
+                }
+            });
+        }
+
+        if(localStorage.hasOwnProperty("sourcePayment")){
+            PageName = 'move';
+            //   $.when(loadMoveSource()).then(loadMoveDestination());
+            localStorage.removeItem("sourcePayment");
+            localStorage.removeItem("popupSourcecld");
+            localStorage.removeItem("popupDestcld");
+        }
+    });
+    $("#yrlyPkg").css("display","none");
+    $("#mnthlyPkg").css("display","block");
+    $('input[name=subscription]:checked').parent().css({"border":"2px solid #3276b1"});
+	checkUserDataLimit();
+			function checkUserDataLimit() {
+            var _url = apicallurl + "/move/limit/active"; 
+        $.ajax({
+            type: "GET",
+            url: _url,
+            async: false,
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS",
+				"Authorization":CFManageCloudAccountsAjaxCall.getAuthDetails()
+            },
+            success: function (result) {
+             var a = result.usedData;
+			 var b = result.totalData;
+			 var c = a/b*100;
+			 var d = getDataSize(a);
+			 var e = getDataSize(b);
+			 $("#usedData").text(d);
+			 $("#totalData").text(e);
+			 if($("#usedData").text()==0){
+			 if($("#totalData").text().includes('GB')){
+			 $("#usedData").text('0'+' GB');
+			 }
+			 }
+			
+			 if(c > 0 && c < 1){
+			 c = 1;
+			 }
+			 else{
+			 c = Math.round(c);
+            }
+			$(".progress-bar.progress-bar-success").css('width', c+'%');
+			}
+        });
+    }
+	function getDataSize(sizeBytes) {
+	 var ONE_KB = 1024;
+var ONE_MB = ONE_KB * ONE_KB;
+var ONE_GB = ONE_KB * ONE_MB;
+var ONE_TB = ONE_KB * ONE_GB;
+        if (sizeBytes == undefined || sizeBytes == null || sizeBytes == 0) {
+            return '0GB';
+			}
+			var fsize=0;
+            if (Math.round(sizeBytes / ONE_GB) > 0) {
+                fsize = sizeBytes / ONE_GB;
+                displaySize = parseFloat(fsize).toFixed(2) + " GB";
+            } else if (Math.round(sizeBytes / ONE_MB) > 0) {
+                fsize = sizeBytes / ONE_MB;
+                displaySize = parseFloat(fsize).toFixed(2) + " MB";
+            } else if (Math.round(sizeBytes / ONE_KB) > 0) {
+                fsize = sizeBytes / ONE_KB;
+                displaySize = parseFloat(fsize).toFixed(2) + " KB";
+            } else if (Math.round(sizeBytes / ONE_TB) > 0) {
+                fsize = sizeBytes / ONE_TB;
+                displaySize = parseFloat(fsize).toFixed(2) + " TB";
+            }else {
+                displaySize = sizeBytes + " Bytes";
+            }
+            return displaySize;
+    }
+</script>
+<script>
+    $('input:radio[name=subscription]').change(function () {
+        $('input[name=subscription]').parent().css({"border":"1px solid black"});
+        $('input[name=subscription]:checked').parent().css({"border":"2px solid #3276b1"});
+    });
+    $('#checkoutback').on('click',function(){
+        $("#checkoutpng").css("display","none");
+        $("#move_main").css("display","");
+
+    });
+    $('.btn-toggle').click(function() {
+        $(this).find('.btn').toggleClass('active');
+        if ($(this).find('.btn-primary').length>0) {
+            $(this).find('.btn').toggleClass('btn-primary');
+            if($(this).find('.btn-primary').text() == "Billed Monthly")
+            {
+                $("#yrlyPkg").css("display","none");
+                $("#mnthlyPkg").css("display","block");
+                $('input[name=subscription][value=StndMonthly]').prop('checked',true);
+            }
+            else
+            {
+                $("#yrlyPkg").css("display","block");
+                $('input[name=subscription][value=StndAnnually]').prop('checked',true);
+                $("#mnthlyPkg").css("display","none");
+            }
+        }
+        $('input[name=subscription]:checked').parent().css({"border":"2px solid #3276b1"});
+        $(this).find('.btn').toggleClass('btn-default');
+    });
+
+    /* $(document).find('.active').click(function () {
+         if(localStorage.getItem("MigtnDone") === "consumer" || localStorage.getItem("MigtnDone") === "multiUser"){
+
+         }
+         else{
+             zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,'navClick');
+         }
+
+     });*/
+</script>
+<!--<script type="text/javascript">
+    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq ||
+        {widgetcode:"54701193e52b98abae244d52e3b2b8f5f61f3d8e5ff885b97cf4cc96601469b1", values:{},ready:function(){}};
+    var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;
+    s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+</script>
+<script>
+
+    $zoho.salesiq.ready=function(embedinfo)
+
+    {
+        $zoho.salesiq.tracking.domain("webapp.cloudfuze.com");
+    }
+
+
+</script>-->
+<!--stripe code start here-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        paymentCheck();
+        $('.__PrivateStripeElement input').on('change',function () {
+            if ($('.CardBrandIcon-inner').children[0].SVG_ZOOMANDPAN_DISABLE === 1){
+                $('#cardsImg').css('display', '');
+            } else {
+                $('#cardsImg').css('display', 'none');
+            }
+
+        });
+        $('#upgrdIcon').on('click', function() {
+            window.location.href = "settings.html#move";
+        });
+
+        $('#plansPopUp').on('click', function() {
+            $("#moveMigrationPrices").modal("show");
+            $(".supportcontent").css("display","none");
+            $("#moveMigrationPrices h4").css("display","none");
+            $("##individualTab").css("padding","2% !important");
+
+            getuserexpiry.getLastSubscription();
+            var _text ;/*= lastsubsresponse.subscriptionName;*/
+            if (_text == "Individual Lite Yearly Subscription") {
+                $("#basicannualsubscribe").css("display", "none");
+                $("#cnclbasicannualsubscribe").css("display", "block");
+            }
+            else if (_text == "Yearly Recurring") {
+                $("#basicannualsubscribe").css("display", "none");
+                $("#cnclbasicannualsubscribe").css("display", "block");
+            }
+            else if (_text == "Standard Yearly Subscription") {
+                $("#stndannualsubscribe").css("display", "none");
+                $("#cnclstndannualsubscribe").css("display", "block");
+            }
+            else if (_text == "Pro Yearly Subscription") {
+                $("#advncdannualsubscribe").css("display", "none");
+                $("#cncladvncdannualsubscribe").css("display", "block");
+            }
+            else if (_text == "Basic Monthly Subscription") {
+                $("#basicmonthlysubscribe").css("display", "none");
+                $("#cnclbasicmonthlysubscribe").css("display", "block");
+            }
+            else if (_text == "Individual Lite Monthly Subscription") {
+                $("#basicmonthlysubscribe").css("display", "none");
+                $("#cnclbasicmonthlysubscribe").css("display", "block");
+            }
+            else if (_text == "Standard Monthly Subscription") {
+                $("#stndmonthlysubscribe").css("display", "none");
+                $("#cnclstndmonthlysubscribe").css("display", "block");
+            }
+            else if (_text == "Pro Monthly Subscription") {
+                $("#advncdmonthlysubscribe").css("display", "none");
+                $("#cncladvncdmonthlysubscribe").css("display", "block");
+            }
+
+
+        });
+    });
+    function paymentCheck() {
+        var a = localStorage.getItem("CFSubscribtion"),
+            b = "$" + localStorage.getItem("CFPrice"),
+            c = "$" + localStorage.getItem("MonthlyAMNT"),
+            d = "$" + localStorage.getItem("YearlyAMNT"),
+            e = localStorage.getItem("CFData"),
+            f = "Data per Year",
+            g = "Data per Month";
+
+        if (a === "Individual Lite Yearly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(d);
+            $("#totalamntNew").html(d);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(f);
+        }
+        if (a === "Standard Yearly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(d);
+            $("#totalamntNew").html(d);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(f);
+        }
+        if (a === "Pro Yearly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(d);
+            $("#amntsize").html(e);
+            $("#totalamntNew").html(d);
+            $("#DataYearRmonth").html(f);
+        }
+        if (a === "Pro Monthly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(c);
+            $("#totalamntNew").html(c);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(g);
+        }
+        if (a === "Standard Monthly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(c);
+            $("#totalamntNew").html(c);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(g);
+        }
+        if (a === "Individual Lite Monthly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(c);
+            $("#totalamntNew").html(c);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(g);
+        }
+        //couponCheck();
+
+    }
+
+</script>
+<script type="text/javascript" >
+    $('#couponcode').focus(function() {
+        if (window.matchMedia('(max-width: 480px)').matches) {
+            $("#cotab-content .table").css("display", "none");
+        }
+    })
+    $('#couponcode').focusout(function() {
+        if (window.matchMedia('(max-width: 480px)').matches) {
+            $("#cotab-content .table").css("display", "block");
+            $('#applycouponNew').trigger('click');
+        }
+    })
+
+    /*   $("#individualYearly").click(function()
+       {
+           $("#liteYearly:hidden").show();
+           $("#liteMonthly").hide();
+           $('#basicmonthlysubscribe').attr('id', 'newID');
+           if($('liteYearly').prop('checked')===false)
+           {
+               $('liteYearly').hide();
+           }
+       });
+       $("#individualMonthly").click(function()
+       {
+           $("#liteMonthly:hidden").show();
+           $("#liteYearly").hide();
+           if($('liteMonthly').prop('checked')===false)
+           {
+               $('liteMonthly').hide();
+           }
+
+       });
+
+       $("#standardYearly").click(function()
+       {
+           $("#stdYearly:hidden").show();
+           $("#stdMonthly").hide();
+           $('#basicmonthlysubscribe').attr('id', 'newID');
+           if($('stdYearly').prop('checked')===false)
+           {
+               $('stdYearly').hide();
+           }
+       });
+       $("#standardMonthly").click(function()
+       {
+           $("#stdMonthly:hidden").show();
+           $("#stdYearly").hide();
+           if($('stdMonthly').prop('checked')===false)
+           {
+               $('stdMonthly').hide();
+           }
+
+       });
+
+       $("#proYearly").click(function()
+       {
+           $("#proYearlychecked:hidden").show();
+           $("#proMnthlychecked").hide();
+           if($('proYearlychecked').prop('checked')===false)
+           {
+               $('proYearlychecked').hide();
+           }
+       });
+       $("#proMontly").click(function()
+       {
+           $("#proMnthlychecked:hidden").show();
+           $("#proYearlychecked").hide();
+           if($('#proMnthlychecked').prop('checked')===false)
+           {
+               $('#proMnthlychecked').hide();
+           }
+       });*/
+    $("input[name=test1]").on("change",function () {
+
+        if($("input[name=test1]:checked").val()=== 'monthly'){
+            $("#liteMonthly:hidden").show();
+            $("#liteYearly").hide();
+        }
+        else{
+            $("#liteYearly:hidden").show();
+            $("#liteMonthly").hide();
+        }
+        return false;
+    });
+    $("input[name=test2]").on("change",function () {
+
+        if($("input[name=test2]:checked").val()=== 'monthly'){
+            $("#stdMonthly:hidden").show();
+            $("#stdYearly").hide();
+        }
+        else{
+            $("#stdYearly:hidden").show();
+            $("#stdMonthly").hide();
+        }
+        return false;
+    });
+    $("input[name=test3]").on("change",function () {
+
+        if($("input[name=test3]:checked").val()=== 'monthly'){
+            $("#proMnthlychecked:hidden").show();
+            $("#proYearlychecked").hide();
+        }
+        else{
+            $("#proYearlychecked:hidden").show();
+            $("#proMnthlychecked").hide();
+        }
+        return false;
+    });
+</script>
+<script>
+    // Create a Stripe client.
+
+    var stripe = Stripe('pk_live_RDQcISQ4Jo8dvB6Vu6R62ktZ00BIGDPa5r');
+
+    // Create an instance of Elements.
+    var elements = stripe.elements();
+    // Custom styling can be passed to options when creating an Element.
+    // (Note that this demo uses a wider set of styles than the guide below.)
+    /*        var style = {
+                base: {
+                    color: '#32325d',
+                    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                    fontSmoothing: 'antialiased',
+                    fontSize: '16px',
+                    '::placeholder': {
+                        color: '#aab7c4'
+                    }
+                },
+                invalid: {
+                    color: '#fa755a',
+                    iconColor: '#fa755a'
+                }
+            };
+
+            // Create an instance of the card Element.
+          //  var card = elements.create('card', {style: style});
+
+            var card = elements.create('card');
+        card.mount('#card-element');
+            // Add an instance of the card Element into the `card-element` <div>.
+        card.mount('#card-element', {style: style});*/
+
+
+    var card = elements.create('card', {
+        hidePostalCode: true,
+        style: {
+            base: {
+                iconColor: '#666EE8',
+                color: '#31325F',
+                lineHeight: '16px',
+                fontWeight: 300,
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSize: '15px',
+
+                '::placeholder': {
+                    color: '#CFD7E0',
+                },
+            },
+        }
+    });
+
+    card.mount('#card-element');
+
+    // Handle real-time validation errors from the card Element.
+    card.addEventListener('change', function (event) {
+        $(".card-error-message").text('');
+        var displayError = document.getElementById('card-errors');
+        if (event.error) {
+            displayError.textContent = event.error.message;
+        } else {
+            displayError.textContent = '';
+        }
+        if(event.empty === true){
+            displayError.textContent = '';
+            $(".card-error-message").text('');
+        }
+    });
+    $(document).on('keyup',"#UserEntName",function(e){
+        var customerEmail = $("#UserEntName").val();
+        if(customerEmail.length < 1){
+            $("#EmailErrMsg").css("display","");
+            $("#UserEntName").focus();
+            $("#EmailErrMsg").text("*Please Enter  Name");
+            return true;
+        }
+        var re = /^[a-zA-Z ]+$/;
+        var is_email=re.test(customerEmail);
+        if(!is_email){
+            $("#EmailErrMsg").css("display","");
+            $("#UserEntName").focus();
+            $("#EmailErrMsg").text("*Please Enter Valid  Name");
+            return true;
+        }
+        else{
+            $("#card-element").focus();
+            $("#UserEntName").focusout();
+            $("#UserEntName").off();
+
+
+            $("#EmailErrMsg").css("display","none");
+        }
+        if (e.which === 9 || e.keyCode === 9) {
+            e.preventDefault();
+
+
+            if(customerEmail.length < 1){
+                $("#EmailErrMsg").css("display","");
+                $("#UserEntName").focus();
+                $("#EmailErrMsg").text("*Please Enter  Name");
+                return false;
+
+            }
+
+            else if (customerEmail.length > 0) {
+
+                var re = /^[a-zA-Z ]+$/;
+                var is_email=re.test(customerEmail);
+                if(!is_email){
+                    $("#EmailErrMsg").css("display","");
+                    $("#UserEntName").focus();
+                    $("#EmailErrMsg").text("*Please Enter Valid  Name");
+
+                    return false;
+                }
+                else{
+                    $("#UserEntName").off();
+                    $(document).find("#card-element").focus();
+                    $(document).find("#UserEntName").focusout();
+                    $("#EmailErrMsg").css("display","none");
+                }
+            }
+        }
+
+    });
+    $("#UserEntName").keydown(function(e){
+        // $(document).find(".cardTr #UserEntEmail").keypress(function(e) {
+        //$(document).on('keypress','#UserEntEmail',function (e) {
+
+        if (e.which == 32) {
+            return false;
+        }
+        var customerEmail = $("#UserEntName").val();
+        if (e.which === 8 || e.keyCode === 8) {
+
+            var customerEmail = $("#UserEntName").val();
+
+            if(customerEmail.length < 1){
+                $("#EmailErrMsg").css("display","");
+                $("#UserEntName").focus();
+                $("#EmailErrMsg").text("*Please Enter  Name");
+                return true;
+
+            }
+
+            else if (customerEmail.length > 0) {
+                var _length = customerEmail.length;
+                var _length2 = _length-1;
+                customerEmail = customerEmail.substring(0,_length2);
+
+                var re = /^[a-zA-Z ]+$/;
+                var is_email=re.test(customerEmail);
+                if(!is_email){
+                    $("#EmailErrMsg").css("display","");
+                    $("#UserEntName").focus();
+                    $("#EmailErrMsg").text("*Please Enter Valid  Name");
+                    return true;
+                }
+                else{
+                    $("#card-element").focus();
+                    $("#UserEntName").focusout();
+                    $("#UserEntName").off();
+
+
+                    $("#EmailErrMsg").css("display","none");
+                    return true;
+                }
+            }
+        }
+
+        /* if (e.which === 9 || e.keyCode === 9) {
+             e.preventDefault();
+
+
+              if(customerEmail.length < 1){
+              $("#EmailErrMsg").css("display","");
+              $("#UserEntName").focus();
+              $("#EmailErrMsg").text("*Please Enter  Name");
+              return false;
+
+       }
+
+         else if (customerEmail.length > 0) {
+
+                 var re = /^[a-zA-Z ]+$/;
+                 var is_email=re.test(customerEmail);
+                 if(!is_email){
+                     $("#EmailErrMsg").css("display","");
+                     $("#UserEntName").focus();
+                     $("#EmailErrMsg").text("*Please Enter Valid  Name");
+
+                     return false;
+                 }
+                 else{
+                     $("#UserEntName").off();
+                     $(document).find("#card-element").focus();
+                    $(document).find("#UserEntName").focusout();
+                     $("#EmailErrMsg").css("display","none");
+                 }
+             }
+         }*/
+        $("#UserEntName").focusout();
+
+    });
+
+    $('#thankbutton').click(function (event) {
+        $("#ProccesingPopup").modal("hide");
+        $("#ThankPop").modal("hide");
+        $("#move_main").css("display","");
+    });
+    // Handle form submission.
+    $('#card-button').click(function (event) {
+        event.preventDefault();
+        $(this).attr('disabled',true);
+        var customerEmail = $("#UserEntName").val();
+        if(customerEmail.length < 1){
+            $("#EmailErrMsg").css("display","");
+            $("#UserEntName").focus();
+            $("#EmailErrMsg").text("*Please Enter Name");
+            $(this).attr('disabled',false);
+            return false;
+
+        }
+
+        else  if(customerEmail.length > 0){
+            var re = /^[a-zA-Z ]+$/;
+            var is_email=re.test(customerEmail);
+            if(!is_email){
+                $("#EmailErrMsg").css("display","");
+                $("#UserEntName").focus();
+                $("#EmailErrMsg").text("*Please Enter Valid Name");
+                $(this).attr('disabled',false);
+                return false;
+            }
+            else{
+                $("#UserEntName").off();
+
+                $("#EmailErrMsg").css("display","none");
+            }
+        }
+
+
+        if(card._parent.className === "StripeElement StripeElement--empty"){
+            $("#ProccesingPopup").modal("hide");
+        }
+        else if(card._parent.className === "StripeElement")
+            $("#ProccesingPopup").modal("hide");
+        else if(card._parent.className === "StripeElement StripeElement--invalid")
+            $("#ProccesingPopup").modal("hide");
+        else if(card._parent.className === "StripeElement StripeElement--empty StripeElement--invalid")
+            $("#ProccesingPopup").modal("hide");
+        else{
+            $("#ProccesingPopup").modal("show");
+        }
+        stripe.createToken(card).then(function (result) {
+            if (result.error) {
+                // Inform the user if there was an error.
+                var errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+                $(this).attr('disabled',false);
+                $("#ProccesingPopup").modal("hide");
+            } else {
+
+                // Send the token to your server.
+                $("#ProccesingPopup").modal("show");
+                var newToken = result.token;
+                var CustomerName = $('#UserEntName').val();
+
+
+                var PlanID, subscriptionType ;
+                var SubscriptionName = localStorage.getItem('CFSubscribtion');
+                if( SubscriptionName == "Individual Lite Monthly Subscription"){
+                    PlanID = "plan_FUOTGUZEODaCDh";//plan_FOkuvnQYOz39OQ
+                    subscriptionType = "PAY_MONTHLY";
+                }
+                else if( SubscriptionName == "Individual Lite Yearly Subscription"){
+                    PlanID = "plan_FUOZLVyZiTfvnU";//plan_FOkt0c6HCkOp9T
+                    subscriptionType = "PAY_YEARLY";
+                }
+                else if( SubscriptionName == "Standard Monthly Subscription"){
+                    PlanID = "plan_FUOacjW43CF9ic";//plan_FOkwiO5Gmgfazn
+                    subscriptionType = "PAY_MONTHLY";
+                }
+                else if( SubscriptionName == "Standard Yearly Subscription"){
+                    PlanID = "plan_FUOawyr66BOpw4";//plan_FOkwHOMmcwDo6j
+                    subscriptionType = "PAY_YEARLY";
+                }
+                else if( SubscriptionName == "Pro Monthly Subscription"){
+                    PlanID = "plan_FUObsGhEDgWyxm";//plan_FOkypZ4HbdHZUw
+                    subscriptionType = "PAY_MONTHLY";
+                }
+                else{
+                    PlanID = "plan_FUOcbZUXm3b5C0";//plan_FOkx1FE83a9Yb2
+                    subscriptionType = "PAY_YEARLY";
+                }
+
+                if($("#applycouponNew").text() == "Remove Coupon"){
+                    var GetTokenVAl = localStorage.getItem('coupon_Id');
+                    var obj1={
+                        'planId': PlanID,
+                        'tranxId': newToken.id,
+                        'customerName': CustomerName,
+                        'subscriptionName':SubscriptionName,
+                        'subscriptionType':subscriptionType,
+                        'coupon':GetTokenVAl
+                    };
+                    setTimeout(function() {
+                        stripeTokenHandler(obj1);
+                    },3000);
+                }
+                else{
+                    var obj2={
+                        'planId': PlanID,
+                        'tranxId': newToken.id,
+                        'customerName': CustomerName,
+                        'subscriptionName':SubscriptionName,
+                        'subscriptionType':subscriptionType,
+                    };
+                    setTimeout(function() {
+                        stripeTokenHandler(obj2);
+                    },3000);
+                }
+            }
+        });
+        setTimeout(function() {
+            $('#card-button').attr('disabled',false);
+        },3000);
+
+    });
+    function addYearlySubscription(customerEmail,subscriptionId,payment_intentId,startTime,endTime){
+        var _b=localStorage.getItem('CFSubscribtion');
+        if(_b.indexOf("Lite") >= 0){
+            sendGAEvents("99.99 (Basic Yearly)","Pricing Plans");
+			activecampaign.eventTrack('Basic Yearly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+        else if(_b.indexOf("Standard") >= 0){
+            sendGAEvents("199.99 (Standard Yearly)","Pricing Plans");
+			activecampaign.eventTrack('Standard Yearly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+        else if(_b.indexOf("Pro") >= 0){
+            sendGAEvents("349.99 (Advanced Yearly)","Pricing Plans");
+			activecampaign.eventTrack('Advanced Yearly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+
+        var subname = _b.replace(/\+/g," ").replace("CloudFuze ","");
+        var status1 = "ACTIVE";
+        var stype = "PAY_YEARLY";
+        /*  var expdate = getuserexpiry.searchuserexpiry(localStorage.getItem('UserId'));
+          var expdate_expiresIn = expdate[0].expiresIn;
+          var expdate_createdDate = expdate[0].createdDate;
+          var etstamp;
+          if (expdate_expiresIn == null) {
+              etstamp = expdate_createdDate + (365 * 24 * 60 * 60 * 1000);
+              // CFSubscriptionsInternal.CreateSubscription(subname, status1, stype, pmnttimestamp, etstamp);
+              CreateSubscription(subname, status1, stype, 1562758483000, etstamp,customerEmail,subscriptionId,payment_intentId);
+          } else {
+              var myDate = new Date();
+              var result = myDate.getTime();
+              etstamp = result + (365 * 24 * 60 * 60 * 1000);
+              //   CFSubscriptionsInternal.CreateSubscription(subname, status1, stype, pmnttimestamp, etstamp);
+              CreateSubscription(subname, status1, stype, 1562758483000, etstamp,customerEmail,subscriptionId,payment_intentId);
+    } */
+        CreateSubscription(subname, status1, stype, startTime*1000, endTime*1000,customerEmail,subscriptionId,payment_intentId);
+
+        $('#transstatustext').text('Thank you for choosing CloudFuze. Your payment was successful.');
+
+    }
+    function addMonthlySubscription(customerEmail,subscriptionId,payment_intentId,startTime,endTime){
+        var _b=localStorage.getItem('CFSubscribtion');
+        if(_b.indexOf("Lite") >= 0){
+            sendGAEvents("9.99 (Basic Monthly)","Pricing Plans");
+			activecampaign.eventTrack('Basic Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+        else if(_b.indexOf("Standard") >= 0){
+            sendGAEvents("19.99 (Standard Monthly)","Pricing Plans");
+			activecampaign.eventTrack('Standard Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+        else if(_b.indexOf("Pro") >= 0){
+            sendGAEvents("34.99 (Advanced Monthly)","Pricing Plans");
+			activecampaign.eventTrack('Advanced Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+
+        _b=(_b.replace(new RegExp('[+]','g')," ").split('CloudFuze').pop().trim());
+
+        var subname =_b.replace(/\+/g," ").replace("CloudFuze ","");
+        var status1 = "ACTIVE";
+        var stype = "PAY_MONTHLY";
+        /*  var expdate = getuserexpiry.searchuserexpiry(localStorage.getItem('UserId'));
+          var expdate_expiresIn = expdate[0].expiresIn;
+          var expdate_createdDate = expdate[0].createdDate;
+          var etstamp;
+          if (expdate_expiresIn == null) {
+              etstamp = expdate_createdDate + (30 * 24 * 60 * 60 * 1000);
+              CreateSubscription(subname, status1, stype, 1562758483000, etstamp,customerEmail,subscriptionId,payment_intentId);
+          }
+          else {
+              var myDate = new Date();
+              var result = myDate.getTime();
+              etstamp = result + (30 * 24 * 60 * 60 * 1000);
+             CreateSubscription(subname, status1, stype, 1562758483000, etstamp,customerEmail,subscriptionId,payment_intentId);
+          } */
+        CreateSubscription(subname, status1, stype,startTime*1000,endTime*1000,customerEmail,subscriptionId,payment_intentId);
+        $('#transstatustext').text('Thank you for choosing CloudFuze. Your payment was successful.');
+
+    }
+    function CreateSubscription(subname, state, stype, ctstamp, etstamp,customerEmail,subscriptionId,payment_intentId ) {
+        var d = new Date();
+        var _time = d.toISOString();
+        sendGAEvents("creation of user subscription",_time);
+        ctstamp = CFInterConvertTimeUtility.Ptstamptomillsec(ctstamp);
+        var apiUrl = apicallurl + "/subscription/add";
+        if (etstamp < ctstamp) { //already expired users
+            if (subname == "Monthly Recurring") {
+                etstamp = CFInterConvertTimeUtility.Pincreasethirty(ctstamp);
+            }
+            if (subname == "Yearly Recurring") {
+                etstamp = CFInterConvertTimeUtility.Pincreaseyear(ctstamp);
+            }
+        }
+        else {
+            if (subname == "Monthly Recurring") {
+                etstamp = CFInterConvertTimeUtility.Pincreasethirty(etstamp);
+            }
+            if (subname == "Yearly Recurring") {
+                etstamp = CFInterConvertTimeUtility.Pincreaseyear(etstamp);
+            }
+        }
+
+        if(subname == "Monthly Recurring"){
+            subname='Individual Lite Monthly Subscription';
+        }
+        if(subname == "Basic Monthly Subscription"){
+            subname='Individual Lite Monthly Subscription';
+        }
+        if(subname == "Basic Yearly Subscription"){
+            subname='Individual Lite Yearly Subscription';
+        }
+        if(subname == "Standard Yearly Subscription"){
+            subname='Standard Yearly Subscription';
+        }
+        if(subname == "Standard Monthly Subscription"){
+            subname='Standard Monthly Subscription';
+        }
+        if(subname == "Advanced Yearly Subscription"){
+            subname='Pro Yearly Subscription';
+        }
+        if(subname == "Advanced Monthly Subscription"){
+            subname='Pro Monthly Subscription';
+        }
+
+        var subsarray = {"subscriptionName": subname, "userId": {"id": localStorage.getItem('UserId')}, "subscriptionStatus": state, "subscriptionType": stype, "subscriptionStartDate": ctstamp, "subscriptionEndDate": etstamp, "subscriptionId": subscriptionId, "email":customerEmail, "payment_intentId":payment_intentId};
+        var subsarrayjson = JSON.stringify(subsarray);
+        var subsresponse1 = "";
+        $.ajax({
+            type: "PUT",
+            url: apiUrl,
+            data: subsarrayjson,
+            async: false,
+            dataType: "application/json",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": CFManageCloudAccountsAjaxCall.getAuthDetails(),
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS"
+            },
+            success: function (data) {
+                subsresponse1 = data;
+            },
+
+            complete: function (xhr, statusText) {
+                if (xhr.status == 200) {
+                    subsresponse = xhr.responseText;
+                    subsresponse = jQuery.parseJSON(subsresponse);
+
+                    var _pmntObj = {
+                        "subscriptionName": subname,
+                        "userId":  localStorage.getItem('UserId'),
+                        "subscriptionStartDate": CFManageCloudAccountsAjaxCall.getDateConversion(ctstamp),
+                        "subscriptionEndDate": CFManageCloudAccountsAjaxCall.getDateConversion(etstamp),
+                        "amountPaid" : $("#totalamntNew").text(),
+                        "discount" : $("#discountNew").text(),
+                        "totAmount" : $("#amntNew").text()
+                    };
+                    sendGAEvents('Payment success.');
+					activecampaign.eventTrack('Success',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Payment');
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"amountPaid",_pmntObj.amountPaid);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"price",_pmntObj.totAmount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"discount",_pmntObj.discount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"paidDate",_pmntObj.subscriptionStartDate);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"recurringPaymentHistory",'amount -' + _pmntObj.amountPaid + ', Paid Date - ' + _pmntObj.subscriptionStartDate);
+                //    zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"RecurringHistory");
+                //    zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,_pmntObj);
+                }
+                if (xhr.status > 300) {
+				    activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"failedPayments",'Yes');
+                 //   zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"Failed");
+                }
+            }
+        });
+    }
+
+
+    // Submit the form with the token ID.
+    function stripeTokenHandler(data) {
+
+        $.ajax({
+            type: 'POST',
+            url: apicallurl+"/stripe/user/payment",
+            async: false,
+            "crossDomain": true,
+
+            data: JSON.stringify(data),
+            headers: {
+                "Authorization": localStorage.getItem('UserAuthDetails'),
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            success: function (data) {
+                console.log(data);
+                var subscriptionId = data.subscriptionId;
+                var customerEmail = data.custommerEmail;
+                if(data.status === 'active'){
+                    $("#ProccesingPopup").modal("hide");
+
+                    var _b=localStorage.getItem('CFSubscribtion');
+                    if(_b.indexOf("Yearly") >= 0){
+                        // addYearlySubscription(customerEmail,subscriptionId);
+                        setTimeout(function() {
+                            $("#ThankPop").modal("show");
+                        },1000);
+
+
+                    }
+                    else if(_b.indexOf("Monthly") >= 0){
+                        //  addMonthlySubscription(customerEmail,subscriptionId);
+                        setTimeout(function() {
+                            $("#ThankPop").modal("show");
+                        },1000);
+                    }
+
+                    var subname = _b.replace(/\+/g," ").replace("CloudFuze ","");
+
+                    var _startTime = data.currentPeriodStart*1000;
+                    var _endTime = data.currentPeriodEnd*1000;
+                    _startTime = CFInterConvertTimeUtility.Ptstamptomillsec(_startTime);
+                    if (_endTime < _startTime) { //already expired users
+                        if (subname == "Monthly Recurring") {
+                            _endTime = CFInterConvertTimeUtility.Pincreasethirty(_startTime);
+                        }
+                        if (subname == "Yearly Recurring") {
+                            _endTime = CFInterConvertTimeUtility.Pincreaseyear(_startTime);
+                        }
+                    }
+                    else {
+                        if (subname == "Monthly Recurring") {
+                            _endTime = CFInterConvertTimeUtility.Pincreasethirty(_endTime);
+                        }
+                        if (subname == "Yearly Recurring") {
+                            _endTime = CFInterConvertTimeUtility.Pincreaseyear(_endTime);
+                        }
+                    }
+                    var _pmntObj = {
+                        "subscriptionName": subname,
+                        "userId":  localStorage.getItem('UserId'),
+                        "subscriptionStartDate": CFManageCloudAccountsAjaxCall.getDateConversion(_startTime),
+                        "subscriptionEndDate": CFManageCloudAccountsAjaxCall.getDateConversion(_endTime),
+                        "amountPaid" : $("#totalamntNew").text(),
+                        "discount" : $("#discountNew").text(),
+                        "totAmount" : $("#amntNew").text()
+                    };
+                    sendGAEvents('Payment success.');
+					activecampaign.eventTrack('Success',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Payment');
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"amountPaid",_pmntObj.amountPaid);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"price",_pmntObj.totAmount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"discount",_pmntObj.discount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"paidDate",_pmntObj.subscriptionStartDate);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"recurringPaymentHistory",'amount -' + _pmntObj.amountPaid + ', Paid Date - ' + _pmntObj.subscriptionStartDate);
+             //       zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"RecurringHistory");
+             //       zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,_pmntObj);
+                    var trailUserRemove = $("#dash-uname").text();
+                    if( trailUserRemove.indexOf("Trial")){
+                        $("#dash-uname").text(trailUserRemove.split("(")[0]);
+                    }
+                }
+                else if(data.status === 'incomplete'){
+                    var paymentIntentSecret = data.clientSecreat;
+                    var startTime = data.currentPeriodStart;
+                    var endTime = data.currentPeriodEnd;
+                    stripe.handleCardPayment(paymentIntentSecret).then(function (result) {
+                        if (result.error) {
+                            $("#ProccesingPopup").modal("hide");
+                            $(".card-error-message").text("Your card not accepting payment or insufficient funds.");
+
+
+                            console.log(result.error);
+
+
+                        } else {
+                            console.log(result);
+                            if(result.paymentIntent.status === "succeeded"){
+                                $("#ProccesingPopup").modal("hide");
+
+                                var payment_intentId = result.paymentIntent.id;
+                                var _b=localStorage.getItem('CFSubscribtion');
+                                if(_b.indexOf("Yearly") >= 0){
+                                    addYearlySubscription(customerEmail,subscriptionId,payment_intentId,startTime,endTime);
+                                    setTimeout(function() {
+                                        $("#ThankPop").modal("show");
+                                    },1000);
+
+                                }
+                                else if(_b.indexOf("Monthly") >= 0){
+                                    addMonthlySubscription(customerEmail,subscriptionId,payment_intentId,startTime,endTime);
+                                    setTimeout(function() {
+                                        $("#ThankPop").modal("show");
+                                    },1000);
+                                }
+                                var trailUserRemove = $("#dash-uname").text();
+                                if( trailUserRemove.indexOf("Trial")){
+                                    $("#dash-uname").text(trailUserRemove.split("(")[0]);
+                                }
+                            }
+                        }
+                    })
+                }
+            },
+            /* complete:function(xhr,statusText){
+               //  var headers = xhr.getAllResponseHeaders().toLowerCase().trim();
+                 var response = xhr.getResponseHeader("exception").trim();
+                 var value =response.split(',')[2].split(':')[1].split('"')[1];
+                 if(value == "Your card's security code is incorrect."){
+                        $(".card-error-message").css("display","");
+                     $(".card-error-message").text(value);
+
+                 }
+                 else{
+                     $(".card-error-message").css("display","");
+                     $(".card-error-message").text("Your card not accepting payment or insufficient funds");
+                 }
+             },*/
+            complete: function (xhr, statusText) {
+
+
+                if (xhr.status >= 300) {
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"failedPayments",'Yes');
+                //    zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"Failed");
+                    $("#ProccesingPopup").modal("hide");
+                    $("#ThankPop").modal("hide");
+
+                    var response = xhr.getResponseHeader("exception").trim();
+
+
+                    var values = response.split(',');
+                    if(values[0].split(":")[2] === 'null' || values[0].split(":")[2] === null || values[0].split(":")[2] === '"null"'){
+                        $(".card-error-message").text("Please enter valid card details.");
+                        return false;
+
+                    }
+
+                    var count = [];
+                    for(var i = 0; i < values.length; i++) {
+                        var hrdValue = values[i].split(': ');
+                        if(hrdValue.length > 1){
+                            count[hrdValue[0].trim()] = hrdValue[1].trim();
+                        }
+                    }
+                    var value = count['"message"'];
+                    /*   var response = xhr.getResponseHeader("exception").trim();
+                       var value =response.split(',')[2].split(':')[1].split('"')[1];*/
+                    if(value){
+                        if(value.includes('"')){
+                            var _value = value.split('"')[1];
+                            $(".card-error-message").text(_value);
+                        }
+                    }
+
+                }
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
+
+    }
+</script>
+<!--stripe payment script code END-->
+
+<script>
+    $(document.body).on('click', function() {
+        if(localStorage.getItem("storageVal") == null){
+            showLogOutNotification("notify","You have been logged out");
+            //$('#cf-logout').trigger("click");
+            window.location.href = "index.html";
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649987855');
+    vgo('setTrackByDefault', true);
+	vgo('setEmail', JSON.parse(localStorage.getItem('CFUser')).primaryEmail);
+    vgo('process');
+</script>
+ 
+</body>
+</html>

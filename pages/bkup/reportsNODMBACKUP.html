@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Hotjar Tracking Code for http://webapp.cloudfuze.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  <script>
+        <!--Start of Zopim Live Chat Script-->
+        window.setTimeout(function() {
+
+            window.$zopim || (function (d, s) {
+                var z = $zopim = function (c) {
+                    z._.push(c)
+                }, $ = z.s =
+                    d.createElement(s), e = d.getElementsByTagName(s)[0];
+                z.set = function (o) {
+                    z.set.
+                    _.push(o)
+                };
+                z._ = [];
+                z.set._ = [];
+                $.async = !0;
+                $.setAttribute('charset', 'utf-8');
+                $.src = '//v2.zopim.com/?2YRVJ9WdqLaWGrAOduJsbu5op02qZFJI';
+                z.t = +new Date;
+                $.
+                    type = 'text/javascript';
+                e.parentNode.insertBefore($, e)
+            })(document, 'script');
+            $zopim(function() {
+                var _usrdtls=JSON.parse(localStorage.getItem("CFUser"));
+                $zopim.livechat.setEmail(_usrdtls.primaryEmail);
+                $zopim.livechat.setName(localStorage.getItem("UserName"));
+            });
+
+        }, 8000);
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>CloudFuze</title>
+  <link rel="Shortcut Icon" type="image/ico" href="../img/PNG/cfLogo.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com">
+ 
+      <link href="../stylesheets/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link rel="canonical" href="https://webapp.cloudfuze.com/pages/reports.html">
+<link rel="stylesheet" href="../stylesheets/sidebar.css">
+ <link href="../stylesheets/LinIconsPro-Light.css" rel="stylesheet">
+<link href="../stylesheets/LineIcons.css" rel="stylesheet">
+<link rel="stylesheet" href="../stylesheets/move.css">
+<link rel="stylesheet" href="../stylesheets/circle.css">
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+<style>
+	.ui-datepicker-trigger {
+		 position:relative;
+		 height:2%;
+		 width: 3%; }
+	.hasDatepicker:focus
+	{
+	outline: none;
+  box-shadow: none;
+  
+	}
+	.hasDatepicker:focus
+	{
+	outline: none;
+  box-shadow: none;
+  
+	}
+	#sidebar i{
+	font-size:20px;
+	}
+	.CloudThumb_parent{
+	margin-right: 1.8%;
+	margin-bottom:2%;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	width:115px;
+	height:115px;
+	float:left;
+	}
+	.CloudThumb_parent:hover{
+	box-shadow: 0px 0px 10px #0000001F;
+	}
+	.cloudThumbnail img {
+    height: 45px;
+    width: 45px;
+	}
+	.table td{
+	vertical-align: middle;
+	}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+  border: 1px solid #E5E5E5;
+    border-radius: 4px;
+	left:7%;
+} 
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fafafa;color:#0062FF;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdowna:hover .dropdown-menu{
+  display: block;
+}
+#moveChild{
+width:30%;
+}
+  @media (min-width:992px){
+ .ml-auto{
+ margin-left:30%!important;
+ }
+
+ }
+  @media (max-width:767px){
+ .dropdown-content {
+	right: 0%;
+    left: 50%!important;
+} 
+}
+   @media (max-width:991.8px){ 
+#move_main{
+width:250vw;
+}
+#moveChild{
+width:40%;
+}
+.prsnlRptTab{
+margin-top:-30%;
+}
+.teamRptTab{
+margin-top:-30%;
+}
+
+ }
+ th,td{
+ padding:1%;
+ text-align: center;
+    font-size: 12px;
+ }
+ tbody{
+ background:#ffffff;
+ }
+table{
+border:1px solid #e5e5e5;
+}
+button,a{
+cursor:pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+th, td {
+text-align:left;
+}
+@media (max-width: 768px) and (min-width: 767.9px) {
+#cm-sidebar{
+padding: 0px 5px;
+position: absolute;
+top: 30%;
+right: 17%;
+}
+#cm-topbar{
+padding: 0px 5px;
+position: absolute;
+top: 30%;
+right: 11%;
+}
+#cm-personal{
+padding: 0px 5px;
+position: absolute;
+top: 90%;
+left: 2%;
+}
+#cm-backup{
+padding: 0px 5px;
+position: absolute;
+top: 44%;
+left: 18%;
+}
+#cm-team{
+padding: 0px 5px;
+position: absolute;
+top: 80%;
+left: 27%;
+}
+#moveChild{
+margin-right:-20%!important; 
+margin-top:2%;
+}
+#initiateBtn{
+margin-left:2%!important; 
+}
+.dropdown-content {
+    width:27%;
+    left: 75%!important;
+}
+} 
+@media (max-width: 420px) and (min-width: 319px) {
+.alertScs,.alertErr{
+width:300px!important;
+min-width:300px!important;  
+} 
+ #policyId{
+ bottom:0%!important;
+ }
+ #moveReportsContainer > table{
+ width:1200px!important;
+ }
+ #appendJob{
+ width:1200px!important;
+ }
+}
+@media (max-height: 620px) {
+
+ #policyId{
+ bottom:-2%!important; 
+ }
+}
+@media (max-width: 1300px) and (min-width: 992px) { 
+ 
+#navbarSupportedContent{
+width:80%!important; 
+} 
+.navbar-nav-scroll{
+width:20%!important; 
+}
+#moveChild {
+    width: 37%;
+	} 
+	.col-md-12 {
+    max-width: 100%;
+    width: 100%;
+}
+.dropdown{
+width:68%!important; 
+}
+}
+progress:after {
+  color: red;
+  font-size: .6em;
+  line-height: 1.5em;
+  text-indent: .5em;
+  width: 15em;
+  height: 1.8em;
+  border: 1px solid #0063a6;
+  background: #fff;
+}
+.reportsData{
+width: 50%;
+}
+.dropdown-toggle::after {
+display:none;
+}
+</style>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body style="display:none;overflow:hidden;" id="movePageMultiUsr">
+<div class="g-signin2" data-theme="dark" style="display:none"></div>
+<div class="wrapper d-flex align-items-stretch">
+<nav id="sidebar" class="active">
+<div style="height:70px;"><a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="30" viewBox="0 0 106.467 53.365" style="margin-bottom: -8%;margin-top: 13%;margin-left: 5%;"><defs><style>.a{fill:#FFFFFF;}.b{fill:#FFFFFF;}.c{fill:#FFFFFF;}</style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#156aff"/><stop offset="1" stop-color="#1100f3"/></linearGradient></defs><g transform="translate(-177.95 -15.003)"><g transform="translate(183.48 15)"><path class="a" d="M1938.25,742.731c.161-.688.936-3.794,1.714-2.2-.024-.025,2.081,2.887.617,10.6.024-.082-1.1,3.237-1.807,1.042.024.082-.525-1.454-.525-1.454s-.391-.383-.435.412c-.021-.054,1.536,9.531,3.545,5.19,0,.029,1.1-1.454,1.3-6.673.068.054.549-7.665-.778-11.644,0,.029-1.234-4.23-2.674-1.648a9.667,9.667,0,0,0-1.214,4.173,20.02,20.02,0,0,0-.182,2.2C1937.8,742.7,1938.09,743.419,1938.25,742.731Z" transform="translate(-1917.075 -729.704)"/><path class="a" d="M1938.32,744.66c.185-.872,1.072-4.81,1.963-2.789-.028-.031,2.383,3.661.707,13.442.027-.1-1.256,4.1-2.069,1.321.027.1-.6-1.843-.6-1.843s-.448-.486-.5.522c-.024-.068,1.759,12.084,4.059,6.58,0,.037,1.26-1.843,1.492-8.46.078.068.628-9.718-.891-14.763,0,.037-1.413-5.363-3.062-2.089a13.176,13.176,0,0,0-1.389,5.29,27.807,27.807,0,0,0-.208,2.789C1937.8,744.623,1938.13,745.532,1938.32,744.66Z" transform="translate(-1908.168 -732.64)"/><path class="a" d="M0,5.45S1.035-.447,3.92.027C3.508.007,5.686-.405,7.3,7.433a47.548,47.548,0,0,1,.356,13.6c-.07-.1-.3,5.482-2.408,8.891,0,.029-2.413,3.8-4.62-2.1A18.264,18.264,0,0,1,0,25.964s2.24,2.411,3.343,0c.018.034,1.718-2.908,1.884-8.756.015.071.263-9.357-1.964-12.192a2.151,2.151,0,0,0-3.031.833A4.54,4.54,0,0,1,0,5.45Z" transform="translate(36.978 0.139) rotate(-0.974)"/><path class="b" d="M2152.9,1316.38s-2.781-.969-2.2-5.006c.034-.28,1.183-3.444,5.328-1.951-.1,0,2.158-3.017,5.044-2.984.024,0,3.307-.2,4.42,3.834-.061.058,4.229-3.5,7.43,1.359.009.014.008,2.182,0,1.639v1.183s-.163,1.883-3.174,1.925h-.178C2167.93,1316.35,2152.9,1316.38,2152.9,1316.38Z" transform="translate(-2100.18 -1291.587)"/><path class="b" d="M3223.61,213.09c-.033.022,4.834,0,4.834,0a5.34,5.34,0,0,1-.855-6.648c.061-.061,1.442-2.79,5.417-1.671-.018-.082,2.83-3.425,5.866-3.138a4.974,4.974,0,0,1,4.885,3.54c-.079-.061,3.74-2.722,6.854,1.5.04.021-.8-6.563-7.44-5.044a7.657,7.657,0,0,0-7.15-4.186,8.618,8.618,0,0,0-5.644,3.382c.083-.061-3.81-.979-5.827,1.111a44.3,44.3,0,0,1-.3,6.671C3224.27,208.55,3223.65,213.068,3223.61,213.09Z" transform="translate(-3177.828 -188.413)"/><path class="b" d="M3219.66,431.08a23.151,23.151,0,0,1,1.43,6.7,5.526,5.526,0,0,1,5.391-1.4c.095,0,7.083-8.092,14.139.859.08.03,5.337-1.1,6.842,3.986-.065,0,1-9.046-11.14-9.243-.035.069-4.568-8.6-13.223-1.61a4,4,0,0,0-3.439.711Z" transform="translate(-3174.591 -425.7)"/><path class="b" d="M3163.06,784.33a7.96,7.96,0,0,1,3.833-1.221,32.009,32.009,0,0,1,.24,17.482c.025.069-3.888,0-3.888,0s1.045-8.3,0-14.826Z" transform="translate(-3127.039 -776.302)"/><path class="b" d="M3107.2,812.941l3.24-.246a9.239,9.239,0,0,1,1.41-2.4c.021,0,2.085,4.361,0,12.167a3.679,3.679,0,0,1-1.41-2.477c0-.059-3.383,0-3.383,0l.142-1.184s2.937.355,2.739-.63c-.018-.021.173-.908-2.586-.568V816.54s2.737.6,2.743-.808c0-.021.133-1.524-2.743-.945a18.1,18.1,0,0,0-.152-1.846Z" transform="translate(-3080.385 -799.48)"/><path class="b" d="M2935.35,831.464l22.548-1.68a4.454,4.454,0,0,1,.263,1.589C2958.18,831.4,2935.35,831.464,2935.35,831.464Z" transform="translate(-2935.35 -816.087)"/><path class="b" d="M2954.38,855.123l19.987-1.006a2.038,2.038,0,0,1-.165.9C2974.19,855.049,2954.38,855.123,2954.38,855.123Z" transform="translate(-2951.574 -836.828)"/><path class="b" d="M2994.27,870.418l13.893-.918-.246,1.016Z" transform="translate(-2985.57 -849.941)"/></g></g></svg>
+	<br>CloudFuze</a></div> 
+<ul class="list-unstyled components mb-5">
+<li>
+<a href="cloudmanager.html"><i class="lnil lnil-cloud-alt"></i> <br>Clouds</a>
+</li>
+<li>
+<a href="move.html"><i class="lnil lnil-rocket" style="transform: rotate(90deg);"></i> <br> Migrate</a>
+</li>
+<li>
+<a href="backUp.html"><i class="lnil lnil-database" style="margin-top:-5%;"></i> <br> Individual<br>Backup</a> 
+</li>
+<li>
+<a href="teammigration.html"><i class="lnil lnil-users-alt" style="margin-top:-5%;"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Team </p><p> Migration </p></a>
+</li>
+<li>
+<a href="slackmigration.html"><i class="lnil lnil-users-alt" style="margin-top:-5%;"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Slack </p><p> Migration </p></a>
+</li>
+<li class="active">
+<a href="reports.html"><i class="lnil lnil-pie-report"></i><br>Reports</a>
+</li>
+<li>
+<a href="https://help.cloudfuze.com/" target="_blank"><i class="lnil lnil-question-circle"></i><br>Help</a>
+</li>
+</ul>
+<div id="policyId" style="height:70px;font-size:11px;bottom: 2%;position: absolute;">
+<a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="color:#fff;">Terms of use</a>
+
+<a href="https://www.cloudfuze.com/privacy-policy" target="_blank" style="color:#fff;">Privacy policy</a>
+</div>
+</nav>
+
+<div id="content" class="" style="background: #FCFCFC;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:0px;">
+<div class="container-fluid">	
+    	<div class="navbar-nav-scroll" style="padding-top: 3%;float:left;width:50%;">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      
+      <li id="cm-personal" class="nav-item" style="padding: 0px 3px;">
+        <a class="nav-link active prsnlRptTab" href="#personal">PERSONAL MIGRATION</a>
+		<hr id="personalHr">
+      </li>
+	  
+      <li id="cm-backup" class="nav-item" style="padding: 0px 9px;">
+        <a class="nav-link bckUpRptTab" href="#backup">BACKUP</a>
+		<hr id="backupHr"style="display:none;">
+      </li>
+	  <li id="cm-team" class="nav-item" style="padding: 0px 9px;">
+        <a class="nav-link teamRptTab" href="#team">TEAM MIGRATION</a>
+		<hr id="teamHr"style="display:none;">
+      </li>
+	    <li id="cm-slack" class="nav-item" style="padding: 0px 9px;"> 
+        <a class="nav-link slackRptTab" href="#slack">SLACK MIGRATION</a> 
+		<hr id="slackHr"style="display:none;">
+      </li>
+     
+   <li id="cm-sidebar" style="padding: 0px 5px;">
+   <button type="button" id="sidebarCollapse" class="btn btn-primary d-lg-none">
+<i class="fa fa-bars"></i>
+<span class="sr-only">Toggle Menu</span>
+   </button></li>
+<li id="cm-topbar" style="padding: 0px 5px;">
+	<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" id="topbarCollapse">
+<i class="fa fa-bars"></i>
+</button></li>
+   
+    </ul>
+	
+  </div>	
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent" style="width:65%;float:right;">
+<ul class="nav navbar-nav ml-auto1" style="width:100%;margin-right: -5%;">
+<li class="nav-item" style="text-align: -webkit-right;width:39%; height: 11vh;padding-top: 2.5%;">
+<div style="text-align: -webkit-right;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData" style="color:#0062FF;font-weight: 600;">0GB</span> used of <span id="totalData" style="color:#0062FF;font-weight: 600;">2.00 GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:0%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="width:18%;text-align: -webkit-right;padding-left: 5%; height: 11vh;padding-top: 2.5%;">
+<a class="nav-link" href="settings.html#price" style="color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;">Upgrade</a>
+</li>
+<li class="nav-item" style="width:43%;text-align: -webkit-left;padding-left: 4%;height: 11vh;padding-top: 2%;"><div class="dropdown" style="width:100%;">
+<a class="dropbtn nav-link" href="#" style="padding-top: 4%"><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #0062FF;font-size: 15px;padding: 5px;"></i><span id="dash-uname" style="margin-left: 4%;font-weight:600;color:#1F2129;word-break: break-word;"></span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left: 1%;font-weight: 600;"></i></a>
+ <div class="dropdown-content">
+ <a href="settings.html" style="text-align:left;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+ <a class="cf-logout" class="mYaccontlogout" href="#" style="text-align:left;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div>
+</div>
+</li>
+
+</ul>
+</div>
+<div class="" id="navbarSupportedContent1" style="width: 100%; float: right; background: rgb(255, 255, 255);display:none;">
+<ul class="nav navbar-nav" style="width: 100%;margin-right: -5%;    margin-top: -4%;">
+
+
+<li class="nav-item" style="text-align: -webkit-center;width: 100%;height: 12vh;padding-top: 8%;padding-right: 10%;border-bottom: 1px solid #e5e5e5;">
+<div style="text-align: -webkit-right;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData1" style="color:#0062FF;font-weight: 600;">0 GB</span> used of <span id="totalData1" style="color:#0062FF;font-weight: 600;">0 GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:0%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="width:100%;padding-right: 8%;height: 8vh;padding-top: 2%;border-bottom: 1px solid #e5e5e5;">
+<a class="nav-link" href="settings.html#price" style="float:right;color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;">Upgrade</a> 
+</li>
+<li class="nav-item" style="width: 100%;text-align: -webkit-right;height: 6vh;padding-right: 10%;border-bottom: 1px solid #e5e5e5;"><div class="dropdown" style="width:100%;">
+<a class="dropbtn nav-link" href="#" style="padding-top: 5%"><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #0062FF;font-size: 15px;padding: 5px;"></i><span id="dash-uname1" style="margin-left: 4%;font-weight:600;color:#1F2129;word-break: break-word;"></span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left: 3%;font-weight: 600;"></i></a>
+ <div class="dropdown-content"> 
+ <a href="settings.html" style="text-align:left;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+ <a class="cf-logout" class="mYaccontlogout" href="#" style="text-align:left;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div>
+</div>
+</li> 
+
+</ul>
+</div>
+</div> 
+</nav>
+<section id="move-header" style="overflow-y: auto;height: 87vh;">
+   
+    <div class="span12" style="position: absolute; margin-left: 40%; display: none;top: 0;" id="spinner2"> 
+        <img src="../img/ajax.gif" alt="Loading">
+    </div>
+    <div id="move_main" style="padding: 2% 3%;">
+	    <div class="alertScs hide">
+        <span class="fa fa-check-circle"></span>
+        <p class="msg"></p>
+        <div class="close-btnScs">
+          <span class="lnil lnil-cross-circle"></span> 
+        </div>
+</div>
+  <div class="alertErr hide">  
+        <span class="fa fa-times-circle"></span>
+        <p class="msg"></p>
+        <div class="close-btnErr">
+          <span class="lnil lnil-cross-circle"></span>
+        </div> 
+</div>
+<!--srikanth-->
+<div id="moveChild" style="float: right;margin-right: 1.5%;margin-bottom: 2%;">
+<button class="button mini rounded form-control refreshBtn" type="button" style="padding: 0 9px 0 10px;height: 40px;font-size: 15px;float: left;width: auto;color: #0062FF;margin-top: 2%;border: 1px solid #0062FF;">
+                    Refresh Status
+    </button><button class="button mini rounded form-control" id="initiateBtn" type="button" style="padding: 0 9px 0 10px;height: 40px;font-size: 15px;float: left;width: auto;color: #0062FF;margin-top: 2%;border: 1px solid #0062FF;margin-left:10%;">
+                    Initiate Migration
+    </button></div>
+<!--srikanth end-->
+<div class="row reportsData" style="float:left;width: 29%;display:none;"> 
+  <div class="" style="margin-left: 5%;width: 100%;">
+<div style="width: 70%;font-size:12px;box-shadow: 0px 0px 10px #0000001f;padding: 5%;border-radius: 12px;border-color: #0062FF;margin-top: 25%;">  
+	
+<div style="width: -4px;">
+<span style="font-size: 16px;">Total data migrated</span><br>
+	</div>
+    <span id="dataMigSpan" style="
+    font-size: 18px;
+    font-weight: bold;
+    color: #0062FF;
+">0 TB</span>
+<br>
+</div>
+</div>
+  <br><div class="" style="margin-left: 5%;width: 100%;margin-top: 5%;/* border-radius: 169px; */">
+<div style="width: 70%;font-size:12px;box-shadow: 0px 0px 10px #0000001f;padding: 4%;border-radius: 12px;">
+	
+<div style="">
+	
+    <span style="font-size:16px;">Migrations Initiated    : <span id="migsInitiated" style="
+    font-weight: bold;
+    font-size: 16px;
+    color: #0062FF;
+    /* text-decoration: blink; */
+">0</span></span><br>
+	<span style="font-size:16px;">Migrations In-progress : <span id="migsInProgress" style="
+    color: blue;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0062FF;
+">0</span></span>
+	</div>
+</div>
+</div>
+
+</div><div id="update-nav">
+  <div id="range-selector">
+    <!-- <input type="button" id="1m" class="period ui-button" value="7days">
+    <input type="button" id="3m" class="period ui-button" value="14 days">
+    <input type="button" id="6m" class="period ui-button" value="1Month"> -->
+    <!-- <input type="button" id="1y" class="period ui-button" value="1y">
+    <input type="button" id="all" class="period ui-button" value="All"> -->
+  </div>
+  <div id="date-selector" class="" style="
+    /* top: -4%; */
+    margin-top: -2%;
+    margin-left: 50%;display:none;
+">
+<br/>
+	From:&nbsp;<!--<input type="date" id="fromDate" style="width: 9%; border-color: transparent;background-color: transparent;" class="ui-widget hasDatepicker">-->
+	<input type="hidden" id="fromDate" style="width: 2%;">&nbsp;
+	To:&nbsp;<!--<input type="date" id="toDate" style="width: 9%; border-color: transparent;background-color: transparent;" class="ui-widget hasDatepicker">-->
+	<input type="hidden" id="toDate" style="width: 2%;">
+	  <!-- <input type="date" id="fromDate" style="width: 9%; border-color: transparent;background-color: transparent;" class="ui-widget hasDatepicker"> -->
+      <!-- To:<input type="date" id="toDate" style="width: 9%; border-color: transparent;background-color: transparent;" class="ui-widget hasDatepicker"> -->
+  </div>
+</div>
+<br>
+<div id='myDiv' style="margin-left: 25%; margin-top:0%;display:none;">
+	<!-- Plotly chart will be drawn inside this DIV --></div>
+<!-- <div id="chartContainer" style="height: 360px;width: 68% !important;margin-left: 12%;/* margin-right: 95%; */"> -->
+	<!-- <div class="canvasjs-chart-container" style="position: relative; text-align: left; cursor: auto; direction: ltr;"> --> 
+		<!-- <canvas class="canvasjs-chart-canvas" width="100" height="360" style="position: absolute; user-select: none;"></canvas><canvas class="canvasjs-chart-canvas" width="100" height="360" style="position: absolute; -webkit-tap-highlight-color: transparent; user-select: none;"></canvas><div class="canvasjs-chart-toolbar" style="position: absolute; right: 1px; top: 1px; border: 1px solid transparent;"></div><div class="canvasjs-chart-tooltip" style="position: absolute; height: auto; box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 2px; z-index: 1000; pointer-events: none; display: none; border-radius: 5px;"><div style=" width: auto;height: auto;min-width: 50px;line-height: auto;margin: 0px 0px 0px 0px;padding: 5px;font-family: Calibri, Arial, Georgia, serif;font-weight: normal;font-style: italic;font-size: 14px;color: #000000;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);text-align: left;border: 2px solid gray;background: rgba(255,255,255,.9);text-indent: 0px;white-space: nowrap;border-radius: 5px;-moz-user-select:none;-khtml-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;} "> Sample Tooltip</div></div></div></div> -->
+
+	<br>
+
+
+
+	<!--<div id="moveChild" style="float: right;margin-right: 1.5%;width: 37%;margin-top: 1.5%;">
+	<!--<div id="moveChild" style="float: right;margin-right: 1.5%;width: 37%;margin-top: 1.5%;">
+<button class="button mini rounded form-control" id="refreshBtn" type="button" style="padding: 0 9px 0 10px;height: 40px;font-size: 15px;float: left;width: auto;color: #0062FF;margin-top: 2%;border: 1px solid #0062FF;">
+                    Refresh Status
+    </button><button class="button mini rounded form-control" id="initiateBtn" type="button" style="padding: 0 9px 0 10px;height: 40px;font-size: 15px;float: left;width: auto;color: #0062FF;margin-top: 2%;border: 1px solid #0062FF;margin-left:5%;">
+                    Initiate Migration
+    </button><button class="button mini rounded form-control" id="srartDeltaBtn" type="button" style="padding: 0 9px 0 10px;height: 40px;font-size: 15px;float: left;width: auto;color: #0062FF;margin-top: 2%;border: 1px solid #0062FF;margin-left:5%;">
+                    Start Delta Migration
+    </button></div>-->
+        <div id="moveReportsContainer" class="col-md-12" style="/* margin-top: 7%; */">
+		<table style="width:100%;">
+		<thead class="bg-info">
+		<tr style="height:40px;"> 
+		<th style="width:18%;">
+		File name
+		</th>
+		<th style="width:18%;">
+		From Cloud
+		</th>
+		<th style="width:18%;">
+		To Cloud
+		</th>
+		<th style="width:14%;">
+		Status
+		</th>
+		<th style="width:12%;">
+		Processed on 
+		</th>
+		<th id="dRpt" style="width:8%;padding:0% 2%;">
+		Download 
+		</th>
+		<th id="cnclMig" style="width:7%;padding:0% 2%;">
+		Cancel  
+		</th>
+		<th style="width:5%">
+		
+		</th>
+		</tr>
+		</thead>
+		<tbody id="moveReportsForUser">
+
+            </tbody>
+		</table>
+		</div>
+		<div id="moveSyncReportsContainer" class="col-md-12" style="display:none;margin-top:7%;">
+		<table style="width:100%;">
+		<thead class="bg-info">
+		<tr style="height:40px;"> 
+		<th style="width:26%;">
+		Job name
+		</th>
+		<th style="width:22%;">
+		Status
+		</th>
+		<th style="width:19%;">
+		Processed on
+		</th>
+		<th style="width:15%;">
+		Pause/Resume
+		</th>
+		<th style="width:11%;">
+		Cancel
+		</th>
+		<th style="width:6%">
+		
+		</th>
+		</tr>
+		</thead>
+		<tbody id="moveSyncReportsForUser">
+
+            </tbody>
+		</table>
+		</div>
+	
+		<div class="container col-md-12" style="float: left;width: 100%;/* margin-top: 12%; */">
+ <!--<select id="jobStatusSel">
+     <option>All</option>
+     <option>Completed</option>
+     <option>In-progress</option>
+    </select>-->
+
+			<div id="mappedMigration" class="col-md-12" style="padding: 0px; display: none;"> 
+				<div id="refreshbutton" style="float: right;width: 10%;margin-right: -3%;">
+					<i class="lnir lnir-spinner-arrow refreshBtn" type="button" style="padding: 0 9px 0 46%;height: 40px;font-size: 18px;float: left;width: auto;padding-top: 10%;font-weight: bold;" title="Refresh Status"></i>
+			 </div>
+		<table style="width:100%;" id="appendJob">
+		<thead class="bg-info">
+		<tr style="height:40px;"> 
+		<th style="width:18%;">Job name</th>
+		<th style="width:10%;">
+		Job type <span class="dropdown" style="pointer-events: auto; opacity: 1; cursor: auto;"><i class="lnil lnil-funnel dropbtn" style="margin-left: 5%;"></i><div class="dropdown-content dropmatchJobtype" style="font-weight: 500; font-size: 12px; top: 85%; left: 10%; display: none;"><a style="border-bottom:none;height:5vh;padding: 10px 15px;"><i class="fa fa-check-circle all active" style="color: green;"></i><span style="margin-left:5%;">All</span></a><a style="border-bottom:none;height:5vh;padding: 10px 15px;"><i class="fa fa-check-circle onetime" style="color: green;display:none;"></i><span style="margin-left:5%;">ONETIME</span></a><a style="border-bottom:none;height:5vh;padding: 10px 15px;"><i class="fa fa-check-circle delta" style="color: green; display: none;"></i><span style="margin-left:5%;">DELTA</span></a></div></span>
+		</th> 
+		
+		<th style="width:12%;">
+		Status <span class="dropdown" style="pointer-events: auto; opacity: 1; cursor: auto;"><i class="lnil lnil-funnel dropbtn" style="margin-left: 5%;"></i><div class="dropdown-content dropmatchStatus" style="font-weight: 500; font-size: 12px; top: 85%; left: 10%; display: none;"><a style="border-bottom:none;height:5vh;padding: 10px 15px;"><i class="fa fa-check-circle all active" style="color: green;"></i><span style="margin-left:5%;">All</span></a><a style="border-bottom:none;height:5vh;padding: 10px 15px;"><i class="fa fa-check-circle completed" style="color: green; display: none;"></i><span style="margin-left:5%;">Completed</span></a><a style="border-bottom:none;height:5vh;padding: 10px 15px;"><i class="fa fa-check-circle in-progress" style="color: green;display:none;"></i><span style="margin-left:5%;">In-Progress</span></a></div></span>
+		</th>
+		<th style="width:15%;">
+		Total Data Migrated
+		</th>
+		<th style="width:15%;">
+		Total Pairs Migrated
+		</th>
+		<th style="width:12%;">
+		Processed on
+		<i class="fa fa-sort" type="button" style="margin-top: 0%;font-size: 18px;padding-left: 3px;"></i>
+		</th>
+		<th id="tPause" style="width: 10%;"> 
+		Pause/Resume
+		</th>
+		<th id="tCancel" style="width:8%;">
+		Cancel
+		</th> 
+		<th style="width: 3%;padding-left:3%;">Delta</th>
+		<th style="width:5%">
+		</th>
+		</tr>
+		</thead>
+		<tbody></tbody>
+		</table>
+		</div>
+<div>
+<div id="channelsTable" style="height: 68vh; border-radius: 5px; overflow: auto; padding: 0px; margin-top: 7%; display: none;">           
+  <i class="lnil lnil-download" id="slackSummaryReport" style="color:#0062ff;font-size: 16px;font-weight: bold;float: right;margin-bottom: 1%;margin-right: 1%;"></i>
+  <table class="table">
+    <thead style="background: #0062ff;color:#fff">
+      <tr>
+		<th><span>Channel Name</span></th>
+		<th><span>Workspace Name</span></th>
+		<th><span>Channel Type</span><span class="dropdown"><i class="fa fa-filter dropbtn" style="margin-left: 50%;"></i><div class="dropdown-content" style="font-weight: 500; font-size: 12px; top: 85%; left: 10%;" id="dropPubPvt"><a><i class="fa fa-check-circle all" style="color: green;"></i><span style="margin-left:5%;">All</span></a><a><i class="fa fa-check-circle public" style="color: green;display:none;"></i><span style="margin-left:5%;">Public</span></a><a><i class="fa fa-check-circle private" style="color: green;display:none;"></i><span style="margin-left:5%;">Private</span></a></div></span></th>
+		<th><span>Migration Status</span></th> 
+		<th><span>Download</span></th>  
+      </tr>
+    </thead>
+    <tbody>
+    
+    </tbody>
+  </table>
+  <p style="margin-top: 12%;text-align: center;font-size: 12px;"><u>Click Automap to fetch mappings</u></p>
+  </div>
+</div>
+    </div>
+	<div id="CFShowLoading" class="modal-backdrop in" style="padding-left: 0px; display: none;">
+    <div class="backdrop" style="position: relative;top: 30%;background: white;border: none;height: 38%;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<circle cx="50" cy="50" r="30" stroke="#d5d8ff" stroke-width="10" fill="none"></circle>
+<circle cx="50" cy="50" r="30" stroke="#0062FF" stroke-width="8" stroke-linecap="round" fill="none"> 
+  <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"></animateTransform>
+  <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1s" values="18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882" keyTimes="0;0.5;1"></animate>
+</circle>
+</svg>
+        <p id="loaderText" style="position: absolute;top: 45%; left: 11%;">Please wait while loading...</p>
+    </div>
+</div>
+</section>
+</div>
+<!--ploytfy graph js code start-->
+<script>
+
+</script>
+<!--ploytfy graph js code end-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" integrity="sha512-okE4owXD0kfXzgVXBzCDIiSSlpXn3tJbNodngsTnIYPJWjuYhtJ+qMoc0+WUwLHeOwns0wm57Ka903FqQKM1sA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+  $("#fromDate,#toDate").datepicker({ 
+	dateFormat: 'yy-mm-dd',
+	buttonImage: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/Calendar_icon_2.svg',
+	buttonImageOnly: true,
+	changeMonth: true,
+	changeYear: true,
+	showOn: 'both',
+	width:'12px',
+ });
+ </script>
+<!--<script src="..javascripts/chart.js"></script>-->
+<!--Core Components-->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="../javascripts/vendor/jquery-ui.min.js" type="text/javascript"></script>
+
+<!--Plugins-->
+<script src="../javascripts/jquery.twbsPagination.min.js" type="text/javascript"></script>
+<script src="../javascripts/timeago.js" type="text/javascript"></script>
+
+<!--Static Variables-->
+<script src="../ajaxcalls/config.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/globalVar.js?ver=1231" type="text/javascript"></script>
+
+<!--Entire App Usage-->
+<script src="../ajaxcalls/CFManageCloudAccounts.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/readyDocument.js?ver=1231" type="text/javascript"></script>
+<script src="../javascripts/actionevents.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/paypalpmnt.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/multiUserMapping.js" type="text/javascript"></script>
+<script src="../ajaxcalls/slackMapping.js" type="text/javascript"></script>
+<script src="../ajaxcalls/paypalPayment.js?ver=1231" type="text/javascript"></script>
+<script>
+	(function($) {
+
+	"use strict";
+
+	var fullHeight = function() {
+
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
+
+	};
+	fullHeight();
+
+	$('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+  $('#topbarCollapse').on('click', function () {
+  if(!$("#navbarSupportedContent1").hasClass('active')){  
+  $("#navbarSupportedContent1").addClass('active');
+      $("#navbarSupportedContent1").css("display","");
+	  $("section").css("margin-top","50%"); 
+	  }
+	  else{
+	   $("#navbarSupportedContent1").removeClass('active');
+      $("#navbarSupportedContent1").css("display","none");
+	  $("section").css("margin-top","2%");
+	  }
+  });
+})(jQuery);
+$('.dropdowna').on('click', function () {
+      $('.dropdown-menu').toggle();
+  });
+  
+  var fromDate = "";
+  var toDate = "";
+    var utc = new Date().toJSON().slice(0,10);
+	toDate = utc;
+	fromDate =new Date(new Date().getTime() - (7 * 24 * 60 * 60 * 1000)).toJSON().slice(0,10);
+	dayWiseReport();	
+  var date_input = document.getElementById('fromDate');
+date_input.value = new Date(); 
+
+date_input.onchange = function(){
+	fromDate= this.value;
+	dayWiseReport(); 
+   console.log(this.value);
+}
+  var date_input1 = document.getElementById('toDate');
+date_input1.value = new Date(); 
+
+date_input1.onchange = function(){
+	toDate= this.value; 
+	dayWiseReport();
+   console.log(this.value);
+}
+      
+ $(document).on('click','.rangeselector g:eq(0)',function(){
+var utc = new Date().toJSON().slice(0,10);
+	toDate = utc;
+	fromDate =new Date(new Date().getTime() - (7 * 24 * 60 * 60 * 1000)).toJSON().slice(0,10);
+	dayWiseReport();
+});
+ $(document).on('click','.rangeselector g:eq(1)',function(){ 
+var utc = new Date().toJSON().slice(0,10);
+	toDate = utc;
+	fromDate =new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)).toJSON().slice(0,10);
+	dayWiseReport();
+});
+ $(document).on('click','.rangeselector g:eq(2)',function(){
+var utc = new Date().toJSON().slice(0,10);
+	toDate = utc;
+	fromDate =new Date(new Date().getTime() - (28 * 24 * 60 * 60 * 1000)).toJSON().slice(0,10); 
+	dayWiseReport();
+});
+ 
+</script>
+<script type="text/javascript" >
+    $(document).ready(function () {
+        sendGAEvents("Clicked on reports page");
+		
+		var _usrId = localStorage.getItem('UserId');
+		
+        if (_usrId) {
+            if (window.location.hash == "#backup" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#backup")))
+            {				
+				$(".bckUpRptTab").trigger('click')
+				
+				
+            }
+            else if (window.location.hash == "#team" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#team")))
+            {
+               $(".teamRptTab").trigger('click');
+            }
+			else if (window.location.hash == "#slack" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#slack")))
+            {
+               $(".slackRptTab").trigger('click');
+            }
+			else{
+			$(".prsnlRptTab").trigger('click');
+			}
+          
+            $('body').show();
+        }
+        else {
+            window.location.href = "index.html?ver=1231";
+            return false;
+        }
+        PageName = 'migrationReports';
+        setTimeout(function () {
+            var height = $(window).height() - $('#FooterLinks').height() - 5 - $('#topHeader').height();
+        }, 2000);
+		  });
+	checkUserProgressLimit();
+	    function dataLimit(){
+        $.ajax({
+            url:  apicallurl+"/move/multiuser/verify/datalimit/"+localStorage.getItem("UserId"),
+            type: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": CFManageCloudAccountsAjaxCall.getAuthDetails(),
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS"
+            },
+            success: function(response){
+                if(response.userLimitExeceeded ===  true) {
+                    showNotyNotification("notify","Your Data Limit exceeded.");
+
+                }
+                else if(response === "User Not Migrated Any Content") {
+                    showNotyNotification("notify","You are not migrated any content.");
+                }
+            }
+        });
+    }
+	$(".dropdown").click(function(){
+	if(!($(".dropdown-content").hasClass("active"))){
+	$(".dropdown-content").addClass("active").css("display","none");
+	}
+	else{
+	$(".dropdown-content").removeClass("active").css("display","");
+	}
+	}); 
+</script>
+<script>
+	$(".prsnlRptTab").on('click',function(){
+	_page_Num =1;
+	$("#CFShowLoading").show();
+$("#date-selector").css("display","none");
+$(".reportsData").css("display","none");
+$("#myDiv").css("display","none");
+$("#refreshbutton").css("display","none");
+$("#moveChild").css("display","");
+	CFManageCloudAccountsAjaxCall.getAllMoveStatusForUser();
+	$("#mappedMigration").css("display","none");
+	$("#channelsTable").css("display","none");
+	$("#moveSyncReportsContainer").css("display","none");
+	$("#moveReportsContainer").css("display","");
+	$('#cloudtitle').text('Personal Migration');
+	$('#cloudtitle').siblings('span').text("A short description about personal migration reports");
+	$(".bckUpRptTab").removeClass("active");
+	$(".bckUpRptTab").children('a').removeClass("active");
+	$(".teamRptTab").removeClass("active");
+	$(".teamRptTab").children('a').removeClass("active");
+	$(".prsnlRptTab").children('a').addClass("active");
+	$('#teamHr').css("display","none"); 
+	$('#backupHr').css("display","none");
+	$('#personalHr').css("display","");
+	$('#slackHr').css("display","none"); 
+	setTimeout(function(){
+	$("#cnclMig").css("width","7%").css("padding","0% 2%");
+	$("#dRpt").css("width","8%").css("padding","0% 2%");
+	},500);
+	});
+	$(".bckUpRptTab").on('click',function(){
+	$("#CFShowLoading").show();
+	_page_Num =1;
+$("#date-selector").css("display","none");
+$(".reportsData").css("display","none");
+$("#myDiv").css("display","none");
+$("#refreshbutton").css("display","none");
+$("#moveChild").css("display","");
+	CFManageCloudAccountsAjaxCall.getAllMoveStatusForSyncUser();
+	$("#mappedMigration").css("display","none");
+	$("#moveSyncReportsContainer").css("display","");
+	$("#channelsTable").css("display","none");
+	$("#moveReportsContainer").css("display","none");
+	$('#cloudtitle').text('Backup');
+	$('#cloudtitle').siblings('span').text("A short description about backup reports");
+	$(".prsnlRptTab").removeClass("active");
+	$(".prsnlRptTab").children('a').removeClass("active"); 
+	$(".teamRptTab").removeClass("active");
+	$(".teamRptTab").children('a').removeClass("active");
+	$(".bckUpRptTab").children('a').addClass("active");
+	$('#personalHr').css("display","none");
+	$('#teamHr').css("display","none"); 
+	$('#backupHr').css("display","");
+	$('#slackHr').css("display","none"); 
+	});
+	
+	$(".teamRptTab").on('click',function(){
+	$("#CFShowLoading").show();
+	_page_Num =1;
+	var matchBy = "All";
+	mappingOptions.appendMigrationJobs(1,150,matchBy);
+$("#date-selector").css("display","");
+$(".reportsData").css("display","");
+$("#myDiv").css("display","");
+$("#refreshbutton").css("display","");
+$("#moveChild").css("display","none");
+	totalDataMigrated();
+	totalJobsCount();
+	$("#mappedMigration").css("display","");
+	$("#channelsTable").css("display","none");
+	$("#moveSyncReportsContainer").css("display","none");
+	$("#moveReportsContainer").css("display","none");
+	$('#cloudtitle').text('Team Migration');
+	$('#cloudtitle').siblings('span').text("A short description about team migration reports");
+	$(".prsnlRptTab").removeClass("active");
+	$(".prsnlRptTab").children('a').removeClass("active");
+	$(".bckUpRptTab").removeClass("active");
+	$(".bckUpRptTab").children('a').removeClass("active");
+	$(".teamRptTab").children('a').addClass("active");
+	$('#personalHr').css("display","none");
+	$('#backupHr').css("display","none");
+	$('#teamHr').css("display",""); 
+	$('#slackHr').css("display","none"); 
+	setTimeout(function(){
+	$("#tPause").css("width","10%").css("padding","0% 2%");
+	$("#tCancel").css("width","10%").css("padding","0% 2%");
+	},500);
+	});
+	$(".slackRptTab").on('click',function(){
+	$("#CFShowLoading").show();
+	_page_Num =1;
+	getSlackReports(); 
+$("#date-selector").css("display","none");
+$(".reportsData").css("display","none");
+$("#myDiv").css("display","none");
+$("#refreshbutton").css("display","none");
+$("#moveChild").css("display","");
+
+	$("#selectAllChannels").css('display','none');
+	$("input[name=channelSelect]").css('display','none');
+	$("#channelsTable").css("display","");
+	$("#mappedMigration").css("display","none");
+	$("#moveSyncReportsContainer").css("display","none");
+	$("#moveReportsContainer").css("display","none");
+	$('#cloudtitle').text('Team Migration');
+	$('#cloudtitle').siblings('span').text("A short description about team migration reports");
+	$(".prsnlRptTab").removeClass("active");
+	$(".prsnlRptTab").children('a').removeClass("active");
+	$(".bckUpRptTab").removeClass("active");
+	$(".slackRptTab").removeClass("active");
+	$(".bckUpRptTab").children('a').removeClass("active");
+	$(".teamRptTab").children('a').removeClass("active");
+	$(".slackRptTab").children('a').addClass("active");
+	$('#personalHr').css("display","none");
+	$('#backupHr').css("display","none");
+	$('#teamHr').css("display","none"); 
+	$('#slackHr').css("display",""); 
+	});
+	
+	$(".refreshBtn").click(function(){
+	_page_Num =1;
+	 if (window.location.hash == "#backup" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#backup")))
+            {				
+				CFManageCloudAccountsAjaxCall.getAllMoveStatusForSyncUser();
+								
+            }
+            else if (window.location.hash == "#team" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#team")))
+            {
+				if(($(".dropmatchStatus a").children("i.active").siblings().text())!="All")
+				{
+					$(".dropmatchStatus a").children("i.active").removeClass(".active");
+					$(".dropmatchStatus a").siblings('a').children('i').css("display","none");
+					$(".dropmatchStatus a").children("i:first").addClass("active");
+					$(".dropmatchStatus a").children("i:first").css("display","");
+
+				}
+				$("#cmptCheckbox").prop("checked", false);
+               mappingOptions.appendMigrationJobs(1,150,"All");
+            }
+			else if (window.location.hash == "#slack" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#slack")))
+            {
+               getSlackReports();
+            }
+			else{
+			
+			CFManageCloudAccountsAjaxCall.getAllMoveStatusForUser();
+			}
+	});
+	$("#initiateBtn").click(function(){
+	 if (window.location.hash == "#backup" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#backup")))
+            {				
+				window.location.href = "backUp.html";
+								
+            }
+            else if (window.location.hash == "#team" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#team")))
+            {
+               window.location.href = "teammigration.html";
+            }
+			else if (window.location.hash == "#slack" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#slack")))
+            {
+               window.location.href = "slackmigration.html";
+            }
+			else{
+			window.location.href = "move.html";
+			}
+	});
+</script>
+
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649987855');
+    vgo('setTrackByDefault', true);
+	vgo('setEmail', JSON.parse(localStorage.getItem('CFUser')).primaryEmail); 
+    vgo('process');
+</script>
+
+</body>
+</html>

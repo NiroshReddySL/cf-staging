@@ -1,0 +1,2180 @@
+﻿<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+   	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <title>CloudFuze</title> 
+<link rel="Shortcut Icon" type="image/ico" href="../img/PNG/cfLogo.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com">
+ 
+      <link href="../stylesheets/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../stylesheets/sidebar.css">
+ <link href="../stylesheets/LinIconsPro-Light.css" rel="stylesheet">
+<link href="../stylesheets/LineIcons.css" rel="stylesheet">
+<style>
+	
+	#sidebar i{
+	font-size:20px;
+	}
+	.CloudThumb_parent{
+	margin-right: 1.8%;
+	margin-bottom:2%;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	width:115px;
+	height:115px;
+	float:left;
+	}
+	.CloudThumb_parent:hover{
+	box-shadow: 0px 0px 10px #0000001F;
+	}
+	.cloudThumbnail img {
+    height: 45px;
+    width: 45px;
+	}
+	.table td{
+	vertical-align: middle;
+	}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+  border: 1px solid #E5E5E5;
+    border-radius: 4px;
+	left:-11%;
+} 
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fafafa;color:#0062FF;}
+ 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  @media (min-width:992px){
+ .ml-auto{
+ margin-left:30%!important;
+ }
+ }
+#accountTable td{
+padding: 2%;
+}
+</style>
+
+<style>
+	/*pricing css*/
+.page-template-pricing .fusion-fullwidth{
+    position: unset !important;
+}
+.page-template-pricing .fusion-fullwidth .fusion-row{
+    position: unset !important;
+}
+.page-template-pricing #main{
+    padding:0px !important;
+}
+.page-template-pricing #main .fusion-row{
+    max-width: 100% !important;
+}
+
+.cntct-details-chat{
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+	padding:2.5%;
+}
+.cntct-details-chat p{
+    margin-bottom: 0px;
+}
+.cntct-details-chat a{
+line-height:3.5;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff !important;
+}
+a.cht-nw{
+        font-size: 14px;
+    text-transform: uppercase;
+    padding: 3% 6%;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #0062FF;
+    margin-left: 5px;
+	background:#0062FF;
+}
+a.cht-nw:hover{
+    color: #fff !important;
+    background-color: #14CFC3;
+    border: 1px solid #14CFC3;
+}
+/*.cntct-dtls{
+    width: 50%;
+    float: left;
+}*/
+.cntct-dtls{
+height:13vh;
+    width: 48%;
+    float: left;
+    padding: 15px;
+    background: #F2F3FF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    margin-right: 6px;
+}
+.cntct-dtls i{
+line-height:2.5;
+    font-size: 20px;
+    margin-top: 5px;
+    display: flex;
+    margin-right: 10px;
+    color: #0062FF;
+	width:10%;
+	float:left;
+/*    display: none;*/
+}
+.gt-touch{
+    margin-bottom: 12px !important;
+}
+p.faq-ques{
+    font-weight: 700;
+    color: #092933;
+    line-height: 26px;
+    margin-bottom: 8px;
+}
+p.faq-ans{
+    line-height: 26px;
+}
+
+@media screen and (max-width: 1024px){
+    .pricingcss-hed-desc{
+        padding: 0px;
+    }
+    .mob-padding .fusion-column-wrapper{
+        padding: 0% 10% !important;
+    }
+    .page-template-pricing .fusion-layout-column .fusion-column-content-centered .fusion-column-content{
+        padding: 0px !important
+    }
+    .business-plan .plan-box{
+        width: 100%;
+    }
+    .pricingcss a.tooltips{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    ul.pricingtabs{
+        background: none;
+    }
+    .pricing-tab-content{
+        padding:0px;
+    }
+    .pricing-plans .plan-box{
+        padding: 0px;
+        width: 100%!important;
+    }
+    .plan-details ul.plan-features {
+        padding: 0% 4%
+    }
+    
+    .comp-link{
+        line-height: 22px;
+    margin-bottom: 20px !important;
+    margin-top: 0px !important;
+    }
+    .plan-box.plan2{
+        margin-top: 30px;
+    }
+    .page-template-pricing h2{
+        line-height: 36px !important;
+    }
+    .mob-padding .fusion-column-wrapper{
+        padding: 0% 10% !important;
+    }
+    .pricing-table-css .fusion-column-wrapper{
+        padding: 0% !important;
+    }
+    .pricingcss{
+        margin-top: 10% !important;
+    }
+    .business-plan .plan-box{
+        width: 100%;
+    }
+    .pricingcss {
+    margin: 5% 8%;
+    }
+    .cntct-dtls{
+        width: 100%;
+    }
+    .pricingcss #tab-2{
+        border: 0px;
+    }
+    .pricingcss #tab-2 .business-title{
+        margin-top: 0px;
+    }
+    .business-plan .plan-box.contct-form{
+        padding: 0px;
+        margin-top: 30px;
+    }
+    .business-plan .req-quote-head{
+        margin-bottom: 15px;
+    }
+    #comprsion-table .fusion-column-content{
+        margin-top: 0px;
+    }
+    .pricing-table-css .fusion-column-content{
+        margin-top: 0px !important;
+    }
+    .faq-css-mob{
+        margin-top: 30px !important;
+    }
+    .pricing-head{
+        margin-bottom:0px;
+    }
+    
+}
+@media screen and (min-width: 1300px){
+.business-plan .plan-box.contct-form .wpcf7-form .wpcf7-text{
+    min-width: 190px;
+}
+}
+@media screen and (max-width: 1240px){
+    .cntct-dtls{
+        width: 100%;
+        margin-right: 0px;
+    }
+}
+
+.error{
+display:none;
+}
+.form-control{
+width:42%;
+display:inline; 
+}
+.profilecont{
+border-bottom:1px solid #f1f1f1;
+}
+#userDataTable td,#userDataTable th{
+padding:1%;
+text-align:center;
+}
+
+#accounts{
+    padding: 0px 9px;
+    position: absolute;
+    top: 38%;
+}
+#prices{
+	padding: 0px 9px;
+    position: absolute;
+    top: 39%;
+    left: 11%;
+}
+#cm-sidebar{
+padding: 0px 5px;
+position: absolute;
+top: 30%;
+right: 5%;
+}
+#cm-topbar{
+padding: 0px 5px;
+position: absolute;
+top: 30%;
+right: 10%;
+}
+.modal-content{
+width:45vw;
+}
+.modal{
+left:-4%;
+}
+#addHr{
+    margin-top: -4%;
+}
+#manageHr{
+    margin-top: -7%;
+}
+#payMonthly{
+font-size:16px;
+}
+#payYearly{
+font-size:16px;
+}
+.msp_test{
+padding-left:3%;
+}
+.contct-form{
+width:50%;
+}
+#termsDiv{
+bottom: 2%;
+}
+/*  responsive */
+@media (max-width: 768px) and (orientation: portrait) {
+#accounts{
+ left: 2%;
+}
+#prices{
+	left: 32%;
+}
+#recommendedSpan {
+	top:10%!important;
+	}
+.plan-details .plan-price {
+margin-top:25%;
+}
+.plan-details .plan-addlchrgs {
+    font-size: 10px;
+}
+.plan-details .plan-features li {
+
+    font-size: 12px; 
+}
+.business-plan ul.plan-features li::before {
+    vertical-align: middle;
+}
+.business-plan ul.plan-features li {
+    font-size: 12px;
+}
+.pricingcss #tab-2 h2.businessplan-head {
+    font-size: 20px;
+    margin-bottom: 0;
+    padding: 4%;
+}
+#cm-sidebar{
+right: 21%;
+}
+#cm-topbar{
+right: 8%;
+}    
+#myAccountDiv{
+width:250vw;
+}
+#sidebarCollapse{
+font-size:10px;
+}
+.btn-dark{
+font-size:10px;
+}
+.navbar-nav-scroll .nav-link{
+font-size:10px; 
+}
+.modal-content{
+width:95vw!important;
+}
+#contactUs .modal-header .close{
+left:85%!important;
+top:4%;
+}
+#contactUs .modal-header{
+background-color:#0062ff;
+}
+#contactUs .modal-body{
+    background: #fff!important;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#contactUs .submitBtn{
+    color: #fff!important;
+    background: #0062FF 0% 0% no-repeat padding-box!important;
+}
+#tbChange{
+    top: 16.7%!important;
+    left: 2%!important;
+}
+.feature_wrap{
+width:100%!important;
+}
+.fusion-layout-column{
+width:100%!important;
+}
+.fusion-responsive-typography-calculated,.cc-small{
+font-size:16px!important; 
+}
+.small-title{
+font-size:14px;
+}
+.modal{
+left:0%;
+}
+ul.pricingtabs li {
+    font-size: 15px;
+    padding: 13px 8px;
+    width: 49%;
+}
+
+.switch{
+width: 49px;
+}
+#payMonthly{
+font-size:10px;
+}
+#payYearly{
+font-size:10px;
+}
+.alertErr{
+right:-13px;
+}
+.msp_test{
+padding-left: 6%;
+width: 257px;
+}
+.contct-form{
+width:100%;
+}
+.dropdown-content {
+	right: 0%;
+    left: 50%!important;
+} 
+}
+@media (max-width: 768px) and (min-width: 767.8px) {
+#prices{
+left:16%;
+}
+#termsDiv{
+bottom: 20%;
+}
+#cm-sidebar {
+    right: 9%;
+}
+#cm-topbar {
+    right: 2%;
+}
+#myAccountDiv {
+    width: 100%;
+	max-width:100%;
+	}
+	#recommendedSpan {
+	top:10%!important;
+	}
+	.dropdown-content {
+    right: 0%;
+    left: 70%!important;
+}
+.modal-content {
+    width: 75vw;
+}
+}
+@media (max-width: 420px) and (min-width: 319px) {
+.alertScs,.alertErr{
+width:300px!important;
+min-width:300px!important;  
+} 
+ #termsDiv{
+ bottom:0%!important;
+ }
+}
+@media (max-height: 620px) {
+
+ #termsDiv{
+ bottom:-2%!important; 
+ }
+}
+@media (max-width: 1076px) and (min-width: 992px) {
+#prices{
+left:14%!important;
+}
+}
+@media (max-width: 1300px) and (min-width: 992px) {
+.navbar-nav-scroll{
+width: 20%!important;
+}  
+#navbarSupportedContent{
+width:80%!important;
+}
+}
+#org_name, #org_email, #org_company, #org_phone, #org_message {
+    width: 100%;
+    height: 50px;
+}
+#org_message {
+    vertical-align: top;
+    height: 8em;
+    width: 100%;
+    margin-left: -9%;
+}
+.submitBtn {
+    color: #fff;
+    text-transform: uppercase;
+    background: #4fbfe8;
+    padding: 9px 19px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+.plan-details .plan-features li {
+list-style-type:disc;
+display:list-item;
+}
+</style>
+</head>
+<body style="overflow:hidden;font-size:12px;">
+	<div class="g-signin2" data-theme="dark" style="display:none"></div>
+<div class="wrapper d-flex align-items-stretch">
+<nav id="sidebar" class="active">
+<div style="height:70px;"><a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="30" viewBox="0 0 106.467 53.365" style="margin-bottom: -8%;margin-top: 13%;margin-left: 5%;"><defs><style>.a{fill:#FFFFFF;}.b{fill:#FFFFFF;}.c{fill:#FFFFFF;}</style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#156aff"/><stop offset="1" stop-color="#1100f3"/></linearGradient></defs><g transform="translate(-177.95 -15.003)"><g transform="translate(183.48 15)"><path class="a" d="M1938.25,742.731c.161-.688.936-3.794,1.714-2.2-.024-.025,2.081,2.887.617,10.6.024-.082-1.1,3.237-1.807,1.042.024.082-.525-1.454-.525-1.454s-.391-.383-.435.412c-.021-.054,1.536,9.531,3.545,5.19,0,.029,1.1-1.454,1.3-6.673.068.054.549-7.665-.778-11.644,0,.029-1.234-4.23-2.674-1.648a9.667,9.667,0,0,0-1.214,4.173,20.02,20.02,0,0,0-.182,2.2C1937.8,742.7,1938.09,743.419,1938.25,742.731Z" transform="translate(-1917.075 -729.704)"/><path class="a" d="M1938.32,744.66c.185-.872,1.072-4.81,1.963-2.789-.028-.031,2.383,3.661.707,13.442.027-.1-1.256,4.1-2.069,1.321.027.1-.6-1.843-.6-1.843s-.448-.486-.5.522c-.024-.068,1.759,12.084,4.059,6.58,0,.037,1.26-1.843,1.492-8.46.078.068.628-9.718-.891-14.763,0,.037-1.413-5.363-3.062-2.089a13.176,13.176,0,0,0-1.389,5.29,27.807,27.807,0,0,0-.208,2.789C1937.8,744.623,1938.13,745.532,1938.32,744.66Z" transform="translate(-1908.168 -732.64)"/><path class="a" d="M0,5.45S1.035-.447,3.92.027C3.508.007,5.686-.405,7.3,7.433a47.548,47.548,0,0,1,.356,13.6c-.07-.1-.3,5.482-2.408,8.891,0,.029-2.413,3.8-4.62-2.1A18.264,18.264,0,0,1,0,25.964s2.24,2.411,3.343,0c.018.034,1.718-2.908,1.884-8.756.015.071.263-9.357-1.964-12.192a2.151,2.151,0,0,0-3.031.833A4.54,4.54,0,0,1,0,5.45Z" transform="translate(36.978 0.139) rotate(-0.974)"/><path class="b" d="M2152.9,1316.38s-2.781-.969-2.2-5.006c.034-.28,1.183-3.444,5.328-1.951-.1,0,2.158-3.017,5.044-2.984.024,0,3.307-.2,4.42,3.834-.061.058,4.229-3.5,7.43,1.359.009.014.008,2.182,0,1.639v1.183s-.163,1.883-3.174,1.925h-.178C2167.93,1316.35,2152.9,1316.38,2152.9,1316.38Z" transform="translate(-2100.18 -1291.587)"/><path class="b" d="M3223.61,213.09c-.033.022,4.834,0,4.834,0a5.34,5.34,0,0,1-.855-6.648c.061-.061,1.442-2.79,5.417-1.671-.018-.082,2.83-3.425,5.866-3.138a4.974,4.974,0,0,1,4.885,3.54c-.079-.061,3.74-2.722,6.854,1.5.04.021-.8-6.563-7.44-5.044a7.657,7.657,0,0,0-7.15-4.186,8.618,8.618,0,0,0-5.644,3.382c.083-.061-3.81-.979-5.827,1.111a44.3,44.3,0,0,1-.3,6.671C3224.27,208.55,3223.65,213.068,3223.61,213.09Z" transform="translate(-3177.828 -188.413)"/><path class="b" d="M3219.66,431.08a23.151,23.151,0,0,1,1.43,6.7,5.526,5.526,0,0,1,5.391-1.4c.095,0,7.083-8.092,14.139.859.08.03,5.337-1.1,6.842,3.986-.065,0,1-9.046-11.14-9.243-.035.069-4.568-8.6-13.223-1.61a4,4,0,0,0-3.439.711Z" transform="translate(-3174.591 -425.7)"/><path class="b" d="M3163.06,784.33a7.96,7.96,0,0,1,3.833-1.221,32.009,32.009,0,0,1,.24,17.482c.025.069-3.888,0-3.888,0s1.045-8.3,0-14.826Z" transform="translate(-3127.039 -776.302)"/><path class="b" d="M3107.2,812.941l3.24-.246a9.239,9.239,0,0,1,1.41-2.4c.021,0,2.085,4.361,0,12.167a3.679,3.679,0,0,1-1.41-2.477c0-.059-3.383,0-3.383,0l.142-1.184s2.937.355,2.739-.63c-.018-.021.173-.908-2.586-.568V816.54s2.737.6,2.743-.808c0-.021.133-1.524-2.743-.945a18.1,18.1,0,0,0-.152-1.846Z" transform="translate(-3080.385 -799.48)"/><path class="b" d="M2935.35,831.464l22.548-1.68a4.454,4.454,0,0,1,.263,1.589C2958.18,831.4,2935.35,831.464,2935.35,831.464Z" transform="translate(-2935.35 -816.087)"/><path class="b" d="M2954.38,855.123l19.987-1.006a2.038,2.038,0,0,1-.165.9C2974.19,855.049,2954.38,855.123,2954.38,855.123Z" transform="translate(-2951.574 -836.828)"/><path class="b" d="M2994.27,870.418l13.893-.918-.246,1.016Z" transform="translate(-2985.57 -849.941)"/></g></g></svg>
+	<br>CloudFuze</a></div>
+<ul class="list-unstyled components mb-5">
+<li>
+<a href="cloudmanager.html?ver=1028"><i class="lnil lnil-cloud-alt"></i> <br>Clouds</a>
+</li>
+<li>
+<a href="move.html?ver=1028"><i class="lnil lnil-rocket" style="transform: rotate(90deg);"></i> <br> Migrate</a>
+</li>
+<li>
+<a href="backUp.html?ver=1028"><i class="lnil lnil-database" style="margin-top:-5%;"></i> <br> Individual<br>Backup</a>
+</li>
+<li>
+<a href="teammigration.html?ver=1028"><i class="lnil lnil-users-alt" style="margin-top:-5%;"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Team </p><p> Migration </p></a>
+</li>
+<li>
+<a href="slackmigration.html?ver=1028"><i class="lnil lnil-users-alt" style="margin-top:-5%;"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Slack </p><p> Migration </p></a>
+</li>
+<li>
+<a href="reports.html?ver=1028"><i class="lnil lnil-pie-report"></i><br>Reports</a>
+</li>
+<li>
+<a href="https://help.cloudfuze.com/" target="_blank"><i class="lnil lnil-question-circle"></i><br>Help</a>
+</li>
+</ul>
+<div id="termsDiv" style="height:70px;font-size:11px;position: absolute;">
+<a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="color:#fff;">Terms of use</a> 
+
+<a href="https://www.cloudfuze.com/privacy-policy" target="_blank" style="color:#fff;">Privacy policy</a>
+
+</div>
+</nav>
+
+<div id="content" class="" style="background: #FCFCFC;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:0px;position:relative;">
+<div class="container-fluid">
+	<div class="navbar-nav-scroll" style="padding-top: 3%;width:45%;">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      
+      <li id="accounts" class="nav-item" style="">
+        <a class="nav-link active settingspage" href="#">MY ACCOUNT</a>
+		<hr id="addHr" style="">
+      </li>
+	  
+      <li id="prices" class="nav-item" style="">
+        <a class="nav-link trialUserPayment" href="settings.html#price">PRICING</a>
+		<hr id="manageHr"style="display:none;">
+      </li>
+     
+   <li  id="cm-sidebar" style="">
+   <button type="button" id="sidebarCollapse" class="btn btn-primary d-lg-none">
+<i class="fa fa-bars"></i>
+<span class="sr-only">Toggle Menu</span>
+   </button></li>
+<li  id="cm-topbar" style="">
+	<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button"  id="topbarCollapse">
+<i class="fa fa-bars"></i>
+</button></li>
+   
+    </ul>
+	
+  </div>	
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent" style="width:65%;"> 
+<ul class="nav navbar-nav ml-auto1" style="width:100%;margin-right: -5%;">
+
+<li class="nav-item" style="text-align: -webkit-right;width:39%; height: 11vh;padding-top: 2.5%;"> 
+<div style="" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData" style="color:#0062FF;font-weight: 600;">0GB</span> used of <span id="totalData" style="color:#0062FF;font-weight: 600;">0GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:0%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="width:18%;text-align: -webkit-right;padding-left: 5%; height: 11vh;padding-top: 2.5%;">
+<a class="nav-link cf_upgrd_btn" onclick="location.href='settings.html#price?ver=1028'" style="color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;cursor:pointer;">Upgrade</a>
+</li>
+<li class="nav-item" style="width:43%;text-align: -webkit-left;padding-left: 3%;height: 11vh;padding-top: 2%;"><div class="dropdown" style="width:100%;">
+<a class="dropbtn nav-link" href="#" style=""><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #0062FF;font-size: 15px;padding: 5px;"></i><span id="dash-uname" style="margin-left: 4%;font-weight:600;color:#1F2129;word-break: break-word;"></span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left: 1%;font-weight: 600;"></i></a>
+ <div class="dropdown-content">
+ <a href="settings.html?ver=1028" style="font-size:14px;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+  <a class="cf-logout" class="mYaccontlogout" href="#" style="font-size:14px;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div>
+</div>
+</li>
+
+</ul>
+</div>
+<div class="" id="navbarSupportedContent1" style="width: 100%; float: right; background: rgb(255, 255, 255);display:none;">
+<ul class="nav navbar-nav" style="width: 100%;margin-right: -5%;    margin-top: 7%;">
+<li class="nav-item" style="text-align: -webkit-center;width: 100%;height: 12vh;padding-top: 8%;padding-right: 10%;border-bottom: 1px solid #e5e5e5;">
+<div style="text-align: -webkit-right;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData1" style="color:#0062FF;font-weight: 600;">0 GB</span> used of <span id="totalData1" style="color:#0062FF;font-weight: 600;">0 GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:0%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="width:100%;padding-right: 8%;height: 8vh;padding-top: 2%;border-bottom: 1px solid #e5e5e5;">
+<a class="nav-link cf_upgrd_btn" href="settings.html#price?ver=1028" style="float:right;color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;">Upgrade</a> 
+</li>
+<li class="nav-item" style="width: 100%;text-align: -webkit-right;height: 6vh;padding-right: 10%;border-bottom: 1px solid #e5e5e5;"><div class="dropdown" style="width:100%;">
+<a class="dropbtn nav-link" href="#" style="padding-top: 5%"><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #0062FF;font-size: 15px;padding: 5px;"></i><span id="dash-uname1" style="margin-left: 4%;font-weight:600;color:#1F2129;word-break: break-word;"></span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left: 3%;font-weight: 600;"></i></a>
+ <div class="dropdown-content"> 
+ <a href="settings.html?ver=1028" style="text-align:left;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+ <a class="cf-logout" class="mYaccontlogout" href="#" style="text-align:left;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div>
+</div>
+</li> 
+
+</ul>
+</div>
+</div>
+</nav>
+<section id="clouds" style="height:89vh;overflow:auto;">
+	<div id="main" style="padding: 2% 3%;">
+	<div class="alertScs hide">
+        <span class="fa fa-check-circle"></span>
+        <p class="msg"></p>
+        <div class="close-btnScs">
+          <span class="lnil lnil-cross-circle"></span> 
+        </div>
+</div>
+  <div class="alertErr hide">  
+        <span class="fa fa-times-circle"></span>
+        <p class="msg"></p>
+        <div class="close-btnErr"> 
+          <span class="lnil lnil-cross-circle"></span>
+        </div> 
+</div>
+
+	<div id="myAccountDiv" class="col-sm-9" style="margin-top:3%;background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 6px #00000014;border: 1px solid #F1F1F1;border-radius: 5px;padding:0;margin-bottom:3%;display:none;">
+	<div style="padding: 1.5% 0% 0% 2%;color:#fff;height: 50px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;font-size:14px;">My Account</div>
+		<table id="accountTable"style="width:100%;margin:bottom:3%">
+		<tbody> 
+		<tr class="profilecont">
+		<td style="color:#1F2129;font-weight:600;width:20%;">Name</td>
+		<td style="width:5%;">:</td>
+		<td style="width:54%;"><span class="ProfileContent" style=""> </span></td>
+		<td style="width:21%;"><a class="" id="CFEditName" style="float:right;color:#0062FF;cursor:pointer;"><i class="lnil lnil-pencil" style="font-weight: 600;font-size: 15px;"></i></a></td>
+		</tr>
+		<tr class="profilecont">
+		<td class="proEmail" style="color:#1F2129;font-weight:600;">Email</td>
+		<td>:</td>
+		<td><span class="ProfileContentemail" style=""></span></td>
+		<td></td>
+		</tr>
+		<tr class="profilecont">
+		<td style="color:#1F2129;font-weight:600;">Change Password</td>
+		<td>:</td>
+		<td><div id="stars" style="margin-top: 2px;">
+                            <span style="margin-left:1.4%;"><b>********************</b></span>
+                           
+                        </div>
+						<div id="changePwd" style="display: none;">
+                            <input class="form-control" style="height: 28px;" type="password" id="Cpswd" placeholder="Enter Password" autofocus="">
+                            <input class="form-control" style="margin-right: 2%;height: 28px;" type="password" id="Rpswd" placeholder="Enter Confirm Password">
+                            <i class="changePwdOk fa fa-check" style="margin-top: 6px;color:green;width:5%;cursor:pointer;"></i>
+                            <i class="changePwdCancel fa fa-times" style="width:5%;color:red;margin-top: 6px;cursor:pointer;"></i>
+                        </div>
+						</td>
+		<td><a class="" id="editPswd" style="float:right;color:#0062FF;cursor:pointer;"><i class="lnil lnil-pencil" style="font-weight: 600;font-size: 15px;"></i></a></td>
+		</tr>
+		<tr class="profilecont">
+		<td style="color:#1F2129;font-weight:600;">Plan Details</td>
+		<td>:</td>
+		<td><span id="subsname" style="">Free Trial</span><br><span>( Note : $0.75 per GB charge will be levied for the extra data )</span></td>
+		<td><a class="" id="cancelSubscription" style="float:right;text-decoration:underline;color:#FF4C4C;cursor:pointer;">Cancel Subscription</a>
+		<a class="nav-link cf_upgrd_btn upgradeBtn" onclick="location.href='settings.html#price'" style="display:none;color: #FFFFFF;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px;height: 33px;width: 108px;text-align: center;cursor:pointer;float: right;padding-top: 0.3rem;">Upgrade</a>
+		</td>
+		</tr>
+		<tr class="profilecont">
+		<td style="color:#1F2129;font-weight:600;">Billing Details</td>
+		<td>:</td>
+		<td><span class="" style=""></span></td>
+		<td><a class="" id="billingDetails" style="float:right;text-decoration:underline;color:#0062FF;cursor:pointer;">Billing Details</a></td>
+		</tr>
+		<tr class="profilecont close"  id="billingDiv" style="display:none;">
+		<td colspan="4">
+					<div style="background-color: white; width: 100%; overflow: auto; height: 20vh;border: 1px solid #e5e5e5;border-radius:3px;">
+					<table id="userDataTable" style="width:100%;">
+					<thead style="background:#f2f3ff;"><tr style="height:9vh;">
+					<th>Date</th>
+					<th>Allocated Data</th>
+					<th>Carry Forward Data</th>
+					<th>Data Used</th>
+					<th>Data Accumulated</th>
+					<th>Invoice No</th>
+					<th></th>
+					<th>Amount ($)</th>
+					</tr>
+					</thead>
+					<tbody></tbody>
+					</table>
+					</div>
+		</td>
+                    </tr>
+		<tr class="profilecont">
+		<td style="color:#1F2129;font-weight:600;">Delete My Account</td>
+		<td>:</td>
+		<td><a class="btn btn-danger" data-toggle="modal" data-target="#deleteUsrAccount" style="background: #FFFFFF 0% 0% no-repeat padding-box;border-radius: 5px;height:26px;color:#888;font-size:12px;padding: 0.6% 4%;border: 1px solid #AAA;">Delete</a></td>
+		<td></td>
+		</tr>
+		</tbody>
+		</table>
+	</div>
+	
+	<div id="pricingDiv" class="col-sm-12" style="margin-top:3%;background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 6px #00000014;border: 1px solid #F1F1F1;border-radius: 5px;padding:0;height:auto;margin-bottom:2%;overflow:auto;display:none;">
+	<div class="pricingcss">
+                            
+                                
+                                
+                                
+                                
+                            <div id="tab-1" class="pricing-tab-content current">
+                                
+                                <div style="text-align:center;margin-bottom: 10px;">
+									<span style="margin-right: 4px; color: rgb(31, 33, 41); opacity: 1;" class="active" id="payMonthly">Pay monthly</span>
+									<label class="switch">
+										<input type="checkbox" name="toggleBtn">
+										<span class="slider round trans"></span>
+									</label>
+									<span style="margin-left: 4px; opacity: 0.5; color: rgb(31, 33, 41);" id="payYearly" class="">Pay annually</span>
+								</div>
+                                    <div class="pricingcss-hed-desc" style="padding:0;">
+                              
+                                <ul class="pricingtabs" style="margin: 0;max-width: 100%;background: none;">
+                                    <li class="" data-tab="tab-1" style="float: left;width: 49%;text-align: left;border-bottom: 1px solid rgba(0,0,0,0.1);margin-left: 0%;padding-left: 0;">Individuals</li>
+                                    <li class="" data-tab="tab-2" style="width: 49%;text-align: left;border-bottom: 1px solid rgba(0,0,0,0.1);margin-left: 2%;padding-left: 0;">Teams and Businesses</li>
+                            </ul>
+                                
+                                
+                                </div>
+                                
+                                <div class="pricing-plans" style="/* background: #FAFAFF 0% 0% no-repeat padding-box; *//* border-radius: 4px; *//* padding: 2%; */">
+                                    <div class="plan-box plan1" style="width:25%;">
+                                        <div class="plan-details">
+                                            <p class="plan-title">LITE</p>
+                                            <p class="plan-price">$9.99</p>
+                                            <p class="plan-data">50 GB/Month</p>
+                                            <p class="plan-addlchrgs">($0.75 per additional 1 GB)</p>
+                                            <a class="plan-buynow" id="lite">Subscribe</a>
+                                            <ul class="plan-features">
+												<li>migrate 2 GB or 50 files for free</li>
+                                               	<li>40+ supported cloud office services</li>
+												<li style="list-style-type: none;">
+<img src="../img/PNG/ONEDRIVE_BUSINESS_ADMIN.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/DROP_BOX.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/G_SUITE.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/SHAREPOINT_ONLINE_BUSINESS.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/BOX.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/SHAREFILE_BUSINESS.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/AZURE_OBJECT_STORAGE.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/NFS.png" style="height: 20px;width: 20px;">
+</li>
+                                                <li>Superfast servers</li>
+                                                <li>Proven 24 x 5 support</li>
+                                                <li>Unlimited accounts in each provider</li>
+                                                <li>Unlimited number of data transfer within the data limit</li>
+                                                <li>100% accurate data transfers</li>
+                                                <li>Built-in auto retry in case of transfer failures</li>
+                                                <li>Handles cloud-throttling intelligently</li>
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                    
+                                    <div class="plan-box plan2" style="width:25%;"> 
+                                     <div class="plan-details active" style="position:relative;">
+                                            <p class="plan-title">PRO</p>
+											
+                                            <p class="plan-price">$34.99</p>
+                                            <p class="plan-data">200 GB/Month</p>
+                                            <p class="plan-addlchrgs">($0.75 per additional 1 GB)</p> 
+                                            <a class="plan-buynow" id="pro">Subscribe</a> 
+                                            <ul class="plan-features">
+											<li>migrate 2 GB or 50 files for free</li>
+                                              <li>40+ supported cloud office services</li> 
+												<li style="list-style-type: none;"> 
+<img src="../img/PNG/ONEDRIVE_BUSINESS_ADMIN.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/DROP_BOX.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/G_SUITE.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/SHAREPOINT_ONLINE_BUSINESS.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/BOX.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/SHAREFILE_BUSINESS.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/AZURE_OBJECT_STORAGE.png" style="height: 20px;width: 20px;">
+<img src="../img/PNG/NFS.png" style="height: 20px;width: 20px;">
+</li>
+                                                <li>Superfast servers</li>
+                                                <li>Proven 24 x 5 support</li>
+                                                <li>Unlimited accounts in each provider</li>
+                                                <li>Unlimited number of data transfer within the data limit</li>
+                                                <li>100% accurate data transfers</li>
+                                                <li>Built-in auto retry in case of transfer failures</li>
+                                                <li>Handles cloud-throttling intelligently</li>
+                                            </ul>
+                                        </div>   
+                                    </div>
+
+
+
+<div class="plan-box plan3" style="width:25%;"> 
+                                     <div class="plan-details" style="position:relative;">
+                                            <p class="plan-title" style="margin-bottom: 10%;">Team</p>
+											  <p id="usersCount" style="font-size: 16px;">20 Users</p>
+											 <!-- <p id="calChange">(Overage charges of $30 <br>per user per month)</p>-->
+											  <span style="position: absolute;top: 17.5%;left: 12%;font-size:16px;" id="tbChange">1 TB</span>
+											  <input type="range" min="1" max="5" value="1" id="slider">
+											  <p id="usersCalc" style="font-size: 16px;margin-top: 4%;margin-bottom: 20%;">$999 / month</p>
+											 											  
+                                            <a class="plan-buynow" id="entPrice">Subscribe</a>   
+                                            <ul class="plan-features">
+											<li>Includes all features of individual plans</li>
+                                                <li>Upto 100 users and 5TB data transfer</li>
+												<li>Multi user clouds</li>
+                                                <li>One time &amp; delta migration</li>
+												<li>Root Folder permissions</li>
+												<li>Sub Folder permissions</li>
+												<li>Metadata (Time Stamp)</li>
+												<li>Versions</li>
+												<li>External Shares</li>
+												<li>Shared data migration</li>
+												<li>Shared links migration</li>
+                                            </ul>
+                                        </div>   
+                                    </div>
+
+
+<div class="plan-box plan4" style="width:25%;">
+                                        <div class="plan-details">
+                                            <p class="plan-title">Enterprise</p>
+											<br><br>
+											<p style="font-size: 15px;margin-top: 4%;">More than 10TB and 50 users?</p><br>
+											<br><br>
+                                            <a class="plan-buynow" id="contactUsBtn">Contact us</a>
+                                            <ul class="plan-features">
+												<li>Includes all features of individual plans</li>
+                                                <li>Multi user clouds</li>
+                                                <li>One time &amp; delta migration</li>
+												<li>Root Folder permissions</li>
+												<li>Sub Folder permissions</li>
+												<li>Metadata (Time Stamp)</li>
+												<li>Versions</li>
+												<li>External Shares</li>
+												<li>Shared data migration</li>
+												<li>Shared links migration</li>
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                </div>
+								
+								<div class="all-include">
+								
+                <h1 class="title-2 cc-small" style="font-size:30px;">Teams and business plans include</h1>  
+				
+                <div class="feature_grid" style="">
+					<div id="w-node-f9ce43cd1a2c-2dc2ce56" class="feature_wrap" style="width: 31%;float: left;margin: 1%;">
+                    <div class="feature_icon"><img src="https://assets-global.website-files.com/5bd161f014584e0578f724ec/5bd6ca9c5d02aceed104c1ab_pricing19.svg" alt="" style="height:20px;width:20px;"></div>
+                    <h5 class="small-title">One-Time Migration<br></h5>
+                    <p class="small-paragraph">All the files and folder in the source will be migrated to the destination.<br></p>
+                  </div>
+                  <div id="w-node-f9ce43cd1a35-2dc2ce56" class="feature_wrap" style="width: 31%;float: left;margin: 1%;">
+                    <div class="feature_icon"><img src="https://assets-global.website-files.com/5bd161f014584e0578f724ec/5bd6cab428b2e450f0883420_pricing13.svg" alt="" style="height:20px;width:20px;"></div>
+                    <h5 class="small-title">Delta Migration<br></h5>
+                    <p class="small-paragraph">All the existing file changes and the newly added content will be migrated to the destination.<br></p> 
+                  </div>                 
+				 <div id="w-node-f9ce43cd1a2c-2dc2ce56" class="feature_wrap" style="width: 31%;float: left;margin: 1%;">
+                    <div class="feature_icon"><img src="https://assets-global.website-files.com/5bd161f014584e0578f724ec/5bd6ca9c5d02aceed104c1ab_pricing19.svg" alt="" style="height:20px;width:20px;"></div>
+                    <h5 class="small-title">Root Folder permissions<br></h5>
+                    <p class="small-paragraph">When the folders are migrated, all the permissions on the root folder will be migrated to the destination.<br></p>
+                  </div>
+                  <div id="w-node-f9ce43cd1a35-2dc2ce56" class="feature_wrap" style="width: 31%;float: left;margin: 1%;">
+                    <div class="feature_icon"><img src="https://assets-global.website-files.com/5bd161f014584e0578f724ec/5bd6cab428b2e450f0883420_pricing13.svg" alt="" style="height:20px;width:20px;"></div>
+                    <h5 class="small-title">Sub-Folder Permissions<br></h5>
+                    <p class="small-paragraph">In some instance there might be the extra permissions on sub folders a part of the root level inheritance. These permissions will also be migrated to the destination.<br></p> 
+                  </div>
+                 <div id="w-node-f9ce43cd1a50-2dc2ce56" class="feature_wrap" style="width: 31%;float: left;margin: 1%;">
+                    <div class="feature_icon"><img src="https://assets-global.website-files.com/5bd161f014584e0578f724ec/5bd6cc79924b98be3b33081f_pricing21.svg" alt="" style="height:20px;width:20px;"></div>
+                    <h5 class="small-title">Metadata (Time Stamp)<br></h5>
+                    <p class="small-paragraph">By default CloudFuze migrates the files/folders with the date of migration in the destination cloud. If this feature is opted, CloudFuze will retain the timestamp in the destination.<br></p>
+                  </div>
+                  <div class="feature_wrap" style="width: 31%;float: left;margin: 1%;">
+                    <div class="feature_icon"><img src="https://assets-global.website-files.com/5bd161f014584e0578f724ec/5bd6cad85a6dba9836e2e272_pricing17.svg" alt="" style="height:20px;width:20px;"></div>
+                    <h5 class="small-title">Versions<br></h5>
+                    <p class="small-paragraph">CloudFuze by default migrated the latest file version to the destination. When the versions are opted, CloudFuze migrates all the file versions to the destination cloud.<br></p>
+                  </div>
+                  <div class="feature_wrap" style="width: 31%;float: left;margin: 1%;">
+                    <div class="feature_icon"><img src="https://assets-global.website-files.com/5bd161f014584e0578f724ec/5bd6caf25a6dba0d43e2e281_pricing16.svg" alt="" style="height:20px;width:20px;"></div>
+                    <h5 class="small-title">External Shares<br></h5>
+                    <p class="small-paragraph">Most of the cloud providers will allow to share the folders to the external team members. CloudFuze will identify these external team members and send the shared link to the destination.<br></p>
+                  </div>
+					<div class="feature_wrap" style="width: 31%;float: left;margin: 1%;">
+                    <div class="feature_icon"><img src="https://assets-global.website-files.com/5bd161f014584e0578f724ec/5bd6cae728b2e41e63883436_pricing8.svg" alt="" style="height:20px;width:20px;"></div>
+                    <h5 class="small-title">Shared Links<br></h5>
+                    <p class="small-paragraph">All the cloud providers will allow to create shared links. These links can be created on the folders or sub-folders. CloudFuze identifies these links on the folders and create the links on the destination cloud. A CSV file will be created in the destination with the source folder path , source shared link and destination shared link.<br></p>
+                  </div>
+                </div> 
+              </div>
+			  
+			  <div style="
+    float: left;
+"> 
+<div class="fusion-fullwidth fullwidth-box fusion-builder-row-3 fusion-flex-container nonhundred-percent-fullwidth non-hundred-percent-height-scrolling" style="background-color: rgba(255,255,255,0);background-position: center center;background-repeat: no-repeat;border-width: 0px 0px 0px 0px;border-color:#eae9e9;border-style:solid;"><div class="fusion-builder-row fusion-row fusion-flex-align-items-flex-start" style="max-width:1216.8px;margin-left: calc(-4% / 2 );margin-right: calc(-4% / 2 );"><div class="fusion-layout-column fusion_builder_column fusion-builder-column-3 fusion_builder_column_1_1 1_1 fusion-flex-column"><div class="fusion-column-wrapper fusion-flex-justify-content-flex-start fusion-content-layout-column" style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding: 0px 0px 0px 0px;"><div class="fusion-text fusion-text-3"><h2 style="text-align: center; font-weight: 600; font-size: 30px; margin-bottom: 15px; --fontSize:30; line-height: 1.6;" data-fontsize="30" data-lineheight="48px" class="fusion-responsive-typography-calculated">Frequently Asked Questions</h2>
+</div></div></div><style type="text/css">.fusion-body .fusion-builder-column-3{width:100% !important;margin-top : 0px;margin-bottom : 20px;}.fusion-builder-column-3 > .fusion-column-wrapper {padding-top : 0px !important;padding-right : 0px !important;margin-right : 1.92%;padding-bottom : 0px !important;padding-left : 0px !important;margin-left : 1.92%;}@media only screen and (max-width:1024px) {.fusion-body .fusion-builder-column-3{width:100% !important;order : 0;}.fusion-builder-column-3 > .fusion-column-wrapper {margin-right : 1.92%;margin-left : 1.92%;}}@media only screen and (max-width:640px) {.fusion-body .fusion-builder-column-3{width:100% !important;order : 0;}.fusion-builder-column-3 > .fusion-column-wrapper {margin-right : 1.92%;margin-left : 1.92%;}}</style><div class="fusion-layout-column fusion_builder_column fusion-builder-column-4 fusion_builder_column_1_1 1_1 fusion-flex-column"><div class="fusion-column-wrapper fusion-flex-justify-content-flex-start fusion-content-layout-column" style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding: 0px 0px 0px 0px;"><div class="fusion-builder-row fusion-builder-row-inner fusion-row fusion-flex-align-items-flex-start" style="width:104% !important;max-width:104% !important;margin-left: calc(-4% / 2 );margin-right: calc(-4% / 2 );"><div class="fusion-layout-column fusion_builder_column_inner fusion-builder-nested-column-0 fusion_builder_column_inner_1_2 1_2 fusion-flex-column" style="width:50%;float:left;"><div class="fusion-column-wrapper fusion-flex-justify-content-flex-start fusion-content-layout-column" style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding: 0px 0px 0px 0px;"><div class="fusion-text fusion-text-4"><p class="faq-ques">1) I don’t represent a company, but I use multi-user (business) clouds. Which category do I belong?</p>
+<p class="faq-ans">Whether you are an individual or a company, as long as it is a multi-user migration/business cloud, it will fall under the business migration category.</p>
+</div></div></div><style type="text/css">.fusion-body .fusion-builder-nested-column-0{width:50% !important;margin-top : 0px;margin-bottom : 20px;}.fusion-builder-nested-column-0 > .fusion-column-wrapper {padding-top : 0px !important;padding-right : 0px !important;margin-right : 3.84%;padding-bottom : 0px !important;padding-left : 0px !important;margin-left : 3.84%;}@media only screen and (max-width:1024px) {.fusion-body .fusion-builder-nested-column-0{width:50% !important;}.fusion-builder-nested-column-0 > .fusion-column-wrapper {margin-right : 3.84%;margin-left : 3.84%;}}@media only screen and (max-width:640px) {.fusion-body .fusion-builder-nested-column-0{width:100% !important;}.fusion-builder-nested-column-0 > .fusion-column-wrapper {margin-right : 1.92%;margin-left : 1.92%;}}</style><div class="fusion-layout-column fusion_builder_column_inner fusion-builder-nested-column-1 fusion_builder_column_inner_1_2 1_2 fusion-flex-column" style="width:50%;float:left;"><div class="fusion-column-wrapper fusion-flex-justify-content-flex-start fusion-content-layout-column" style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding: 0px 0px 0px 0px;"><div class="fusion-text fusion-text-5"><p class="faq-ques">2) I represent a company, but I only need single-user (consumer) cloud migration. What should I do?</p>
+<p class="faq-ans">Even though you represent a company, if the migration is between two single-user clouds, you can simply subscribe to a personal plan.</p>
+</div></div></div><style type="text/css">.fusion-body .fusion-builder-nested-column-1{width:50% !important;margin-top : 0px;margin-bottom : 20px;}.fusion-builder-nested-column-1 > .fusion-column-wrapper {padding-top : 0px !important;padding-right : 0px !important;margin-right : 3.84%;padding-bottom : 0px !important;padding-left : 0px !important;margin-left : 3.84%;}@media only screen and (max-width:1024px) {.fusion-body .fusion-builder-nested-column-1{width:50% !important;}.fusion-builder-nested-column-1 > .fusion-column-wrapper {margin-right : 3.84%;margin-left : 3.84%;}}@media only screen and (max-width:640px) {.fusion-body .fusion-builder-nested-column-1{width:100% !important;}.fusion-builder-nested-column-1 > .fusion-column-wrapper {margin-right : 1.92%;margin-left : 1.92%;}}</style><div class="fusion-layout-column fusion_builder_column_inner fusion-builder-nested-column-2 fusion_builder_column_inner_1_2 1_2 fusion-flex-column" style="width:50%;float:left;"><div class="fusion-column-wrapper fusion-flex-justify-content-flex-start fusion-content-layout-column" style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding: 0px 0px 0px 0px;"><div class="fusion-text fusion-text-6"><p class="faq-ques">3) What should I do if your personal data migration plans are not meeting my migration needs?</p>
+<p class="faq-ans">You can reach out to us for a custom price quote based on the data size.</p>
+</div></div></div><style type="text/css">.fusion-body .fusion-builder-nested-column-2{width:50% !important;margin-top : 0px;margin-bottom : 20px;}.fusion-builder-nested-column-2 > .fusion-column-wrapper {padding-top : 0px !important;padding-right : 0px !important;margin-right : 3.84%;padding-bottom : 0px !important;padding-left : 0px !important;margin-left : 3.84%;}@media only screen and (max-width:1024px) {.fusion-body .fusion-builder-nested-column-2{width:50% !important;}.fusion-builder-nested-column-2 > .fusion-column-wrapper {margin-right : 3.84%;margin-left : 3.84%;}}@media only screen and (max-width:640px) {.fusion-body .fusion-builder-nested-column-2{width:100% !important;}.fusion-builder-nested-column-2 > .fusion-column-wrapper {margin-right : 1.92%;margin-left : 1.92%;}}</style><div class="fusion-layout-column fusion_builder_column_inner fusion-builder-nested-column-3 fusion_builder_column_inner_1_2 1_2 fusion-flex-column" style="width:50%;float:left;"><div class="fusion-column-wrapper fusion-flex-justify-content-flex-start fusion-content-layout-column" style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding: 0px 0px 0px 0px;"><div class="fusion-text fusion-text-7"><p class="faq-ques">4) Does CloudFuze provide discount for non-profit organizations?</p>
+<p class="faq-ans">Yes, we do.</p>
+</div></div></div><style type="text/css">.fusion-body .fusion-builder-nested-column-3{width:50% !important;margin-top : 0px;margin-bottom : 20px;}.fusion-builder-nested-column-3 > .fusion-column-wrapper {padding-top : 0px !important;padding-right : 0px !important;margin-right : 3.84%;padding-bottom : 0px !important;padding-left : 0px !important;margin-left : 3.84%;}@media only screen and (max-width:1024px) {.fusion-body .fusion-builder-nested-column-3{width:50% !important;}.fusion-builder-nested-column-3 > .fusion-column-wrapper {margin-right : 3.84%;margin-left : 3.84%;}}@media only screen and (max-width:640px) {.fusion-body .fusion-builder-nested-column-3{width:100% !important;}.fusion-builder-nested-column-3 > .fusion-column-wrapper {margin-right : 1.92%;margin-left : 1.92%;}}</style><div class="fusion-layout-column fusion_builder_column_inner fusion-builder-nested-column-4 fusion_builder_column_inner_1_2 1_2 fusion-flex-column" style="width:100%;float:left;"><div class="fusion-column-wrapper fusion-flex-justify-content-flex-start fusion-content-layout-column" style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding: 0px 0px 0px 0px;"><div class="fusion-text fusion-text-8"><p class="faq-ques">5) I have more questions.</p>
+<p class="faq-ans">Contact us via chat, email, or phone. We will answer your questions.</p>
+</div></div></div><style type="text/css">.fusion-body .fusion-builder-nested-column-4{width:50% !important;margin-top : 0px;margin-bottom : 20px;}.fusion-builder-nested-column-4 > .fusion-column-wrapper {padding-top : 0px !important;padding-right : 0px !important;margin-right : 3.84%;padding-bottom : 0px !important;padding-left : 0px !important;margin-left : 1.84%;}@media only screen and (max-width:1024px) {.fusion-body .fusion-builder-nested-column-4{width:50% !important;}.fusion-builder-nested-column-4 > .fusion-column-wrapper {margin-right : 3.84%;margin-left : 3.84%;}}@media only screen and (max-width:640px) {.fusion-body .fusion-builder-nested-column-4{width:100% !important;}.fusion-builder-nested-column-4 > .fusion-column-wrapper {margin-right : 1.92%;margin-left : 1.92%;}}</style></div></div></div><style type="text/css">.fusion-body .fusion-builder-column-4{width:100% !important;margin-top : 0px;margin-bottom : 20px;}.fusion-builder-column-4 > .fusion-column-wrapper {padding-top : 0px !important;padding-right : 0px !important;margin-right : 1.92%;padding-bottom : 0px !important;padding-left : 0px !important;margin-left : 1.92%;}@media only screen and (max-width:1024px) {.fusion-body .fusion-builder-column-4{width:100% !important;order : 0;}.fusion-builder-column-4 > .fusion-column-wrapper {margin-right : 1.92%;margin-left : 1.92%;}}@media only screen and (max-width:640px) {.fusion-body .fusion-builder-column-4{width:100% !important;order : 0;}.fusion-builder-column-4 > .fusion-column-wrapper {margin-right : 1.92%;margin-left : 1.92%;}}</style></div><style type="text/css">.fusion-body .fusion-flex-container.fusion-builder-row-3{ padding-top : 60px;margin-top : 0px;padding-right : 15%;padding-bottom : 30px;margin-bottom : 0px;padding-left : 15%;}</style></div></div>
+                            </div>
+                                
+                           </div>
+						   </div>
+	   <div id="thankYouPage"  style="display: none;text-align: center;">
+        <div><img src="../img/PNG/Thank_you.png" class="thankYouImg"></div>
+        <div><h2 id="thankYouHead" data-fontsize="65" data-lineheight="65">Thank you!</h2>
+            <p style="text-align: center;font-size:14px;">Your submission has been received. We will get back to you shortly!</p>
+            <p style="text-align: center; font-weight: 600;"><a id="backToPrice" href="cloudmanager.html">Back to Home</a></p>
+        </div>
+
+    </div>
+	</div>
+
+	<!-- Modals -->
+
+ <div class="modal fade" id="deleteUsrAccount" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Delete Account</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;">
+            <p style="font-size:16px;color:#1F2129;">Deleting your account will delete all your cloud data history and we will no longer have any access to your cloud data.</p>
+        </div>
+		<div style="text-align: center;"><span style="font-size: 14px;">Reason for deleting your account</span>
+    <select style="margin-left: 5%;width: 35%;height: 5vh;margin-bottom: 3%;">
+	<option>Select</option>
+	<option>I have migrated all my data</option>
+	<option>Cloud connectors are missing</option>
+	<option>Looking for business cloud migration</option>
+	<option>others</option>
+    </select>
+</div>
+<div style="text-align: center;display:none;"><p style="font-size: 14px;width: 38%;margin-left: 10%;float: left;">Please tell us why are you deleting your account?</p> <span style="color:red;float: left;margin-top: 4%;">*</span>
+    <textarea cols="38" rows="3" style="margin-left: -8%;" id="reasonText"></textarea>
+</div>
+<div style="color: red;text-align: center;margin-left: 35%;display:none;" id="errorDel">Please fill the required fields</div>
+        </div>
+        <div class="modal-footer">
+  
+<a class="button mini rounded light-gray" data-dismiss="modal" id="deleteConfirm" style="border: 1px solid #707070;width: 98px;height: 40px;padding: 1% 6%;float: left; color:#707070;font-size:16px;cursor:pointer;">Yes</a> 
+<a class="button mini rounded blue" data-dismiss="modal" style="width: 73px;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 4.5%;float: left;font-size:16px;cursor:pointer;">No</a>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+ 
+  <div class="modal fade" id="cnclmonthlysubscribemodal" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Cancel Subscription</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;">
+            <p style="font-size:16px;color:#1F2129;">Are you sure you want to cancel subscription ?</p>
+        </div>
+        </div>
+        <div class="modal-footer">
+  
+<a class="button mini rounded red" data-dismiss="modal" style="border: 1px solid #707070;width: 73px;height: 40px;padding: 1% 4.5%;float: left; color:#707070;font-size:16px;cursor:pointer;">No</a> 
+<a class="button mini rounded blue" id="cnclmonthlysubscribeyes" style="width: 98px;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 6%;float: left;font-size:16px;cursor:pointer;">Yes</a>
+        </div> 
+        
+      </div>
+    </div>
+ </div>
+ 
+   <div class="modal fade" id="cnclannualsubscribemodal" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Cancel Subscription</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;">
+            <p style="font-size:16px;color:#1F2129;">Are you sure you want to cancel subscription ?</p>
+        </div>
+        </div>
+        <div class="modal-footer">
+  
+<a class="button mini rounded red" data-dismiss="modal" style="border: 1px solid #707070;width: 73px;height: 40px;padding: 1% 4.5%;float: left; color:#707070;font-size:16px;cursor:pointer;">No</a> 
+<a class="button mini rounded blue" id="cnclannualsubscribeyes" style="width:98px;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 6%;float: left;font-size:16px;cursor:pointer;">Yes</a>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+    <div class="modal fade" id="cnclOtherSubscribemodal" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Cancel Previous Subscription</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;">
+            <p id="canclPrevText" style="font-size:16px;color:#1F2129;">Are you sure you want to cancel previous subscription ?</p>
+        </div>
+        </div>
+        <div class="modal-footer">
+  
+<a class="button mini rounded red" data-dismiss="modal" style="border: 1px solid #707070;width: 73px;height: 40px;padding: 1% 4.5%;float: left; color:#707070;font-size:16px;cursor:pointer;">No</a> 
+<a class="button mini rounded blue" id="cnclPrevSubscribeyes" style="width:98px;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 3%;float: left;font-size:16px;cursor:pointer;">Proceed<span class="cnclOthersubscribeyes"> </span></a>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+ 
+     <div class="modal fade" id="cnclsubscribemodalfinal" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Processing....</p>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;">
+            <h5><span>Please dont click back button, backspace or refresh your browser</span></h5>
+			<img src="../img/ajax.gif">
+			<h5><span>we are cancelling your subscription Please wait....</span></h5>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+
+     <div class="modal fade" id="transPrevstatus" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Status</p>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;">
+           <h5 id="transstatusPrevtext">Thank you for choosing CloudFuze. Your previous subscription cancellation was successful.</h5>
+		   <div style="margin-top: 30px;">
+<a class="button mini rounded blue" id="contPrevclick" style="width:auto;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 3%;font-size:16px;cursor:pointer;" href="checkout.html"><span id="transPrevbutton">Continue...</span></a>
+                </div>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+ 
+      <div class="modal fade" id="transstatus" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Status</p>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;">
+           <h5 id="transstatustext"></h5>
+		   <div style="margin-top: 30px;">
+<a class="button mini rounded blue" id="contclick" style="width:auto;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 3%;font-size:16px;cursor:pointer;" href="settings.html"><span id="transbutton">Continue...</span></a>
+                </div>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+ 
+ <div class="modal fade" id="contactUs" data-keyboard="false" style="top: 12%;" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 46vw;border: none;background:none;">
+        <div class="modal-header" style="border-radius: 5px 5px 0px 0px;height:9vh;border-bottom: none;">
+                   <p class="modal-title" style="color: #FFFFFF;font-size: 24px;margin-left: 2%;">Contact Us</p>
+         <i type="button" class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px!important;color:#fff;opacity:1;position:absolute;left:135%;top:0%;"></i>
+        </div>
+         <div class="modal-body" style="max-height: 100%;background:none;">
+		           <div id="crmWebToEntityForm" style="width:100%;">
+                        <form name="thecontact" id="org" method="post">
+                            <div class="form-group col-md-6" style="float: left;position: relative;"> 
+                                <input type="text" id="org_name" name="name" placeholder="Name*" class="form-control invld" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                                <span class="error"><p class="errorName" style="position: absolute;top: 90%;text-shadow: none;color:red;">This field is required.</p></span>
+                            </div>
+                            <div class="form-group col-md-6" style="float: right;position: relative;">
+                                <input type="email" id="org_email" name="email" placeholder="Email*" class="form-control invld" required="" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+                                <span class="error"><p class="errEmail" style="position: absolute;top: 90%;text-shadow: none;color:red;">Please enter a valid email address.</p></span>
+                            </div>
+                            <div class="form-group col-md-6" style="float: left;position: relative;">
+                                <input type="text" id="org_phone" name="phone" placeholder="Phone" class="form-control valid">
+                                <span class="error"><p class="errorPhn" style="position: absolute;top: 90%;text-shadow: none;">This field is required.</p></span>
+                            </div>
+                            <div class="form-group col-md-6" style="float: right;position: relative;">
+                                <input type="text" id="org_company" name="company" placeholder="Company" class="form-control valid">
+                                <span class="error"><p class="errorCom" style="position: absolute;top: 90%;text-shadow: none;">This field is required.</p></span>
+                            </div>
+
+                            <div class="form-group col-md-12" style="margin-left: 8.8%;float:left;">
+                                <textarea id="org_message" name="message" placeholder="Enter your message here" class="form-control valid" style="color:black"></textarea>
+                                <span class="error"><p class="errorMsg" style="text-shadow: none;">This field is required.</p></span>
+                            </div>
+                            <div id="org_submit" style="margin-left: 44%;float: left;margin-bottom: 2%;">
+                                <a href="#" class="submitBtn" style="color: #0062FF;background: #FFFFFF 0% 0% no-repeat padding-box;">Submit</a>
+                            </div>
+                           
+                        </form>
+                    </div>
+                </div>
+    </div>
+</div>
+</div>
+
+ 	<div id="CFShowLoading" class="modal-backdrop in" style="display: none; padding-left: 0px;">
+    <div class="backdrop" style="position: relative;top: 30%;background: white;border: none;height: 38%;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<circle cx="50" cy="50" r="30" stroke="#d5d8ff" stroke-width="10" fill="none"/>
+<circle cx="50" cy="50" r="30" stroke="#0062FF" stroke-width="8" stroke-linecap="round" fill="none">
+  <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"/>
+  <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1s" values="18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882" keyTimes="0;0.5;1"/>
+</circle>
+</svg>
+        <p id="loaderText" style="position: absolute;top: 45%; left: 11%;">Please wait while loading...</p>
+    </div>
+</div>
+</section>
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+ <!-- Hotjar Tracking Code for http://webapp.cloudfuze.com
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+ </script> --> 
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.setTimeout(function() {
+
+            window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+                d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+            _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+                $.src='//v2.zopim.com/?2YRVJ9WdqLaWGrAOduJsbu5op02qZFJI';z.t=+new Date;$.
+                    type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+            $zopim(function() {
+                var _usrdtls=JSON.parse(localStorage.getItem("CFUser"));
+                $zopim.livechat.setEmail(_usrdtls.primaryEmail);
+                $zopim.livechat.setName(localStorage.getItem("UserName"));
+            });
+
+        }, 8000);
+    </script>
+    <!--End of Zopim Live Chat Script-->
+<script>
+	(function($) {
+	"use strict";
+
+	var fullHeight = function() {
+
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
+
+	};
+	fullHeight();
+
+	$('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+  $('#topbarCollapse').on('click', function () {
+  if(!$("#navbarSupportedContent1").hasClass('active')){
+  $("#navbarSupportedContent1").addClass('active');
+      $("#navbarSupportedContent1").css("display","");
+	  $("#clouds").css("margin-top","50%"); 
+	  }
+	  else{
+	   $("#navbarSupportedContent1").removeClass('active');
+      $("#navbarSupportedContent1").css("display","none");
+	  $("#clouds").css("margin-top","3%"); 
+	  }
+  });
+})(jQuery);
+</script>
+<script type="text/javascript">
+
+
+ $(document).ready( function () {
+ //$("#CFShowLoading").modal("show");
+	$('#billingDiv').css('display','none');
+        var height;
+        if (window.matchMedia('(min-width: 1024px)').matches) {
+            height = window.innerHeight - 70;
+            $("#myaccount_details").css("height", height+'px');
+            $("#selectionHeading").css("height", height+'px');
+        }
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+            height = window.innerHeight - 230;
+            $("#myaccount_details").css("height", height+'px');
+            $("#selectionHeading").css("height", height+'px');
+        }
+        var _usrId = localStorage.getItem('UserId');
+
+        if (_usrId) {
+            if (window.location.hash == "#price" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#price")))
+            {				
+				setTimeout(function(){
+						$("#thankYouPage").hide();
+				$('#myAccountDiv').hide(); 
+			//	activecampaign.getContact(JSON.parse(localStorage.getItem('CFUser')).primaryEmail, 'pricingPageVisited','Yes'); 
+                $('.trialUserPayment').trigger('click'); 
+				},100);
+				
+				
+            }
+            else if (window.location.hash == "#thanks" || ((!(BrowserDetect.browser == "Safari"))&& window.location.hash.includes("#thanks")))
+            {
+                getuserexpiry.getSubscriptionExpiry();
+                $('#myAccountDiv').hide();
+                $(".settingspage").parent("li").removeClass("active");
+                $(".paymentinfo").parent("li").removeClass("active");
+                $(".trialUserPayment").parent("li").removeClass("active");
+                $('#pmntinfo').hide();
+                $("#selectionHeading").hide();
+                $("#thankYouPage").show();
+                $('#infotitle').text("");
+            }
+			else{
+				setTimeout(function(){
+						$("#thankYouPage").hide();
+			$('.settingspage').trigger('click');
+			},100);
+			}
+          
+            $('body').show();
+        }
+        else {
+            window.location.href = "index.html?ver=1028";
+            return false;
+        }
+        
+	});
+	var slider = document.getElementById("slider");
+var output = document.getElementById("usersCount");
+output.innerHTML = slider.value * 20+ " Users";
+$("#tbChange").text(slider.value+" TB");
+
+slider.oninput = function() {
+  output.innerHTML = this.value *20 + " Users"; 
+  
+var _calc = document.getElementById("usersCalc"); 
+$("#tbChange").text(this.value+" TB");
+	if($("#payYearly").hasClass('active')){
+_calc.innerHTML = "$"+this.value *850  + " / Month";
+	}
+	else{
+_calc.innerHTML = "$"+(this.value *1000 -1)  + " / Month";
+	}
+
+}
+</script>
+<script type="text/javascript" src="../javascripts/MetroNotifications_7.js"></script>
+<script src="../javascripts/security/webtoolkit.base64.js"></script>
+<script src="../ajaxcalls/AesUtil.js" type="text/javascript"></script>
+<script src="../javascripts/timeago.js" type="text/javascript"></script>
+<script src="../javascripts/jqueryui.js" type="text/javascript"></script>
+<script src="../javascripts/ZeroClipboard.js" type="text/javascript"></script>
+<script src="../javascripts/jquery.noty.packaged.min.js" type="text/javascript"></script>
+
+<!--Static Vaiables-->
+<script src="../ajaxcalls/config.js?ver=1028"></script>
+<script src="../ajaxcalls/globalVar.js?ver=1028" type="text/javascript"></script>
+
+<script type="text/javascript" src="../javascripts/navigation.js"></script>
+<script src="../ajaxcalls/readyDocument.js?ver=1028" type="text/javascript"></script>
+<script src="../javascripts/actionevents.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/pricing.js?ver=1028" type="text/javascript"></script>
+
+
+<script src="../ajaxcalls/homePageActionEvents.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/CFManageCloudAccounts.js?ver=1028" type="text/javascript"></script>
+
+<script src="../ajaxcalls/workspace.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/fileShareMetaData.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/boxOauth.js?ver=1028" type="text/javascript"></script> 
+<script src="../ajaxcalls/cfCloudInsert.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/common.js?ver=1028" type="text/javascript"></script>
+<script src="../javascripts/jquery.twbsPagination.min.js" type="text/javascript"></script>
+<script src="../ajaxcalls/paypalpmnt.js?ver=1028" type="text/javascript"></script>
+
+<script src="../ajaxcalls/paypalPayment.js?ver=1028" type="text/javascript"></script>
+<script>
+    $('.black').click(function() {
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+            if ($('.secondary-nav-menu').hasClass('open')) {
+                height = window.innerHeight - 230;
+                $("#myaccount_details").css("height", height + 'px');
+                $("#selectionHeading").css("height", height + 'px');
+            } else {
+                height = window.innerHeight - 330;
+                $("#myaccount_details").css("height", height + 'px');
+                $("#selectionHeading").css("height", height + 'px');
+            }
+        }
+    });
+	  const uA = navigator.userAgent;
+        const vendor = navigator.vendor;
+	if (/Safari/i.test(uA) && /Apple Computer/.test(vendor) && !/Mobi|Android/i.test(uA)) {
+		$("#reasonText").attr("cols","22");
+		$("#reasonText").css("margin-left","3%");
+	}
+    $('input:radio[name=subscription]').change(function () {
+        $('input[name=subscription]').parent().css({"border":"1px solid black"});
+        $('input[name=subscription]:checked').parent().css({"border":"2px solid #3276b1"});
+    });
+    $('.btn-toggle').click(function() {
+        $(this).find('.btn').toggleClass('active');
+        if ($(this).find('.btn-primary').length>0) {
+            $(this).find('.btn').toggleClass('btn-primary');
+            if($(this).find('.btn-primary').text() == "Billed Monthly")
+            {
+                $("#yrlyPkg").css("display","none");
+                $("#mnthlyPkg").css("display","block");
+                $('input[name=subscription][value=StndMonthly]').prop('checked',true);
+            }
+            else
+            {
+                $("#yrlyPkg").css("display","block");
+                $('input[name=subscription][value=StndAnnually]').prop('checked',true);
+                $("#mnthlyPkg").css("display","none");
+            }
+        }
+        $('input[name=subscription]:checked').parent().css({"border":"2px solid #3276b1"});
+        $(this).find('.btn').toggleClass('btn-default');
+
+    });
+	$('.cf_upgrd_btn').on('click', function() {
+        $('.trialUserPayment').trigger('click');
+    });
+	var urlParams;
+        (window.onpopstate = function () {
+            var match, pl = /\+/g,
+                search = /([^&=]+)=?([^&]*)/g,
+                decode = function (s) {
+                    return decodeURIComponent(s.replace(pl, " "));
+                },
+                query = window.location.search.substring(1);
+            urlParams = {};
+            while (match = search.exec(query))
+                urlParams[decode(match[1])] = decode(match[2]);
+        })();
+
+        CFPaymentsPaypal.createPayment(urlParams);
+        var isCusUser = checkIsaCustomUserForLogin(localStorage.getItem("UserId"));
+        getuserexpiry.getLastSubscription();
+        var ver='';
+        if (lastsubsresponse == undefined && isCusUser === false)
+            ver="(Trial User)";
+        $('#dash-uname').text(localStorage.getItem('UserName')+ver);
+
+        var _cur = JSON.parse(localStorage.getItem('CFUser')).currency;
+
+        if (_cur == null || _cur != 'EUR') {
+            _cur = 'USD';
+        }
+
+        var cur = {
+            'USD': '$',
+            'EUR': '€'
+        };
+        var _currencyContainer = $('[data-currency]');
+        _currencyContainer.attr('data-currency', _cur);
+        _currencyContainer.text(cur[_cur]);
+       /* if (lastsubsresponse !==undefined){
+            if(lastsubsresponse.subscriptionStatus == "INACTIVE") {
+                getuserexpiry.getSubscriptionExpiry();
+                var _text = lastsubsresponse.subscriptionName;
+                if (_text == "Individual Lite Yearly Subscription") {  
+                    if($("#payYearly").hasClass('active')){
+					$("#lite").text('Cancel Subscription');
+					}
+                }
+                else if (_text == "Pro Yearly Subscription") {
+                  if($("#payYearly").hasClass('active')){
+					$("#pro").text('Cancel Subscription');
+					}
+                }
+                else if (_text == "Individual Lite Monthly Subscription") {
+                 if($("#payMonthly").hasClass('active')){
+					$("#lite").text('Cancel Subscription');
+					}
+                }
+                else if (_text == "Pro Monthly Subscription") {
+                  if($("#payMonthly").hasClass('active')){
+					$("#pro").text('Cancel Subscription');
+					}
+                }
+            }
+        }*/
+	
+
+    $("#yrlyPkg").css("display","none");
+    $("#mnthlyPkg").css("display","block");
+    $('input[name=subscription]:checked').parent().css({"border":"2px solid #3276b1"});
+	   
+	function checkUserDataLimit() {
+        var valid = false;
+        var _url = apicallurl + "/move/totalUsedData";
+       $.ajax({
+            type: "GET",
+            url: _url,
+            async: false,
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS",
+				"Authorization":CFManageCloudAccountsAjaxCall.getAuthDetails()
+            },
+            success: function (result){
+		    for(var i=0;i<result.length;i++){
+			if(result[i].amountPaid == "Free Trail"){
+			var html = '<tr><td>'+CFManageCloudAccountsAjaxCall.getDateConversion(result[i].createdTime)+
+			'</td><td>'+getDataSize(result[i].subscribedDataPack)+
+			'</td><td>'+getDataSize(result[i].carryFdData)+
+			'</td><td>'+getDataSize(result[i].usedData)+
+			'</td><td>'+getDataSize(result[i].subscribedDataPack + result[i].carryFdData - result[i].usedData)+
+			'</td><td>'+result[i].invoiceId.split(":")[0]+
+			'</td><td>'+0+
+			'</td></tr>';
+			$("#userDataTable tbody").prepend(html);
+			}
+			else{
+			var s = result[i].invoiceId.split("https")[1];
+			s = "https"+s;
+			var t = result[i].subscribedDataPack + result[i].carryFdData - result[i].usedData;
+			var d = getDataSize(Math.abs(t));
+			if(Math.sign(t) == -1){
+			var p = "-";
+			}
+			else{
+			var p = "";
+			}
+			var html = '<tr><td>'+CFManageCloudAccountsAjaxCall.getDateConversion(result[i].createdTime)+
+			'</td><td>'+getDataSize(result[i].subscribedDataPack)+
+			'</td><td>'+getDataSize(result[i].carryFdData)+
+			'</td><td>'+getDataSize(result[i].usedData)+
+			'</td><td>'+p+d+
+			'</td><td>'+result[i].invoiceId.split(":")[0]+
+			'</td><td><a style="width: 20px;" target="_self" href="'+s+'"><i class="lnil lnil-download" style="    color: #1F2129;font-weight: bolder;font-size: 14px;"></i></a>'+
+			'</td><td>'+result[i].amountPaid+
+			'</td></tr>';
+			$("#userDataTable tbody").prepend(html); 
+			}
+			 }
+			}
+        });
+    }
+	 $('#cancelSubscription').click(function(){
+		if(lastsubsresponse.subscriptionName == "Pro Monthly Subscription" || lastsubsresponse.subscriptionName == "Individual Lite Monthly Subscription"){
+		 $('#cnclmonthlysubscribemodal').modal('show').css('display','block');
+		}
+		else{
+		 $('#cnclannualsubscribemodal').modal('show').css('display','block');
+		}
+		 });
+	
+	$('#billingDetails').click(function(){
+	$('#billingDiv').css('display','');
+	if($('#billingDiv').hasClass('close')){
+	$('#billingDiv').removeClass('close');
+	$('#billingDiv').addClass('open');
+	$(this).closest('tr').css('border-bottom','none');
+	}
+	else{
+	$('#billingDiv').css('display','none');
+		$('#billingDiv').removeClass('open');
+		$('#billingDiv').addClass('close');
+		$(this).closest('tr').css('border-bottom','1px solid #f1f1f1');
+	}
+	});
+	
+	$('.plan-box').mouseenter(function(){
+	if($(this).hasClass('plan1')){
+	$(".plan2").children('.plan-details').removeClass('active');
+	}
+	});
+	$('.plan-box').mouseleave(function(){
+	if($(this).hasClass('plan1')){
+	$(".plan2").children('.plan-details').addClass('active');
+	}
+	});
+</script>
+
+<script>
+    $('#fusion-tab-personal').on('click', function() {
+        $('.fusion-tab-heading').removeClass('tabs');
+        $(this).children().addClass("tabs");
+        $('.error_show').removeClass('error_show').addClass('error');
+        $("#personal").show();
+        $("#business").hide();
+    });
+    $('#fusion-tab-business').on('click', function() {
+        $('.fusion-tab-heading').removeClass('tabs');
+        $(this).children().addClass("tabs");
+        $('.error_show').removeClass('error_show').addClass('error');
+        $("#personal").hide();
+        $("#business").show();
+		
+
+    });
+
+    $("#individualYearly").click(function()
+    {
+        $("#liteYearly:hidden").show();
+        $("#liteMonthly").hide();
+        $('#basicmonthlysubscribe').attr('id', 'newID');
+        if($('liteYearly').prop('checked')===false)
+        {
+            $('liteYearly').hide();
+        }
+    });
+    $("#individualMonthly").click(function()
+    {
+        $("#liteMonthly:hidden").show();
+        $("#liteYearly").hide();
+        if($('liteMonthly').prop('checked')===false)
+        {
+            $('liteMonthly').hide();
+        }
+
+    });
+
+    $("#standardYearly").click(function()
+    {
+        $("#stdYearly:hidden").show();
+        $("#stdMonthly").hide();
+        $('#basicmonthlysubscribe').attr('id', 'newID');
+        if($('stdYearly').prop('checked')===false)
+        {
+            $('stdYearly').hide();
+        }
+    });
+    $("#standardMonthly").click(function()
+    {
+        $("#stdMonthly:hidden").show();
+        $("#stdYearly").hide();
+        if($('stdMonthly').prop('checked')===false)
+        {
+            $('stdMonthly').hide();
+        }
+
+    });
+
+    $("#proYearly").click(function()
+    {
+        $("#proYearlychecked:hidden").show();
+        $("#proMnthlychecked").hide();
+        if($('proYearlychecked').prop('checked')===false)
+        {
+            $('proYearlychecked').hide();
+        }
+    });
+    $("#proMontly").click(function()
+    {
+        $("#proMnthlychecked:hidden").show();
+        $("#proYearlychecked").hide();
+        if($('#proMnthlychecked').prop('checked')===false)
+        {
+            $('#proMnthlychecked').hide();
+        }
+    });
+
+
+    $(".read").click(function()
+    {
+        $('#enterprisePlan').show();
+    });
+    $("#proceedBtn").click(function()
+    {
+        $('#EntcalcpricemodalNew').show();
+    });
+    //    $(".readOrg").click(function(){
+    //        var usersVal = $(document).find("input[type='number']").val();
+    //        $("#users").html(usersVal);
+    //        var total = usersVal * 25;
+    //        $("#totalVal").html("$" + total);
+    //    });
+    $(".readOrgCont").click(function(){
+        sendGAEvents("clicked on Assisted migration contact us form in organizations tab");
+        $('#org_name').val('');
+        $('#org_email').val('');
+        $('#org_company').val('');
+        $('#org_message').val('');
+        $('#org_phone').val('');
+        $('#org_name').removeClass("valid").removeClass("invalid").addClass("invld");
+        $('#org_email').removeClass("valid").removeClass("invalid").addClass("invld");
+        //    $('#org_company').removeClass("valid").removeClass("invalid").addClass("invld");
+        //    $('#org_message').removeClass("valid").removeClass("invalid").addClass("invld");
+        $('.error_show').removeClass('error_show').addClass('error');
+        //$('.error_show').css('display','none');
+        //  zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"Pricing","","","");
+        $('#enterpriseContact').show();
+    });
+    /*  $(".divDisplayDelete").click(function(){
+          $('#deleteUsrAccount').show();
+      });*/
+	  
+	  $("#contactUsBtn").click(function()
+    {
+        $('#contactUs').modal('show');
+		$('.modal-backdrop').css('background-color','#0062ff');
+    });
+    //Delete account call
+    $("#deleteConfirm").click(function(){
+	var _reason = $('#deleteUsrAccount select').val();
+				if((_reason != "I have migrated all my data" && $('#reasonText').val().trim() == "")||_reason == "Select"){
+				if(_reason == "Select"){
+				$("#errorDel").text("Please select an option");
+				}
+				$("#errorDel").css("display","");
+				return false;
+				}
+				else{
+				$("#errorDel").css("display","none");				
+				}
+        sendGAEvents("clicked on delete button in settings Page");
+        var _usrDtls=JSON.parse(localStorage.getItem("CFUser"));
+        $.ajax({
+            type: "DELETE",
+            url: apicallurl + "/users/desableAccount/"+_usrDtls.primaryEmail,
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": localStorage.getItem('UserAuthDetails'),
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS"
+            },
+            success: function (data) {
+                if(data.isActive == false){
+			/*	var reason = $('#deleteUsrAccount select').val();
+				if(reason == "I have migrated all my data"){
+				reason = reason;
+				}
+				else{
+				reason = reason + ' - ' + $('#reasonText').val();
+				}
+				activecampaign.getContact(JSON.parse(localStorage.getItem('CFUser')).primaryEmail, 'accountDeleted','Yes'); 
+				activecampaign.getContact(JSON.parse(localStorage.getItem('CFUser')).primaryEmail, 'reasonForLeaving',reason); 
+                  */
+				  if($("#subslevel").text() == "Paid"){ 
+                        if(lastsubsresponse.subscriptionId){ 
+                            CFSubscriptionsInternal.CancelSubscription(lastsubsresponse.id);
+                        }
+                        else
+                            CFPaymentsPaypal.cnclRecurringSubscription(lastpmntresponse.recurringId);
+                    }
+					
+					alertSuccess("Account deleted successfully"); 
+                    localStorage.setItem('storageVal', false);
+					setTimeout(function(){
+                  if (localStorage.getItem("socialLogin") === "gloginSoc"){
+					signOut();
+				function signOut(){
+			var auth2 = gapi.auth2.getAuthInstance();
+         auth2.signOut().then(function () {
+         console.log('User signed out.');
+        });
+};
+      }
+console.log('User signed out normally.');
+    sendGAEvents("clicked on logout button");
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.href="index.html";
+					},1000);
+                }
+            }
+        });
+    });
+    function increaseValue() {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        if(value > 99)
+            return false;
+        else
+            value++;
+        document.getElementById('number').value = value;
+    }
+
+    function decreaseValue() {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value; 
+        value < 1 ? value = 1 : '';
+        value--;
+        document.getElementById('number').value = value;
+    }
+    function Check() {
+        if ($("#enterprise").prop('checked') === true) {
+            $('#proceedBtn').removeClass('disabled');
+            $('#proceedBtn').css('opacity', '1');
+        }
+        else{
+            $('#proceedBtn').addClass('disabled');
+            $('#proceedBtn').css('opacity', '0.6');
+        }
+    }
+	$(".dropdown").click(function(){
+	if(!($(".dropdown-content").hasClass("active"))){
+	$(".dropdown-content").addClass("active").css("display","none");
+	}
+	else{
+	$(".dropdown-content").removeClass("active").css("display","");
+	}
+	});
+</script>
+<script>
+    $(document).ready(function() {
+				checkUserProgressLimit();
+		checkUserDataLimit();
+
+        sendGAEvents("clicked on upgrade button");
+        <!-- Real-time Validation -->
+        <!--Name can't be blank-->
+        $('#contact_name').on('input', function() {
+            var input=$(this);
+            var is_name=input.val();
+            if(is_name){
+                input.siblings().removeClass('error_show').addClass('error');
+                input.removeClass("invld").addClass("valid");
+            }
+            else{
+                input.removeClass("valid").addClass("invld");
+            }
+        });
+
+        <!--Email must be an email -->
+        $('#contact_email').on('input', function() {
+            var input=$(this);
+            var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            var is_email=re.test(input.val());
+            if(is_email){
+                input.removeClass("invld").addClass("valid");
+            }
+            else{
+                input.removeClass("valid").addClass("invld");
+            }
+            if(($("#contact_email")[0].validationMessage) == ""){
+                input.siblings().removeClass('error_show').addClass('error');
+                input.removeClass("invld").addClass("valid");
+            }
+            else{
+                input.siblings().removeClass('error').addClass('error_show');
+                input.removeClass("valid").addClass("invld");
+            }
+
+        });
+        /* $('#contact_company').on('input', function() {
+             var input=$(this);
+             var is_name=input.val();
+             if(is_name){
+                 input.siblings().removeClass('error_show').addClass('error');
+                 input.removeClass("invalid").addClass("valid");
+             }
+             else{
+                 input.removeClass("valid").addClass("invalid");
+             }
+         });
+         <!--Message can't be blank -->
+         $('#contact_message').keyup(function(event) {
+             var input=$(this);
+             var message=$(this).val();
+             console.log(message);
+             if(message){
+                 input.siblings().removeClass('error_show').addClass('error');
+                 input.removeClass("invalid").addClass("valid");
+             }
+             else{
+                 input.removeClass("valid").addClass("invalid");
+             }
+         }); */
+
+
+        <!-- After Form Submitted Validation-->
+        $("#submitBtn").click(function(event){
+            sendGAEvents("clicked on submit button for msp form");
+            var form_data=$("#contact").serializeArray();
+            var error_free=true;
+            for (var input in form_data){
+                var element=$("#contact_"+form_data[input]['name']);
+                var value = element.val();
+                if(value !== "")
+                    element.removeClass("invld");
+                var valid=element.hasClass("valid");
+                var unchange = element.hasClass("invld");
+                var error_element= element.parent().next();
+                if (!valid || unchange){
+                    error_element.removeClass("error").addClass("error_show");
+                    $(".errorMsg").css("margin-left","-9%");
+                    error_free=false;
+                }
+                else{
+                    error_element.removeClass("error_show").addClass("error");
+                }
+            }
+            if (!error_free){
+                event.preventDefault();
+            }
+            else{
+
+                //document.thecontact.submit();
+                var formData = $("#contact").serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "https://script.google.com/macros/s/AKfycbx_XFZ7HDoHxNTHj8R0XinoWXwdnyEziKf97-0ILA/exec",
+                    data: formData,
+                    success: function() {
+						//activecampaign.getContact(JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'leadSource','Webapp_Pricing');
+                        //     $("#thankyou_message").fadeIn();
+                        //     $("#thankyou_message").fadeOut(8000);
+						//activecampaign.getContact(JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'leadSource','Webapp_Pricing');
+                        $('#contact_name').val('');
+                        $('#contact_email').val('');
+                        $('#contact_company').val('');
+                        $('#contact_message').val('');
+                        $('#contact_phone').val('');
+                        $('#contact_name').removeClass("valid").addClass("invld");
+                        $('#contact_email').removeClass("valid").addClass("invld");
+                        window.location.href ='settings.html#thanks';
+                        // $('#contact_company').removeClass("valid").addClass("invld");
+                        // $('#contact_message').removeClass("valid").addClass("invld");
+
+                    }
+                });
+                return window.location.href ='settings.html#thanks';
+
+
+            }
+        });
+
+        <!--Name can't be blank-->
+        $('#org_name').on('input', function() {
+            var input=$(this);
+            var is_name=input.val();
+            if(is_name){
+                input.siblings().removeClass('error_show').addClass('error');
+                input.removeClass("invalid").addClass("valid");
+            }
+            else{
+                input.removeClass("valid").addClass("invalid");
+            }
+            if($(this).hasClass('invalid')){
+                input.siblings().removeClass('error').addClass('error_show');
+            }
+            else{
+                input.siblings().removeClass('error_show').addClass('error');
+            }
+        });
+
+        <!--Email must be an email -->
+        $('#org_email').on('input', function() {
+            var input=$(this);
+            var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            var is_email=re.test(input.val());
+            if(is_email){
+                input.removeClass("invalid").addClass("valid");
+            }
+            else{
+                input.removeClass("valid").addClass("invalid");
+            }
+            if(($("#org_email")[0].validationMessage) == "") {
+                input.siblings().removeClass('error_show').addClass('error');
+                input.removeClass("invalid").addClass("valid");
+            }
+            else{
+                input.siblings().removeClass('error').addClass('error_show');
+                input.removeClass("valid").addClass("invalid");
+            }
+
+        });
+        /*   $('#org_company').on('input', function() {
+               var input=$(this);
+               var is_name=input.val();
+               if(is_name){
+                   input.siblings().removeClass('error_show').addClass('error');
+                   input.removeClass("invalid").addClass("valid");
+               }
+               else{
+                   input.removeClass("valid").addClass("invalid");
+               }
+           });
+           <!--Message can't be blank -->
+           $('#org_message').keyup(function(event) {
+               var input=$(this);
+               var message=$(this).val();
+               console.log(message);
+               if(message){
+                   input.siblings().removeClass('error_show').addClass('error');
+                   input.removeClass("invalid").addClass("valid");
+               }
+               else{
+                   input.removeClass("valid").addClass("invalid");
+               }
+           }); */
+
+
+        <!-- After Form Submitted Validation-->
+        $(".submitBtn").click(function(event){
+            sendGAEvents("clicked on submit button for enterprise form");
+            //  $('#enterpriseContact').modal({'backdrop': 'static'});
+            var forms_data=$("#org").serializeArray();
+            var error_free=true;
+            for (var input in forms_data){
+                var element=$("#org_"+forms_data[input]['name']);
+                var value = element.val();
+                if(value !== "")
+                    element.removeClass("invld");
+                var valid=element.hasClass("valid");
+                var unchange = element.hasClass("invld");
+                var error_element=$("span", element.parent());
+                if (!valid || unchange){
+                    error_element.removeClass("error").addClass("error_show");
+                    $(".errorMsg").css("margin-left","-9%");
+                    //  $('#contact_company').parent().css('margin-right','1%');
+                    //  $("#contact_submit").css("margin-top","17%");
+                    //  $("#contact_submit").css("margin-left","1%");
+                    error_free=false;
+                }
+                else{
+                    error_element.removeClass("error_show").addClass("error");
+                }
+            }
+            if (!error_free){
+                event.preventDefault();
+            }
+            else{
+
+                //document.thecontact.submit();
+                var formsData = $("#org").serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "https://script.google.com/macros/s/AKfycbx_XFZ7HDoHxNTHj8R0XinoWXwdnyEziKf97-0ILA/exec",
+                    //  url: "https://crm.zoho.com/crm/WebToLeadForm",
+                    async:false,
+                    data: formsData,
+                    success: function() {
+                        //   $("#org_thankyoumessage").fadeIn();
+                        //    $("#org_thankyoumessage").fadeOut(8000);
+                        $('#org_name').val('');
+                        $('#org_email').val('');
+                        $('#org_company').val('');
+                        $('#org_message').val('');
+                        $('#org_phone').val('');
+                        $('#org_name').removeClass("valid").addClass("invld");
+                        $('#org_email').removeClass("valid").addClass("invld");
+                        //   $('#org_company').removeClass("valid").addClass("invld");
+                        //   $('#org_message').removeClass("valid").addClass("invld");
+                        window.location.href = 'settings.html#thanks';
+                        $('#myaccount_details').hide();
+                        $(".settingspage").parent("li").removeClass("active");
+                        $(".paymentinfo").parent("li").removeClass("active");
+                        $(".trialUserPayment").parent("li").removeClass("active");
+                        $('#pmntinfo').hide();
+                        $("#selectionHeading").hide();
+                        $('#enterpriseContact').modal('hide');
+                        $("#thankYouPage").show();
+					//	activecampaign.getContact(JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'leadSource','Webapp_Pricing');
+                        $('#infotitle').text("");
+
+                    }
+                });
+                return false;
+
+            }
+        });
+
+
+	});
+	
+	</script>
+	<script>
+	$(document).ready(function () 
+ {
+     $(".phone_logo").click(function() {
+        $("#ChatWidgetButton").click();
+    });
+$('.nav-tabs li:nth-child(2) a').trigger('click');
+});
+
+
+$(document).ready(function(){
+$('#input-name').click(function(){
+    $('.name input').focus();
+});
+$('#input-name1').click(function(){
+    $('.name input').focus();
+});
+$('#input-name2').click(function(){
+    $('.name input').focus();
+});
+ 
+});
+
+
+
+/*contact form7 form submission to thanks page*/
+$(document).ready(function(){
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = 'https://www.cloudfuze.com/thanks';
+}, false );
+});
+
+
+$(document).ready(function(){
+	
+
+
+$('.settingspage').click(function () {
+	$("#CFShowLoading").modal("show");
+        sendGAEvents("Clicked on my account in settings page");
+       $('#cloudtitle').text('Account Settings');
+	   $('.settingspage').addClass('active');
+        $('.trialUserPayment').removeClass('active');
+		$('#cloudtitle').siblings('span').text("A small description about account settings");
+        $('#myAccountDiv').css("display","");
+		$('#addHr').css("display","");
+		$('.trialUserPayment').children('a').removeClass("active");
+		$('.settingspage').children('a').addClass("active");
+		$('#pricingDiv').css("display","none");
+		$('#manageHr').css("display","none");
+		 $("#thankYouPage").hide();
+		var UserObj = JSON.parse(localStorage.getItem('CFUser'));
+		$(".ProfileContent").html(UserObj.lastName +" </span>");
+		$(".ProfileContentemail").html(UserObj.primaryEmail +" </span>");
+        var _mobile = UserObj.mobileNumber == null ? 'Not Available' : UserObj.mobileNumber;
+        if(_mobile == "")
+            _mobile ="Not Available";
+        $(".ProfileContentmobile").html( _mobile+" </span>");
+		setTimeout(function(){
+			$("#CFShowLoading").modal("hide");
+			},500);
+    });
+
+$('.trialUserPayment').click(function () {
+	$("#CFShowLoading").modal("show");
+        sendGAEvents("Clicked on my pricing in settings page");
+		getuserexpiry.getSubscriptionExpiry();
+       $('#cloudtitle').text('Pricing');
+		$('#cloudtitle').siblings('span').text("A small description about Pricing");
+        $('#pricingDiv').css("display","");
+		$('#manageHr').css("display","");
+		$('.trialUserPayment').addClass('active');
+        $('.settingspage').removeClass('active');
+		$('.settingspage').children('a').removeClass("active");
+		$('.trialUserPayment').children('a').addClass("active");
+		$('#myAccountDiv').css("display","none");
+		$('#addHr').css("display","none");
+		//activecampaign.getContact(JSON.parse(localStorage.getItem('CFUser')).primaryEmail, 'pricingPageVisited','Yes');
+		/*	 if (lastsubsresponse !==undefined){
+            if(lastsubsresponse.subscriptionStatus == "ACTIVE") {
+                var _text = lastsubsresponse.subscriptionName;
+                if (_text == "Individual Lite Monthly Subscription") {
+                 if($("#payMonthly").hasClass('active')){
+					$("#lite").text('Cancel Subscription');
+					}
+					else{
+					$("#lite").text('Subscribe');
+					}
+                }
+                else if (_text == "Pro Monthly Subscription") {
+                  if($("#payMonthly").hasClass('active')){
+					$("#pro").text('Cancel Subscription');
+					}
+					else{
+					$("#lite").text('Subscribe');
+					}
+                }
+				else if(_text == "Individual Lite Yearly Subscription"||_text == "Pro Yearly Subscription"){
+				$("#lite").text('Subscribe');
+				$("#pro").text('Subscribe');
+				}
+            }
+			else{
+				$("#lite").text('Subscribe');
+				$("#pro").text('Subscribe');
+			}
+        } */
+		setTimeout(function(){
+			$("#CFShowLoading").modal("hide");
+			},500);
+    });
+	
+});
+$(document).on('change','#deleteUsrAccount select',function(){
+	var _reason = $(this).val();
+				if(_reason == "others" && $('#reasonText').val().trim() == ""){
+				$(this).parent().next('div').find('p').text('What could we do to make CloudFuze better for you?');
+				}
+				if(_reason == "Cloud connectors are missing" && $('#reasonText').val().trim() == ""){
+				$(this).parent().next('div').find('p').text('Please let us know which cloud combinations are you looking for?');
+				}
+				if(_reason == "Looking for business cloud migration" && $('#reasonText').val().trim() == ""){
+				$(this).parent().next('div').find('p').text('Please let us know which cloud combinations are you looking for?');
+				}
+				if(_reason != "I have migrated all my data" &&_reason != "Select"){
+				$(this).parent().next('div').css('display','');
+				}
+				else{
+				$(this).parent().next('div').css('display','none');
+				$('#errorDel').css('display','none');
+				}
+});
+$(document).ready(function(){
+$("a.chat_new").prop("href", "javascript:$zopim.livechat.window.show();");
+});
+	</script>
+
+
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649987855');
+    vgo('setTrackByDefault', true);
+	vgo('setEmail', JSON.parse(localStorage.getItem('CFUser')).primaryEmail);
+    vgo('process');
+</script>
+</body>
+</html>

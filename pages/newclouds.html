@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CloudFuze</title>
+<link rel="Shortcut Icon" type="image/ico" href="../img/favicon.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com">
+ 
+      <link href="../stylesheets/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../stylesheets/sidebar.css">
+ <link href="../stylesheets/LinIconsPro-Light.css" rel="stylesheet">
+
+<style>
+	
+	#sidebar i{
+	font-size:20px;
+	}
+	.CloudThumb_parent{
+	margin-right: 2.5%;
+	margin-bottom:2%;
+	}
+	.cloudThumbnail img {
+    height: 45px;
+    width: 45px;
+}
+</style>
+</head>
+<body style="overflow:hidden;">
+	<div class="g-signin2" data-theme="dark" style="display:none"></div>
+<div class="wrapper d-flex align-items-stretch">
+<nav id="sidebar" class="active">
+<div style="height:70px;"><a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="30" viewBox="0 0 106.467 53.365" style="margin-bottom: -8%;margin-top: 13%;margin-left: 5%;"><defs><style>.a{fill:#FFFFFF;}.b{fill:#FFFFFF;}.c{fill:#FFFFFF;}</style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#156aff"/><stop offset="1" stop-color="#1100f3"/></linearGradient></defs><g transform="translate(-177.95 -15.003)"><g transform="translate(183.48 15)"><path class="a" d="M1938.25,742.731c.161-.688.936-3.794,1.714-2.2-.024-.025,2.081,2.887.617,10.6.024-.082-1.1,3.237-1.807,1.042.024.082-.525-1.454-.525-1.454s-.391-.383-.435.412c-.021-.054,1.536,9.531,3.545,5.19,0,.029,1.1-1.454,1.3-6.673.068.054.549-7.665-.778-11.644,0,.029-1.234-4.23-2.674-1.648a9.667,9.667,0,0,0-1.214,4.173,20.02,20.02,0,0,0-.182,2.2C1937.8,742.7,1938.09,743.419,1938.25,742.731Z" transform="translate(-1917.075 -729.704)"/><path class="a" d="M1938.32,744.66c.185-.872,1.072-4.81,1.963-2.789-.028-.031,2.383,3.661.707,13.442.027-.1-1.256,4.1-2.069,1.321.027.1-.6-1.843-.6-1.843s-.448-.486-.5.522c-.024-.068,1.759,12.084,4.059,6.58,0,.037,1.26-1.843,1.492-8.46.078.068.628-9.718-.891-14.763,0,.037-1.413-5.363-3.062-2.089a13.176,13.176,0,0,0-1.389,5.29,27.807,27.807,0,0,0-.208,2.789C1937.8,744.623,1938.13,745.532,1938.32,744.66Z" transform="translate(-1908.168 -732.64)"/><path class="a" d="M0,5.45S1.035-.447,3.92.027C3.508.007,5.686-.405,7.3,7.433a47.548,47.548,0,0,1,.356,13.6c-.07-.1-.3,5.482-2.408,8.891,0,.029-2.413,3.8-4.62-2.1A18.264,18.264,0,0,1,0,25.964s2.24,2.411,3.343,0c.018.034,1.718-2.908,1.884-8.756.015.071.263-9.357-1.964-12.192a2.151,2.151,0,0,0-3.031.833A4.54,4.54,0,0,1,0,5.45Z" transform="translate(36.978 0.139) rotate(-0.974)"/><path class="b" d="M2152.9,1316.38s-2.781-.969-2.2-5.006c.034-.28,1.183-3.444,5.328-1.951-.1,0,2.158-3.017,5.044-2.984.024,0,3.307-.2,4.42,3.834-.061.058,4.229-3.5,7.43,1.359.009.014.008,2.182,0,1.639v1.183s-.163,1.883-3.174,1.925h-.178C2167.93,1316.35,2152.9,1316.38,2152.9,1316.38Z" transform="translate(-2100.18 -1291.587)"/><path class="b" d="M3223.61,213.09c-.033.022,4.834,0,4.834,0a5.34,5.34,0,0,1-.855-6.648c.061-.061,1.442-2.79,5.417-1.671-.018-.082,2.83-3.425,5.866-3.138a4.974,4.974,0,0,1,4.885,3.54c-.079-.061,3.74-2.722,6.854,1.5.04.021-.8-6.563-7.44-5.044a7.657,7.657,0,0,0-7.15-4.186,8.618,8.618,0,0,0-5.644,3.382c.083-.061-3.81-.979-5.827,1.111a44.3,44.3,0,0,1-.3,6.671C3224.27,208.55,3223.65,213.068,3223.61,213.09Z" transform="translate(-3177.828 -188.413)"/><path class="b" d="M3219.66,431.08a23.151,23.151,0,0,1,1.43,6.7,5.526,5.526,0,0,1,5.391-1.4c.095,0,7.083-8.092,14.139.859.08.03,5.337-1.1,6.842,3.986-.065,0,1-9.046-11.14-9.243-.035.069-4.568-8.6-13.223-1.61a4,4,0,0,0-3.439.711Z" transform="translate(-3174.591 -425.7)"/><path class="b" d="M3163.06,784.33a7.96,7.96,0,0,1,3.833-1.221,32.009,32.009,0,0,1,.24,17.482c.025.069-3.888,0-3.888,0s1.045-8.3,0-14.826Z" transform="translate(-3127.039 -776.302)"/><path class="b" d="M3107.2,812.941l3.24-.246a9.239,9.239,0,0,1,1.41-2.4c.021,0,2.085,4.361,0,12.167a3.679,3.679,0,0,1-1.41-2.477c0-.059-3.383,0-3.383,0l.142-1.184s2.937.355,2.739-.63c-.018-.021.173-.908-2.586-.568V816.54s2.737.6,2.743-.808c0-.021.133-1.524-2.743-.945a18.1,18.1,0,0,0-.152-1.846Z" transform="translate(-3080.385 -799.48)"/><path class="b" d="M2935.35,831.464l22.548-1.68a4.454,4.454,0,0,1,.263,1.589C2958.18,831.4,2935.35,831.464,2935.35,831.464Z" transform="translate(-2935.35 -816.087)"/><path class="b" d="M2954.38,855.123l19.987-1.006a2.038,2.038,0,0,1-.165.9C2974.19,855.049,2954.38,855.123,2954.38,855.123Z" transform="translate(-2951.574 -836.828)"/><path class="b" d="M2994.27,870.418l13.893-.918-.246,1.016Z" transform="translate(-2985.57 -849.941)"/></g></g></svg>
+	<br>CloudFuze</a></div>
+<ul class="list-unstyled components mb-5">
+<li class="active">
+<a href="#"><i class="lnil lnil-cloud-alt"></i> <br>Clouds</a>
+</li>
+<li>
+<a href="move.html"><i class="lnil lnil-rocket" style="transform: rotate(90deg);"></i> <br> Migrate</a>
+</li>
+<li>
+<a href="backUp.html"><i class="lnil lnil-database"></i> <br> Individual<br>Backup</a>
+</li>
+<li>
+<a href="teammigration.html"><i class="lnil lnil-users-alt"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Team </p><p> Migration </p></a>
+</li>
+<li>
+<a href="reports.html"><i class="lnil lnil-pie-report"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Team </p><p> Reports </p></a>
+</li>
+<li>
+<a href="syncReports.html"><i class="lnil lnil-cloud-sync-alt"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Sync </p><p> Reports </p></a>
+</li>
+</ul>
+<div style="height:70px;font-size:10px;margin-top: 65%;">
+<a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="color:#fff;">Terms of use</a>
+
+<a href="https://www.cloudfuze.com/privacy-policy" target="_blank" style="color:#fff;">Privacy policy</a>
+
+<a href="https://www.cloudfuze.com/hc/en-us" target="_blank" style="color:#fff;">Help</a>
+<div>
+</nav>
+
+<div id="content" class="" style="background: #FCFCFC;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:0px;">
+<div class="container-fluid">
+	<div class="navbar-nav-scroll" style="padding-top: 3%;">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      
+      <li class="nav-item"  id="cm-addcloud" style="padding: 0px 9px;">
+        <a class="nav-link active" href="#">Add Clouds</a>
+		<hr id="addHr" style="">
+      </li>
+	  
+      <li class="nav-item" id="cm-managecloud" style="padding: 0px 9px;">
+        <a class="nav-link " href="#">Manage Clouds</a>
+		<hr id="manageHr"style="display:none">
+      </li>
+     
+   <li style="padding: 0px 5px;">
+   <button type="button" id="sidebarCollapse" class="btn btn-primary d-lg-none">
+<i class="fa fa-bars"></i>
+<span class="sr-only">Toggle Menu</span>
+   </button></li>
+<li style="padding: 0px 5px;">
+	<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<i class="fa fa-bars"></i>
+</button></li>
+   
+    </ul>
+	
+  </div>	
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="#" style="color:#000000;padding: 8px 5px;">Hello, <span style="font-weight:600;">Derrick</span></a>
+</li>
+<!--<a class="nav-link" href="#" style="font-size:12px;padding: 10px 32px;color:#000000;">Data <span style="color:#1220F6;font-weight: 600;">5GB</span> used of <span style="color:#1220F6;font-weight: 600;">10GB</span></a>-->
+<li class="nav-item" style="text-align: -webkit-center;">
+<div style="width: 60%;text-align: left;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 140px;float: left;margin-bottom: 2%;">Data <span id="usedData" style="color:#1220F6;font-weight: 600;">5GB</span> used of <span id="totalData" style="color:#1220F6;font-weight: 600;">10GB</span> </p>
+	<div class="progress" style="height: 8px;width: 170px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:64%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="padding-right: 5%;">
+<a class="nav-link" href="#" style="color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;">Upgrade</a>
+</li>
+<li class="nav-item" style="padding-right: 3%;">
+<a class="nav-link" href="#"><i class="lnil lnil-user-alt-1" style="color: #1220F6;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #1220F6;font-size: 15px;padding: 5px;"></i></a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section id="clouds" style="height:89vh;overflow:auto;">
+	<div id="main" style="padding: 1% 3%;">
+	<div id="headingDiv" style="margin-bottom: 2%;">
+	<h5 id="cloudtitle" style="font-weight:500;">Add Clouds</h5>
+	<span id="pageShow">Add the Clouds to add them as a source or Destination Clouds</span>
+	</div>
+	<div id="addclouddiv" style="">
+	<div id="personalDiv" style="background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 5px;width:100%;height:55vh;margin-bottom:3%;padding: 2%;">
+	<h6 style="font-weight:500;color:#1F2129;font-size: 18px;">Personal Clouds</h6>
+	<div style="padding:1%">
+	<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							 <img src="../img/PNG/onedrivebusiness.png">
+                            </div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129">OneDrive</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+                                <img src="../img/PNG/onedrivebusiness.png">
+                            </div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -20%">OneDrive for<br>business</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+                                <img src="../img/PNG/SHAREPOINT_ONLINE.png">
+                            </div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -10%">SharePoint<br>online</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/drive/circle/SHAREPOINT_ONLINE_HYBRIDCONSUMER.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -20%">SharePoint<br>Online Hybrid</p></div>
+                </div>
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/googledrive.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -20%">Google Drive</p></div>
+                </div>
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/googledrive.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -20%">Shared Drives</p></div>
+                </div>
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/dropbox.PNG">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;">Dropbox</p></div>
+                </div>
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;margin-right:0%;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/wasabi.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: 14%;">Wasabi</p></div>
+                </div>
+				
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/box.PNG">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: 27%;">Box</p></div>
+                </div>
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/NFS.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -12%;">Network File<br>Shares (NFS)</p></div>
+                </div>
+				
+			<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/FTP.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left:34%;">FTP</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/egnyte.PNG">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: 14%;">Egnyte</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/amazons3.PNG">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;">Amazon S3</p></div>
+                </div>
+	</div>
+				
+	</div>
+	<div id="businessDiv"style="background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 5px;width:100%;height:55vh;margin-bottom:3%;padding: 2%;">
+	<h6 style="font-weight:500;color:#1F2129;font-size: 18px;">Business Clouds</h6>
+	<div style="padding:1%;">
+	<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							 <img src="../img/PNG/onedrivebusiness.png">
+                            </div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -20%">OneDrive for<br>business</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+                                <img src="../img/PNG/onedrivebusiness.png">
+                            </div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -37%">OneDrive for<br>business hybrid</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+                              <img src="../img/PNG/sahrepoint_2013.PNG">
+                            </div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -35%">SharePoint 2013</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+                               <img src="../img/PNG/sharepoint_2010.PNG">
+                            </div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -35%">SharePoint 2010</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+                                <img src="../img/PNG/SHAREPOINT_ONLINE.png">
+                            </div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -10%">SharePoint<br>online</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/drive/circle/SHAREPOINT_ONLINE_HYBRIDCONSUMER.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -20%">SharePoint<br>Online Hybrid</p></div>
+                </div>
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/googlesuite.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: 12%">G suite</p></div>
+                </div>
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;margin-right:0%;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/googledrive.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -25%">Shared Drives</p></div>
+                </div>
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/dropbox.PNG">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;">Dropbox</p></div>
+                </div>
+			
+				
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/box.PNG">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: 27%;">Box</p></div>
+                </div>
+				<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/azurenew.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: 14%;">Azure</p></div>
+                </div>
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/egnyte.PNG">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: 14%;">Egnyte</p></div>
+                </div>
+				
+					<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/NFS.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left: -12%;">Network File<br>Shares</p></div>
+                </div>
+				
+			<div class="CloudThumb_parent" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 10px #0000001F;border-radius: 5px;width:115px;height:115px;float:left;">
+		<div class="clds" style="padding: 21% 30%;">
+                        <a href="#" id="Onedrive_Business">
+                            <div class="cloudThumbnail button" type="button"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+							<img src="../img/PNG/cifsnew.png">
+							</div>
+                        </a>
+
+		<p style="font-size:10px;color:#1F2129;width: max-content;text-align: center;margin-left:34%;">CIFS</p></div>
+                </div>
+	</div>
+	</div>
+	</div>
+	<div id="manageclouddiv" class="col-sm-12" style="display:none;">
+	<div style="background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 5px;width:100%;height:55vh;margin-bottom:3%;padding: 2%;">
+	<div id="cloudInfo" style="background: #FCFCFC 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 5px;height:80px;width:100%;">
+	<div id="mngCloudIcon" style="width: 8%;padding: 1.5% 2%;float:left;">
+	<img src="../img/PNG/onedrivebusiness.png">
+	</div>
+	<div id="mngCloudName" style="width: 23%;padding:2.7% 1%;float:left;color:#1F2129;font-weight:500;">
+	<span>OneDrive for business Hybrid</span>
+	</div>
+	<div id="mngCloudData" style="width: 20%;padding: 2%;float:left;">
+	<div style="width: 100%;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 138px;float: left;margin-bottom: 2%;">68 out of 106 Users </p><span id="percentOfUsers" style="font-size: 12px;font-weight: 600;float: left;color: #000;">100%</span>
+	<div class="progress" style="height: 6px;width: 170px;border-radius: 15px;background: #d9534f;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:64%;background: #4CAF50;height: 100%;border-radius: 25px;"></div></div></div>
+	</div>
+	<div id="mngCloudSync" style="width: 3%;padding: 2.7% 4% 0% 0%;float:left;">
+			<i class="lnil lnil-reload" style="font-size: 15px;font-weight:600;"></i>
+	</div>
+	<div id="mngCloudEmail" style="width: 25%;padding: 2.7% 1%;float:left;">
+		<span>eril@installstep.onmicrosoft.com</span>
+	</div>
+	<div id="mngCloudType" style="width: 8%;padding: 2.7% 1%;float:left;">
+	<span>Multiuser</span>
+	</div>
+	<div id="mngCloudRemove" style="width: 6%;padding: 2.7% 2%;float:left;text-align: right;">
+	<i class="lnil lnil-trash-can-alt" style="font-size: 17px;"></i>
+	</div>
+	<div id="mngCloudDetails" style="width: 6%;padding: 2.7% 2%;float:left;">
+	<i class="lnil lnil-chevron-down-circle" style="color: #1220F6;font-size: 20px;font-weight:600;"></i>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	</div>
+</section>
+</div>
+</div>
+<script type="text/javascript" src="../javascripts/vendor/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="../javascripts/vendor/bootstrap-3.3.5.js"></script>
+<script type="text/javascript" src="../javascripts/MetroNotifications_7.js"></script>
+<script src="../javascripts/security/webtoolkit.base64.js"></script>
+<script src="../ajaxcalls/AesUtil.js" type="text/javascript"></script>
+<script src="../javascripts/timeago.js" type="text/javascript"></script>
+<script src="../javascripts/jqueryui.js" type="text/javascript"></script>
+<script src="../javascripts/ZeroClipboard.js" type="text/javascript"></script>
+<script src="../javascripts/jquery.noty.packaged.min.js" type="text/javascript"></script>
+
+<!--Static Vaiables-->
+<script src="../ajaxcalls/config.js?ver=1231"></script>
+<script src="../ajaxcalls/globalVar.js?ver=1231" type="text/javascript"></script>
+
+<script type="text/javascript" src="../javascripts/navigation.js"></script>
+<script src="../ajaxcalls/readyDocument.js?ver=1231" type="text/javascript"></script>
+<script src="../javascripts/actionevents.js?ver=1231" type="text/javascript"></script>
+
+
+<script src="../ajaxcalls/homePageActionEvents.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/CFManageCloudAccounts.js?ver=1231" type="text/javascript"></script>
+
+<script src="../ajaxcalls/workspace.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/fileShareMetaData.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/boxOauth.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/cfCloudInsert.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/common.js?ver=1231" type="text/javascript"></script>
+<script src="../javascripts/jquery.twbsPagination.min.js" type="text/javascript"></script>
+
+<script>
+	(function($) {
+
+	"use strict";
+
+	var fullHeight = function() {
+
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
+
+	};
+	fullHeight();
+
+	$('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+
+})(jQuery);
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+            height = window.innerHeight - 280;
+            $("#cloudsView").css("height", height + 'px');
+        }
+        else{
+            height = window.innerHeight - 62;
+            $("#cloudsView").css("height", height + 'px');
+        }
+
+        $('.black').click(function() {
+            if (window.matchMedia('(max-width: 1024px)').matches) {
+                if ($('.secondary-nav-menu').hasClass('open')) {
+                    height = window.innerHeight - 350;
+                    $("#cloudsView").css("height", height + 'px');
+                } else {
+                    height = window.innerHeight - 280;
+                    $("#cloudsView").css("height", height + 'px');
+                }
+            }
+        });
+        sendGAEvents("Clicked on cloud migration page");
+        $('#upgrdIcon').on('click', function () {
+            window.location.href = "settings.html#move";
+        });
+
+        if (localStorage.getItem('UserId')) {
+            $('body').show();
+        }
+        else {
+            window.location.href = "index.html?ver=1231";
+        }
+        var hash = window.location.hash.substr(1);
+        if (hash == "desktop") {
+            window.onbeforeunload = function (e) {
+                localStorage.clear();
+                window.location = "index.html?ver=1231"
+            }
+        }
+        else if (hash == "putRequest") {
+            $('body').append('<sript src="../javascripts/putRequest.js?ver=1231" type="text/javascript"></sript>');
+        }
+        else if (hash == "orange") {
+            $('#primary,#secondary,#FooterLinks,.top-nav').show();
+            $('#cm-addcloud').removeClass('active');
+            $('#cm-managecloud').removeClass('active');
+            $('#addclouddiv').addClass('divdisplay');
+            $('#manageclouddiv').addClass('divdisplay');
+            $('#orangelanding').show();
+        }
+        else {
+            $('#orangelanding').hide();
+            $('#primary,#secondary,#FooterLinks,.top-nav').show();
+            $('#cm-addcloud').addClass('active');
+            $('#cm-managecloud').removeClass('active');
+            $('#addclouddiv').removeClass('divdisplay');
+            $('#manageclouddiv').addClass('divdisplay');
+        }
+    });
+    var mywindow = null;
+    var params = window.location.toString();
+    params = params.split('?');
+    if (params[1] != undefined)
+        var params = params[1].replace('&', '=').split('=');
+    mywindow = window.addEventListener('storage', storageEventHandler, false);
+    function storageEventHandler(evt) {
+        if (evt.key == "OauthProcess") {
+            if (evt.newValue == "Completed") {
+                CFManageCloudAccountsAjaxCall.getAllClouds();
+                $('#cm-managecloud').trigger('click');
+
+
+                showNotyNotification('notify', 'Account added successfully.');
+            }
+            else if (evt.newValue == "alreadyExist") {
+                showNotyNotification('error', 'This e-mail address is already registered. Please  enter a different e-mail address.');
+            }
+            else if (evt.newValue == "failed") {
+                showNotyNotification('error', 'Failed registering .Please try once again.');
+            }
+
+            else if (evt.newValue == "restricted") {
+                showNotyNotification('error', 'This email domain is restricted by admin.');
+            }
+            else if(evt.newValue == 'notadmin'){
+                showNotyNotification('error','Please enter Box Admin credentials.');
+            }
+            /*	      else if (evt.newValue == "Please try adding with Admin credentials") {
+                            showNotyNotification('error', 'Adding Failed ! Please try with  Admin credentials.');
+                        }
+                        else if(evt.newValue == 'ItemNotFound'){
+                            showNotyNotification('error','Onedrive error : Item does not exist.');
+                        } */
+        }
+    }
+    /*   $(document).find('.active').click(function () {
+           if(localStorage.getItem("MigtnDone") === "consumer" || localStorage.getItem("MigtnDone") === "multiUser"){
+
+           }
+           else{
+               zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,'navClick',"","","","");
+           }
+
+       });*/
+
+    $('#cm-managecloud').click(function () {
+        sendGAEvents("Clicked on manage clouds in clouds page");
+		localStorage.setItem('manageClouds',true);
+	 activecampaign.eventTrack('Manage Clouds',JSON.parse(localStorage.CFUser).primaryEmail,'clicked');
+        $('#orangelanding').hide();
+        $('#cloudtitle').text('Manage Clouds');
+        $('#cloudData').html("");
+        CFManageCloudAccountsAjaxCall.getAllClouds();
+        CFManageCloudAccountsAjaxCall.getAllCloudTitlesSettings(CloudName, CloudId);
+        var cloudHeight = $('#CloudAlerts').css("height");
+        if (cloudHeight > 350) {
+            $('#CloudAlerts').slimscroll({
+                alwaysVisible: false,
+                height: '350px',
+                width: '757px'
+            });
+        }
+    });
+    (function () {
+        CFManageCloudAccountsAjaxCall.getAllClouds(CloudName);
+        var count = 0;
+        if (AllCloudsInfo != null || AllCloudsInfo != undefined) {
+            $.each(AllCloudsInfo, function (i, c) {
+                if (c.cloudStatus != "ACTIVE") {
+                    count++;
+                }
+            });
+        }
+        if (count > 0) {
+            $('#primary .active').find('.cf-warning3').remove();
+            $('#cm-managecloud > a').find('.cf-warning3').remove();
+            $('#primary .active > a').append('<i class="cf-warning" style="color: rgb(236, 40, 40);font-size: 15pt;position: absolute;top: -12px;right: -4px;width: 32px;height: 32px;"></i>')
+            $('#cm-managecloud > a').append('<i class="cf-warning3" style="color:rgb(236, 40, 40);font-size:11pt"></i>')
+        }
+    })();
+
+    $('#cm-addcloud').click(function () {
+        sendGAEvents("Clicked on add clouds in clouds page");
+        $('#cloudtitle').text('Add clouds');
+        $('#orangelanding').hide();
+    });
+
+    $('.table-responsive').height($(window).height() - 70 + 'px');
+	
+		checkUserDataLimit();
+			function checkUserDataLimit() {
+         var _url = apicallurl + "/move/limit/active"; 
+        $.ajax({
+            type: "GET",
+            url: _url,
+            async: false,
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS",
+				"Authorization":CFManageCloudAccountsAjaxCall.getAuthDetails()
+            },
+            success: function (result) {
+             var a = result.usedData;
+			 var b = result.totalData;
+			 var c = a/b*100;
+			 var d = getDataSize(a);
+			 var e = getDataSize(b);
+			 $("#usedData").text(d);
+			 $("#totalData").text(e);
+			 if($("#usedData").text()==0){
+			 if($("#totalData").text().includes('GB')){
+			 $("#usedData").text('0'+' GB');
+			 }
+			 }
+			
+			 if(c > 0 && c < 1){
+			 c = 1;
+			 }
+			 else{
+			 c = Math.round(c);
+            }
+			$(".progress-bar.progress-bar-success").css('width', c+'%');
+			}
+        });
+    }
+	function getDataSize(sizeBytes) {
+	 var ONE_KB = 1024;
+var ONE_MB = ONE_KB * ONE_KB;
+var ONE_GB = ONE_KB * ONE_MB;
+var ONE_TB = ONE_KB * ONE_GB;
+        if (sizeBytes == undefined || sizeBytes == null || sizeBytes == 0) {
+            return '0GB';
+			}
+			var fsize=0;
+            if (Math.round(sizeBytes / ONE_GB) > 0) {
+                fsize = sizeBytes / ONE_GB;
+                displaySize = parseFloat(fsize).toFixed(2) + " GB";
+            } else if (Math.round(sizeBytes / ONE_MB) > 0) {
+                fsize = sizeBytes / ONE_MB;
+                displaySize = parseFloat(fsize).toFixed(2) + " MB";
+            } else if (Math.round(sizeBytes / ONE_KB) > 0) {
+                fsize = sizeBytes / ONE_KB;
+                displaySize = parseFloat(fsize).toFixed(2) + " KB";
+            } else if (Math.round(sizeBytes / ONE_TB) > 0) {
+                fsize = sizeBytes / ONE_TB;
+                displaySize = parseFloat(fsize).toFixed(2) + " TB";
+            }else {
+                displaySize = sizeBytes + " Bytes";
+            }
+            return displaySize;
+    }
+</script>
+<!--<script type="text/javascript">
+    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq ||
+        {widgetcode:"54701193e52b98abae244d52e3b2b8f5f61f3d8e5ff885b97cf4cc96601469b1", values:{},ready:function(){}};
+    var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;
+    s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+</script>
+<script>
+
+    $zoho.salesiq.ready=function(embedinfo)
+
+    {
+        $zoho.salesiq.tracking.domain("webapp.cloudfuze.com");
+    }
+
+
+</script>-->
+<script>
+    $(document.body).on('click', function() {
+        if(localStorage.getItem("storageVal") == null){
+            showLogOutNotification("notify","You have been logged out");
+            //$('#cf-logout').trigger("click");
+            window.location.href = "index.html";
+        }
+    });
+
+</script>
+<script>
+	$(function(){
+var result = JSON.parse(localStorage.getItem('CFUser'));
+		 var data ={
+                    "name" : result.lastName,
+                    "email" : result.primaryEmail,
+					"phone" : result.mobileNumber
+                };
+		if(localStorage.getItem('signUp') == "true"){
+	activecampaign.createContact(data);
+				activecampaign.getContact(data.email,'contactList');
+			 activecampaign.eventTrack('SignUp',data.email,'clicked');
+				activecampaign.getContact(data.email, 'loggedIn','1');
+				 var _chkNonPubEmail = data.email;
+                    var str = _chkNonPubEmail.split('@').slice(1);
+                    var allowedDomains = ['gmail.com', 'yahoo.com', 'inbox.com',
+                        'iCloud.com', 'mail.com', 'aol.com', 'msn.com', 'hotmail.com', 'outlook.com', 'live.com', 'yopmail.com',
+			'rediff.com', 'gmx.com', 'yandex.com', 'protonmail.com'];
+				if ($.inArray(str[0], allowedDomains) === -1) {
+				activecampaign.getContact(data.email, 'businessEmail','Yes');
+				}
+				else{
+				activecampaign.getContact(data.email, 'businessEmail','No');
+				}
+				localStorage.removeItem('signUp')
+				}
+				else if(localStorage.getItem('login') == "true"){
+				activecampaign.getContact(data.email, 'loggedIn');
+				activecampaign.eventTrack('Login',data.email,'clicked');
+				localStorage.removeItem('login')
+		}
+});
+</script>
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649987855');
+    vgo('setTrackByDefault', true);
+	vgo('setEmail', JSON.parse(localStorage.getItem('CFUser')).primaryEmail);
+    vgo('process');
+</script>
+</body>
+</html>

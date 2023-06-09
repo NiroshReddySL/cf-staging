@@ -1,0 +1,3068 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Hotjar Tracking Code for http://webapp.cloudfuze.com
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>-->
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+      window.setTimeout(function () {
+        window.$zopim ||
+          (function (d, s) {
+            var z = ($zopim = function (c) {
+                z._.push(c);
+              }),
+              $ = (z.s = d.createElement(s)),
+              e = d.getElementsByTagName(s)[0];
+            z.set = function (o) {
+              z.set._.push(o);
+            };
+            z._ = [];
+            z.set._ = [];
+            $.async = !0;
+            $.setAttribute("charset", "utf-8");
+            $.src = "//v2.zopim.com/?2YRVJ9WdqLaWGrAOduJsbu5op02qZFJI";
+            z.t = +new Date();
+            $.type = "text/javascript";
+            e.parentNode.insertBefore($, e);
+          })(document, "script");
+        $zopim(function () {
+          var _usrdtls = JSON.parse(localStorage.getItem("CFUser"));
+          $zopim.livechat.setEmail(_usrdtls.primaryEmail);
+          $zopim.livechat.setName(localStorage.getItem("UserName"));
+        });
+      }, 8000);
+    </script>
+
+    <!--End of Zopim Live Chat Script-->
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src *; script-src 'self' 'unsafe-inline' www.google-analytics.com *.app-us1.com *.cloudflare.com *.zopim.com *.hotjar.com *.zdassets.com maxcdn.bootstrapcdn.com ajax.googleapis.com apis.google.com *.aspnetcdn.com *.stripe.com; style-src 'self' 'unsafe-inline' cdn.lineicons.com maxcdn.bootstrapcdn.com *.googleapis.com; img-src * 'self' data: google-analytics.com" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <title>CloudFuze</title>
+    <link rel="Shortcut Icon" type="image/ico" href="../img/PNG/cfLogo.png" />
+
+    <link
+      href="../stylesheets/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <link href="../stylesheets/chosen.css" rel="stylesheet" type="text/css" />
+    <!--  <link href="../stylesheets/style.css?ver=1231" rel="stylesheet" type="text/css"/>
+	      <link href="../stylesheets/application.css?ver=1231" rel="stylesheet" type="text/css"/>
+	
+    <link href="../font/cloudfuzefont.css" rel="stylesheet" type="text/css"/>
+    <link href="../font/cficons.css?ver=1231" rel="stylesheet" type="text/css"/>  -->
+    <link
+      href="../stylesheets/bootstrap/bootstrap-progressbar-3.1.1.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <link
+      href="../stylesheets/move.css?ver=1231"
+      rel="stylesheet"
+      type="text/css" />
+    <link href="../stylesheets/MetroNotifications_7.css" rel="stylesheet" />
+    <link href="../stylesheets/upgrade.css" rel="stylesheet" />
+    <link href="../stylesheets/multiUser.css" rel="stylesheet" />
+    <link href="../stylesheets/wizard.css" rel="stylesheet" />
+    <link href="../stylesheets/search-box.css" rel="stylesheet" />
+    <link href="../stylesheets/multiuserstyling.css" rel="stylesheet" />
+    <link href="../stylesheets/jquery.datepicker2.css" rel="stylesheet" />
+    <!--<link href="../stylesheets/loading.css" rel="stylesheet" />-->
+    <link
+      href="../stylesheets/bootstrap/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if lt IE 9]>
+      <script
+        src="../../javascripts/html5shiv.js"
+        type="text/javascript"></script>
+      <script
+        src="../../javascripts/excanvas.js"
+        type="text/javascript"></script>
+      <script src="../../javascripts/iefix.js" type="text/javascript"></script>
+      <link
+        href="../../stylesheets/iefix.css"
+        media="screen"
+        rel="stylesheet"
+        type="text/css" />
+    <![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+
+    <!-- Login With Google -->
+    <script
+      src="https://apis.google.com/js/platform.js?onload=renderButton"
+      async
+      defer></script>
+    <meta name="google-signin-scope" content="profile email" />
+    <meta
+      name="google-signin-client_id"
+      content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+    <link
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet" />
+    <!-- Login With Google -->
+
+    <style>
+      .bodyOverlay {
+        background-color: rgba(255, 255, 255, 0.2);
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        overflow-x: hidden;
+      }
+
+      body {
+        color: #1f2129;
+      }
+      .list-group-item {
+        border: none;
+      }
+
+      .button:hover {
+        background: #ededed;
+        text-shadow: rgba(255, 255, 255, 0.5) 0 1px 1px;
+        border: 1px solid lightgrey;
+        box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0 0 inset;
+        background-image: -webkit-linear-gradient(top, #ffffff, #ededed);
+      }
+      .button.blue:hover {
+        text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
+        background: #147cb9;
+        border: 1px solid #126da2;
+      }
+
+      body {
+        font: normal 12px sans-serif;
+        overflow: auto;
+      }
+
+      .breadcrumb > li + li:before {
+        content: "";
+      }
+      input[type="radio"]:checked:before {
+        content: "";
+        display: block;
+        position: relative;
+        top: 3px;
+        left: 3px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #0062ff;
+      }
+      #moveDestination input[type="radio"]:checked:before {
+        left: 13px;
+      }
+      .highlight {
+        margin-left: 10px;
+      }
+      .cloudSpinn {
+        cursor: pointer;
+        margin-top: 2px;
+        height: 16px;
+        width: 16px;
+        display: inline-block;
+        background: url(../img/syncCloud.gif) no-repeat;
+        /* float: right; */
+        margin-bottom: 2px;
+      }
+      .cloudSpinn1 {
+        height: 17px;
+        width: 17px;
+        display: inline-block;
+        background: url(../img/syncCloud1.gif) no-repeat;
+      }
+      .modal-backdrop,
+      .modal-backdrop.fade.in {
+        opacity: 0.6;
+        filter: alpha(opacity=60);
+      }
+      .moveCloudBlock .cf-refresh4 {
+        color: #000000 !important;
+      }
+      #moveReportsForUser tr {
+        border-bottom: 1px solid #ccc !important;
+      }
+      #moveReportsForUser .hide-report1 {
+        border-bottom: 0px solid #ccc !important;
+      }
+      @-moz-document url-prefix() {
+        .cf-plus5:after,
+        .cf-plus5disabled:after {
+          content: url(../img/down.png);
+        }
+        .cf-minus5:after {
+          content: url(../img/up.png);
+        }
+      }
+
+      .pricing li a {
+        border: 1px solid #000;
+      }
+      .pricing .active a {
+        border: 2px solid orange !important;
+      }
+
+      .activeTab {
+        border-bottom: 2px solid #286090;
+        color: #286090;
+      }
+
+      .boxPricing {
+        position: relative;
+      }
+      .ribbonPricing {
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        z-index: 1;
+        overflow: hidden;
+        width: 75px;
+        height: 69px;
+        text-align: right;
+      }
+      .ribbonPricing span {
+        font-size: 10px;
+        font-weight: bold;
+        color: rgb(50, 118, 177);
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        width: 100px;
+        display: block;
+        border: 1px solid #e2e2e2;
+        background: #f2f2f2;
+        box-shadow: 2px 3px 10px -5px rgb(50, 118, 177);
+        position: absolute;
+        top: 19px;
+        left: -21px;
+      }
+      .ribbonPricing span::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 100%;
+        z-index: -1;
+        border-left: 3px solid rgb(50, 118, 177);
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid rgb(50, 118, 177);
+      }
+      .ribbonPricing span::after {
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 100%;
+        z-index: -1;
+        border-left: 3px solid transparent;
+        border-right: 3px solid rgb(50, 118, 177);
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid rgb(50, 118, 177);
+      }
+      .btn-group .btn-primary {
+        border: 2px solid #357ebd;
+      }
+      #moveSource .ui-selected {
+        background: #b6dde6;
+      }
+
+      .migrationImage {
+        width: 7%;
+        margin-right: 7px;
+      }
+      .moveReportDetailsTable .col-md-3 div {
+        float: left;
+        font-weight: bold;
+        margin-right: 3%;
+      }
+      .moveSyncReportDetailsTable .col-md-3 div {
+        float: left;
+        font-weight: bold;
+        margin-right: 3%;
+      }
+      .moveReportDetails .reportTable table {
+        width: 90%;
+        margin-left: 2%;
+        border: 1px solid #ccc !important;
+      }
+      .moveReportDetails .reportTable th {
+        background-color: #84b3dc !important;
+      }
+
+      /* ... Target Safari ... */
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        ::i-block-chrome,
+        #forPreviousMove {
+          margin-top: 1.3%;
+        }
+        ::i-block-chrome,
+        #forNextMove {
+          margin-top: 21%;
+        }
+      }
+      #preview .col-md-12:nth-child(2) table th,
+      #preview .col-md-12:nth-child(2) table td {
+        text-align: left;
+      }
+      <!--optionspage css-- > form.example input[type="text"] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+      }
+
+      form.example button {
+        padding: 5px;
+        background: white;
+        font-size: 17px;
+        border: 1px solid lightgray;
+        border-left: none;
+        cursor: pointer;
+        margin-left: -4px;
+        margin-top: -10px;
+      }
+
+      form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .optionsDiv1 table tr {
+        border-bottom: none !important;
+      }
+
+      .sd-container {
+        position: relative;
+        float: left;
+      }
+
+      .sd {
+        border: 1px solid #1cbaa5;
+        padding: 5px 10px;
+        height: 30px;
+        width: 150px;
+      }
+
+      .open-button1 {
+        position: absolute;
+        top: 12px;
+        right: 13px;
+        width: 15px;
+        height: 10px;
+        background: #fff;
+        pointer-events: none;
+      }
+
+      .open-button1 calendar-button {
+        border: none;
+        background: transparent;
+      }
+      .dropdown-menu1 li:hover {
+        background-color: lightgray;
+      }
+      .dropdown-menufile li:hover {
+        background-color: lightgray;
+      }
+      .dropdown-menu1job li:hover {
+        background-color: lightgray;
+      }
+      /* .ui-datepicker {
+             width: 17em;
+             padding: .2em .2em 0;
+             display: none;
+             background:#2F99B4;
+         }
+         .ui-datepicker .ui-datepicker-title {
+             margin: 0 2.3em;
+             line-height: 1.8em;
+             text-align: center;
+             color:#FFFFFF;
+             background:#2F99B4;
+         }
+         .ui-datepicker table {
+             width: 100%;
+             font-size: .7em;
+             border-collapse: collapse;
+             font-family:verdana;
+             margin: 0 0 .4em;
+             color:#000000;
+             background:#9EEFEE;
+         }
+         !*This is date TD *!
+         .ui-datepicker td {
+
+             border: 0;
+             padding: 1px;
+
+
+         }
+         .ui-datepicker td span,
+         .ui-datepicker td a {
+             display: block;
+             padding: .8em;
+             text-align: right;
+             text-decoration: underline;
+         }*/
+      .fromDate1 .ui-datepicker-trigger {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+      }
+      .toDate1 .ui-datepicker-trigger {
+        position: absolute;
+        top: 47px;
+        right: 15px;
+      }
+
+      .submitBtn {
+        color: #fff;
+        text-transform: uppercase;
+        background: #4fbfe8;
+        padding: 9px 19px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+      }
+      .submitBtn:hover {
+        background: #fcb315;
+        color: #fff;
+        border-radius: 10px;
+      }
+
+      textarea {
+        vertical-align: top;
+        height: 5em;
+      }
+
+      .error {
+        display: none;
+        margin-left: 10px;
+      }
+
+      .error_show {
+        color: red;
+        margin-left: 0%;
+      }
+      #org_name,
+      #org_email,
+      #org_company,
+      #org_phone,
+      #org_message {
+        width: 100%;
+        height: 50px;
+      }
+      #org_message {
+        vertical-align: top;
+        height: 8em;
+        width: 100%;
+        margin-left: -9%;
+      }
+
+      input.invalid,
+      textarea.invalid {
+        border: 2px solid red;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .user_navigation {
+        margin-top: 8px;
+      }
+      .user_navigation li {
+        margin-right: 10px;
+      }
+
+      .btn-primary.disabled,
+      .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      #forNextMove {
+        color: #fff;
+        background-color: #0062ff;
+        border-color: #0062ff;
+      }
+      input[name="sourceCloud"],
+      input[name="dstCloud"] {
+        vertical-align: middle;
+        float: left;
+        margin-right: 5%;
+        /*    margin-top: 20%;*/
+      }
+    </style>
+    <link rel="stylesheet" href="../stylesheets/sidebar.css" />
+    <link href="../stylesheets/LinIconsPro-Light.css" rel="stylesheet" />
+    <link href="../stylesheets/LineIcons.css" rel="stylesheet" />
+    <style>
+      #sidebar i {
+        font-size: 20px !important;
+      }
+      .CloudThumb_parent {
+        margin-right: 1.8%;
+        margin-bottom: 2%;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        width: 115px;
+        height: 115px;
+        float: left;
+      }
+      .CloudThumb_parent:hover {
+        box-shadow: 0px 0px 10px #0000001f;
+      }
+      .cloudThumbnail img {
+        height: 45px;
+        width: 45px;
+      }
+      .table td {
+        vertical-align: middle;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        z-index: 1;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        left: -15%;
+      }
+      .exclude {
+        left: 65% !important;
+      }
+      .timeCreated {
+        left: 60% !important;
+      }
+      .includeFileFolder .dropdown-content {
+        left: 60%;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: #fafafa;
+        color: #0062ff;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      button,
+      input,
+      textarea {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      .table > thead > tr > th {
+        border-bottom: none;
+      }
+      .bg-info {
+        padding-top: 0.1rem;
+      }
+      @media only screen and (min-width: 992px) {
+        .d-lg-none {
+          display: none !important;
+        }
+      }
+      .lnil-cross-circle,
+      i {
+        font-size: 14px !important;
+        font-weight: bold !important;
+      }
+      #sidebar,
+      #content {
+        font-family: poppins;
+      }
+      .rowdiv {
+        width: 45%;
+      }
+      #cm-sidebar {
+        padding: 0px 5px;
+        position: absolute;
+        top: 30%;
+        right: 5%;
+      }
+      #cm-topbar {
+        padding: 0px 5px;
+        position: absolute;
+        top: 30%;
+        right: 10%;
+      }
+      @media only screen and (max-width: 768px) {
+        #navbarSupportedContent {
+          display: none !important;
+        }
+        .flex-row {
+          float: right;
+        }
+        .rowdiv {
+          width: 100%;
+        }
+        #cm-sidebar {
+          right: 20%;
+        }
+        #cm-topbar {
+          right: 10%;
+        }
+        .dropdown-content {
+          right: 0%;
+          left: 50% !important;
+        }
+      }
+      .btn-dark {
+        color: #fff;
+        background-color: #343a40;
+        border-color: #343a40;
+      }
+
+      element.style {
+        top: 12%;
+        display: block;
+      }
+      .modal-open .modal {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      .modal {
+        left: -4%;
+        position: fixed;
+        top: 0;
+        z-index: 1050;
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        outline: 0;
+      }
+      .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: 0.5rem;
+        pointer-events: none;
+      }
+      .modal.fade .modal-dialog {
+        transition: -webkit-transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+        -webkit-transform: translate(0, -50px);
+        transform: translate(0, -50px);
+      }
+      .modal.show .modal-dialog {
+        -webkit-transform: none;
+        transform: none;
+      }
+      .modal-content {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+        outline: 0;
+      }
+      .modal-header {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        border-bottom: 1px solid #dee2e6;
+        border-top-left-radius: calc(0.3rem - 1px);
+        border-top-right-radius: calc(0.3rem - 1px);
+      }
+      .modal-body {
+        position: relative;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1rem;
+      }
+      .modal-footer {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding: 0.75rem;
+        border-top: 1px solid #dee2e6;
+        border-bottom-right-radius: calc(0.3rem - 1px);
+        border-bottom-left-radius: calc(0.3rem - 1px);
+      }
+      .fade {
+        transition: opacity 0.15s linear;
+      }
+      .modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1040;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        opacity: 0.4 !important;
+      }
+      .show {
+        display: block !important;
+        opacity: 1;
+      }
+      @media (max-width: 768px) and (min-width: 767.9px) {
+        #Cf_Mobile {
+          width: 90% !important;
+        }
+        svg {
+          margin-left: 42% !important;
+        }
+        #cm-sidebar {
+          right: 5%;
+        }
+        #cm-topbar {
+          right: 2%;
+        }
+        .dropdown-content {
+          right: 0%;
+          left: 70% !important;
+        }
+      }
+      @media (max-width: 420px) and (min-width: 319px) {
+        .alertScs,
+        .alertErr {
+          width: 300px !important;
+          min-width: 300px !important;
+        }
+        #policyId {
+          bottom: 0% !important;
+        }
+      }
+      @media (max-height: 620px) {
+        #policyId {
+          bottom: -2% !important;
+        }
+      }
+      @media (max-width: 1300px) and (min-width: 992px) {
+        #navbarSupportedContent {
+          width: 150% !important;
+        }
+      }
+      .migrateImg {
+        margin-top: -7%;
+      }
+      .usr-folder1 > .dropdown > .dropdown-content {
+        min-width: 200px;
+      }
+      .usr-folder1 > .dropdown > .dropdown-content > a {
+        font-size: 13px;
+        height: 5vh;
+        padding: 4%;
+      }
+
+      /*for stripe payment*/
+      .StripeElement {
+        box-sizing: border-box;
+        height: 40px;
+        padding: 10px 12px;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        background-color: white;
+        box-shadow: 0 1px 3px 0 #e6ebf1;
+        -webkit-transition: box-shadow 150ms ease;
+        transition: box-shadow 150ms ease;
+      }
+
+      .StripeElement--focus {
+        box-shadow: 0 1px 3px 0 #cfd7df;
+      }
+
+      .StripeElement--invalid {
+        border-color: #fa755a;
+      }
+
+      .StripeElement--webkit-autofill {
+        background-color: #fefde5 !important;
+      }
+      /*for stripe payment END*/
+      #UserEntName::placeholder,
+      #couponcode::placeholder {
+        color: #cccccc;
+        opacity: 1; /* Firefox */
+      }
+      #ProccesingPopup {
+        background: white;
+        width: 30%;
+        border: 1px solid gray;
+        top: 57%;
+        padding: 3% 0 5%;
+        left: 56%;
+      }
+      #ProccesingPopup .container {
+        width: 100%;
+        height: auto;
+        background: white;
+        padding: 8% 4%;
+        border-radius: 2%;
+      }
+      #ProccesingPopup p {
+        font-size: 14px;
+      }
+      #ThankPop {
+        background: white;
+        width: 35%;
+        border: 1px solid gray;
+        top: 57%;
+        left: 55%;
+        padding: 2% 2% 0;
+      }
+      #ThankPop img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10%;
+      }
+
+      #ThankPop a {
+        width: 20%;
+        margin-top: 4%;
+        text-align: center;
+        padding: 2%;
+        color: white;
+        display: block;
+        background-color: #0062ff;
+        margin: 8% auto;
+        font-size: 15px;
+        border: none;
+        border-radius: 3px;
+      }
+      #ThankPop .container {
+        width: 100%;
+        background: white;
+        padding: 5%;
+        border-radius: 2%;
+      }
+      #couponcode {
+        height: 36px;
+        margin-top: 2%;
+        border-right: none;
+        border: 1px solid #e5e5e5;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        padding: 2%;
+        width: 15vw;
+      }
+      #applycouponNew {
+        padding: 0 9px 0 10px;
+        height: 36px;
+        font-size: 12px;
+        float: right;
+        background: #24dfd3 0% 0% no-repeat padding-box;
+        border-radius: 0px 5px 5px 0px;
+        border: 1px solid #24dfd3;
+        width: 10vw;
+        color: #fff;
+        position: absolute;
+        top: 14%;
+        right: 4%;
+      }
+      #checkoutDiv {
+        position: relative;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        height: 73vh;
+        padding: 2%;
+      }
+      #checkoutChild {
+        background: #fcfcfc 0% 0% no-repeat padding-box;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        width: 538px;
+        height: 65vh;
+        float: left;
+        padding: 2%;
+        max-width: 52%;
+      }
+      #verticalLine {
+        border: 1px solid #e5e5e5;
+        height: 58vh;
+        float: left;
+        left: 53%;
+        top: 11%;
+        background: #e5e5e5;
+        position: absolute;
+      }
+      #checkoutChild2 {
+        width: 460px;
+        height: 55vh;
+        background: #fcfcfc 0% 0% no-repeat padding-box;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        float: right;
+        margin-top: 3.5%;
+        padding: 2%;
+      }
+      #moveMigrationPrices {
+        top: 2%;
+        left: -16%;
+      }
+      #titleModal {
+        color: #ffffff;
+        font-size: 16px;
+        width: 100%;
+      }
+      #closePrice {
+        font-size: 25px !important;
+        color: #fff;
+        opacity: 1;
+        width: 10%;
+        text-align: right;
+      }
+      #bodyModal {
+        width: 100%;
+      }
+      #payMonthly {
+        margin-right: 4px;
+        color: #1f2129;
+        font-size: 16px;
+      }
+      #payYearly {
+        margin-left: 4px;
+        opacity: 0.5;
+        color: #1f2129;
+        font-size: 16px;
+      }
+      .pricing-plans {
+        background: #fafaff 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        padding: 2%;
+      }
+      #contModal {
+        width: 100%;
+        border: none;
+      }
+      #headModal {
+        background: #0062ff 0% 0% no-repeat padding-box;
+        border-radius: 5px 5px 0px 0px;
+        height: 9vh;
+        width: 100%;
+        padding-top: 2%;
+      }
+      #ProccesingPopup {
+        background: white;
+        border: 1px solid gray;
+        padding: 3% 0 5%;
+        top: 21%;
+        left: 34%;
+        height: 47%;
+        width: 33%;
+      }
+      #ProccesingPopup .container {
+        width: 100%;
+        height: auto;
+        background: white;
+        padding: 8% 4%;
+        border-radius: 2%;
+      }
+      #ProccesingPopup p {
+        font-size: 14px;
+      }
+      #ThankPop {
+        background: white;
+        width: 35%;
+        border: 1px solid gray;
+        padding: 2% 2% 0;
+        top: 12%;
+        left: 32%;
+        height: 65%;
+      }
+      #ThankPop img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10%;
+      }
+
+      #ThankPop a {
+        width: 20%;
+        margin-top: 4%;
+        text-align: center;
+        padding: 2%;
+        color: white;
+        display: block;
+        background-color: #0062ff;
+        margin: 8% auto;
+        font-size: 15px;
+        border: none;
+        border-radius: 3px;
+      }
+      #ThankPop .container {
+        width: 100%;
+        background: white;
+        padding: 5%;
+        border-radius: 2%;
+      }
+      input[type="date"]::-webkit-inner-spin-button,
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+      }
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        height: 24px;
+        width: 50px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .slider {
+        background-color: #2196f3;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+      input::-webkit-calendar-picker-indicator {
+        opacity: 100;
+      }
+
+      /*.sizeDropDown{
+  margin-left: -53% !important;
+}*/
+
+      .fldr_parent1 p {
+        /*display: flex !important;
+    margin-left: 22px;
+    position: relative;
+    margin-bottom: 0% !important;
+    margin-top: 5% !important;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;*/
+      }
+      .fldr_parent1 p input {
+        /* padding: 0;
+    margin: -1px 0 0 13px !important;
+    width: 59px;*/
+        margin-left: 33px !important;
+      }
+      .fldr_parent1 p i {
+        /*margin-left: 7px !important;
+    margin-top: 2px !important;
+    margin-right: 0px !important;
+    font-size: 12px !important;*/
+        margin-top: 5px !important;
+        position: absolute;
+        font-size: 12px !important;
+      }
+      .fldr_parent1 p #textSpan {
+        margin-left: 20px;
+        /*position: relative !important;
+    margin-left: 5px;
+    margin-top: -2px;
+    width:160px !important;*/
+      }
+      .fldr_parent1 p span:nth-child(1) {
+        margin-bottom: 0px !important;
+        margin-top: 5px !important;
+        position: absolute !important;
+      }
+      .fldr_parent1 p img {
+        position: absolute;
+        margin-top: 3px;
+        position: absolute;
+        margin-top: 6px;
+        width: 10px !important;
+        height: 10px !important;
+      }
+      #forSpoFolderImage {
+        height: 20px !important;
+        width: 20px !important;
+        position: relative;
+        left: 25px;
+        margin-top: -4px;
+      }
+      @media only screen and (min-width: 1430px) {
+        .fldr_parent1 p input[type="radio"] {
+          margin-left: 23px;
+        }
+      }
+      .fldr_parent1 p span[name="SHAREPOINT_ONLINE_BUSINESS"]:nth-child(1) {
+        margin-bottom: 0px !important;
+        margin-top: 5px !important;
+        margin-left: 4% !important;
+        position: absolute !important;
+      }
+      #folderLoading img {
+        margin-top: 2px !important;
+        width: 20px !important;
+        position: relative;
+        height: 20px !important;
+        margin: 5px;
+      }
+      .fldr_parent .usr-data {
+        padding: 0px !important;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 30px;
+        position: absolute;
+        margin-bottom: 2% !important;
+        left: 0;
+      }
+      .fldr_parent .usr-data .usr-folder {
+        padding-bottom: 2%;
+        margin-left: 7% !important;
+      }
+      #rootLevelUserSelectInput {
+      }
+      .fldr_parent div:nth-child(2) {
+        margin-left: 10px !important;
+        margin-top: 0% !important;
+        /*z-index: 9999999999;*/
+        position: absolute;
+        top: 7px;
+        left: 50px;
+      }
+      .fldr_parent div:nth-child(3) {
+        margin-left: 0% !important;
+        margin-top: 0% !important;
+        position: absolute;
+        left: 74px;
+        top: 6px;
+      }
+
+      #dstCloudsUsers .fldr_parent div:nth-child(3) {
+        /*margin-left: 15% !important;
+    margin-top: -10.5% !important;
+     margin-left: 19% !important;
+    margin-top: -9.5% !important;*/
+      }
+      #changeLnilToFa {
+        /*margin-top: 2px !important;
+    font-size: 12px !important;
+    color: #f7d26c;*/
+        margin-top: 7px !important;
+        font-size: 11px !important;
+        color: #f7d26c;
+        /*multiUsercss 1107*/
+      }
+      @media only screen and (min-width: 1430px) {
+        .fldr_parent1 p input {
+          /* padding: 0;
+    margin: -1px 0 0 13px !important;
+    width: 59px;
+    margin-left: 54px !important;*/
+        }
+
+        /*.fldr_parent div:nth-child(3) {
+    margin-left: 24% !important;
+    margin-top: -10.3% !important; 
+}
+
+#dstCloudsUsers .fldr_parent div:nth-child(3) {
+    margin-left: 24% !important;
+    margin-top: -10.5% !important;
+}
+.fldr_parent div:nth-child(2) {
+    margin-left: 49px !important;
+    margin-top: -10% !important;
+    z-index: 9999999999; 
+} */
+      }
+      div#navbarSupportedContent {
+        display: flex !important;
+        align-items: center;
+        height: 80px;
+        margin: -55px;
+      }
+      .alignNxtPrev {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      #mappingClouds .message-widget a {
+        background-color: #fff;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      .message-box .message-widget a .user-img {
+        width: 25%;
+        position: relative;
+        display: inline-block;
+        display: flex !important;
+        margin: 0;
+        float: left;
+        /* justify-content: center; */
+        align-items: center !important;
+      }
+
+      .migrateImg {
+        margin-top: -7%;
+        padding: 4px !important;
+      }
+      .migrationImage {
+        height: 30px;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+      }
+      @media only screen and (min-width: 1850px) {
+        #scrollMappedBody table thead tr {
+          width: 49% !important;
+        }
+        .fldr_parent1 p input {
+          margin-left: 54px !important;
+        }
+      }
+      @media only screen and (min-width: 1850px) {
+        #mapdPrmns table thead tr {
+          width: 64% !important;
+        }
+        #mapdPrmns table thead tr th {
+          width: 81% !important;
+        }
+      }
+      @media only screen and (min-width: 2100px) {
+        #mapdPrmns table thead tr {
+          width: 63% !important;
+        }
+        #mapdPrmns table thead tr th {
+          width: 84% !important;
+        }
+        .fldr_parent1 p input {
+          margin-left: 54px !important;
+        }
+      }
+      @media only screen and (min-width: 2760px) {
+        #mapdPrmns table thead tr {
+          width: 64% !important;
+        }
+        #mapdPrmns table thead tr th {
+          width: 85% !important;
+        }
+        .fldr_parent1 p input {
+          margin-left: 54px !important;
+        }
+      }
+      .forDomainNameMin > .fldr_parent {
+        display: flex;
+        /* align-items: center; */
+        flex-wrap: wrap;
+        flex-direction: column;
+        min-height: 40px;
+        /* justify-content: center; */
+        position: relative;
+      }
+      .fldr_parent1 {
+        padding-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .fldr_parent1 {
+        margin-top: 20px;
+      }
+      #folderLoading {
+        top: 21px;
+      }
+    </style>
+    <!-- New Menu Styles Start's -->
+    <style>
+      body {
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.8;
+        font-weight: normal;
+        background: #fafafa;
+        color: #1f2129;
+      }
+      .sideNav-Home {
+        width: 80px;
+        height: 100vh;
+        color: #fff;
+        display: flex;
+        background-color: #001a6f;
+      }
+      .sideNavMenu li {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .sideNavMenu li a {
+        gap: 5px;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        color: #fff;
+        align-items: center;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .sideNavMenu li a i {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .sideNavMenu li a span {
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+      .sideNavMenu li img {
+        width: 72px;
+      }
+      .sideNavMenu {
+        padding: 0;
+      }
+      .new_SideActive {
+        background-color: #0037a9;
+        border-left: 3px solid #fff;
+      }
+      .new-PlaceContainer {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 80px);
+      }
+      .topNav-Home {
+        height: 70px;
+        display: flex;
+        padding: 0 30px;
+        align-items: center;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
+      }
+      .userNameMenu {
+        gap: 5px;
+        display: flex;
+        cursor: pointer;
+        margin-left: auto;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+      }
+      .userNameMenu div {
+        font-weight: 600;
+      }
+      .userNameMenu .lnil-user-alt-1 {
+        padding: 5px;
+        font-weight: 600;
+        color: #0062ff;
+        border-radius: 50px;
+        border: 1px solid #0062ff;
+      }
+      .placeCFTEST {
+        gap: 50px;
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .placeCFTEST div {
+        width: 140px;
+        height: 160px;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid #f2f2f2;
+        box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
+      }
+      .placeCFTEST div a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .placeCFTEST div a i {
+        color: #0062ff;
+        font-size: 36px;
+      }
+      .placeCFTEST div a span {
+        color: #000;
+        font-weight: 500;
+        padding: 0 15px;
+        text-align: center;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content-New {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        z-index: 1;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        left: -15%;
+      }
+
+      .dropdown-content-New a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content-New a:hover {
+        background-color: #fafafa;
+        color: #1220f6 !important;
+      }
+      .userNameMenu:hover .dropdown-content-New {
+        display: block;
+      }
+      #newDashName {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        color: #fff;
+        border-radius: 50%;
+        align-items: center;
+        background: #0062ff;
+        justify-content: center;
+        border: 2px solid #0062ff;
+      }
+    </style>
+    <!-- New Menu Styles End's -->
+    <!-- LinkEx PreScan Styles Start's -->
+    <style>
+      .linkEx-PreScanSummary {
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+      }
+      .linkEx-PreScanSummary-Status {
+        width: 100%;
+        height: 25px;
+        display: flex;
+      }
+      .linkEx-PreScanSummary-Status div {
+        width: auto;
+        height: 100%;
+        display: flex;
+        padding: 0 10px;
+        font-size: 12px;
+        color: #737373;
+        margin-left: auto;
+        align-items: center;
+        justify-content: center;
+        background-color: #f2f2f2;
+        border-radius: 0px 5px 0px 0px;
+      }
+      .linkEx-PreScanSummary-Body {
+        display: flex;
+        align-items: center;
+        height: calc(100% - 25px);
+        justify-content: space-around;
+      }
+      .linkEx-PreScanSummary-Content-title {
+        font-size: 12px;
+        font-weight: 400;
+        color: #495057;
+      }
+      .linkEx-PreScanSummary-Content-body {
+        font-size: 24px;
+        font-weight: 500;
+        color: #495057;
+      }
+      .linkEx-PreScanSummary-Content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .linkEx-preScan-Actions {
+        gap: 15px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        margin-top: 15px;
+      }
+      .linkEx-preScan-downloadCSV {
+        gap: 6px;
+        display: flex;
+        cursor: pointer;
+        /* margin-left: auto; */
+        padding: 8px 12px;
+        border-radius: 4px;
+        align-items: center;
+        font-size: 12px !important;
+        justify-content: space-evenly;
+      }
+      .linkEx-preScan-downloadCSV:hover {
+        background-color: #f2f2f2;
+      }
+      .linkEx-preScan-scanLinks {
+        height: 40px;
+        color: #fff;
+        display: flex;
+        cursor: pointer;
+        font-weight: 500;
+        padding: 0px 12px;
+        border-radius: 4px;
+        align-items: center;
+        font-size: 12px !important;
+        justify-content: space-evenly;
+        background-color: #0062ff;
+      }
+      .linkEx-preScan-reportsBack {
+        gap: 5px;
+        width: 80px;
+        height: 40px;
+        border: unset;
+        display: flex;
+        color: #454545;
+        border-radius: 5px;
+        align-items: center;
+        background-color: #f2f2f2;
+        justify-content: space-evenly;
+      }
+      .linkEx-preScan-usersTable {
+        width: 100%;
+        margin-top: 10px;
+      }
+      .linkEx-preScan-usersTable-Title {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #f2f2f2;
+      }
+      .linkEx-preScan-usersTable-bodyData {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #f2f2f2;
+      }
+      .linkEx-preScan-usersTable-Body {
+        width: 100%;
+        display: flex;
+        height: 300px;
+        /* flex-wrap: wrap; */
+        overflow-y: auto;
+        align-items: center;
+        flex-direction: column;
+      }
+      .placeSelectPreScanAll {
+        justify-content: center;
+      }
+      .placeSelectPreScanAll,
+      .placeUserEmail,
+      .placeUserName,
+      .placeTotalOroginalFiles,
+      .placeTotalLinks,
+      .placeTotalLinksFiles,
+      .placeScanStatus {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+      }
+      .placeUserEmail span,
+      .placeUserName span,
+      .placeTotalOroginalFiles span,
+      .placeTotalLinks span,
+      .placeTotalLinksFiles span,
+      .placeScanStatus span {
+        width: 99%;
+        overflow: hidden;
+        white-space: pre;
+        text-overflow: ellipsis;
+      }
+      .linkEx-preScan-usersTable-Title > .placeUserEmail span,
+      .linkEx-preScan-usersTable-Title > .placeUserName span,
+      .linkEx-preScan-usersTable-Title > .placeTotalOroginalFiles span,
+      .linkEx-preScan-usersTable-Title > .placeTotalLinks span,
+      .linkEx-preScan-usersTable-Title > .placeTotalLinksFiles span,
+      .linkEx-preScan-usersTable-Title > .placeScanStatus span {
+        padding: 0 1px;
+        font-size: 12px;
+        color: #acacac;
+        font-weight: 400;
+      }
+      .placeUserEmail span,
+      .placeUserName span,
+      .placeTotalOroginalFiles span,
+      .placeTotalLinks span,
+      .placeTotalLinksFiles span,
+      .placeScanStatus span {
+        /* padding: 0 5px; */
+        font-size: 12px;
+        color: #454545;
+        font-weight: 500;
+      }
+      .placeSelectPreScanAll {
+        width: 2%;
+      }
+      .placeUserEmail {
+        width: 23%;
+      }
+      .placeUserName,
+      .placeTotalOroginalFiles,
+      .placeTotalLinks,
+      .placeTotalLinksFiles,
+      .placeScanStatus {
+        width: 12%;
+      }
+
+      .placeFolderName span,
+      .placeFilePath span,
+      .placeFileSize span,
+      .placeFileTotalLinks span,
+      .placeFileTotalLinksFiles span,
+      .placeFileScanStatus span {
+        padding: 0 5px;
+        font-size: 12px;
+        color: #454545;
+        font-weight: 500;
+      }
+
+      .placeFolderName,
+      .placeFilePath {
+        width: 22%;
+      }
+
+      .placeFileSize,
+      .placeFileTotalLinks,
+      .placeFileTotalLinksFiles,
+      .placeFileScanStatus {
+        width: 14%;
+      }
+
+      .span-PROCESSED,
+      .span-COMPLETED {
+        font-weight: 500 !important;
+        color: #00c64f !important;
+      }
+      .span-NOT_PROCESSED,
+      .span-IN_QUEUE {
+        font-weight: 500 !important;
+        color: #a52a2a !important;
+      }
+      .span-CONFLICT {
+        font-weight: 500 !important;
+        color: #ff4c4c !important;
+      }
+      .span-IN_PROGRESS,
+      .span-PICKING_INPRGS {
+        font-weight: 500 !important;
+        color: #0062ff !important;
+      }
+
+      /* .linkEx-preScan-usersTable-bodyData > .preScanDone > span:hover {
+      .linkEx-preScan-usersTable-bodyData > .preScanDone > span:hover {
+        cursor: pointer;
+        color: #0062ff !important;
+        text-decoration: underline;
+      } */
+
+      .linkEx-preScan-reportsTables {
+        width: 100%;
+        margin-top: 15px;
+      }
+      img.tableImg {
+        width: 18px;
+      }
+      .alignWorkSpaceFolder {
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 5px;
+      }
+      .linkExJobName div {
+        width: 99%;
+        font-size: 12px;
+        color: #454545;
+        font-weight: 500;
+        overflow: hidden;
+        white-space: pre;
+        text-overflow: ellipsis;
+      }
+      #linkEx-map {
+        width: 100%;
+        max-height: 450px;
+        margin-top: 15px;
+        overflow-y: auto;
+      }
+      #linkEx-map table {
+        width: 100%;
+      }
+      #linkEx-map table thead tr {
+        top: 0;
+        position: sticky;
+        background-color: #fff;
+        border-bottom: 1px solid #ebecf0;
+      }
+      #linkEx-map table thead tr th,
+      #appendSelectedMappingsEmail tr td,
+      #emailMappingsTableBody tr td {
+        font-size: 12px;
+        font-weight: 400;
+        text-align: left;
+        color: #5e6c84;
+        padding: 5px 10px;
+      }
+      #appendSelectedMappingsEmail tr td,
+      #emailMappingsTableBody tr td {
+        font-size: 12px !important;
+        color: #454545 !important;
+        font-weight: 500 !important;
+      }
+      .createBatchParent-modal {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: absolute;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.01);
+      }
+
+      .createBatchParent-modal-container {
+        width: 500px;
+        height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        z-index: 999999999;
+        border-radius: 4px;
+        background-color: #fff;
+        transform: translateY(80px);
+        animation: fromTop 0.1s linear;
+        box-shadow: 0.5px 0px 2.7px rgba(0, 0, 0, 0.012),
+          1.3px 0.1px 6.9px rgba(0, 0, 0, 0.018),
+          2.7px 0.2px 14.2px rgba(0, 0, 0, 0.022),
+          5.5px 0.4px 29.2px rgba(0, 0, 0, 0.028),
+          15px 1px 80px rgba(0, 0, 0, 0.04);
+      }
+      @keyframes fromTop {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(40px);
+        }
+        100% {
+          transform: translateY(80px);
+        }
+      }
+      .createBatchParent-modal-title h4 {
+        padding: 0;
+        margin: 0;
+      }
+      .createBatchParent-modal-title {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        color: #fff;
+        padding: 0 10px;
+        align-items: center;
+        background-color: #0062ff;
+        justify-content: space-between;
+      }
+      .createBatchParent-modal-Body {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        height: calc(100% - 85px);
+        background-color: #fff;
+      }
+      .createBatchParent-modal-Footer {
+        width: 100%;
+        gap: 15px;
+        height: 45px;
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: flex-end;
+        border-top: 1px solid #d3d3d3;
+        /* background-color: #5e6c84; */
+      }
+      .createBatchParent-modal-Footer div {
+        height: 80%;
+        /* width: 40px; */
+        color: #fff;
+        display: flex;
+        cursor: pointer;
+        padding: 0 15px;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: center;
+        background-color: #0062ff;
+      }
+      #addNewBatchCTACancel {
+        background-color: #f2f2f2 !important;
+        color: #acacac !important;
+      }
+      .selectNewBatch {
+        width: 100%;
+        height: 40px;
+        padding: 0 5px;
+        border-radius: 4px;
+        color: #454545;
+        border: 1px solid #d3d3d3;
+      }
+      .emailMappingsOptions {
+        gap: 15px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .emailMappingsOptions div {
+        gap: 6px;
+        display: flex;
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 4px;
+        align-items: center;
+        font-size: 12px !important;
+        justify-content: space-evenly;
+      }
+
+      .emailMappingsOptions div:hover {
+        background-color: #f2f2f2;
+      }
+      .modalPaths-Parent {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        align-items: flex-end;
+        justify-content: flex-end;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      .modalPaths-Parent-Body {
+        width: 50%;
+        height: calc(100vh - 70px);
+        background-color: #fff;
+        box-shadow: 0.5px 0px 2.7px rgba(0, 0, 0, 0.012),
+          1.3px 0.1px 6.9px rgba(0, 0, 0, 0.018),
+          2.7px 0.2px 14.2px rgba(0, 0, 0, 0.022),
+          5.5px 0.4px 29.2px rgba(0, 0, 0, 0.028),
+          15px 1px 80px rgba(0, 0, 0, 0.04);
+      }
+      .modalPaths-Parent-Body-title {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        color: #fff;
+        padding: 0 10px;
+        align-items: center;
+        background-color: #0062ff;
+        justify-content: space-between;
+      }
+      .modalPaths-Parent-Body-Body {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        height: calc(100% - 40px);
+      }
+      .modalPathHeadder {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        border-bottom: 1px solid #f2f2f2;
+      }
+      .srcPathModal,
+      .dstnPathModal {
+        width: 25%;
+        display: flex;
+        align-items: center;
+      }
+      .originalFileNmae {
+        width: 20%;
+        display: flex;
+        align-items: center;
+      }
+      .statusModal {
+        width: 15%;
+        display: flex;
+        align-items: center;
+      }
+      .originalFileNmae span,
+      .statusModal span,
+      .srcPathModal span,
+      .dstnPathModal span {
+        width: 99%;
+        color: #000;
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: 600;
+        overflow: hidden;
+        white-space: pre;
+        text-overflow: ellipsis;
+      }
+      #modalLinksPath {
+        color: #454545 !important;
+        /* text-decoration: underline; */
+      }
+      #modalLinkIcon {
+        margin: 0;
+        padding: 0;
+        color: #0062ff;
+        font-size: 8px !important;
+      }
+      .circleLinks {
+        width: 15px;
+        height: 15px;
+        display: flex;
+        cursor: pointer;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #0062ff;
+      }
+      .showErrDesc {
+        visibility: hidden;
+      }
+      .linkEx-preScan-usersTable-bodyData:hover .showErrDesc {
+        visibility: visible;
+      }
+      .showCancelWorkSpace {
+        display: none;
+      }
+      .linkEx-preScan-usersTable-bodyData:hover .showCancelWorkSpace {
+        display: block;
+      }
+    </style>
+    <!-- LinkEx PreScan Styles End's -->
+  </head>
+  <body style="display: none; overflow: hidden" id="movePageMultiUsr">
+    <div class="g-signin2" data-theme="dark" style="display: none"></div>
+    <div
+      class="wrapper d-flex align-items-stretch"
+      style="display: flex !important; align-items: stretch !important">
+      <div id="content" class="" style="background: #fcfcfc">
+        <div style="display: flex">
+          <div class="sideNav-Home">
+            <nav>
+              <ul class="sideNavMenu">
+                <li>
+                  <img src="../img/CloudFuze-logo-white.png" alt="CFLOGO" />
+                </li>
+                <li>
+                  <a href="./home.html">
+                    <i class="lnil lnil-home"></i>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./cloudmanagerLinkEx.html">
+                    <i class="lnil lnil-cloud-alt"></i>
+                    <span>Clouds</span>
+                  </a>
+                </li>
+                <li class="new_SideActive">
+                  <a href="#">
+                    <i class="lnil lnil-link"></i>
+                    <span>LinkEx</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./linkExReports.html">
+                    <i class="lnil lnil-pie-report"></i>
+                    <span>Reports</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="new-PlaceContainer">
+            <div class="topNav-Home">
+              <div class="userNameMenu dropbtn nav-link">
+                <div id="newDashName">CF</div>
+                <div
+                  class="dropdown-content-New"
+                  style="z-index: 999999; left: -180%; top: 40px">
+                  <a href="settings.html" style="text-align: left"
+                    ><i
+                      class="lnil lnil-user-alt"
+                      style="
+                        font-size: 16px;
+                        margin-right: 3%;
+                        font-weight: 600;
+                      "></i
+                    >My Account</a
+                  >
+                  <a class="cf-logout" href="#" style="text-align: left"
+                    ><i
+                      class="lnil lnil-exit"
+                      style="
+                        font-size: 16px;
+                        margin-right: 3%;
+                        transform: rotate(180deg);
+                        font-weight: 600;
+                      "></i
+                    >Logout</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- <div class="placeCFTEST"> -->
+            <section
+              id="move-header"
+              style="height: 89vh; font-family: 'Poppins', Arial, sans-serif">
+              <div class="alertScs hide">
+                <span class="fa fa-check-circle"></span>
+                <p class="msg"></p>
+                <div class="close-btnScs">
+                  <span class="lnil lnil-cross-circle"></span>
+                </div>
+              </div>
+              <div class="alertErr hide">
+                <span class="fa fa-times-circle"></span>
+                <p class="msg"></p>
+                <div class="close-btnErr">
+                  <span class="lnil lnil-cross-circle"></span>
+                </div>
+              </div>
+              <div
+                class="span12"
+                style="
+                  position: absolute;
+                  margin-left: 40%;
+                  display: none;
+                  top: 0;
+                "
+                id="spinner2">
+                <img src="../img/ajax.gif" alt="Loading" />
+              </div>
+              <div
+                class="span12"
+                id="CF_no_clouds"
+                style="
+                  background: #ffffff 0% 0% no-repeat padding-box;
+                  box-shadow: 0px 0px 6px #00000014;
+                  border: 1px solid #f1f1f1;
+                  border-radius: 5px;
+                  width: 756px;
+                  height: 328px;
+                  margin-left: 15%;
+                  margin-top: 9%;
+                  display: none;
+                ">
+                <div class="box">
+                  <div
+                    class="tab-header"
+                    style="
+                      background: #0062ff 0% 0% no-repeat padding-box;
+                      border: 1px solid #0062ff;
+                      border-radius: 5px 5px 0px 0px;
+                      height: 50px;
+                      font-size: 18px;
+                      color: #ffffff;
+                      text-align: center;
+                      padding-top: 1.5%;
+                    ">
+                    Welcome to CloudFuze
+                  </div>
+                  <div class="padded">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="104"
+                      height="60.667"
+                      viewBox="0 0 104 60.667"
+                      style="margin-left: 42%; margin-top: 3%">
+                      <defs>
+                        <style>
+                          .cfa,
+                          .cfb {
+                            fill: #0129ac;
+                          }
+                          .cfb {
+                            font-size: 22px;
+                            font-family: ProductSans-Bold, Product Sans;
+                            font-weight: 700;
+                            letter-spacing: -0.02em;
+                          }
+                        </style>
+                      </defs>
+                      <g transform="translate(-2.258 0)">
+                        <g transform="translate(8.384 0)">
+                          <g transform="translate(22.093 0)">
+                            <path
+                              class="cfa"
+                              d="M1938.279,743.2c.172-.733,1-4.042,1.826-2.344-.026-.027,2.217,3.076.657,11.293.026-.087-1.172,3.449-1.925,1.11.026.087-.559-1.549-.559-1.549s-.417-.408-.464.439c-.022-.058,1.636,10.154,3.777,5.529,0,.031,1.172-1.549,1.385-7.109.072.057.585-8.167-.829-12.406,0,.031-1.315-4.507-2.849-1.756a10.3,10.3,0,0,0-1.293,4.446,21.337,21.337,0,0,0-.194,2.344C1937.8,743.17,1938.109,743.935,1938.279,743.2Z"
+                              transform="translate(-1937.811 -729.327)" />
+                            <path
+                              class="cfa"
+                              d="M1938.352,745.258c.2-.929,1.142-5.125,2.091-2.972-.03-.033,2.539,3.9.753,14.321.029-.106-1.338,4.368-2.2,1.407.029.107-.639-1.964-.639-1.964s-.477-.518-.533.556c-.025-.072,1.874,12.875,4.325,7.01,0,.039,1.342-1.964,1.59-9.014.083.072.669-10.354-.949-15.729,0,.04-1.506-5.714-3.263-2.226a14.042,14.042,0,0,0-1.48,5.636,29.721,29.721,0,0,0-.222,2.971C1937.8,745.218,1938.15,746.187,1938.352,745.258Z"
+                              transform="translate(-1928.32 -732.455)" />
+                            <path
+                              class="cfa"
+                              d="M0,5.807S1.1-.476,4.176.029c-.439-.021,1.882-.46,3.6,7.891a50.659,50.659,0,0,1,.379,14.49c-.075-.107-.32,5.841-2.566,9.473,0,.031-2.571,4.049-4.922-2.237A19.458,19.458,0,0,1,0,27.663s2.387,2.569,3.562,0c.019.036,1.83-3.1,2.007-9.329.016.076.28-9.969-2.092-12.99a2.292,2.292,0,0,0-3.229.887A4.837,4.837,0,0,1,0,5.807Z"
+                              transform="translate(17.304 0.145) rotate(-0.974)" />
+                          </g>
+                          <g transform="translate(0 2.07)">
+                            <path
+                              class="cfa"
+                              d="M2153.049,1317.03s-2.963-1.032-2.344-5.333c.036-.3,1.26-3.669,5.677-2.079-.107,0,2.3-3.214,5.374-3.179.025,0,3.523-.213,4.709,4.085-.065.062,4.506-3.729,7.916,1.448.01.015.009,2.325,0,1.746v1.26s-.174,2.006-3.382,2.051h-.19C2169.063,1317,2153.049,1317.03,2153.049,1317.03Z"
+                              transform="translate(-2096.88 -1292.689)" />
+                            <path
+                              class="cfa"
+                              d="M3223.612,214.114c-.036.023,5.149,0,5.149,0a5.69,5.69,0,0,1-.911-7.083c.065-.065,1.536-2.972,5.771-1.78-.019-.087,3.015-3.649,6.25-3.343a5.3,5.3,0,0,1,5.2,3.772c-.084-.065,3.985-2.9,7.3,1.6.043.022-.852-6.992-7.927-5.374a8.158,8.158,0,0,0-7.617-4.46,9.182,9.182,0,0,0-6.013,3.6c.088-.065-4.06-1.043-6.208,1.184a47.162,47.162,0,0,1-.32,7.107C3224.314,209.277,3223.653,214.091,3223.612,214.114Z"
+                              transform="translate(-3174.835 -189.896)" />
+                            <path
+                              class="cfa"
+                              d="M3219.661,431.3a24.667,24.667,0,0,1,1.524,7.138,5.888,5.888,0,0,1,5.744-1.492c.1,0,7.546-8.621,15.064.915.085.032,5.686-1.172,7.29,4.247-.069,0,1.065-9.638-11.868-9.848-.037.073-4.867-9.163-14.089-1.715a4.261,4.261,0,0,0-3.664.758Z"
+                              transform="translate(-3171.644 -427.646)" />
+                            <path
+                              class="cfa"
+                              d="M3163.059,784.41a8.485,8.485,0,0,1,4.084-1.3,34.113,34.113,0,0,1,.256,18.626c.026.073-4.143,0-4.143,0s1.113-8.843,0-15.8Z"
+                              transform="translate(-3124.682 -777.93)" />
+                            <path
+                              class="cfa"
+                              d="M3107.209,813.114l3.452-.262a9.826,9.826,0,0,1,1.5-2.557c.022,0,2.221,4.646,0,12.963a3.917,3.917,0,0,1-1.5-2.639c0-.063-3.6,0-3.6,0l.151-1.261s3.129.378,2.918-.671c-.019-.022.185-.967-2.755-.605v-1.133s2.916.639,2.923-.861c0-.022.141-1.624-2.923-1.007A19.28,19.28,0,0,0,3107.209,813.114Z"
+                              transform="translate(-3078.64 -800.846)" />
+                            <path
+                              class="cfa"
+                              d="M2935.351,831.574l24.023-1.79a4.755,4.755,0,0,1,.28,1.693C2959.674,831.506,2935.351,831.574,2935.351,831.574Z"
+                              transform="translate(-2935.351 -817.265)" />
+                            <path
+                              class="cfa"
+                              d="M2954.381,855.189l21.295-1.072a2.166,2.166,0,0,1-.176.959C2975.487,855.11,2954.381,855.189,2954.381,855.189Z"
+                              transform="translate(-2951.392 -837.771)" />
+                            <path
+                              class="cfa"
+                              d="M2994.271,870.478l14.8-.978-.262,1.082Z"
+                              transform="translate(-2985.001 -850.735)" />
+                          </g>
+                        </g>
+                        <text class="cfb" transform="translate(2.258 54.667)">
+                          <tspan x="0" y="0">CloudFuze</tspan>
+                        </text>
+                      </g>
+                    </svg>
+                    <p style="text-align: center; margin: 4%">
+                      To use this CloudFuze feature, you must first add Multi
+                      user cloud(s) to CloudFuze <br />
+                      by clicking Add Cloud and completing the setup process
+                    </p>
+                    <a
+                      href="cloudmanager.html?ver=1231"
+                      class="button mini rounded blue"
+                      id="AFTWButton"
+                      style="
+                        width: auto;
+                        height: 40px;
+                        background: #0062ff 0% 0% no-repeat padding-box !important;
+                        border: 1px solid #0062ff;
+                        border-radius: 5px;
+                        color: #fff;
+                        padding: 1% 4%;
+                        float: left;
+                        font-size: 16px;
+                        margin-left: 36%;
+                      "
+                      >Add Cloud Account</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="span12"
+                id="Cf_Mobile"
+                style="
+                  background: #ffffff 0% 0% no-repeat padding-box;
+                  box-shadow: 0px 0px 6px #00000014;
+                  border: 1px solid #f1f1f1;
+                  border-radius: 5px;
+                  width: 270px;
+                  height: 328px;
+                  margin-left: 8%;
+                  margin-top: 9%;
+                  display: none;
+                ">
+                <div class="box">
+                  <div
+                    class="tab-header"
+                    style="
+                      background: #0062ff 0% 0% no-repeat padding-box;
+                      border: 1px solid #0062ff;
+                      border-radius: 5px 5px 0px 0px;
+                      height: 50px;
+                      font-size: 18px;
+                      color: #ffffff;
+                      text-align: center;
+                      padding-top: 1.5%;
+                    ">
+                    Welcome to CloudFuze
+                  </div>
+                  <div class="padded">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="104"
+                      height="60.667"
+                      viewBox="0 0 104 60.667"
+                      style="margin-top: 3%; margin-left: 32%">
+                      <defs>
+                        <style>
+                          .cfa,
+                          .cfb {
+                            fill: #0129ac;
+                          }
+                          .cfb {
+                            font-size: 22px;
+                            font-family: ProductSans-Bold, Product Sans;
+                            font-weight: 700;
+                            letter-spacing: -0.02em;
+                          }
+                        </style>
+                      </defs>
+                      <g transform="translate(-2.258 0)">
+                        <g transform="translate(8.384 0)">
+                          <g transform="translate(22.093 0)">
+                            <path
+                              class="cfa"
+                              d="M1938.279,743.2c.172-.733,1-4.042,1.826-2.344-.026-.027,2.217,3.076.657,11.293.026-.087-1.172,3.449-1.925,1.11.026.087-.559-1.549-.559-1.549s-.417-.408-.464.439c-.022-.058,1.636,10.154,3.777,5.529,0,.031,1.172-1.549,1.385-7.109.072.057.585-8.167-.829-12.406,0,.031-1.315-4.507-2.849-1.756a10.3,10.3,0,0,0-1.293,4.446,21.337,21.337,0,0,0-.194,2.344C1937.8,743.17,1938.109,743.935,1938.279,743.2Z"
+                              transform="translate(-1937.811 -729.327)" />
+                            <path
+                              class="cfa"
+                              d="M1938.352,745.258c.2-.929,1.142-5.125,2.091-2.972-.03-.033,2.539,3.9.753,14.321.029-.106-1.338,4.368-2.2,1.407.029.107-.639-1.964-.639-1.964s-.477-.518-.533.556c-.025-.072,1.874,12.875,4.325,7.01,0,.039,1.342-1.964,1.59-9.014.083.072.669-10.354-.949-15.729,0,.04-1.506-5.714-3.263-2.226a14.042,14.042,0,0,0-1.48,5.636,29.721,29.721,0,0,0-.222,2.971C1937.8,745.218,1938.15,746.187,1938.352,745.258Z"
+                              transform="translate(-1928.32 -732.455)" />
+                            <path
+                              class="cfa"
+                              d="M0,5.807S1.1-.476,4.176.029c-.439-.021,1.882-.46,3.6,7.891a50.659,50.659,0,0,1,.379,14.49c-.075-.107-.32,5.841-2.566,9.473,0,.031-2.571,4.049-4.922-2.237A19.458,19.458,0,0,1,0,27.663s2.387,2.569,3.562,0c.019.036,1.83-3.1,2.007-9.329.016.076.28-9.969-2.092-12.99a2.292,2.292,0,0,0-3.229.887A4.837,4.837,0,0,1,0,5.807Z"
+                              transform="translate(17.304 0.145) rotate(-0.974)" />
+                          </g>
+                          <g transform="translate(0 2.07)">
+                            <path
+                              class="cfa"
+                              d="M2153.049,1317.03s-2.963-1.032-2.344-5.333c.036-.3,1.26-3.669,5.677-2.079-.107,0,2.3-3.214,5.374-3.179.025,0,3.523-.213,4.709,4.085-.065.062,4.506-3.729,7.916,1.448.01.015.009,2.325,0,1.746v1.26s-.174,2.006-3.382,2.051h-.19C2169.063,1317,2153.049,1317.03,2153.049,1317.03Z"
+                              transform="translate(-2096.88 -1292.689)" />
+                            <path
+                              class="cfa"
+                              d="M3223.612,214.114c-.036.023,5.149,0,5.149,0a5.69,5.69,0,0,1-.911-7.083c.065-.065,1.536-2.972,5.771-1.78-.019-.087,3.015-3.649,6.25-3.343a5.3,5.3,0,0,1,5.2,3.772c-.084-.065,3.985-2.9,7.3,1.6.043.022-.852-6.992-7.927-5.374a8.158,8.158,0,0,0-7.617-4.46,9.182,9.182,0,0,0-6.013,3.6c.088-.065-4.06-1.043-6.208,1.184a47.162,47.162,0,0,1-.32,7.107C3224.314,209.277,3223.653,214.091,3223.612,214.114Z"
+                              transform="translate(-3174.835 -189.896)" />
+                            <path
+                              class="cfa"
+                              d="M3219.661,431.3a24.667,24.667,0,0,1,1.524,7.138,5.888,5.888,0,0,1,5.744-1.492c.1,0,7.546-8.621,15.064.915.085.032,5.686-1.172,7.29,4.247-.069,0,1.065-9.638-11.868-9.848-.037.073-4.867-9.163-14.089-1.715a4.261,4.261,0,0,0-3.664.758Z"
+                              transform="translate(-3171.644 -427.646)" />
+                            <path
+                              class="cfa"
+                              d="M3163.059,784.41a8.485,8.485,0,0,1,4.084-1.3,34.113,34.113,0,0,1,.256,18.626c.026.073-4.143,0-4.143,0s1.113-8.843,0-15.8Z"
+                              transform="translate(-3124.682 -777.93)" />
+                            <path
+                              class="cfa"
+                              d="M3107.209,813.114l3.452-.262a9.826,9.826,0,0,1,1.5-2.557c.022,0,2.221,4.646,0,12.963a3.917,3.917,0,0,1-1.5-2.639c0-.063-3.6,0-3.6,0l.151-1.261s3.129.378,2.918-.671c-.019-.022.185-.967-2.755-.605v-1.133s2.916.639,2.923-.861c0-.022.141-1.624-2.923-1.007A19.28,19.28,0,0,0,3107.209,813.114Z"
+                              transform="translate(-3078.64 -800.846)" />
+                            <path
+                              class="cfa"
+                              d="M2935.351,831.574l24.023-1.79a4.755,4.755,0,0,1,.28,1.693C2959.674,831.506,2935.351,831.574,2935.351,831.574Z"
+                              transform="translate(-2935.351 -817.265)" />
+                            <path
+                              class="cfa"
+                              d="M2954.381,855.189l21.295-1.072a2.166,2.166,0,0,1-.176.959C2975.487,855.11,2954.381,855.189,2954.381,855.189Z"
+                              transform="translate(-2951.392 -837.771)" />
+                            <path
+                              class="cfa"
+                              d="M2994.271,870.478l14.8-.978-.262,1.082Z"
+                              transform="translate(-2985.001 -850.735)" />
+                          </g>
+                        </g>
+                        <text class="cfb" transform="translate(2.258 54.667)">
+                          <tspan x="0" y="0">CloudFuze</tspan>
+                        </text>
+                      </g>
+                    </svg>
+                    <p style="text-align: center; margin: 4%">
+                      Please login to our web application to use this feature
+                      for a better experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="move_main"
+                style="display: block; overflow-y: unset; padding: 1% 3%">
+                <div
+                  class="span12"
+                  style="width: 96%; display: flex; margin-left: -18px">
+                  <div id="teamMigrationWidget" class="wizard">
+                    <ul
+                      class="steps"
+                      style="list-style: none; margin-left: -4%">
+                      <li data-target="selection" class="active" data-val="1">
+                        <span class="badge badge-info">1</span>Selection<span
+                          class="chevron"></span>
+                      </li>
+                      <li data-target="pre-scan" data-val="2">
+                        <span class="badge">2</span>Pre-Scan & Fix<span
+                          class="chevron"></span>
+                      </li>
+                      <!-- <li data-target="permissions" data-val="3">
+                        <span class="badge">3</span>Map&Migrate<span
+                          class="chevron"></span>
+                      </li> -->
+                    </ul>
+                  </div>
+                </div>
+                <div class="alignNxtPrev">
+                  <div style="text-align: center">
+                    <button
+                      data-prev="1"
+                      class="btn btn-primary flat-button btn-md disabled"
+                      style="
+                        gap: 5px;
+                        width: 80px;
+                        height: 40px;
+                        border: unset;
+                        display: flex;
+                        color: #454545;
+                        border-radius: 5px;
+                        align-items: center;
+                        background-color: #f2f2f2;
+                        justify-content: space-evenly;
+                      "
+                      id="forPreviousMove">
+                      <i class="lnil lnil-arrow-left" aria-hidden="true"></i>
+                      Back
+                    </button>
+                  </div>
+                  <div style="text-align: center">
+                    <button
+                      data-step="1"
+                      class="btn btn-primary flat-button btn-md disabled"
+                      id="forNextMove"
+                      style="
+                        gap: 5px;
+                        width: 80px;
+                        height: 40px;
+                        border: unset;
+                        display: flex;
+                        color: #454545;
+                        border-radius: 5px;
+                        align-items: center;
+                        background-color: #f2f2f2;
+                        justify-content: space-evenly;
+                      ">
+                      <span>Next</span>
+                      <i class="lnil lnil-arrow-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <div id="mappingClouds">
+                  <div style="margin-top: -10px">
+                    <div
+                      class="col-md-3"
+                      style="margin-top: 35px; margin-left: -1%; width: 26%">
+                      <div class="card">
+                        <div class="card-block bg-info" style="height: 40px">
+                          <h5 class="text-white card-title">Select Source</h5>
+                        </div>
+                        <div class="card-block" id="srcClouds">
+                          <div class="message-box contact-box">
+                            <div class="message-widget contact-widget"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-md-offset-2" style="width: 36%">
+                      <div class="animation-arrow"></div>
+                      <div class="animation-arrow third-arrow"></div>
+                    </div>
+
+                    <div
+                      class="col-md-3"
+                      style="
+                        margin-top: 35px;
+                        width: 26%;
+                        float: right;
+                        margin-right: -1.3%;
+                      ">
+                      <div class="card">
+                        <div class="card-block bg-info" style="height: 40px">
+                          <h5 class="text-white card-title">
+                            Select Destination
+                          </h5>
+                        </div>
+                        <div class="card-block" id="dstClouds">
+                          <div class="message-box contact-box">
+                            <div class="message-widget contact-widget"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="linkEx-PreScan" style="display: none; flex-wrap: wrap">
+                  <div class="linkEx-PreScanSummary">
+                    <div class="linkEx-PreScanSummary-Status">
+                      <div class="preScanLstUpdt"></div>
+                    </div>
+                    <div class="linkEx-PreScanSummary-Body">
+                      <div class="linkEx-PreScanSummary-Content">
+                        <div class="linkEx-PreScanSummary-Content-title">
+                          Users
+                        </div>
+                        <div
+                          class="linkEx-PreScanSummary-Content-body"
+                          id="link-preScan-totalUsers">
+                          10
+                        </div>
+                      </div>
+                      <div class="linkEx-PreScanSummary-Content">
+                        <div class="linkEx-PreScanSummary-Content-title">
+                          Files With Links
+                        </div>
+                        <div
+                          class="linkEx-PreScanSummary-Content-body"
+                          id="link-preScan-totalOriginalFiles">
+                          10
+                        </div>
+                      </div>
+                      <div class="linkEx-PreScanSummary-Content">
+                        <div class="linkEx-PreScanSummary-Content-title">
+                          Links
+                        </div>
+                        <div
+                          class="linkEx-PreScanSummary-Content-body"
+                          id="link-preScan-totalLinks">
+                          303000000
+                        </div>
+                      </div>
+                      <div class="linkEx-PreScanSummary-Content">
+                        <div class="linkEx-PreScanSummary-Content-title">
+                          Link Files
+                        </div>
+                        <div
+                          class="linkEx-PreScanSummary-Content-body"
+                          id="link-preScan-totalLinkFiles">
+                          1000000
+                        </div>
+                      </div>
+                      <div class="linkEx-PreScanSummary-Content">
+                        <div class="linkEx-PreScanSummary-Content-title">
+                          Size of Files With Links
+                        </div>
+                        <div
+                          class="linkEx-PreScanSummary-Content-body"
+                          id="link-preScan-dataSize">
+                          100 GB
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="linkEx-preScan-Actions">
+                    <div
+                      class="linkEx-preScan-downloadCSV"
+                      id="deleteMultipleWorkSpaces"
+                      style="display: none">
+                      <i class="lnil lnil-trash"></i>
+                    </div>
+                    <div
+                      class="linkEx-preScan-downloadCSV"
+                      id="downloadPreScanTable"
+                      style="margin-left: auto">
+                      <i class="lnil lnil-download"></i>
+                      <div>CSV</div>
+                    </div>
+                    <div class="linkEx-preScan-downloadCSV" id="upldMappingCsv">
+                      <i class="lnil lnil-upload"></i>
+                      <span>CSV</span>
+                    </div>
+                    <input
+                      type="file"
+                      visbility="hidden"
+                      id="collectPreScanCSV"
+                      style="display: none"
+                      onchange="usersLinkExPreScanCsv()"
+                      accept=".csv" />
+                    <div
+                      class="linkEx-preScan-scanLinks disabled"
+                      id="scanLinksCTA">
+                      <div>Scan Links</div>
+                    </div>
+                  </div>
+                  <div class="linkEx-preScan-usersTable">
+                    <div class="linkEx-preScan-usersTable-Title">
+                      <div class="placeSelectPreScanAll">
+                        <input
+                          type="checkbox"
+                          id="selAllLinkScan"
+                          style="margin: 0" />
+                      </div>
+                      <div class="placeUserEmail"><span>Source User</span></div>
+                      <div class="placeUserEmail">
+                        <span>Destination User</span>
+                      </div>
+                      <!-- <div class="placeUserName">
+                        <span>Files With Links</span>
+                      </div> -->
+                      <div class="placeTotalOroginalFiles">
+                        <span>Files With Links</span>
+                      </div>
+                      <div class="placeTotalLinks">
+                        <span>Total Link</span>
+                      </div>
+                      <div class="placeTotalLinksFiles">
+                        <span>Total Linked Files</span>
+                      </div>
+                      <div class="placeTotalLinksFiles">
+                        <!-- <span>Files With Links Size</span> -->
+                        <span>Scan Status</span>
+                      </div>
+                      <div class="placeScanStatus">
+                        <span>Status</span>
+                      </div>
+                      <div class="placeScanStatus" style="width: 100px"></div>
+                    </div>
+                    <div class="linkEx-preScan-usersTable-Body"></div>
+                  </div>
+                </div>
+                <div
+                  id="linkEx-preScan-Reports"
+                  style="display: none; flex-wrap: wrap">
+                  <div class="linkEx-preScan-Actions" style="margin-top: 30px">
+                    <button class="linkEx-preScan-reportsBack">
+                      <i class="lnil lnil-arrow-left"></i>
+                      Back
+                    </button>
+                  </div>
+                  <div class="linkEx-preScan-reportsTables">
+                    <div class="linkEx-preScan-usersTable-Title">
+                      <div class="placeFolderName"><span>File Name</span></div>
+                      <div class="placeFilePath"><span>Path</span></div>
+                      <div class="placeFileSize">
+                        <span>Size</span>
+                      </div>
+                      <div class="placeFileTotalLinks">
+                        <span>Total Links</span>
+                      </div>
+                      <div class="placeFileTotalLinksFiles">
+                        <span>Total Link Files</span>
+                      </div>
+                      <div class="placeFileScanStatus">
+                        <span>Scan Status</span>
+                      </div>
+                    </div>
+                    <div class="linkEx-preScan-reportsTables-Body"></div>
+                  </div>
+                </div>
+                <div
+                  id="linkEx-mappping"
+                  style="display: none; flex-wrap: wrap; margin-top: 10px">
+                  <div class="emailMappingsOptions" style="margin-left: auto">
+                    <div id="downloadUserMapping">
+                      <i class="lnil lnil-download"></i>
+                      <span>CSV</span>
+                    </div>
+                    <!-- <div id="upldMappingCsv">
+                      <i class="lnil lnil-upload"></i>
+                      <span>CSV</span>
+                    </div>
+                    <input
+                      type="file"
+                      visbility="hidden"
+                      id="collectPreScanCSV"
+                      style="display: none"
+                      onchange="usersLinkExPreScanCsv()"
+                      accept=".csv" /> -->
+                  </div>
+                  <div id="linkEx-map" style="display: flex; flex-wrap: wrap">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>
+                            <input
+                              type="checkbox"
+                              name="selectAllMappings"
+                              id="selectAllLinkExMappings" />
+                          </th>
+                          <th>Source User Email</th>
+                          <th>Destination User Email</th>
+                          <th>Mapping Status</th>
+                          <th>Migration Status</th>
+                        </tr>
+                      </thead>
+                      <tbody id="emailMappingsTableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div
+              class="createBatchParent-modal"
+              id="modalBatchCreate"
+              style="display: none">
+              <div class="createBatchParent-modal-container">
+                <div class="createBatchParent-modal-title">
+                  <h4>Job Name</h4>
+                  <i
+                    class="lnil lnil-close"
+                    id="closeBatchModal"
+                    style="cursor: pointer"></i>
+                </div>
+                <div class="createBatchParent-modal-Body">
+                  <div
+                    class="batch_Add_New"
+                    style="
+                      margin-top: 20px;
+                      width: 90%;
+                      display: flex;
+                      flex-direction: column;
+                    ">
+                    <span>JobName:</span>
+                    <input
+                      type="text"
+                      class="selectNewBatch"
+                      name="newBatchName"
+                      id="newBatchName"
+                      placeholder="LinkEx-1" />
+                  </div>
+                </div>
+                <div class="createBatchParent-modal-Footer">
+                  <div id="addNewBatchCTACancel">Cancel</div>
+                  <div id="addNewBatchCTA">Ok</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="modalPaths-Parent" style="display: none" ;>
+      <div class="modalPaths-Parent-Body">
+        <div class="modalPaths-Parent-Body-title">
+          <span>File Links</span>
+          <i
+            class="lnil lnil-close"
+            id="closeLinksModal"
+            style="cursor: pointer"></i>
+        </div>
+        <div class="modalPaths-Parent-Body-Body">
+          <!-- <div>
+            <span>FileName:</span><span id="modalFileName"></span>Text.xml
+          </div> -->
+          <div class="modalPathHeadder">
+            <div class="originalFileNmae">
+              <span style="font-weight: 500"> Original File Name </span>
+            </div>
+            <div class="originalFileNmae">
+              <span style="font-weight: 500"> Link File Name </span>
+            </div>
+            <div class="srcPathModal">
+              <span style="font-weight: 500"> Source Url </span>
+            </div>
+            <div class="dstnPathModal">
+              <span style="font-weight: 500">Destination Url</span>
+            </div>
+            <div class="statusModal">
+              <span style="font-weight: 500"> Status </span>
+            </div>
+          </div>
+          <div class="modalPathBody"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="CFShowLoading"
+      class="modal-backdrop in"
+      style="display: none; padding-left: 0px">
+      <div
+        class="backdrop"
+        style="
+          position: relative;
+          top: 30%;
+          background: white;
+          border: none;
+          height: 38%;
+        ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          style="
+            width: 40%;
+            margin: auto;
+            display: block;
+            shape-rendering: auto;
+          "
+          width="200px"
+          height="200px"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="xMidYMid">
+          <circle
+            cx="50"
+            cy="50"
+            r="30"
+            stroke="#d5d8ff"
+            stroke-width="10"
+            fill="none" />
+          <circle
+            cx="50"
+            cy="50"
+            r="30"
+            stroke="#0062FF"
+            stroke-width="8"
+            stroke-linecap="round"
+            fill="none">
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              repeatCount="indefinite"
+              dur="1s"
+              values="0 50 50;180 50 50;720 50 50"
+              keyTimes="0;0.5;1" />
+            <animate
+              attributeName="stroke-dasharray"
+              repeatCount="indefinite"
+              dur="1s"
+              values="18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882"
+              keyTimes="0;0.5;1" />
+          </circle>
+        </svg>
+        <div
+          style="
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          ">
+          <p id="loaderText" style="margin-top: 0px; margin-bottom: 0px">
+            Please wait while loading...
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- </body> -->
+    <!--Core Components-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script
+      src="../javascripts/vendor/jquery-ui.min.js"
+      type="text/javascript"></script>
+
+    <!--Plugins-->
+    <script src="../javascripts/timeago.js" type="text/javascript"></script>
+    <script
+      src="../javascripts/jquery.twbsPagination.min.js"
+      type="text/javascript"></script>
+
+    <!--Static Variables-->
+    <script
+      src="../ajaxcalls/config.js?ver=1231"
+      type="text/javascript"></script>
+    <script
+      src="../ajaxcalls/globalVar.js?ver=1231"
+      type="text/javascript"></script>
+
+    <!--Entire App Usage-->
+    <script
+      src="../ajaxcalls/CFManageCloudAccounts.js?ver=1231"
+      type="text/javascript"></script>
+    <script
+      src="../ajaxcalls/readyDocument.js?ver=1231"
+      type="text/javascript"></script>
+    <script
+      src="../javascripts/actionevents.js?ver=1231"
+      type="text/javascript"></script>
+    <script
+      src="../ajaxcalls/pricing.js?ver=1231"
+      type="text/javascript"></script>
+    <script
+      src="../ajaxcalls/linkExMapping.js?ver=2198"
+      type="text/javascript"></script>
+    <script>
+      (function ($) {
+        "use strict";
+
+        var fullHeight = function () {
+          $(".js-fullheight").css("height", $(window).height());
+          $(window).resize(function () {
+            $(".js-fullheight").css("height", $(window).height());
+          });
+        };
+        fullHeight();
+
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar").toggleClass("active");
+        });
+        $("#topbarCollapse").on("click", function () {
+          if (!$("#navbarSupportedContent1").hasClass("active")) {
+            $("#navbarSupportedContent1").addClass("active");
+            $("#navbarSupportedContent1").css("display", "");
+            $("section").css("margin-top", "50%");
+          } else {
+            $("#navbarSupportedContent1").removeClass("active");
+            $("#navbarSupportedContent1").css("display", "none");
+            $("section").css("margin-top", "2%");
+          }
+        });
+      })(jQuery);
+      $(".dropdown").click(function () {
+        if (!$(".dropdown-content").hasClass("active")) {
+          $(".dropdown-content").addClass("active").css("display", "none");
+        } else {
+          $(".dropdown-content").removeClass("active").css("display", "");
+        }
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        localStorage.removeItem("csvTeamFolderNo");
+        sendGAEvents("Clicked on team migration page");
+        $("#upgrdIcon").on("click", function () {
+          window.location.href = "settings.html#move";
+        });
+        if (localStorage.getItem("UserId")) {
+          $("body").show();
+        } else {
+          window.location.href = "index.html?ver=1231";
+        }
+        PageName = "businessMigration";
+        var length = AllCloudsInfo.length,
+          isExistsBusClouds = false;
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        for (i = 0; i < length; i++) {
+          var _cloud = AllCloudsInfo[i];
+          if (
+            _cloud.cloudName !== "GMAIL" &&
+            _cloud.cloudName !== "OUTLOOK" &&
+            _cloud.cloudName !== "SLACK" &&
+            _cloud.cloudName !== "MICROSOFT_TEAMS"
+          ) {
+            if (
+              (_cloud.cloudName == "AMAZON" ||
+                _cloud.cloudName == "AZURE_FILESHARE_OBJECT_STORAGE" ||
+                _cloud.cloudName == "FTP") &&
+              _cloud.businessCloud == true
+            ) {
+              isExistsBusClouds = true;
+              var _domainName = _cloud.cloudUserId;
+              if (_domainName.indexOf("@"))
+                _domainName = _domainName.split("@")[1];
+              else _domainName = _domainName.split("|")[1];
+              var _html =
+                '<a> <div class="user-img"> <input type="radio" cloudname="appendCloudName" name="sourceCloud" mail="Email" id="CloudId"/> <div class="migrateImg" style="padding:7%;"><div id="cloudIcon" class="migrationImage"></div></div> </div><div class="mail-contnet"> <h5>userName</h5></div></a>';
+              var _srcHtml = _html
+                .replace("CloudId", _cloud.id)
+                .replace("Email", _cloud.cloudUserId.split("|")[1])
+                .replace("cloudIcon", _cloud.cloudName)
+                .replace("appendCloudName", _cloud.cloudName)
+                .replace("userName", _cloud.userDisplayName);
+              $("#srcClouds .message-widget").append(_srcHtml);
+              $("#dstClouds .message-widget").append(
+                _srcHtml.replace("sourceCloud", "dstCloud")
+              );
+            } else if (_cloud.userType == "ADMIN") {
+              isExistsBusClouds = true;
+              var _domainName = _cloud.cloudUserId;
+              if (_cloud.cloudName == "AZURE_FILESHARE_OBJECT_STORAGE") {
+                _domainName = "";
+              } else if (_domainName.indexOf("@")) {
+                _domainName = _domainName.split("@")[1];
+              } else {
+                _domainName = _domainName.split("|")[1];
+              }
+              var _html =
+                '<a> <div class="user-img"> <input type="radio" cloudname="appendCloudName" name="sourceCloud" mail="Email" id="CloudId"/><div class="migrateImg" style="padding:7%;"><div id="cloudIcon" class="migrationImage"></div></div> </div><div class="mail-contnet"> <h5>userName</h5> <span class="mail-desc">domainName</span> </div></a>';
+              var _srcHtml = _html
+                .replace("CloudId", _cloud.id)
+                .replace("Email", _cloud.cloudUserId.split("|")[1])
+                .replace("cloudIcon", _cloud.cloudName)
+                .replace("userName", _cloud.userDisplayName)
+                .replace("appendCloudName", _cloud.cloudName)
+                .replace("domainName", _domainName);
+              $("#srcClouds .message-widget").append(_srcHtml);
+              $("#dstClouds .message-widget").append(
+                _srcHtml.replace("sourceCloud", "dstCloud")
+              );
+            }
+          }
+        }
+        if (!isExistsBusClouds) {
+          $("#move_main").css("display", "none");
+
+          $("#CF_no_clouds").css("display", "block");
+          if (isMobile) {
+            $("#move_main").css("display", "none");
+            $("#CF_no_clouds").css("display", "none");
+            $("#Cf_Mobile").css("display", "");
+          }
+        } else {
+          if (isMobile) {
+            $("#move_main").css("display", "none");
+            $("#CF_no_clouds").css("display", "none");
+            $("#Cf_Mobile").css("display", "");
+          }
+        }
+
+        var dispanme = "";
+        //  selectEvent.init();
+        setTimeout(function () {
+          var height =
+            $(window).height() -
+            $("#FooterLinks").height() -
+            5 -
+            $("#topHeader").height();
+          $("#moveReportsContainer").css("max-height", height);
+        }, 2000);
+        $(window).resize(function () {
+          $("#moveReportsContainer").css("max-height", $(window).height());
+        });
+      });
+      checkUserProgressLimit();
+      $("#contactUsBtn").click(function () {
+        $("#moveMigrationPrices").modal("hide");
+        $("#enterpriseContact").modal("show");
+        $(".modal-backdrop").css("background-color", "#0062ff");
+      });
+      $("#thankbutton").click(function () {
+        $("#move_main").css("display", "");
+        $("#checkoutpng").css("display", "none");
+      });
+    </script>
+    <!--stripe payment script code-->
+
+    <script type="text/javascript">
+      (function (e, t, o, n, p, r, i) {
+        e.visitorGlobalObjectAlias = n;
+        e[e.visitorGlobalObjectAlias] =
+          e[e.visitorGlobalObjectAlias] ||
+          function () {
+            (e[e.visitorGlobalObjectAlias].q =
+              e[e.visitorGlobalObjectAlias].q || []).push(arguments);
+          };
+        e[e.visitorGlobalObjectAlias].l = new Date().getTime();
+        r = t.createElement("script");
+        r.src = o;
+        r.async = true;
+        i = t.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(r, i);
+      })(
+        window,
+        document,
+        "https://diffuser-cdn.app-us1.com/diffuser/diffuser.js",
+        "vgo"
+      );
+      vgo("setAccount", "649987855");
+      vgo("setTrackByDefault", true);
+      vgo("setEmail", JSON.parse(localStorage.getItem("CFUser")).primaryEmail);
+      vgo("process");
+    </script>
+  </body>
+</html>

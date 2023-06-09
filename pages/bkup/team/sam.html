@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    ul {
+      background-color: white;
+      border: 1px solid gray;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background-color: lightgray;
+    }
+
+    .autoSearchList {
+      width: 200px;
+      height: 400px;
+      overflow-y: auto;
+    }
+  </style>
+  <body>
+    <input type="text" id="search-input" />
+    <div class="autoSearchList">
+      <ul class="listAppend"></ul>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+  <script>
+    let batchNames = [
+      "Batch-1",
+      "Test-1",
+      "Batch-3",
+      "Test-4",
+      "Batch-5",
+      "Test-5",
+      "Batch-6",
+      "Test-6",
+      "Batch-7",
+      "Test-7",
+      "Batch-8",
+      "Test-8",
+      "Batch-9",
+      "Test-9",
+      "Batch-10",
+      "Test-10",
+    ];
+
+    $("#search-input").on("input", function () {
+      appendBatches($(this).val());
+    });
+
+    function appendBatches(filter) {
+      console.log(filter);
+      if (filter !== "" || filter !== undefined || filter !== null) {
+        $(".listAppend").html("");
+        batchNames?.filter((data) => {
+          if (data.indexOf(filter) >= 0) {
+            $(".listAppend").append(`
+            <li>${data}</li>
+            `);
+          }
+        });
+      } else {
+        batchNames?.map((data) => {
+          $(".listAppend").append(`
+            <li>${data}</li>
+            `);
+        });
+      }
+    }
+
+    appendBatches();
+  </script>
+</html>

@@ -1,0 +1,3414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Hotjar Tracking Code for http://webapp.cloudfuze.com
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script> -->
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+      window.setTimeout(function () {
+        window.$zopim ||
+          (function (d, s) {
+            var z = ($zopim = function (c) {
+                z._.push(c);
+              }),
+              $ = (z.s = d.createElement(s)),
+              e = d.getElementsByTagName(s)[0];
+            z.set = function (o) {
+              z.set._.push(o);
+            };
+            z._ = [];
+            z.set._ = [];
+            $.async = !0;
+            $.setAttribute("charset", "utf-8");
+            $.src = "//v2.zopim.com/?2YRVJ9WdqLaWGrAOduJsbu5op02qZFJI";
+            z.t = +new Date();
+            $.type = "text/javascript";
+            e.parentNode.insertBefore($, e);
+          })(document, "script");
+        $zopim(function () {
+          var _usrdtls = JSON.parse(localStorage.getItem("CFUser"));
+          $zopim.livechat.setEmail(_usrdtls.primaryEmail);
+          $zopim.livechat.setName(localStorage.getItem("UserName"));
+        });
+      }, 8000);
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>CloudFuze</title>
+    <link rel="Shortcut Icon" type="image/ico" href="../img/PNG/cfLogo.png" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://apis.google.com/js/platform.js?onload=renderButton"
+      async
+      defer
+    ></script>
+    <meta name="google-signin-scope" content="profile email" />
+    <meta
+      name="google-signin-client_id"
+      content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com"
+    />
+
+    <link
+      href="../stylesheets/bootstrap/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../stylesheets/sidebar.css" />
+    <link rel="stylesheet" href="../stylesheets/move.css" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link href="../stylesheets/LinIconsPro-Light.css" rel="stylesheet" />
+    <link href="../stylesheets/LineIcons.css" rel="stylesheet" />
+    <style>
+      #sidebar i {
+        font-size: 20px;
+      }
+      .CloudThumb_parent {
+        margin-right: 1.8%;
+        margin-bottom: 2%;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        width: 115px;
+        height: 115px;
+        float: left;
+      }
+      .CloudThumb_parent:hover {
+        box-shadow: 0px 0px 10px #0000001f;
+      }
+      .cloudThumbnail img {
+        height: 45px;
+        width: 45px;
+      }
+      .table td {
+        vertical-align: middle;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        z-index: 1;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        left: -15%;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #fafafa;
+        color: #0062ff;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      button {
+        outline: none;
+      }
+      button,
+      a {
+        cursor: pointer;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table td {
+        border: none;
+      }
+      #ProccesingPopup {
+        background: white;
+        width: 30%;
+        border: 1px solid gray;
+        top: 57%;
+        padding: 3% 0 5%;
+        left: 56%;
+      }
+      #ProccesingPopup .container {
+        width: 100%;
+        height: auto;
+        background: white;
+        padding: 8% 4%;
+        border-radius: 2%;
+      }
+      #ProccesingPopup p {
+        font-size: 14px;
+      }
+      #ThankPop {
+        background: white;
+        width: 35%;
+        border: 1px solid gray;
+        top: 57%;
+        left: 55%;
+        padding: 2% 2% 0;
+      }
+      #ThankPop img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10%;
+      }
+
+      #ThankPop a {
+        width: 20%;
+        margin-top: 4%;
+        text-align: center;
+        padding: 2%;
+        color: white;
+        display: block;
+        background-color: #0062ff;
+        margin: 8% auto;
+        font-size: 15px;
+        border: none;
+        border-radius: 3px;
+      }
+      #ThankPop .container {
+        width: 100%;
+        background: white;
+        padding: 5%;
+        border-radius: 2%;
+      }
+      #checkoutback {
+        padding: 4%;
+        text-align: center;
+        color: #288ac7;
+        float: right;
+        font-size: 17px;
+        border: none;
+        border-radius: 3px;
+      }
+      #sourceBlock {
+        float: left;
+        margin-left: -1.4%;
+        padding: 1% 2%;
+        max-width: 51%;
+      }
+      #destinationBlock {
+        float: right;
+        margin-right: -2%;
+        padding: 1% 2%;
+        max-width: 51%;
+      }
+      #movecheckModal {
+        margin-top: 2%;
+        width: 10vw;
+      }
+      .rowdiv {
+        width: 45%;
+      }
+      .cf-back {
+        margin-top: 1%;
+        margin-right: -9%;
+      }
+      .notyMe {
+        width: 15%;
+      }
+      .notyOther {
+        width: 85%;
+      }
+      #nofityOthersCheckBox {
+        margin-top: 8px;
+      }
+      #notySpan {
+        margin-top: 1%;
+        padding-left: 1%;
+      }
+      #chargesDiv {
+        position: absolute;
+        bottom: 3%;
+      }
+      #chargesSpan {
+        margin-left: 19%;
+        font-size: 16px;
+      }
+      #nofityMeCheckBox {
+        margin-top: 10%;
+      }
+      #moveNotifyEmails {
+        width: 80%;
+      }
+      @media only screen and (max-width: 768px) {
+        .dropdown-content {
+          right: 0%;
+          left: 50% !important;
+        }
+        #CF_no_clouds {
+          width: 100% !important;
+        }
+        .padded > svg {
+          margin-left: 36%;
+        }
+        #AFTWButton {
+          margin-left: 26%;
+        }
+        #sourceBlock {
+          max-width: 100%;
+        }
+        #destinationBlock {
+          max-width: 100%;
+          margin-bottom: 10%;
+        }
+        #moveNotifyEmails {
+          width: 135%;
+          margin-left: -38% !important;
+        }
+        .cf-back {
+          margin-top: 3% !important;
+          margin-right: 0% !important;
+        }
+        #chargesDiv {
+          position: unset;
+          bottom: 0%;
+          margin-bottom: 10%;
+        }
+        #chargesSpan {
+          margin-left: 0%;
+          font-size: 12px;
+        }
+        #movecheckModal {
+          margin-top: 7%;
+          width: auto;
+        }
+        p.ui-selectee,
+        p.fileP {
+          width: 70%;
+        }
+        .modal-content {
+          width: 95vw;
+        }
+        .modal {
+          left: 0%;
+        }
+        .flex-row {
+          float: right;
+        }
+        .rowdiv {
+          width: 100%;
+        }
+        #fileNameSpan {
+          font-size: 10px;
+        }
+        #readyToMigrate {
+          font-size: 10px;
+        }
+        .notyMe {
+          width: 30%;
+        }
+        .notyOther {
+          width: 70%;
+        }
+        .fileCheck {
+          overflow: auto;
+        }
+        #nofityOthersCheckBox {
+          margin-top: 12px;
+        }
+        #notySpan {
+          margin-top: 4%;
+          padding-left: 3%;
+        }
+      }
+      @media (max-width: 768px) and (min-width: 767.8px) {
+        .dropdown-content {
+          right: 0%;
+          left: 70% !important;
+        }
+        .modal-content {
+          width: 75vw;
+        }
+        .navbar-nav {
+          margin-top: 0% !important;
+        }
+      }
+      @media (max-width: 420px) and (min-width: 319px) {
+        .alertScs,
+        .alertErr {
+          width: 300px !important;
+          min-width: 300px !important;
+        }
+        #policyId {
+          bottom: 0% !important;
+        }
+        .alertScs .msg,
+        .alertErr .msg {
+          font-size: 8px;
+        }
+        #moveDestination .list-group-item {
+          width: 102%;
+          font-size: 9px;
+        }
+        #moveSource .list-group-item {
+          width: 102%;
+          font-size: 9px;
+        }
+      }
+      @media (max-height: 620px) {
+        #policyId {
+          bottom: -2% !important;
+        }
+      }
+      #content {
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      @media (max-width: 1300px) and (min-width: 992px) {
+        #navbarSupportedContent {
+          width: 150% !important;
+        }
+      }
+      .cont {
+        /* border: 3px solid #fff; */
+        display: none;
+      }
+      .userStatus {
+        width: 20%;
+        float: left;
+        z-index: 999999;
+        position: relative;
+      }
+      .userStatusColor {
+        width: 10%;
+        float: left;
+      }
+      .fileCount {
+        width: 25%;
+        float: left;
+        margin-left: 30px;
+      }
+      .fileType {
+        width: 20%;
+        float: left;
+        z-index: 999999;
+        position: relative;
+      }
+      .fileTypeColor {
+        width: 10%;
+        float: left;
+        margin-left: 135px;
+        margin-top: 30px;
+      }
+      .summaryData {
+        width: 30%;
+        float: left;
+        margin-left: 265px;
+        margin-top: 10px;
+      }
+      .deepScanTitle1 {
+        width: 50%;
+        float: left;
+        padding: 20px;
+        margin-left: 128px;
+      }
+      .deepScanTitle2 {
+        width: 20%;
+        float: left;
+        margin-left: -225px;
+        padding: 20px;
+      }
+      .deepScanTitle3 {
+        width: 10%;
+        float: left;
+        margin-left: 120px;
+        padding: 20px;
+      }
+      .userStatusColorPaletteDiv {
+        padding: 8%;
+        margin-left: -30px;
+      }
+      .userStatusColorPalette {
+        position: absolute;
+        display: block;
+        margin-top: -10px;
+        margin-left: -30px;
+      }
+      .userStatusColorPalette li {
+        list-style: none;
+        padding: 5px;
+        margin: 5px;
+        position: relative;
+      }
+      .userStatusColorPalette li span {
+        list-style: none;
+        padding: 5px 8px;
+        font-weight: 500;
+        margin-left: 5px;
+      }
+      .userStatusColorPalette li:nth-child(1):before {
+        content: "";
+        width: 8px;
+        height: 25px;
+        background-color: #00d84a;
+        position: absolute;
+        border-radius: 2px;
+      }
+      .userStatusColorPalette li:nth-child(2):before {
+        content: "";
+        width: 8px;
+        height: 25px;
+        background-color: rgb(104, 104, 104);
+        position: absolute;
+        border-radius: 2px;
+      }
+      .userStatusColorPalette li:nth-child(3):before {
+        content: "";
+        width: 8px;
+        height: 25px;
+        background-color: #ff6666;
+        position: absolute;
+        border-radius: 2px;
+      }
+      .userStatusColorPalette li:nth-child(4):before {
+        content: "";
+        width: 8px;
+        height: 25px;
+        background-color: rgba(255, 153, 102, 9);
+        position: absolute;
+        border-radius: 2px;
+      }
+      .userStatusColorPalette li:nth-child(5):before {
+        content: "";
+        width: 8px;
+        height: 25px;
+        background-color: #d82e2f;
+        position: absolute;
+        border-radius: 2px;
+      }
+      .userStatusChartCls {
+        width: 95%;
+        height: 30%;
+        margin-top: 35px;
+        margin-left: 10px;
+      }
+
+      #userStatusChartId {
+        height: 150px !important;
+      }
+      .actHead {
+        text-align: center;
+        position: absolute;
+        display: block;
+      }
+      .totalFileChartCanvasCls {
+        width: 350px;
+        height: 30%;
+        display: block;
+      }
+
+      #totalFileChartCanvas {
+        background: #fff;
+        height: 200px;
+      }
+      .fileTypeChartsHeadClass {
+        width: 95%;
+        height: 30%;
+        margin-left: 40%;
+        margin-top: 70px;
+      }
+      .fileTypeColorPalette li {
+        list-style: none;
+        padding: 8px;
+      }
+      .fileTypeColorPalette li span {
+        list-style: none;
+        padding: 5px 8px;
+        font-weight: 500;
+        margin-left: 5px;
+      }
+      .fileTypeColorPalette li::before {
+        content: "";
+        width: 8px;
+        height: 25px;
+        background-color: #00d84a;
+        position: absolute;
+        border-radius: 2px;
+      }
+      .fileTypeColorPalette li:nth-child(1):before {
+        background-color: rgba(255, 153, 102, 1);
+      }
+      .fileTypeColorPalette li:nth-child(2):before {
+        background-color: rgba(198, 201, 202, 1);
+      }
+      .fileTypeColorPalette li:nth-child(3):before {
+        background-color: rgba(128, 116, 110, 1);
+      }
+      .fileTypeColorPalette li:nth-child(4):before {
+        background-color: rgba(42, 210, 201, 1);
+      }
+      .fileTypeColorPalette li:nth-child(5):before {
+        background-color: rgba(97, 71, 103, 1);
+      }
+      .toow li:nth-child(1):before {
+        background-color: rgba(88, 188, 98, 1);
+      }
+      .toow li:nth-child(2):before {
+        background-color: rgb(11, 58, 187);
+      }
+      #fileTypeCharts {
+        height: 150px !important;
+      }
+      .fileTypeColorPalette {
+        position: absolute;
+        display: block;
+        margin-top: 10px;
+      }
+      .tableFixHeadPreMigrate {
+        overflow: auto;
+        height: auto;
+        max-height: 75vh;
+        width: 99%;
+        margin-top: 3%;
+        margin-left: -1.5%;
+        position: relative;
+      }
+      .tableFixHeadPreMigrate thead th {
+        position: sticky;
+        top: 0;
+        background-color: #0062ff;
+        color: #fff;
+        border: 1px solid #0062ffd1;
+      }
+      .tableFixHeadPreMigrate thead {
+        position: sticky;
+        padding: 7.5px !important;
+        top: 0;
+        background-color: #0062ff;
+        color: #fff;
+        border: 1px solid #0062ffd1;
+      }
+      .tableFixHeadPreMigrate table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .tableFixHeadPreMigrate th,
+      .tableFixHeadPreMigrate td {
+        padding: 4px 1px !important;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+      }
+      .tableFixHeadPreMigrate th {
+        background: #eee;
+        font-size: 14px !important;
+        font-weight: 500;
+      }
+      .fls {
+        width: 100%;
+        margin: 4%;
+      }
+      .deepScanProgress {
+        margin: 23px 1px !important;
+      }
+      .progress {
+        border-radius: 50px;
+        margin-left: 85px !important;
+      }
+      .tableContentNotifier {
+        padding: 15px;
+        margin-left: 17px;
+      }
+      .tableContentNotifier li {
+        list-style: none;
+        display: inline;
+        font-size: 14px;
+      }
+      .tableContentNotifier li:nth-child(1):after {
+        content: "Active";
+        padding: 3px;
+        font-weight: 500;
+      }
+      .tableContentNotifier li:nth-child(2):after {
+        content: "In-Active";
+        padding: 3px;
+        font-weight: 500;
+      }
+      .tableContentNotifier li:nth-child(3):after {
+        content: "Non-Provisioned";
+        padding: 3px;
+        font-weight: 500;
+      }
+      .tableContentNotifier li:nth-child(4):after {
+        content: "Deleted";
+        padding: 3px;
+        font-weight: 500;
+      }
+      .tableContentNotifier li:nth-child(5):after {
+        content: "Suspended";
+        padding: 3px;
+        font-weight: 500;
+      }
+      .checkInputDeepScan{
+      width: 1.3em;
+      height: 1.3em;
+      background-color: white;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 1px solid #ddd;
+      outline: none;
+      cursor: pointer;
+      }
+      .round {
+  position: relative;
+  }
+
+  .round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  left: -5px;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 4px;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  transform: rotate(-45deg);
+  width: 10px;
+}
+
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+.noBorderTd{
+  border-left-style: hidden!important;
+    border-bottom-style: hidden !important;
+}
+.noTableHeadStyle{
+  border-style: hidden !important;
+  background-color: #fff !important;
+}
+
+.deepScanBtn {
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 14px;
+  background-color: #1220f6;
+  border: none;
+  font-weight: 400;
+  outline: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+    }
+    .pannelDeepScan{
+      margin-top: 26%;
+    }
+    .ui-widget-header {
+    background: #cac8c8 !important;
+    border: 0;
+    padding: 15px 15px 0 !important;
+  }
+  .summaryDataQuestion{
+    font-size: 14px;
+    font-weight: 500;
+    color: #8f627e;
+  }
+  .summaryDataAnswer{
+    font-size: 14px;
+    font-weight: 700;
+    color: #0062ff;
+  }
+    </style>
+  </head>
+  <body style="overflow: hidden">
+    <div class="g-signin2" data-theme="dark" style="display: none"></div>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar" class="active">
+        <div style="height: 70px">
+          <a href="#" class="logo"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="60"
+              height="30"
+              viewBox="0 0 106.467 53.365"
+              style="margin-bottom: -8%; margin-top: 13%; margin-left: 5%"
+            >
+              <defs>
+                <style>
+                  .a {
+                    fill: #ffffff;
+                  }
+                  .b {
+                    fill: #ffffff;
+                  }
+                  .c {
+                    fill: #ffffff;
+                  }
+                </style>
+                <linearGradient
+                  id="a"
+                  x1="0.5"
+                  x2="0.5"
+                  y2="1"
+                  gradientUnits="objectBoundingBox"
+                >
+                  <stop offset="0" stop-color="#156aff" />
+                  <stop offset="1" stop-color="#1100f3" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(-177.95 -15.003)">
+                <g transform="translate(183.48 15)">
+                  <path
+                    class="a"
+                    d="M1938.25,742.731c.161-.688.936-3.794,1.714-2.2-.024-.025,2.081,2.887.617,10.6.024-.082-1.1,3.237-1.807,1.042.024.082-.525-1.454-.525-1.454s-.391-.383-.435.412c-.021-.054,1.536,9.531,3.545,5.19,0,.029,1.1-1.454,1.3-6.673.068.054.549-7.665-.778-11.644,0,.029-1.234-4.23-2.674-1.648a9.667,9.667,0,0,0-1.214,4.173,20.02,20.02,0,0,0-.182,2.2C1937.8,742.7,1938.09,743.419,1938.25,742.731Z"
+                    transform="translate(-1917.075 -729.704)"
+                  />
+                  <path
+                    class="a"
+                    d="M1938.32,744.66c.185-.872,1.072-4.81,1.963-2.789-.028-.031,2.383,3.661.707,13.442.027-.1-1.256,4.1-2.069,1.321.027.1-.6-1.843-.6-1.843s-.448-.486-.5.522c-.024-.068,1.759,12.084,4.059,6.58,0,.037,1.26-1.843,1.492-8.46.078.068.628-9.718-.891-14.763,0,.037-1.413-5.363-3.062-2.089a13.176,13.176,0,0,0-1.389,5.29,27.807,27.807,0,0,0-.208,2.789C1937.8,744.623,1938.13,745.532,1938.32,744.66Z"
+                    transform="translate(-1908.168 -732.64)"
+                  />
+                  <path
+                    class="a"
+                    d="M0,5.45S1.035-.447,3.92.027C3.508.007,5.686-.405,7.3,7.433a47.548,47.548,0,0,1,.356,13.6c-.07-.1-.3,5.482-2.408,8.891,0,.029-2.413,3.8-4.62-2.1A18.264,18.264,0,0,1,0,25.964s2.24,2.411,3.343,0c.018.034,1.718-2.908,1.884-8.756.015.071.263-9.357-1.964-12.192a2.151,2.151,0,0,0-3.031.833A4.54,4.54,0,0,1,0,5.45Z"
+                    transform="translate(36.978 0.139) rotate(-0.974)"
+                  />
+                  <path
+                    class="b"
+                    d="M2152.9,1316.38s-2.781-.969-2.2-5.006c.034-.28,1.183-3.444,5.328-1.951-.1,0,2.158-3.017,5.044-2.984.024,0,3.307-.2,4.42,3.834-.061.058,4.229-3.5,7.43,1.359.009.014.008,2.182,0,1.639v1.183s-.163,1.883-3.174,1.925h-.178C2167.93,1316.35,2152.9,1316.38,2152.9,1316.38Z"
+                    transform="translate(-2100.18 -1291.587)"
+                  />
+                  <path
+                    class="b"
+                    d="M3223.61,213.09c-.033.022,4.834,0,4.834,0a5.34,5.34,0,0,1-.855-6.648c.061-.061,1.442-2.79,5.417-1.671-.018-.082,2.83-3.425,5.866-3.138a4.974,4.974,0,0,1,4.885,3.54c-.079-.061,3.74-2.722,6.854,1.5.04.021-.8-6.563-7.44-5.044a7.657,7.657,0,0,0-7.15-4.186,8.618,8.618,0,0,0-5.644,3.382c.083-.061-3.81-.979-5.827,1.111a44.3,44.3,0,0,1-.3,6.671C3224.27,208.55,3223.65,213.068,3223.61,213.09Z"
+                    transform="translate(-3177.828 -188.413)"
+                  />
+                  <path
+                    class="b"
+                    d="M3219.66,431.08a23.151,23.151,0,0,1,1.43,6.7,5.526,5.526,0,0,1,5.391-1.4c.095,0,7.083-8.092,14.139.859.08.03,5.337-1.1,6.842,3.986-.065,0,1-9.046-11.14-9.243-.035.069-4.568-8.6-13.223-1.61a4,4,0,0,0-3.439.711Z"
+                    transform="translate(-3174.591 -425.7)"
+                  />
+                  <path
+                    class="b"
+                    d="M3163.06,784.33a7.96,7.96,0,0,1,3.833-1.221,32.009,32.009,0,0,1,.24,17.482c.025.069-3.888,0-3.888,0s1.045-8.3,0-14.826Z"
+                    transform="translate(-3127.039 -776.302)"
+                  />
+                  <path
+                    class="b"
+                    d="M3107.2,812.941l3.24-.246a9.239,9.239,0,0,1,1.41-2.4c.021,0,2.085,4.361,0,12.167a3.679,3.679,0,0,1-1.41-2.477c0-.059-3.383,0-3.383,0l.142-1.184s2.937.355,2.739-.63c-.018-.021.173-.908-2.586-.568V816.54s2.737.6,2.743-.808c0-.021.133-1.524-2.743-.945a18.1,18.1,0,0,0-.152-1.846Z"
+                    transform="translate(-3080.385 -799.48)"
+                  />
+                  <path
+                    class="b"
+                    d="M2935.35,831.464l22.548-1.68a4.454,4.454,0,0,1,.263,1.589C2958.18,831.4,2935.35,831.464,2935.35,831.464Z"
+                    transform="translate(-2935.35 -816.087)"
+                  />
+                  <path
+                    class="b"
+                    d="M2954.38,855.123l19.987-1.006a2.038,2.038,0,0,1-.165.9C2974.19,855.049,2954.38,855.123,2954.38,855.123Z"
+                    transform="translate(-2951.574 -836.828)"
+                  />
+                  <path
+                    class="b"
+                    d="M2994.27,870.418l13.893-.918-.246,1.016Z"
+                    transform="translate(-2985.57 -849.941)"
+                  />
+                </g>
+              </g>
+            </svg>
+            <br />CloudFuze</a
+          >
+        </div>
+        <ul class="list-unstyled components mb-5">
+          <li>
+            <a href="cloudmanager.html?ver=1028"
+              ><i class="lnil lnil-cloud-alt"></i> <br />Clouds</a
+            >
+          </li>
+          <li>
+            <a href="move.html?ver=1028"
+              ><i class="lnil lnil-rocket" style="transform: rotate(90deg)"></i>
+              <br />
+              Migrate</a
+            >
+          </li>
+          <li>
+            <a href="backUp.html?ver=1028"
+              ><i class="lnil lnil-database" style="margin-top: -5%"></i> <br />
+              Individual<br />Backup</a
+            >
+          </li>
+          <li>
+            <a href="teammigration.html?ver=1028"
+              ><i class="lnil lnil-users-alt" style="margin-top: -5%"></i>
+              <p style="margin-bottom: -3%; margin-top: 5%">Team</p>
+              <p>Migration</p></a
+            >
+          </li>
+          <li>
+            <a href="slackmigration.html?ver=1028"
+              ><i class="lnil lnil-users-alt" style="margin-top: -5%"></i>
+              <p style="margin-bottom: -3%; margin-top: 5%">Slack</p>
+              <p>Migration</p></a
+            >
+          </li>
+          <li>
+            <a href="reports.html?ver=1028"
+              ><i class="lnil lnil-pie-report"></i><br />Reports</a
+            >
+          </li>
+          <li>
+            <a href="https://help.cloudfuze.com/" target="_blank"
+              ><i class="lnil lnil-question-circle"></i><br />Help</a
+            >
+          </li>
+        </ul>
+        <div
+          id="policyId"
+          style="height: 70px; font-size: 11px; bottom: 2%; position: absolute"
+        >
+          <a
+            href="https://www.cloudfuze.com/terms-of-use"
+            target="_blank"
+            style="color: #fff"
+            >Terms of use</a
+          >
+
+          <a
+            href="https://www.cloudfuze.com/privacy-policy"
+            target="_blank"
+            style="color: #fff"
+            >Privacy policy</a
+          >
+        </div>
+      </nav>
+
+      <div id="content" class="" style="background: #fcfcfc">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light"
+          style="margin-bottom: 0px"
+        >
+          <div class="container-fluid">
+            <div class="rowdiv" style="float: left">
+              <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li id="cm-sidebar" style="margin-right: 5%">
+                  <button
+                    type="button"
+                    id="sidebarCollapse"
+                    class="btn btn-primary d-lg-none"
+                  >
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                  </button>
+                </li>
+                <li id="cm-topbar" style="">
+                  <button
+                    class="btn btn-dark d-inline-block d-lg-none ml-auto"
+                    type="button"
+                    id="topbarCollapse"
+                  >
+                    <i class="fa fa-bars"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="collapse navbar-collapse"
+              id="navbarSupportedContent"
+              style="width: 65%; float: right"
+            >
+              <ul
+                class="nav navbar-nav ml-auto1"
+                style="width: 100%; margin-right: -5%"
+              >
+                <!--<a class="nav-link" href="#" style="font-size:12px;padding: 10px 32px;color:#000000;">Data <span style="color:#0062FF;font-weight: 600;">5GB</span> used of <span style="color:#0062FF;font-weight: 600;">10GB</span></a>-->
+                <li
+                  class="nav-item"
+                  style="
+                    text-align: -webkit-center;
+                    width: 39%;
+                    height: 11vh;
+                    padding-top: 2.5%;
+                  "
+                >
+                  <div style="text-align: -webkit-right" id="incrementProgress">
+                    <p
+                      id="usersDisplay"
+                      style="
+                        color: #707070;
+                        font-size: 12px;
+                        width: 100%;
+                        float: left;
+                        margin-bottom: 2%;
+                      "
+                    >
+                      Data
+                      <span
+                        id="usedData"
+                        style="color: #0062ff; font-weight: 600"
+                        >0GB</span
+                      >
+                      used of
+                      <span
+                        id="totalData"
+                        style="color: #0062ff; font-weight: 600"
+                        >0GB</span
+                      >
+                    </p>
+                    <div
+                      class="progress"
+                      style="
+                        height: 8px;
+                        width: 190px;
+                        border-radius: 15px;
+                        background: #e5e5e5;
+                      "
+                    >
+                      <div
+                        class="progress-bar progress-bar-success progressGreen"
+                        role="progressbar"
+                        style="
+                          width: 0%;
+                          background: #24dfd3;
+                          height: 100%;
+                          border-radius: 25px;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="nav-item"
+                  style="
+                    width: 18%;
+                    text-align: -webkit-right;
+                    padding-left: 5%;
+                    height: 11vh;
+                    padding-top: 2.5%;
+                  "
+                >
+                  <a
+                    class="nav-link"
+                    href="settings.html#price?ver=1028"
+                    style="
+                      color: #ffffff;
+                      background: #1220f6 0% 0% no-repeat padding-box;
+                      border-radius: 5px;
+                      height: 36px;
+                      width: 108px;
+                      text-align: center;
+                      vertical-align: middle;
+                      display: table;
+                    "
+                    >Upgrade</a
+                  >
+                </li>
+                <li
+                  class="nav-item"
+                  style="
+                    width: 43%;
+                    text-align: -webkit-left;
+                    padding-left: 3%;
+                    height: 11vh;
+                    padding-top: 2%;
+                  "
+                >
+                  <div class="dropdown" style="width: 100%">
+                    <a class="dropbtn nav-link" href="#" style="padding-top: 4%"
+                      ><i
+                        class="lnil lnil-user-alt-1"
+                        style="
+                          color: #0062ff;
+                          margin-top: -8%;
+                          border-radius: 14px;
+                          border: 0.8999999761581421px solid #0062ff;
+                          font-size: 15px;
+                          padding: 5px;
+                        "
+                      ></i
+                      ><span
+                        id="dash-uname"
+                        style="
+                          margin-left: 4%;
+                          font-weight: 600;
+                          color: #1f2129;
+                          word-break: break-word;
+                        "
+                      ></span
+                      ><i
+                        class="lnil lnil-chevron-down"
+                        style="
+                          font-size: 10px;
+                          padding-left: 1%;
+                          font-weight: 600;
+                        "
+                      ></i
+                    ></a>
+                    <div class="dropdown-content">
+                      <a href="settings.html?ver=1028" style="text-align: left"
+                        ><i
+                          class="lnil lnil-user-alt"
+                          style="
+                            font-size: 16px;
+                            margin-right: 3%;
+                            font-weight: 600;
+                          "
+                        ></i
+                        >My Account</a
+                      >
+                      <a
+                        class="cf-logout"
+                        class="mYaccontlogout"
+                        href="#"
+                        style="text-align: left"
+                        ><i
+                          class="lnil lnil-exit"
+                          style="
+                            font-size: 16px;
+                            margin-right: 3%;
+                            transform: rotate(180deg);
+                            font-weight: 600;
+                          "
+                        ></i
+                        >Logout</a
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class=""
+              id="navbarSupportedContent1"
+              style="
+                width: 100%;
+                float: right;
+                background: rgb(255, 255, 255);
+                display: none;
+              "
+            >
+              <ul
+                class="nav navbar-nav"
+                style="width: 100%; margin-right: -5%; margin-top: 7%"
+              >
+                <li
+                  class="nav-item"
+                  style="
+                    text-align: -webkit-center;
+                    width: 100%;
+                    height: 12vh;
+                    padding-top: 8%;
+                    padding-right: 10%;
+                    border-bottom: 1px solid #e5e5e5;
+                  "
+                >
+                  <div style="text-align: -webkit-right" id="incrementProgress">
+                    <p
+                      id="usersDisplay"
+                      style="
+                        color: #707070;
+                        font-size: 12px;
+                        width: 100%;
+                        float: left;
+                        margin-bottom: 2%;
+                      "
+                    >
+                      Data
+                      <span
+                        id="usedData1"
+                        style="color: #0062ff; font-weight: 600"
+                        >0 GB</span
+                      >
+                      used of
+                      <span
+                        id="totalData1"
+                        style="color: #0062ff; font-weight: 600"
+                        >0 GB</span
+                      >
+                    </p>
+                    <div
+                      class="progress"
+                      style="
+                        height: 8px;
+                        width: 190px;
+                        border-radius: 15px;
+                        background: #e5e5e5;
+                      "
+                    >
+                      <div
+                        class="progress-bar progress-bar-success progressGreen"
+                        role="progressbar"
+                        style="
+                          width: 0%;
+                          background: #24dfd3;
+                          height: 100%;
+                          border-radius: 25px;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="nav-item"
+                  style="
+                    width: 100%;
+                    padding-right: 8%;
+                    height: 8vh;
+                    padding-top: 2%;
+                    border-bottom: 1px solid #e5e5e5;
+                  "
+                >
+                  <a
+                    class="nav-link cf_upgrd_btn"
+                    href="settings.html#price?ver=1028"
+                    style="
+                      float: right;
+                      color: #ffffff;
+                      background: #1220f6 0% 0% no-repeat padding-box;
+                      border-radius: 5px;
+                      height: 36px;
+                      width: 108px;
+                      text-align: center;
+                      vertical-align: middle;
+                      display: table;
+                    "
+                    >Upgrade</a
+                  >
+                </li>
+                <li
+                  class="nav-item"
+                  style="
+                    width: 100%;
+                    text-align: -webkit-right;
+                    height: 6vh;
+                    padding-right: 10%;
+                    border-bottom: 1px solid #e5e5e5;
+                  "
+                >
+                  <div class="dropdown" style="width: 100%">
+                    <a class="dropbtn nav-link" href="#" style="padding-top: 5%"
+                      ><i
+                        class="lnil lnil-user-alt-1"
+                        style="
+                          color: #0062ff;
+                          margin-top: -8%;
+                          border-radius: 14px;
+                          border: 0.8999999761581421px solid #0062ff;
+                          font-size: 15px;
+                          padding: 5px;
+                        "
+                      ></i
+                      ><span
+                        id="dash-uname1"
+                        style="
+                          margin-left: 4%;
+                          font-weight: 600;
+                          color: #1f2129;
+                          word-break: break-word;
+                        "
+                      ></span
+                      ><i
+                        class="lnil lnil-chevron-down"
+                        style="
+                          font-size: 10px;
+                          padding-left: 3%;
+                          font-weight: 600;
+                        "
+                      ></i
+                    ></a>
+                    <div class="dropdown-content">
+                      <a href="settings.html?ver=1028" style="text-align: left"
+                        ><i
+                          class="lnil lnil-user-alt"
+                          style="
+                            font-size: 16px;
+                            margin-right: 3%;
+                            font-weight: 600;
+                          "
+                        ></i
+                        >My Account</a
+                      >
+                      <a
+                        class="cf-logout"
+                        class="mYaccontlogout"
+                        href="#"
+                        style="text-align: left"
+                        ><i
+                          class="lnil lnil-exit"
+                          style="
+                            font-size: 16px;
+                            margin-right: 3%;
+                            transform: rotate(180deg);
+                            font-weight: 600;
+                          "
+                        ></i
+                        >Logout</a
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="alertScs hide">
+          <span class="fa fa-check-circle"></span>
+          <p class="msg"></p>
+          <div class="close-btnScs">
+            <span class="lnil lnil-cross-circle"></span>
+          </div>
+        </div>
+        <div class="alertErr hide">
+          <span class="fa fa-times-circle"></span>
+          <p class="msg"></p>
+          <div class="close-btnErr">
+            <span class="lnil lnil-cross-circle"></span>
+          </div>
+        </div>
+        <div
+      class="container-fluid p-3 mx-4 my-4 border"
+      style="width: 90%; position: absolute;height: 100vh;overflow: scroll;"
+    >
+    <!-- <span style="float:right;position:relative;color: #0062ff;"><button class="deepScanBtn" onclick="startDeepScan()">SCAN</button></span> -->
+      <div class="cont" style="display: none;">
+        <div class="deepScanTitle1">
+          <h5 style="font-weight: 400; font-size: 14px;text-decoration: underline;">File Count Based On Size</h5>
+        </div>
+        <div class="deepScanTitle2">
+          <h5 style="font-weight: 400; font-size: 14px;text-decoration: underline;">File Types</h5>
+        </div>
+        <div class="deepScanTitle3">
+          <h5 style="font-weight: 400; font-size: 14px;text-decoration: underline;">Summary</h5>
+        </div>
+      </div>
+      <div class="cont" style="margin-top: 65px">
+        <div class="userStatus" style="display: none;">
+          <div class="userStatusChartCls">
+            <canvas id="userStatusChartId"></canvas>
+          </div>
+        </div>
+        <div class="userStatusColor" style="display: none;">
+          <div class="userStatusColorPaletteDiv">
+            <ul class="userStatusColorPalette">
+              <li><span>Active</span></li>
+              <li><span>Inactive</span></li>
+              <li><span>Non-Provision</span></li>
+              <li><span>Deleted</span></li>
+              <li><span>Suspended </span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fileCount">
+          <div class="fls">
+            <div class="deepScanProgress" style="margin-top: -35px;">
+              <span style="margin-top: -2px; margin-left: 15%">Size</span>
+              <span style="
+                  position: absolute;
+                  width: 22%;
+                  margin-left: 18.5%;
+                  margin-top: -2px;
+                  z-index: 9999999;
+                ">File Count</span>
+              <div class="progress deepscanbar" style="height: 15px; width: 99%; margin-left: 80px; display: none">
+                <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="1000">
+                </div>
+              </div>
+            </div>
+            <!-- Progress Bar Starts -->
+            <div class="deepScanProgress" style="margin-top: 5px">
+              <span style="position: absolute; margin-top: -4px;margin-left:-2px">Above 5GB</span>
+              <span style="position: absolute;margin-left: 24.5%;margin-top: -5px;z-index: 99999999;" id="txtabove5gb">50</span>
+              <div class="progress deepscanbar" style="height: 15px; width: 70%; margin-left: 85px">
+                <div class="progress-bar" role="progressbar" id="above5gb" style="width: 40%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="1000">
+                </div>
+              </div>
+            </div>
+            <!-- Progress Bar Ends -->
+            <div class="deepScanProgress" style="margin-top: 18px">
+                <span style="position: absolute; margin-top: -4px;margin-left:16px">1GB-5GB</span>
+                <span style="position: absolute;margin-left: 24.5%;margin-top: -5px;z-index: 99999999;" id="txtonegb5gb">50</span>
+                <div class="progress" style="height: 15px; width: 70%; margin-left: 85px">
+                  <div class="progress-bar" role="progressbar" id="onegb5gb" style="width: 40%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="1000">
+                  </div>
+                </div>
+              </div>
+            <div class="deepScanProgress" style="margin-top: 18px">
+              <span style="position: absolute; margin-top: -4px;margin-left:-2px">500MB-1GB</span>
+              <span style="position: absolute;margin-left: 24.5%;margin-top: -5px;z-index: 99999999;" id="txtfivehunmb1gb">250</span>
+              <div class="progress" style="height: 15px; width: 70%; margin-left: 90px">
+                <div class="progress-bar" role="progressbar" id="fivehunmb1gb" style="width: 60%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="1000">
+                </div>
+              </div>
+            </div>
+            <!-- End Progress -->
+            <div class="deepScanProgress" style="margin-top: 18px">
+                <span style="position: absolute; margin-top: -4px;margin-left: -21px;">100MB-500MB</span>
+                <span style="position: absolute;margin-left: 24.5%;margin-top: -5px;z-index: 99999999;" id="txthunmb500mb">10</span>
+                <div class="progress" style="height: 15px; width: 70%; margin-left: 90px">
+                  <div class="progress-bar" id="hunmb500mb" role="progressbar" style="width: 10%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="1000">
+                  </div>
+                </div>
+              </div>
+            <div class="deepScanProgress" style="margin-top: 18px">
+              <span style="position: absolute; margin-top: -4px;margin-left: 5px;">1KB-100MB</span>
+              <span style="position: absolute;margin-left: 24.5%;margin-top: -5px;z-index: 99999999;" id="txtonekb100mb">10</span>
+              <div class="progress" style="height: 15px; width: 70%; margin-left: 90px">
+                <div class="progress-bar" id="onekb100mb" role="progressbar" style="width: 10%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="1000">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fileType">
+          <div class="fileTypeChartsHeadClass">
+            <canvas id="fileTypeCharts"></canvas>
+          </div>
+        </div>
+        <div class="fileTypeColor">
+          <div style="">
+            <ul class="fileTypeColorPalette" style="margin-left: -110px">
+              <li><span>Images</span></li>
+              <li><span>Videos</span></li>
+              <li><span>Audios</span></li>
+              <li><span>Word</span></li>
+              <li><span>Excel</span></li>
+            </ul>
+          </div>
+          <div style="">
+            <ul class="fileTypeColorPalette toow" style="margin-left: -10px">
+              <li><span>PDF</span></li>
+              <li><span>Others</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="summaryData">
+          <div style="width: 90%;font-size:12px;box-shadow: 0px 0px 10px #0000001f;padding: 4%;border-radius: 12px;">
+            <table>
+              <tr>
+                <td class="summaryDataQuestion" style="width: 75%;">Selected Users<span style="float: right;">:</span></td>
+                <td class="summaryDataAnswer" style="width: 25%;">5</td>
+              </tr>
+              <tr>
+                <td class="summaryDataQuestion" style="width: 75%;">Used Space<span style="float: right;">:</span></td>
+                <td class="summaryDataAnswer" style="width: 28%;">5 [TB]</td>
+              </tr>
+            </table>
+            </div>
+        </div>
+      </div>
+      <div class="" style="margin-top: 50px">
+        <table id="pannelDeepScan"
+          style="
+            justify-content: center;
+            text-align: center;
+            border-radius: 5px;
+            width: 95%;
+            font-size: 12px;
+            box-shadow: 0px 0px 10px #0000001f;
+            padding: 5%;
+            border-radius: 12px;
+            border-color: #0062ff;
+            padding: 5px;
+            color: #8f627e;
+            transform: translate(2.5%);
+          "
+        >
+          <thead style="">
+            <tr>
+              <th style="text-align: center; padding: 1%">
+                <div style="color: #0062ff; font-size: 24px">250</div>
+              </th>
+              <th style="text-align: center">
+                <div style="color: #0062ff; font-size: 24px">100</div>
+              </th>
+              <th style="text-align: center">
+                <div style="color: #0062ff; font-size: 24px">5</div>
+              </th>
+              <th style="text-align: center">
+                <div style="color: #0062ff; font-size: 24px">3000</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="font-size: 16px; font-weight: 500; color: #8f627e">
+              <td style="padding-bottom: 15px" id=""><div>Versions Count</div>
+                <span><input type="text" style="padding: 5px;font-size:12px;width: 60px;height: 29px;border: 1px solid rgb(146, 144, 144);" placeholder="From Year" title="From Year">&nbsp;To&nbsp;<input type="text" style="padding: 5px;font-size:12px;width: 60px;height: 29px;border: 1px solid rgb(146, 144, 144);" placeholder="To Year" title="To Year"></span>  
+              </td>
+              <td style="padding-bottom: 15px" id=""><div>Shared Links</div><span style="visibility: hidden;">--</span></td>
+              <td style="padding-bottom: 15px" id=""><div>Long Name File Count</div><span style="visibility: hidden;">--</span> </td>
+              <td style="padding-bottom: 21px" id=""><div>Files/Folders</div><span style="">
+                <input type="hidden" id="formDateAtDeepScanPanel" />&nbsp;To&nbsp;<input type="hidden" id="toDateAtDeepScanPanel" />
+              </span>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tablestart" style="margin-bottom: 10%;">
+        <!-- <div><button class="deepScanBtn" style="float: right;background-color: none;border-radius: 0;margin-right: 2.5%;margin-top: 2%;" title="" onclick="startDeepScan()" >Scan&nbsp;<i class="fa fa-search"></i></button></div> -->
+        <div><button class="deepScanBtnForScan" style="border:none;outline:none;float: right;background: none;border-radius: 0;margin-right: 2.5%;margin-top: 2%;color:#000;pointer-events: none;opacity: 0.3;" title="" onclick="startDeepScan()" >Scan&nbsp;<i class="fa fa-search"></i></button></div>
+        <div class="tableFixHeadPreMigrate">
+          <table id="preMigrationAnalysisTable">
+            <thead>
+              <tr>
+                <th scope="col" style="text-align: center;width: 5%;" rowspan="2" class="noTableHeadStyle"><span class="round" id="deepScanTableCheckBox" style="" title="Select All Users"><input type="checkbox" id="all" onclick="stayInput(this)"/><label for="all"></label> </span></th>
+                <th scope="col" style="text-align: center" rowspan="">
+                  Email Id
+                </th>
+                <th scope="col" style="text-align: center" rowspan="2">
+                  Role
+                </th>
+                <!-- <th scope="col" style="text-align: center" rowspan="2">
+                  User Status
+                </th> -->
+                <th
+                  scope="col"
+                  id="TotalSpace"
+                  style="text-align: center"
+                  rowspan="2"
+                >
+                  Long Name Folders/Files
+                </th>
+                <th
+                  scope="col"
+                  id="TotalSpace"
+                  style="text-align: center; width: 8%"
+                >
+                Files/Folders Range
+                </th>
+                <th
+                  scope="col"
+                  id="TotalSpace"
+                  style="text-align: center"
+                  rowspan="2"
+                >
+                  Shared Links
+                </th>
+                <th
+                  scope="col"
+                  id="TotalSpace"
+                  style="text-align: center"
+                >
+                Versions
+                </th>
+                <th
+                  scope="col"
+                  rowspan="2"
+                  id="TotalSpace"
+                  style="text-align: center"
+                >
+                  File Count Based On Size
+                </th>
+                <th
+                  scope="col"
+                  rowspan="2"
+                  id="TotalSpace"
+                  style="text-align: center"
+                >
+                  File Count Based On File Type
+                </th>
+              </tr>
+
+              <tr style="position: sticky;">
+                  <th style="width: 30%;padding: 5%;"><div style=""></div>
+                    <input
+                      type="email"
+                      placeholder="Email Id"
+                      style="
+                        color: #777;
+                        font-weight: 400;
+                        width: 184px;
+                        height: 26px;
+                        padding: 5px 2px;
+                      "
+                      id="searchEmailInPreMig"
+                    /><i
+                      class="fa fa-search"
+                      style="margin-left: -30px; color: black"
+                    ></i>
+                  </div>
+                  </div></th>
+                  <th>
+                    <div>
+                    <i class="fa fa-calendar" aria-hidden="true" style="color: #fff;"></i>&nbsp;To&nbsp;<i class="fa fa-calendar" aria-hidden="true" style="color: #fff;"></i>
+                    <span class="dropdown">
+                      <i class="fa fa-angle-down" class="dropbtn" aria-hidden="true" style="color: #fff;margin-left: 30px;"></i>  
+                      <div class="dropdown-content">
+                      <a> 
+                        <span>
+                          <span class="round"><input type="checkbox" id="createdTime" onclick="checkForOtherCheck()"/><label for="createdTime" style="left: -7px;"></label> </span><span style="margin-left: 10px;">Created Time
+                          </span>
+                          </span>
+                      </a>
+                      <a> 
+                        <span>
+                          <span class="round"><input type="checkbox" id="modifiedTime" onclick="checkForOtherCheckForMod()"/><label for="modifiedTime" style="left: -7px;"></label> </span><span style="margin-left: 10px;">Modified Time
+                          </span>
+                          </span>
+                      </a>
+                    </div>
+                  </span>
+                  </div>
+                </th>
+                  <th><div>
+                    <i class="fa fa-calendar" aria-hidden="true" style="color: #fff;"></i>&nbsp;To&nbsp;<i class="fa fa-calendar" aria-hidden="true" style="color: #fff;"></i>
+                  </div></th>
+              </tr>
+            </thead>
+            <tbody id="tbPreMigAnal" style="cursor: pointer;">
+              <tr style="height: 45px" onmouseover="toogleDeepScanInput(this)" onmouseout="retoogleDeepScanInput(this)" onclick="selectCheckBoxDeepSacn(this)">
+                <td style="padding: 12px 16px;width: 4%;" class="noBorderTd"><span id="deepScanTableNum"></span><span class="round" id="deepScanTableCheckBox" style="display: none;"><input type="checkbox" id="2" onclick="stayInput(this)"/><label for="2"></label> </span></td>
+                <!-- <td style="padding: 12px 16px;width: 8%;"><span id="deepScanTableNum">1</span></td> -->
+                <td style="padding: 12px 16px; width: 20%">
+                  erik@filefuze.co
+                  <span style="float: right;margin-right: 10px;">
+                  <i
+                    class="fa fa-circle" title="Active User"
+                    style="margin-left: 20px; color: #00d84a"
+                  ></i>
+                  </span>
+                </td>
+                <td style="padding: 12px 16px;width: 8%;">Admin</td>
+                <td style="padding: 12px 16px;width: 9%;">300000</td>
+                <td style="padding: 12px 16px;width: 11%;">300000</td>
+                <td style="padding: 12px 16px;width: 9%;">300000</td>
+                <td style="padding: 12px 16px;width: 8%;">300000</td>
+                <td style="padding: 12px 16px;width: 9%;">300000 <i class="fa fa-info-circle" style="float: right;margin-top:4px;margin-right:5px" data-toggle="popover" data-provider="popupTooltip" title="File Count Based On Size" data-content="1KB-100MB:<b>&nbsp;5000</b><br/>100MB-500MB:<b>&nbsp;500</b><br/>5&nbsp;00MB-1GB:<b>&nbsp;60</b><br/>1GB-5GB:<b>&nbsp;10</b><br/>Above 5GB:<b>&nbsp;200</b>"></i></td>
+                <td style="padding: 12px 16px;width: 11%;">300000 <i class="fa fa-info-circle" style="float: right;margin-top:4px;margin-right:5px" data-toggle="popover" data-provider="popupTooltip" title="File Count Based On File Type" data-content="Images:<b>&nbsp;5000</b><br/>Videos:<b>&nbsp;500</b><br/>Audio:<b>&nbsp;60</b><br/>Word:<b>&nbsp;10</b><br/>Excel:<b>&nbsp;200</b><br/>PDF:<b>&nbsp;200</b><br/>Others:<b>&nbsp;200</b>"></i></td>
+              </tr>
+              
+              <tr style="height: 45px" onmouseover="toogleDeepScanInput(this)" onmouseout="retoogleDeepScanInput(this)" onclick="selectCheckBoxDeepSacn(this)">
+                <td style="padding: 12px 16px;width: 4%;" class="noBorderTd"><span id="deepScanTableNum"></span><span class="round" id="deepScanTableCheckBox" style="display: none;"><input type="checkbox" id="4" onclick="stayInput(this)"/><label for="3"></label> </span></td>
+                <!-- <td style="padding: 12px 16px;width: 8%;"><span id="deepScanTableNum">1</span></td> -->
+                <td style="padding: 12px 16px; width: 20%">
+                  t-0.m_m'y@snapbot.io
+                  <span style="float: right;margin-right: 10px;">
+                  <i
+                    class="fa fa-circle" title="Active User"
+                    style="margin-left: 20px; color: #00d84a"
+                  ></i>
+                  </span>
+                </td>
+                <td style="padding: 12px 16px;width: 8%;">Co-Admin</td>
+                <td style="padding: 12px 16px;width: 9%;">300000</td>
+                <td style="padding: 12px 16px;width: 11%;">300000</td>
+                <td style="padding: 12px 16px;width: 9%;">300000</td>
+                <td style="padding: 12px 16px;width: 8%;">300000</td>
+                <td style="padding: 12px 16px;width: 9%;">300000 <i class="fa fa-info-circle" style="float: right;margin-top:4px;margin-right:5px" data-toggle="popover" data-provider="popupTooltip" title="File Count Based On Size" data-content="1KB-100MB:<b>&nbsp;5000</b><br/>100MB-500MB:<b>&nbsp;500</b><br/>5&nbsp;00MB-1GB:<b>&nbsp;60</b><br/>1GB-5GB:<b>&nbsp;10</b><br/>Above 5GB:<b>&nbsp;200</b>"></i></td>
+                <td style="padding: 12px 16px;width: 11%;">300000 <i class="fa fa-info-circle" style="float: right;margin-top:4px;margin-right:5px" data-toggle="popover" data-provider="popupTooltip" title="File Count Based On File Type" data-content="Images:<b>&nbsp;5000</b><br/>Videos:<b>&nbsp;500</b><br/>Audio:<b>&nbsp;60</b><br/>Word:<b>&nbsp;10</b><br/>Excel:<b>&nbsp;200</b><br/>PDF:<b>&nbsp;200</b><br/>Others:<b>&nbsp;200</b>"></i></td>
+              </tr>
+              <tr style="height: 45px" onmouseover="toogleDeepScanInput(this)" onmouseout="retoogleDeepScanInput(this)" onclick="selectCheckBoxDeepSacn(this)">
+                <td style="padding: 12px 16px;width: 4%;" class="noBorderTd"><span id="deepScanTableNum"></span><span class="round" id="deepScanTableCheckBox" style="display: none;"><input type="checkbox" id="6" onclick="stayInput(this)"/><label for="4"></label> </span></td>
+                <!-- <td style="padding: 12px 16px;width: 8%;"><span id="deepScanTableNum">1</span></td> -->
+                <td style="padding: 12px 16px; width: 20%">
+                  alex@filefuze.co
+                  <span style="float: right;margin-right: 10px;">
+                  <i
+                    class="fa fa-circle" title="Active User"
+                    style="margin-left: 20px; color: #00d84a"
+                  ></i>
+                  </span>
+                </td>
+                <td style="padding: 12px 16px;width: 8%;">Member</td>
+                <td style="padding: 12px 16px;width: 9%;">54321</td>
+                <td style="padding: 12px 16px;width: 11%;">12345</td>
+                <td style="padding: 12px 16px;width: 9%;">3000</td>
+                <td style="padding: 12px 16px;width: 8%;">300</td>
+                <td style="padding: 12px 16px;width: 9%;">3000<i class="fa fa-info-circle" style="float: right;margin-top:4px;margin-right:5px" data-toggle="popover" data-provider="popupTooltip" title="File Count Based On Size" data-content="1KB-100MB:<b>&nbsp;5000</b><br/>100MB-500MB:<b>&nbsp;500</b><br/>5&nbsp;00MB-1GB:<b>&nbsp;60</b><br/>1GB-5GB:<b>&nbsp;10</b><br/>Above 5GB:<b>&nbsp;200</b>"></i></td>
+                <td style="padding: 12px 16px;width: 11%;">300<i class="fa fa-info-circle" style="float: right;margin-top:4px;margin-right:5px" data-toggle="popover" data-provider="popupTooltip" title="File Count Based On File Type" data-content="Images:<b>&nbsp;5000</b><br/>Videos:<b>&nbsp;500</b><br/>Audio:<b>&nbsp;60</b><br/>Word:<b>&nbsp;10</b><br/>Excel:<b>&nbsp;200</b><br/>PDF:<b>&nbsp;200</b><br/>Others:<b>&nbsp;200</b>"></i></td>
+              </tr>
+              
+            </tbody>
+          </table>
+          <ul class="tableContentNotifier" style="display: none;">
+            <li><i
+              class="fa fa-check-circle"
+              style="margin-left: 20px; color: #00d84a"
+            ></i></li>
+            <li><i
+              class="fa fa-circle"
+              style="margin-left: 20px; color: rgb(104, 104, 104)"
+            ></i></li>
+            <li><i
+              class="fa fa-circle-o"
+              style="margin-left: 20px; color: #0062ff"
+            ></i></li>
+            <li><i
+              class="fa fa-trash-o"
+              style="margin-left: 20px; color: #d82e2f"
+            ></i></li>
+            <li><i
+              class="fa fa-times-circle"
+              style="margin-left: 20px; color: #d82e2f"
+            ></i></li>
+          </ul>
+          <nav aria-label="..." style="margin-left: 40%; margin-top: 30px">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#"
+                  >2 <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+      $("#CFShowLoading").modal("show");
+    </script>
+
+    <script src="../javascripts/security/webtoolkit.base64.js"></script>
+    <script src="../ajaxcalls/AesUtil.js" type="text/javascript"></script>
+    <script src="../javascripts/timeago.js" type="text/javascript"></script>
+    <script
+      src="../javascripts/vendor/jquery-ui.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!--Static Vaiables-->
+    <script src="../ajaxcalls/config.js?ver=1028"></script>
+    <script
+      src="../ajaxcalls/globalVar.js?ver=1028"
+      type="text/javascript"
+    ></script>
+    <script src="../ajaxcalls/pricing.js?ver=1028"></script>
+
+    <!--Entire App Usage-->
+
+    <script
+      src="../ajaxcalls/CFManageCloudAccounts.js?ver=1028"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function(){
+  $('[data-provider="popupTooltip"]').popover({ trigger: "manual",
+    html: true,
+    animation: true }).on("mouseenter", function() {
+    var _this = this;
+    $(this).popover("show");
+    $(".popover").on("mouseleave", function() {
+      $(_this).popover('hide');
+    });
+  }).on("mouseleave", function() {
+    var _this = this;
+    setTimeout(function() {
+      if (!$(".popover:hover").length) {
+        $(_this).popover("hide");
+      }
+    }, 300);
+  }); 
+});
+      function checkForOtherCheck(){
+    if($('#createdTime').is(':checked')){
+      $("#modifiedTime").prop('checked','')
+    }
+  }
+  function checkForOtherCheckForMod(){
+    if($('#modifiedTime').is(':checked')){
+      $("#createdTime").prop('checked','')
+    }
+  }
+       $(document).ready(function () {
+      createChartForuserStatus("userStatusChartId", userStatusChart);
+      createChartForTotalFiles("totalFileChartCanvas", totalFilesChart);
+      createChartForFileTypes("fileTypeCharts", myChartDataForFileTypes);
+    });
+
+    const userStatusChart = {
+      type: "doughnut",
+      data: {
+        labels: ["Active", "Inactive","Non-Provision","Deleted", "Suspended "],
+        datasets: [
+          {
+            data: [5, 2,4,3, 1],
+            backgroundColor: [
+              "#00D84A",
+              "rgb(104, 104, 104)",
+              "#FF6666",
+              "rgba(255, 153, 102, 9)",
+              "#D82E2F",
+            ],
+            borderColor: [
+              "#00D84A",
+              "rgb(104, 104, 104)",
+              "#FF6666",
+              "rgba(255, 153, 102, 9)",
+              "#D82E2F",
+            ],
+            borderWidth: 1,
+            cutout: "80%",
+          },
+        ],
+      },
+      options: {
+        title: {
+          display: true,
+          text: "USER STATUS",
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true,
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+            labels: {
+              boxWidth: 0,
+            },
+          },
+        },
+        legend: {
+          position: "top",
+          labels: {
+            color: "rgb(0 , 0, 0)",
+            position: "bottom",
+            boxWidth: 5,
+            padding: 12,
+          },
+        },
+      },
+    };
+
+    function createChartForuserStatus(chartId, chartData) {
+      const ctx = document.getElementById(chartId);
+      const myChart = new Chart(ctx, {
+        type: chartData.type,
+        data: chartData.data,
+        options: chartData.options,
+      });
+    }
+    // TotalFileSizeChart
+    var data = [100, 200, 3000];
+    const totalFilesChart = {
+      type: "bar",
+
+      data: {
+        labels: ["5KB-500MB", "500MB-5GB", "Above 5GB"],
+        datasets: [
+          {
+            label: "File Count",
+            data: data,
+            backgroundColor: [
+              "rgba(255, 153, 102, 1)",
+              "rgba(198, 201, 202, 1)",
+              "rgba(128, 116, 110, 1)",
+            ],
+            borderColor: [
+              "rgba(255, 153, 102, 1)",
+              "rgba(198, 201, 202, 1)",
+              "rgba(128, 116, 110, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        barPercentage: 0.5,
+        indexAxis: "y",
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+          },
+          y: {
+            grid: {
+              display: false,
+            },
+          },
+        },
+        title: {
+          display: true,
+          text: "This is your 401(k) account's current asset mix",
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true,
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+            labels: {
+              boxWidth: 0,
+            },
+          },
+        },
+        legend: {
+          display: false,
+          position: "right",
+          labels: {
+            boxWidth: 10,
+            padding: 12,
+          },
+        },
+      },
+    };
+
+    function createChartForTotalFiles(chartId, chartData) {
+      const ctx = document.getElementById(chartId);
+      const myChart = new Chart(ctx, {
+        type: chartData.type,
+        data: chartData.data,
+        options: chartData.options,
+      });
+    }
+    // FileTypeCharts
+    const myChartDataForFileTypes = {
+      type: "doughnut",
+
+      data: {
+        labels: ["Images", "Videos", "Audio", "Word", "Excel", "PDF", "Others"],
+        datasets: [
+          {
+            data: [47, 19, 90, 51, 22, 19, 200],
+            backgroundColor: [
+              "rgba(255, 153, 102, 1)",
+              "rgba(198, 201, 202, 1)",
+              "rgba(128, 116, 110, 1)",
+              "rgba(42, 210, 201, 1)",
+              "rgba(97, 71, 103, 1)",
+              "rgba(88, 188, 98, 1)",
+              "rgba(11, 58, 187,1)",
+            ],
+            borderColor: [
+              "rgba(255, 153, 102, 1)",
+              "rgba(198, 201, 202, 1)",
+              "rgba(128, 116, 110, 1)",
+              "rgba(42, 210, 201, 1)",
+              "rgba(97, 71, 103, 1)",
+              "rgba(88, 188, 98, 1)",
+              "rgba(11, 58, 187,1)",
+            ],
+            borderWidth: 1,
+            cutout: "80%",
+          },
+        ],
+      },
+      options: {
+        title: {
+          display: true,
+          text: "",
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true,
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+            labels: {
+              boxWidth: 0,
+            },
+          },
+        },
+        legend: {
+          position: "bottom",
+          labels: {
+            color: "rgb(0 , 0, 0)",
+            position: "bottom",
+            boxWidth: 5,
+            padding: 12,
+          },
+        },
+      },
+    };
+
+    function createChartForFileTypes(chartId, chartData) {
+      const ctx = document.getElementById(chartId);
+      const myChart = new Chart(ctx, {
+        type: chartData.type,
+        data: chartData.data,
+        options: chartData.options,
+      });
+    }
+    function toogleDeepScanInput(e){
+      $(e).find('td:eq(0) #deepScanTableNum').css('display','none')
+      $(e).find('td:eq(0) #deepScanTableCheckBox').css('display','')
+    }
+    function retoogleDeepScanInput(e){
+      if($(e).attr('event') === 'stop'){
+        return null;
+      }
+      else{
+      $(e).find('td:eq(0) #deepScanTableNum').css('display','')
+      $(e).find('td:eq(0) #deepScanTableCheckBox').css('display','none')
+      }
+    }
+    function stayInput(e){
+      console.log($(e).parent('tr'))
+      if(($(e).attr('id') === 'all') && ($(e).is(":checked"))){
+          // alert('Here')
+          $("#tbPreMigAnal").find('#deepScanTableCheckBox').css('display','').find('input[type="checkbox"]').prop('checked','checked');
+          $("#tbPreMigAnal").find('tr').attr('event','stop')
+          $("#tbPreMigAnal").find('tr').css('background','')
+          checkSearch();
+        }
+      else if(($(e).attr('id') === 'all') && ($(e).not(":checked"))){
+        // alert();
+        $("#tbPreMigAnal").find('#deepScanTableCheckBox').css('display','none').find('input[type="checkbox"]').prop('checked','');
+        $("#tbPreMigAnal").find('tr').attr('event','')
+          $("#tbPreMigAnal").find('tr').css('background','')
+          checkSearch();
+      }
+    else{
+      if($(e).is(":checked")){
+        $(e).parents('tr').attr('event','stop')
+        $(e).parents('tr').css('background','')
+      }else{
+        $(e).parents('tr').css('background','')
+        $(e).attr('checked',false)
+        $(e).parents('tr').attr('event','')
+      }
+    }
+  }
+  function selectCheckBoxDeepSacn(e){
+      var checkBox = $(e).find('input[type="checkbox"]')
+      if(checkBox.is(':checked')){
+        checkBox.prop('checked','')
+        $(e).attr('event','')
+        $(e).css('background','')
+        checkSearch();
+        return null;
+      }
+      else{
+        checkBox.prop('checked','checked')
+        $(e).attr('event','stop')
+        $(e).css('background','')
+        checkSearch();
+      }
+  }
+  function checkSearch(){
+      // if($("#tbPreMigAnal").find('input[type="checkbox"]:checked').length > 0){
+      //   $('#fileFoldersPannel').css('display','');
+      //   $('#versionsPannel').css('display','');
+      // }
+      // else{
+      //   $('#fileFoldersPannel').css('display','none');
+      //   $('#versionsPannel').css('display','none');
+      // }
+    if($("#tbPreMigAnal").find('input[type="checkbox"]:checked').length === $("#tbPreMigAnal").find('input[type="checkbox"]').length){
+      $("#checkAllCheckBox").prop('checked','checked')
+    }else{
+      $("#checkAllCheckBox").prop('checked','')
+    }
+    if($("#tbPreMigAnal").find('input[type="checkbox"]:checked').length >= 1){
+      console.log($("#tbPreMigAnal").find('input[type="checkbox"]:checked').length)
+      $('#selectedUsers').html($("#tbPreMigAnal").find('input[type="checkbox"]:checked').length);
+      $('.deepScanBtnForScan').css({'opacity':'1','pointer-events': 'all'})
+    }
+    else{
+      $('#selectedUsers').html($("#tbPreMigAnal").find('input[type="checkbox"]:checked').length);
+      $('.deepScanBtnForScan').css({'opacity':'0.2','pointer-events': 'none'})
+    }
+  }
+  function startDeepScan(){
+    if($("#tbPreMigAnal").find('input[type="checkbox"]:checked').length > 0){
+        $('#pannelDeepScan').toggleClass('pannelDeepScan')
+        $('.cont').toggle();
+    }
+    else{
+       alertError('Please Select Atleast One User From The Table');
+    }
+  }
+  $(function () {
+    $("#formDateAtDeepScanPanel").datepicker({
+      showOn: "button",
+      buttonImageOnly: true,
+      buttonImage:
+        "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+      buttonText: "From Date",
+    });
+    $("#toDateAtDeepScanPanel").datepicker({
+      showOn: "button",
+      buttonImageOnly: true,
+      buttonImage:
+        "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+      buttonText: "To Date",
+    });
+  });
+  </script>
+    </script>
+    <script>
+      CFManageCloudAccountsAjaxCall.getAllClouds();
+      var dispanme = "";
+      sessionStorage.setItem("clouds", false);
+      $.each(AllCloudsInfo, function (i, cloud) {
+        var email = cloud.cloudUserId;
+        email = email.split("|");
+        email = email[1];
+        var _warning = cloud.cloudStatus == "INACTIVE" ? "cf-warning" : "";
+
+        if (
+          cloud.userDisplayName != null &&
+          (cloud.userDisplayName.trim().length > 0 ||
+            cloud.userDisplayName != "")
+        ) {
+          dispanme = cloud.userDisplayName;
+        } else {
+          dispanme = email;
+        }
+        var titleName = dispanme;
+        dispanme = CFManageCloudAccountsAjaxCall.getMaxChars(dispanme, 20);
+        var _msg = "";
+        if (cloud.cloudName == "ONEDRIVE" && cloud.cloudStatus == "INACTIVE")
+          _msg =
+            "OneDrive API has been upgraded. Please re-connect your cloud.";
+        if (MultiUserClouds.indexOf(cloud.cloudName) == -1) {
+          if (cloud.cloudName == "AMAZON" && cloud.businessCloud == true) {
+            return;
+          } else {
+            sessionStorage.setItem("clouds", true);
+            var srcHtml =
+              '<div class="moveCloudBlock button ' +
+              _warning +
+              '" style="padding:0px" title="' +
+              _msg +
+              '">' +
+              '<div class="move ' +
+              cloud.cloudName +
+              '" cid="' +
+              cloud.id +
+              '" pid="' +
+              cloud.rootFolderId +
+              '"></div>' +
+              '<p id="userEmail" title="' +
+              titleName +
+              '">' +
+              dispanme +
+              "</p></div>";
+            var destHtml =
+              '<div class="moveCloudBlock button ' +
+              _warning +
+              '" style="padding:0px" title="' +
+              _msg +
+              '">' +
+              '<input type="radio"  name="destCloud" class="destCloudInput" style="margin: 5px;height: 15px;width: 15px;display:none;">' +
+              '<div class="move ' +
+              cloud.cloudName +
+              '"  cid="' +
+              cloud.id +
+              '" pid="' +
+              cloud.rootFolderId +
+              '"></div>' +
+              '<p id="userEmail" title="' +
+              titleName +
+              '">' +
+              dispanme +
+              "</i></p></div>";
+            srcHtml = srcHtml.replace("cfIcon", cloud.cloudName);
+            destHtml = destHtml.replace("cfIcon", cloud.cloudName);
+            $("#moveSource").append(srcHtml);
+
+            $("#moveDestination").append(destHtml);
+          }
+        }
+
+        // $("#moveDestination >div").droppable({
+        //   greedy: true,
+        //   drop: dropEventHandler,
+        //   over: function () {
+        //     $(this)
+        //       .addClass("moveCloudBlockDragHover")
+        //       .removeClass("moveCloudBlock");
+        //   },
+        //   out: function () {
+        //     $(this)
+        //       .removeClass("moveCloudBlockDragHover")
+        //       .addClass("moveCloudBlock");
+        //   },
+        // });
+      });
+      setTimeout(function () {
+        var height =
+          $(window).height() -
+          $("#FooterLinks").height() -
+          5 -
+          $("#topHeader").height();
+        $("#moveReportsContainer").css("max-height", height);
+      }, 2000);
+
+      if (sessionStorage.getItem("clouds") == "false") {
+        if (window.innerWidth < 1023) {
+          $(".rowdiv").css("width", "95%");
+          $("#CF_no_clouds").css("width", "80%");
+        }
+        $("#CF_no_clouds").show();
+        $("#move_main").hide();
+        $("#move_multiUser").hide();
+      } else {
+        $("#CF_no_clouds").hide();
+        $("#move_main").show();
+        $("#move_multiUser").hide();
+      }
+      if (window.innerWidth > 767 && window.innerWidth < 1023) {
+        $("#movePopup").css("left", "-15%");
+        $("#movePopup").children(".modal-dialog").css("max-width", "50%");
+      }
+      $("#moveReportsContainer").hide();
+      $("#headerText").text("Migrate");
+      $("#movecheckModal").prop("disabled", true).removeClass("blue");
+      setTimeout(function () {
+        $("#CFShowLoading").modal("hide");
+      }, 200);
+    </script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script
+      src="../ajaxcalls/readyDocument.js?ver=1028"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../javascripts/actionevents.js?ver=1028"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../ajaxcalls/fileShareMetaData.js?ver=1028"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../ajaxcalls/homePageActionEvents.js?ver=1028"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../ajaxcalls/paypalpmnt.js?ver=1028"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../ajaxcalls/common.js?ver=1028"
+      type="text/javascript"
+    ></script>
+
+    <script>
+      (function ($) {
+        "use strict";
+
+        var fullHeight = function () {
+          $(".js-fullheight").css("height", $(window).height());
+          $(window).resize(function () {
+            $(".js-fullheight").css("height", $(window).height());
+          });
+        };
+        fullHeight();
+
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar").toggleClass("active");
+        });
+        $("#topbarCollapse").on("click", function () {
+          if (!$("#navbarSupportedContent1").hasClass("active")) {
+            $("#navbarSupportedContent1").addClass("active");
+            $("#navbarSupportedContent1").css("display", "");
+            if ($("#sidebar").hasClass("active")) {
+              $("#move-header").css("margin-top", "70%");
+              $("#checkoutpng").css("margin-top", "70%");
+            } else {
+              $("#move-header").css("margin-top", "55%");
+              $("#checkoutpng").css("margin-top", "55%");
+            }
+          } else {
+            $("#navbarSupportedContent1").removeClass("active");
+            $("#navbarSupportedContent1").css("display", "none");
+            $("#move-header").css("margin-top", "3%");
+            $("#checkoutpng").css("margin-top", "3%");
+          }
+        });
+      })(jQuery);
+      $(".dropdown").click(function () {
+        if (!$(".dropdown-content").hasClass("active")) {
+          $(".dropdown-content").addClass("active").css("display", "none");
+        } else {
+          $(".dropdown-content").removeClass("active").css("display", "");
+        }
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#moveFileCheck").click(function (event) {
+          event.stopImmediatePropagation();
+        });
+        $("#upgrdIcon").on("click", function () {
+          window.location.href = "settings.html#move";
+        });
+        $("#RestrictionMOVEOK").on("click", function () {
+          $("#RestrictionMOVE").hide();
+        });
+        $("#RestrictionSrcOK").on("click", function () {
+          $("#RestrictionSrc").hide();
+        });
+        $("#thankbutton").on("click", function () {
+          $("#ThankPop").hide();
+          $("#ProccesingPopup").hide();
+          $("#checkoutpng").css("display", "none");
+          $("#move_main").css("display", " ");
+        });
+        if (localStorage.getItem("UserId")) {
+          $("body").show();
+        } else {
+          window.location.href = "index.html?ver=1028";
+        }
+        PageName = "moveLanding";
+      });
+      $("#yrlyPkg").css("display", "none");
+      $("#mnthlyPkg").css("display", "block");
+      $("input[name=subscription]:checked")
+        .parent()
+        .css({ border: "2px solid #3276b1" });
+      checkUserDataLimit();
+      function checkUserDataLimit() {
+        var _url = apicallurl + "/move/limit/active";
+        $.ajax({
+          type: "GET",
+          url: _url,
+          async: false,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS",
+            Authorization: CFManageCloudAccountsAjaxCall.getAuthDetails(),
+          },
+          success: function (result) {
+            var a = result.usedData;
+            var b = result.totalData;
+            var c = (a / b) * 100;
+            var d = getDataSize(a);
+            var e = getDataSize(b);
+            $("#usedData").text(d);
+            $("#totalData").text(e);
+            if ($("#usedData").text() == 0) {
+              if ($("#totalData").text().includes("GB")) {
+                $("#usedData").text("0" + " GB");
+              }
+            }
+
+            if (c > 0 && c < 1) {
+              c = 1;
+            } else {
+              c = Math.round(c);
+            }
+            $(".progress-bar.progress-bar-success").css("width", c + "%");
+          },
+        });
+      }
+      function getDataSize(sizeBytes) {
+        var ONE_KB = 1024;
+        var ONE_MB = ONE_KB * ONE_KB;
+        var ONE_GB = ONE_KB * ONE_MB;
+        var ONE_TB = ONE_KB * ONE_GB;
+        if (sizeBytes == undefined || sizeBytes == null || sizeBytes == 0) {
+          return "0GB";
+        }
+        var fsize = 0;
+        if (Math.round(sizeBytes / ONE_GB) > 0) {
+          fsize = sizeBytes / ONE_GB;
+          displaySize = parseFloat(fsize).toFixed(2) + " GB";
+        } else if (Math.round(sizeBytes / ONE_MB) > 0) {
+          fsize = sizeBytes / ONE_MB;
+          displaySize = parseFloat(fsize).toFixed(2) + " MB";
+        } else if (Math.round(sizeBytes / ONE_KB) > 0) {
+          fsize = sizeBytes / ONE_KB;
+          displaySize = parseFloat(fsize).toFixed(2) + " KB";
+        } else if (Math.round(sizeBytes / ONE_TB) > 0) {
+          fsize = sizeBytes / ONE_TB;
+          displaySize = parseFloat(fsize).toFixed(2) + " TB";
+        } else {
+          displaySize = sizeBytes + " Bytes";
+        }
+        return displaySize;
+      }
+
+      $("input:radio[name=subscription]").change(function () {
+        $("input[name=subscription]")
+          .parent()
+          .css({ border: "1px solid black" });
+        $("input[name=subscription]:checked")
+          .parent()
+          .css({ border: "2px solid #3276b1" });
+      });
+      $("#checkoutback").on("click", function () {
+        $("#checkoutpng").css("display", "none");
+        $("#move_main").css("display", "");
+      });
+      $(".btn-toggle").click(function () {
+        $(this).find(".btn").toggleClass("active");
+        if ($(this).find(".btn-primary").length > 0) {
+          $(this).find(".btn").toggleClass("btn-primary");
+          if ($(this).find(".btn-primary").text() == "Billed Monthly") {
+            $("#yrlyPkg").css("display", "none");
+            $("#mnthlyPkg").css("display", "block");
+            $("input[name=subscription][value=StndMonthly]").prop(
+              "checked",
+              true,
+            );
+          } else {
+            $("#yrlyPkg").css("display", "block");
+            $("input[name=subscription][value=StndAnnually]").prop(
+              "checked",
+              true,
+            );
+            $("#mnthlyPkg").css("display", "none");
+          }
+        }
+        $("input[name=subscription]:checked")
+          .parent()
+          .css({ border: "2px solid #3276b1" });
+        $(this).find(".btn").toggleClass("btn-default");
+      });
+    </script>
+    <!--stripe code start here-->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        paymentCheck();
+        $(".__PrivateStripeElement input").on("change", function () {
+          if (
+            $(".CardBrandIcon-inner").children[0].SVG_ZOOMANDPAN_DISABLE === 1
+          ) {
+            $("#cardsImg").css("display", "");
+          } else {
+            $("#cardsImg").css("display", "none");
+          }
+        });
+        $("#upgrdIcon").on("click", function () {
+          window.location.href = "settings.html#move";
+        });
+
+        $("#plansPopUp").on("click", function () {
+          $("#moveMigrationPrices").modal("show");
+          $(".supportcontent").css("display", "none");
+          $("#moveMigrationPrices h4").css("display", "none");
+          $("##individualTab").css("padding", "2% !important");
+
+          getuserexpiry.getLastSubscription();
+          var _text; /*= lastsubsresponse.subscriptionName;*/
+          if (_text == "Individual Lite Yearly Subscription") {
+            $("#basicannualsubscribe").css("display", "none");
+            $("#cnclbasicannualsubscribe").css("display", "block");
+          } else if (_text == "Yearly Recurring") {
+            $("#basicannualsubscribe").css("display", "none");
+            $("#cnclbasicannualsubscribe").css("display", "block");
+          } else if (_text == "Standard Yearly Subscription") {
+            $("#stndannualsubscribe").css("display", "none");
+            $("#cnclstndannualsubscribe").css("display", "block");
+          } else if (_text == "Pro Yearly Subscription") {
+            $("#advncdannualsubscribe").css("display", "none");
+            $("#cncladvncdannualsubscribe").css("display", "block");
+          } else if (_text == "Basic Monthly Subscription") {
+            $("#basicmonthlysubscribe").css("display", "none");
+            $("#cnclbasicmonthlysubscribe").css("display", "block");
+          } else if (_text == "Individual Lite Monthly Subscription") {
+            $("#basicmonthlysubscribe").css("display", "none");
+            $("#cnclbasicmonthlysubscribe").css("display", "block");
+          } else if (_text == "Standard Monthly Subscription") {
+            $("#stndmonthlysubscribe").css("display", "none");
+            $("#cnclstndmonthlysubscribe").css("display", "block");
+          } else if (_text == "Pro Monthly Subscription") {
+            $("#advncdmonthlysubscribe").css("display", "none");
+            $("#cncladvncdmonthlysubscribe").css("display", "block");
+          }
+        });
+      });
+      function paymentCheck() {
+        var a = localStorage.getItem("CFSubscribtion"),
+          b = "$" + localStorage.getItem("CFPrice"),
+          c = "$" + localStorage.getItem("MonthlyAMNT"),
+          d = "$" + localStorage.getItem("YearlyAMNT"),
+          e = localStorage.getItem("CFData"),
+          f = "Data per Year",
+          g = "Data per Month";
+
+        if (a === "Individual Lite Yearly Subscription") {
+          $("#subscribetypeNew span").html(a);
+          $("#amntNew").html(d);
+          $("#totalamntNew").html(d);
+          $("#amntsize").html(e);
+          $("#DataYearRmonth").html(f);
+        }
+        if (a === "Standard Yearly Subscription") {
+          $("#subscribetypeNew span").html(a);
+          $("#amntNew").html(d);
+          $("#totalamntNew").html(d);
+          $("#amntsize").html(e);
+          $("#DataYearRmonth").html(f);
+        }
+        if (a === "Pro Yearly Subscription") {
+          $("#subscribetypeNew span").html(a);
+          $("#amntNew").html(d);
+          $("#amntsize").html(e);
+          $("#totalamntNew").html(d);
+          $("#DataYearRmonth").html(f);
+        }
+        if (a === "Pro Monthly Subscription") {
+          $("#subscribetypeNew span").html(a);
+          $("#amntNew").html(c);
+          $("#totalamntNew").html(c);
+          $("#amntsize").html(e);
+          $("#DataYearRmonth").html(g);
+        }
+        if (a === "Standard Monthly Subscription") {
+          $("#subscribetypeNew span").html(a);
+          $("#amntNew").html(c);
+          $("#totalamntNew").html(c);
+          $("#amntsize").html(e);
+          $("#DataYearRmonth").html(g);
+        }
+        if (a === "Individual Lite Monthly Subscription") {
+          $("#subscribetypeNew span").html(a);
+          $("#amntNew").html(c);
+          $("#totalamntNew").html(c);
+          $("#amntsize").html(e);
+          $("#DataYearRmonth").html(g);
+        }
+        //couponCheck();
+      }
+    </script>
+    <script type="text/javascript">
+      $("#couponcode").focus(function () {
+        if (window.matchMedia("(max-width: 480px)").matches) {
+          $("#cotab-content .table").css("display", "none");
+        }
+      });
+      $("#couponcode").focusout(function () {
+        if (window.matchMedia("(max-width: 480px)").matches) {
+          $("#cotab-content .table").css("display", "block");
+          $("#applycouponNew").trigger("click");
+        }
+      });
+
+      $("input[name=test1]").on("change", function () {
+        if ($("input[name=test1]:checked").val() === "monthly") {
+          $("#liteMonthly:hidden").show();
+          $("#liteYearly").hide();
+        } else {
+          $("#liteYearly:hidden").show();
+          $("#liteMonthly").hide();
+        }
+        return false;
+      });
+      $("input[name=test2]").on("change", function () {
+        if ($("input[name=test2]:checked").val() === "monthly") {
+          $("#stdMonthly:hidden").show();
+          $("#stdYearly").hide();
+        } else {
+          $("#stdYearly:hidden").show();
+          $("#stdMonthly").hide();
+        }
+        return false;
+      });
+      $("input[name=test3]").on("change", function () {
+        if ($("input[name=test3]:checked").val() === "monthly") {
+          $("#proMnthlychecked:hidden").show();
+          $("#proYearlychecked").hide();
+        } else {
+          $("#proYearlychecked:hidden").show();
+          $("#proMnthlychecked").hide();
+        }
+        return false;
+      });
+    </script>
+    <script>
+      // Create a Stripe client.
+
+      var stripe = Stripe("pk_test_0bZabDekUemnB2Fhvchcxsic00uWijdciq"); //pk_live_RDQcISQ4Jo8dvB6Vu6R62ktZ00BIGDPa5r
+
+      // Create an instance of Elements.
+      var elements = stripe.elements();
+
+      var card = elements.create("card", {
+        hidePostalCode: true,
+        style: {
+          base: {
+            iconColor: "#666EE8",
+            color: "#31325F",
+            lineHeight: "16px",
+            fontWeight: 300,
+            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+            fontSize: "15px",
+
+            "::placeholder": {
+              color: "#CFD7E0",
+            },
+          },
+        },
+      });
+
+      card.mount("#card-element");
+
+      // Handle real-time validation errors from the card Element.
+      card.addEventListener("change", function (event) {
+        $(".card-error-message").text("");
+        var displayError = document.getElementById("card-errors");
+        if (event.error) {
+          displayError.textContent = event.error.message;
+        } else {
+          displayError.textContent = "";
+        }
+        if (event.empty === true) {
+          displayError.textContent = "";
+          $(".card-error-message").text("");
+        }
+      });
+      $(document).on("keyup", "#UserEntName", function (e) {
+        var customerEmail = $("#UserEntName").val();
+        if (customerEmail.length < 1) {
+          $("#EmailErrMsg").css("display", "");
+          $("#UserEntName").focus();
+          $("#EmailErrMsg").text("*Please Enter  Name");
+          return true;
+        }
+        var re = /^[a-zA-Z ]+$/;
+        var is_email = re.test(customerEmail);
+        if (!is_email) {
+          $("#EmailErrMsg").css("display", "");
+          $("#UserEntName").focus();
+          $("#EmailErrMsg").text("*Please Enter Valid  Name");
+          return true;
+        } else {
+          $("#card-element").focus();
+          $("#UserEntName").focusout();
+          $("#UserEntName").off();
+
+          $("#EmailErrMsg").css("display", "none");
+        }
+        if (e.which === 9 || e.keyCode === 9) {
+          e.preventDefault();
+
+          if (customerEmail.length < 1) {
+            $("#EmailErrMsg").css("display", "");
+            $("#UserEntName").focus();
+            $("#EmailErrMsg").text("*Please Enter  Name");
+            return false;
+          } else if (customerEmail.length > 0) {
+            var re = /^[a-zA-Z ]+$/;
+            var is_email = re.test(customerEmail);
+            if (!is_email) {
+              $("#EmailErrMsg").css("display", "");
+              $("#UserEntName").focus();
+              $("#EmailErrMsg").text("*Please Enter Valid  Name");
+
+              return false;
+            } else {
+              $("#UserEntName").off();
+              $(document).find("#card-element").focus();
+              $(document).find("#UserEntName").focusout();
+              $("#EmailErrMsg").css("display", "none");
+            }
+          }
+        }
+      });
+      $("#UserEntName").keydown(function (e) {
+        if (e.which == 32) {
+          return false;
+        }
+        var customerEmail = $("#UserEntName").val();
+        if (e.which === 8 || e.keyCode === 8) {
+          var customerEmail = $("#UserEntName").val();
+
+          if (customerEmail.length < 1) {
+            $("#EmailErrMsg").css("display", "");
+            $("#UserEntName").focus();
+            $("#EmailErrMsg").text("*Please Enter  Name");
+            return true;
+          } else if (customerEmail.length > 0) {
+            var _length = customerEmail.length;
+            var _length2 = _length - 1;
+            customerEmail = customerEmail.substring(0, _length2);
+
+            var re = /^[a-zA-Z ]+$/;
+            var is_email = re.test(customerEmail);
+            if (!is_email) {
+              $("#EmailErrMsg").css("display", "");
+              $("#UserEntName").focus();
+              $("#EmailErrMsg").text("*Please Enter Valid  Name");
+              return true;
+            } else {
+              $("#card-element").focus();
+              $("#UserEntName").focusout();
+              $("#UserEntName").off();
+
+              $("#EmailErrMsg").css("display", "none");
+              return true;
+            }
+          }
+        }
+
+        $("#UserEntName").focusout();
+      });
+
+      $("#thankbutton").click(function (event) {
+        $("#ProccesingPopup").modal("hide");
+        $("#ThankPop").modal("hide");
+        $("#move_main").css("display", "");
+      });
+      // Handle form submission.
+      $("#card-button").click(function (event) {
+        event.preventDefault();
+        $(this).attr("disabled", true);
+        var customerEmail = $("#UserEntName").val();
+        if (customerEmail.length < 1) {
+          $("#EmailErrMsg").css("display", "");
+          $("#UserEntName").focus();
+          $("#EmailErrMsg").text("*Please Enter Name");
+          $(this).attr("disabled", false);
+          return false;
+        } else if (customerEmail.length > 0) {
+          var re = /^[a-zA-Z ]+$/;
+          var is_email = re.test(customerEmail);
+          if (!is_email) {
+            $("#EmailErrMsg").css("display", "");
+            $("#UserEntName").focus();
+            $("#EmailErrMsg").text("*Please Enter Valid Name");
+            $(this).attr("disabled", false);
+            return false;
+          } else {
+            $("#UserEntName").off();
+
+            $("#EmailErrMsg").css("display", "none");
+          }
+        }
+
+        if (card._parent.className === "StripeElement StripeElement--empty") {
+          $("#ProccesingPopup").modal("hide");
+        } else if (card._parent.className === "StripeElement")
+          $("#ProccesingPopup").modal("hide");
+        else if (
+          card._parent.className === "StripeElement StripeElement--invalid"
+        )
+          $("#ProccesingPopup").modal("hide");
+        else if (
+          card._parent.className ===
+          "StripeElement StripeElement--empty StripeElement--invalid"
+        )
+          $("#ProccesingPopup").modal("hide");
+        else {
+          $("#ProccesingPopup").modal("show");
+        }
+        stripe.createToken(card).then(function (result) {
+          if (result.error) {
+            // Inform the user if there was an error.
+            var errorElement = document.getElementById("card-errors");
+            errorElement.textContent = result.error.message;
+            $(this).attr("disabled", false);
+            $("#ProccesingPopup").modal("hide");
+          } else {
+            // Send the token to your server.
+            $("#ProccesingPopup").modal("show");
+            var newToken = result.token;
+            var CustomerName = $("#UserEntName").val();
+
+            var PlanID, subscriptionType;
+            var SubscriptionName = localStorage.getItem("CFSubscribtion");
+            if (SubscriptionName == "Individual Lite Monthly Subscription") {
+              PlanID = "plan_FOkuvnQYOz39OQ"; //plan_FUOTGUZEODaCDh
+              subscriptionType = "PAY_MONTHLY";
+            } else if (
+              SubscriptionName == "Individual Lite Yearly Subscription"
+            ) {
+              PlanID = "plan_FOkt0c6HCkOp9T"; //plan_FUOZLVyZiTfvnU
+              subscriptionType = "PAY_YEARLY";
+            } else if (SubscriptionName == "Standard Monthly Subscription") {
+              PlanID = "plan_FOkwiO5Gmgfazn"; //plan_FUOacjW43CF9ic
+              subscriptionType = "PAY_MONTHLY";
+            } else if (SubscriptionName == "Standard Yearly Subscription") {
+              PlanID = "plan_FOkwHOMmcwDo6j"; //plan_FUOawyr66BOpw4
+              subscriptionType = "PAY_YEARLY";
+            } else if (SubscriptionName == "Pro Monthly Subscription") {
+              PlanID = "plan_FOkypZ4HbdHZUw"; //plan_FUObsGhEDgWyxm
+              subscriptionType = "PAY_MONTHLY";
+            } else {
+              PlanID = "plan_FOkx1FE83a9Yb2"; //plan_FUOcbZUXm3b5C0
+              subscriptionType = "PAY_YEARLY";
+            }
+
+            if ($("#applycouponNew").text() == "Remove Coupon") {
+              var GetTokenVAl = localStorage.getItem("coupon_Id");
+              var obj1 = {
+                planId: PlanID,
+                tranxId: newToken.id,
+                customerName: CustomerName,
+                subscriptionName: SubscriptionName,
+                subscriptionType: subscriptionType,
+                coupon: GetTokenVAl,
+              };
+              setTimeout(function () {
+                stripeTokenHandler(obj1);
+              }, 3000);
+            } else {
+              var obj2 = {
+                planId: PlanID,
+                tranxId: newToken.id,
+                customerName: CustomerName,
+                subscriptionName: SubscriptionName,
+                subscriptionType: subscriptionType,
+              };
+              setTimeout(function () {
+                stripeTokenHandler(obj2);
+              }, 3000);
+            }
+          }
+        });
+        setTimeout(function () {
+          $("#card-button").attr("disabled", false);
+        }, 3000);
+      });
+      function addYearlySubscription(
+        customerEmail,
+        subscriptionId,
+        payment_intentId,
+        startTime,
+        endTime,
+      ) {
+        var _b = localStorage.getItem("CFSubscribtion");
+        /* if(_b.indexOf("Lite") >= 0){
+            sendGAEvents("99.99 (Basic Yearly)","Pricing Plans");
+			activecampaign.eventTrack('Basic Yearly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+        else if(_b.indexOf("Standard") >= 0){
+            sendGAEvents("199.99 (Standard Yearly)","Pricing Plans");
+			activecampaign.eventTrack('Standard Yearly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+        else if(_b.indexOf("Pro") >= 0){
+            sendGAEvents("349.99 (Advanced Yearly)","Pricing Plans");
+			activecampaign.eventTrack('Advanced Yearly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}*/
+
+        var subname = _b.replace(/\+/g, " ").replace("CloudFuze ", "");
+        var status1 = "ACTIVE";
+        var stype = "PAY_YEARLY";
+
+        CreateSubscription(
+          subname,
+          status1,
+          stype,
+          startTime * 1000,
+          endTime * 1000,
+          customerEmail,
+          subscriptionId,
+          payment_intentId,
+        );
+
+        $("#transstatustext").text(
+          "Thank you for choosing CloudFuze. Your payment was successful.",
+        );
+      }
+      function addMonthlySubscription(
+        customerEmail,
+        subscriptionId,
+        payment_intentId,
+        startTime,
+        endTime,
+      ) {
+        var _b = localStorage.getItem("CFSubscribtion");
+        /* if(_b.indexOf("Lite") >= 0){
+            sendGAEvents("9.99 (Basic Monthly)","Pricing Plans");
+			activecampaign.eventTrack('Basic Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+        else if(_b.indexOf("Standard") >= 0){
+            sendGAEvents("19.99 (Standard Monthly)","Pricing Plans");
+			activecampaign.eventTrack('Standard Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+        else if(_b.indexOf("Pro") >= 0){
+            sendGAEvents("34.99 (Advanced Monthly)","Pricing Plans");
+			activecampaign.eventTrack('Advanced Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}*/
+
+        _b = _b
+          .replace(new RegExp("[+]", "g"), " ")
+          .split("CloudFuze")
+          .pop()
+          .trim();
+
+        var subname = _b.replace(/\+/g, " ").replace("CloudFuze ", "");
+        var status1 = "ACTIVE";
+        var stype = "PAY_MONTHLY";
+
+        CreateSubscription(
+          subname,
+          status1,
+          stype,
+          startTime * 1000,
+          endTime * 1000,
+          customerEmail,
+          subscriptionId,
+          payment_intentId,
+        );
+        $("#transstatustext").text(
+          "Thank you for choosing CloudFuze. Your payment was successful.",
+        );
+      }
+      function CreateSubscription(
+        subname,
+        state,
+        stype,
+        ctstamp,
+        etstamp,
+        customerEmail,
+        subscriptionId,
+        payment_intentId,
+      ) {
+        var d = new Date();
+        var _time = d.toISOString();
+        sendGAEvents("creation of user subscription", _time);
+        ctstamp = CFInterConvertTimeUtility.Ptstamptomillsec(ctstamp);
+        var apiUrl = apicallurl + "/subscription/add";
+        if (etstamp < ctstamp) {
+          //already expired users
+          if (subname == "Monthly Recurring") {
+            etstamp = CFInterConvertTimeUtility.Pincreasethirty(ctstamp);
+          }
+          if (subname == "Yearly Recurring") {
+            etstamp = CFInterConvertTimeUtility.Pincreaseyear(ctstamp);
+          }
+        } else {
+          if (subname == "Monthly Recurring") {
+            etstamp = CFInterConvertTimeUtility.Pincreasethirty(etstamp);
+          }
+          if (subname == "Yearly Recurring") {
+            etstamp = CFInterConvertTimeUtility.Pincreaseyear(etstamp);
+          }
+        }
+
+        if (subname == "Monthly Recurring") {
+          subname = "Individual Lite Monthly Subscription";
+        }
+        if (subname == "Basic Monthly Subscription") {
+          subname = "Individual Lite Monthly Subscription";
+        }
+        if (subname == "Basic Yearly Subscription") {
+          subname = "Individual Lite Yearly Subscription";
+        }
+        if (subname == "Standard Yearly Subscription") {
+          subname = "Standard Yearly Subscription";
+        }
+        if (subname == "Standard Monthly Subscription") {
+          subname = "Standard Monthly Subscription";
+        }
+        if (subname == "Advanced Yearly Subscription") {
+          subname = "Pro Yearly Subscription";
+        }
+        if (subname == "Advanced Monthly Subscription") {
+          subname = "Pro Monthly Subscription";
+        }
+
+        var subsarray = {
+          subscriptionName: subname,
+          userId: { id: localStorage.getItem("UserId") },
+          subscriptionStatus: state,
+          subscriptionType: stype,
+          subscriptionStartDate: ctstamp,
+          subscriptionEndDate: etstamp,
+          subscriptionId: subscriptionId,
+          email: customerEmail,
+          payment_intentId: payment_intentId,
+        };
+        var subsarrayjson = JSON.stringify(subsarray);
+        var subsresponse1 = "";
+        $.ajax({
+          type: "PUT",
+          url: apiUrl,
+          data: subsarrayjson,
+          async: false,
+          dataType: "application/json",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: CFManageCloudAccountsAjaxCall.getAuthDetails(),
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS",
+          },
+          success: function (data) {
+            subsresponse1 = data;
+          },
+
+          complete: function (xhr, statusText) {
+            if (xhr.status == 200) {
+              subsresponse = xhr.responseText;
+              subsresponse = jQuery.parseJSON(subsresponse);
+
+              var _pmntObj = {
+                subscriptionName: subname,
+                userId: localStorage.getItem("UserId"),
+                subscriptionStartDate:
+                  CFManageCloudAccountsAjaxCall.getDateConversion(ctstamp),
+                subscriptionEndDate:
+                  CFManageCloudAccountsAjaxCall.getDateConversion(etstamp),
+                amountPaid: $("#totalamntNew").text(),
+                discount: $("#discountNew").text(),
+                totAmount: $("#amntNew").text(),
+              };
+              sendGAEvents("Payment success.");
+              /*	activecampaign.eventTrack('Success',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Payment');
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"amountPaid",_pmntObj.amountPaid);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"price",_pmntObj.totAmount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"discount",_pmntObj.discount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"paidDate",_pmntObj.subscriptionStartDate);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"recurringPaymentHistory",'amount -' + _pmntObj.amountPaid + ', Paid Date - ' + _pmntObj.subscriptionStartDate);
+                 */
+            }
+            if (xhr.status > 300) {
+              //    activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"failedPayments",'Yes');
+              //   zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"Failed");
+            }
+          },
+        });
+      }
+
+      // Submit the form with the token ID.
+      function stripeTokenHandler(data) {
+        $.ajax({
+          type: "POST",
+          url: apicallurl + "/stripe/user/payment",
+          async: false,
+          crossDomain: true,
+
+          data: JSON.stringify(data),
+          headers: {
+            Authorization: localStorage.getItem("UserAuthDetails"),
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          success: function (data) {
+            console.log(data);
+            var subscriptionId = data.subscriptionId;
+            var customerEmail = data.custommerEmail;
+            if (data.status === "active") {
+              $("#ProccesingPopup").modal("hide");
+
+              var _b = localStorage.getItem("CFSubscribtion");
+              if (_b.indexOf("Yearly") >= 0) {
+                // addYearlySubscription(customerEmail,subscriptionId);
+                setTimeout(function () {
+                  $("#ThankPop").modal("show");
+                }, 1000);
+              } else if (_b.indexOf("Monthly") >= 0) {
+                //  addMonthlySubscription(customerEmail,subscriptionId);
+                setTimeout(function () {
+                  $("#ThankPop").modal("show");
+                }, 1000);
+              }
+
+              var subname = _b.replace(/\+/g, " ").replace("CloudFuze ", "");
+
+              var _startTime = data.currentPeriodStart * 1000;
+              var _endTime = data.currentPeriodEnd * 1000;
+              _startTime =
+                CFInterConvertTimeUtility.Ptstamptomillsec(_startTime);
+              if (_endTime < _startTime) {
+                //already expired users
+                if (subname == "Monthly Recurring") {
+                  _endTime =
+                    CFInterConvertTimeUtility.Pincreasethirty(_startTime);
+                }
+                if (subname == "Yearly Recurring") {
+                  _endTime =
+                    CFInterConvertTimeUtility.Pincreaseyear(_startTime);
+                }
+              } else {
+                if (subname == "Monthly Recurring") {
+                  _endTime =
+                    CFInterConvertTimeUtility.Pincreasethirty(_endTime);
+                }
+                if (subname == "Yearly Recurring") {
+                  _endTime = CFInterConvertTimeUtility.Pincreaseyear(_endTime);
+                }
+              }
+              var _pmntObj = {
+                subscriptionName: subname,
+                userId: localStorage.getItem("UserId"),
+                subscriptionStartDate:
+                  CFManageCloudAccountsAjaxCall.getDateConversion(_startTime),
+                subscriptionEndDate:
+                  CFManageCloudAccountsAjaxCall.getDateConversion(_endTime),
+                amountPaid: $("#totalamntNew").text(),
+                discount: $("#discountNew").text(),
+                totAmount: $("#amntNew").text(),
+              };
+              sendGAEvents("Payment success.");
+              /*		activecampaign.eventTrack('Success',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Payment');
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"amountPaid",_pmntObj.amountPaid);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"price",_pmntObj.totAmount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"discount",_pmntObj.discount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"paidDate",_pmntObj.subscriptionStartDate);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"recurringPaymentHistory",'amount -' + _pmntObj.amountPaid + ', Paid Date - ' + _pmntObj.subscriptionStartDate);
+             */
+              //       zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"RecurringHistory");
+              //       zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,_pmntObj);
+              var trailUserRemove = $("#dash-uname").text();
+              if (trailUserRemove.indexOf("Trial")) {
+                $("#dash-uname").text(trailUserRemove.split("(")[0]);
+              }
+            } else if (data.status === "incomplete") {
+              var paymentIntentSecret = data.clientSecreat;
+              var startTime = data.currentPeriodStart;
+              var endTime = data.currentPeriodEnd;
+              stripe
+                .handleCardPayment(paymentIntentSecret)
+                .then(function (result) {
+                  if (result.error) {
+                    $("#ProccesingPopup").modal("hide");
+                    $(".card-error-message").text(
+                      "Your card not accepting payment or insufficient funds.",
+                    );
+
+                    console.log(result.error);
+                  } else {
+                    console.log(result);
+                    if (result.paymentIntent.status === "succeeded") {
+                      $("#ProccesingPopup").modal("hide");
+
+                      var payment_intentId = result.paymentIntent.id;
+                      var _b = localStorage.getItem("CFSubscribtion");
+                      if (_b.indexOf("Yearly") >= 0) {
+                        addYearlySubscription(
+                          customerEmail,
+                          subscriptionId,
+                          payment_intentId,
+                          startTime,
+                          endTime,
+                        );
+                        setTimeout(function () {
+                          $("#ThankPop").modal("show");
+                        }, 1000);
+                      } else if (_b.indexOf("Monthly") >= 0) {
+                        addMonthlySubscription(
+                          customerEmail,
+                          subscriptionId,
+                          payment_intentId,
+                          startTime,
+                          endTime,
+                        );
+                        setTimeout(function () {
+                          $("#ThankPop").modal("show");
+                        }, 1000);
+                      }
+                      var trailUserRemove = $("#dash-uname").text();
+                      if (trailUserRemove.indexOf("Trial")) {
+                        $("#dash-uname").text(trailUserRemove.split("(")[0]);
+                      }
+                    }
+                  }
+                });
+            }
+          },
+
+          complete: function (xhr, statusText) {
+            if (xhr.status >= 300) {
+              //	activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"failedPayments",'Yes');
+              //    zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"Failed");
+              $("#ProccesingPopup").modal("hide");
+              $("#ThankPop").modal("hide");
+
+              var response = xhr.getResponseHeader("exception").trim();
+
+              var values = response.split(",");
+              if (
+                values[0].split(":")[2] === "null" ||
+                values[0].split(":")[2] === null ||
+                values[0].split(":")[2] === '"null"'
+              ) {
+                $(".card-error-message").text(
+                  "Please enter valid card details.",
+                );
+                return false;
+              }
+
+              var count = [];
+              for (var i = 0; i < values.length; i++) {
+                var hrdValue = values[i].split(": ");
+                if (hrdValue.length > 1) {
+                  count[hrdValue[0].trim()] = hrdValue[1].trim();
+                }
+              }
+              var value = count['"message"'];
+              /*   var response = xhr.getResponseHeader("exception").trim();
+                       var value =response.split(',')[2].split(':')[1].split('"')[1];*/
+              if (value) {
+                if (value.includes('"')) {
+                  var _value = value.split('"')[1];
+                  $(".card-error-message").text(_value);
+                }
+              }
+            }
+          },
+          error: function (e) {
+            console.log(e);
+          },
+        });
+      }
+      $("#moveSource").on("keyup", "#autocomplete", function (e) {
+        if ($(this).val().length == 0) {
+          if (e.key == "Control" || e.key == "Shift" || e.key == "Alt") {
+            return false;
+          }
+          //   $("#moveSource .list-group").html('');
+        } else if (e.which == 13) {
+          var _id = $("#sourceBlock #movePageShowMore").attr("data-id");
+          if (_id == undefined) {
+            _id = "/";
+          }
+          moveCheckSum = "source";
+          sessionStorage.setItem("source", "source");
+          srcInpVal = $("#moveSource").find("#autocomplete").val();
+          SingleCloudId = $('[data-type="sourceback"]').attr("cid");
+          CFManageCloudAccountsAjaxCall.searchAllRootFoldersAndFiles(
+            $('[data-type="sourceback"]').attr("cid"),
+            _id,
+            srcInpVal.trim(),
+          );
+          //$(this).val(e);
+          return;
+        }
+      });
+
+      /*... Mapped-Users keydown for firefox ...*/
+      $("#moveSource").on("keypdown", "#autocomplete", function (e) {
+        if (e.key == "Control" || e.key == "Shift" || e.key == "Alt") {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      $("#moveSource").on("keypress", "#autocomplete", function (e) {
+        if ($(this).val().length == 0) {
+          /*	var _id = $('#sourceBlock #movePageShowMore').attr('data-id');
+	if(_id == undefined){
+	_id = "/";
+	}
+     CFManageCloudAccountsAjaxCall.searchAllRootFoldersAndFiles($('[data-type="sourceback"]').attr('cid'),_id,e.key);*/
+        } else if (e.which == 13) $("#moveSource .list-group").html("");
+      });
+      var srcInpVal, destInpVal;
+      $("#moveSource").on("click", ".fa-search", function (e) {
+        if ($("#moveSource").find("#autocomplete").val().length == 0) {
+          //    $("#moveSource .list-group").html('');
+        } else {
+          srcInpVal = $("#moveSource").find("#autocomplete").val();
+          var _id = $("#sourceBlock #movePageShowMore").attr("data-id");
+          if (_id == undefined) {
+            _id = "/";
+          }
+          sessionStorage.setItem("source", "source");
+          moveCheckSum = "source";
+          SingleCloudId = $('[data-type="sourceback"]').attr("cid");
+          CFManageCloudAccountsAjaxCall.searchAllRootFoldersAndFiles(
+            $('[data-type="sourceback"]').attr("cid"),
+            _id,
+            srcInpVal.trim(),
+          );
+
+          return;
+        }
+      });
+      $("#moveDestination").on("click", ".fa-search", function (e) {
+        if ($("#moveDestination").find("#autocomplete").val().length == 0) {
+          //  $("#moveDestination .list-group").html('');
+        } else {
+          destInpVal = $(moveDestination).find("#autocomplete").val();
+          var _id = $("#destinationBlock #movePageShowMore").attr("data-id");
+          if (_id == undefined) {
+            _id = "/";
+          }
+          sessionStorage.setItem("source", "destination");
+          moveCheckSum = "destination";
+          SingleCloudId = $('[data-type="destback"]').attr("cid");
+          CFManageCloudAccountsAjaxCall.searchAllRootFoldersAndFiles(
+            $('[data-type="destback"]').attr("cid"),
+            _id,
+            destInpVal.trim(),
+          );
+          //$(this).val(e);
+          return;
+        }
+      });
+      $("#moveDestination").on("keyup", "#autocomplete", function (e) {
+        if ($(this).val().length == 0) {
+          if (e.key == "Control" || e.key == "Shift" || e.key == "Alt") {
+            return false;
+          }
+          //  $("#moveDestination .list-group").html('');
+        } else if (e.which == 13) {
+          var _id = $("#destinationBlock #movePageShowMore").attr("data-id");
+          if (_id == undefined) {
+            _id = "/";
+          }
+          sessionStorage.setItem("source", "destination");
+          moveCheckSum = "destination";
+          SingleCloudId = $('[data-type="destback"]').attr("cid");
+          destInpVal = $(moveDestination).find("#autocomplete").val();
+          CFManageCloudAccountsAjaxCall.searchAllRootFoldersAndFiles(
+            $('[data-type="destback"]').attr("cid"),
+            _id,
+            destInpVal.trim(),
+          );
+          return;
+        }
+      });
+
+      /*... Mapped-Users keydown for firefox ...*/
+      $("#moveDestination").on("keydown", "#autocomplete", function (e) {
+        if (e.key == "Control" || e.key == "Shift" || e.key == "Alt") {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      $("#moveDestination").on("keypress", "#autocomplete", function (e) {
+        if ($(this).val().length == 0) {
+          /*	var _id = $('#destinationBlock #movePageShowMore').attr('data-id');
+	if(_id == undefined){
+	_id = "/";
+	}
+     CFManageCloudAccountsAjaxCall.searchAllRootFoldersAndFiles($('[data-type="destback"]').attr('cid'),_id,e.key);*/
+        } else if (e.which == 13) $("#moveDestination .list-group").html("");
+      });
+    </script>
+    <!--stripe payment script code END-->
+
+    <script>
+      $(document.body).on("click", function () {
+        if (localStorage.getItem("storageVal") == null) {
+          alertSuccess("You have been logged out");
+          //$('#cf-logout').trigger("click");
+          setTimeout(function () {
+            window.location.href = "index.html";
+          }, 1000);
+        }
+      });
+    </script>
+    <!--<script>
+		setTimeout(function () {
+		$(function(){
+var result = JSON.parse(localStorage.getItem('CFUser'));
+		 var data ={
+                    "name" : result.lastName,
+                    "email" : result.primaryEmail,
+					"phone" : result.mobileNumber
+                };
+		if(localStorage.getItem('signUp') == "true"){ 
+	activecampaign.createContact(data);
+				activecampaign.getContact(data.email,'contactList');
+			 activecampaign.eventTrack('SignUp',data.email,'clicked');
+				activecampaign.getContact(data.email, 'loggedIn','1');
+				 var _chkNonPubEmail = data.email;
+                    var str = _chkNonPubEmail.split('@').slice(1);
+                    var allowedDomains = ['gmail.com', 'yahoo.com', 'inbox.com',
+                        'iCloud.com', 'mail.com', 'aol.com', 'msn.com', 'hotmail.com', 'outlook.com', 'live.com', 'yopmail.com',
+			'rediff.com', 'gmx.com', 'yandex.com', 'protonmail.com'];
+				if ($.inArray(str[0], allowedDomains) === -1) {
+				activecampaign.getContact(data.email, 'businessEmail','Yes');
+				}
+				else{
+				activecampaign.getContact(data.email, 'businessEmail','No');
+				}
+				localStorage.removeItem('signUp')
+				}
+				else if(localStorage.getItem('login') == "true"){
+				activecampaign.getContact(data.email, 'loggedIn');
+				activecampaign.eventTrack('Login',data.email,'clicked');
+				localStorage.removeItem('login');
+		}
+});
+		},5000);
+</script>-->
+    <script type="text/javascript">
+      (function (e, t, o, n, p, r, i) {
+        e.visitorGlobalObjectAlias = n;
+        e[e.visitorGlobalObjectAlias] =
+          e[e.visitorGlobalObjectAlias] ||
+          function () {
+            (e[e.visitorGlobalObjectAlias].q =
+              e[e.visitorGlobalObjectAlias].q || []).push(arguments);
+          };
+        e[e.visitorGlobalObjectAlias].l = new Date().getTime();
+        r = t.createElement("script");
+        r.src = o;
+        r.async = true;
+        i = t.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(r, i);
+      })(
+        window,
+        document,
+        "https://diffuser-cdn.app-us1.com/diffuser/diffuser.js",
+        "vgo",
+      );
+      vgo("setAccount", "649987855");
+      vgo("setTrackByDefault", true);
+      vgo("setEmail", JSON.parse(localStorage.getItem("CFUser")).primaryEmail);
+      vgo("process");
+    </script>
+  </body>
+</html>

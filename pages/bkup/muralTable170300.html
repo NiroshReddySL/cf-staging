@@ -1,0 +1,2080 @@
+﻿
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Hotjar Tracking Code for http://webapp.cloudfuze.com
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>--> 
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.setTimeout(function() {
+ 
+            window.$zopim || (function (d, s) {
+                var z = $zopim = function (c) {
+                    z._.push(c)
+                }, $ = z.s =
+                    d.createElement(s), e = d.getElementsByTagName(s)[0];
+                z.set = function (o) {
+                    z.set.
+                    _.push(o)
+                };
+                z._ = [];
+                z.set._ = [];
+                $.async = !0;
+                $.setAttribute('charset', 'utf-8');
+                $.src = '//v2.zopim.com/?2YRVJ9WdqLaWGrAOduJsbu5op02qZFJI';
+                z.t = +new Date;
+                $.type = 'text/javascript';
+                e.parentNode.insertBefore($, e)
+            })(document, 'script');
+            $zopim(function() {
+                var _usrdtls=JSON.parse(localStorage.getItem("CFUser"));
+                $zopim.livechat.setEmail(_usrdtls.primaryEmail);
+                $zopim.livechat.setName(localStorage.getItem("UserName"));
+            });
+
+        }, 8000);
+    </script>
+	
+    <!--End of Zopim Live Chat Script-->
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>CloudFuze</title>
+    <link rel="Shortcut Icon" type="image/ico" href="../img/PNG/cfLogo.png">
+
+    <link href="../stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/chosen.css" rel="stylesheet" type="text/css"/>
+  <!--  <link href="../stylesheets/style.css?ver=1231" rel="stylesheet" type="text/css"/>
+	      <link href="../stylesheets/application.css?ver=1231" rel="stylesheet" type="text/css"/>
+	
+    <link href="../font/cloudfuzefont.css" rel="stylesheet" type="text/css"/>
+    <link href="../font/cficons.css?ver=1231" rel="stylesheet" type="text/css"/>  -->
+    <link href="../stylesheets/bootstrap/bootstrap-progressbar-3.1.1.min.css" rel="stylesheet" type="text/css"/>
+ <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link href="../stylesheets/move.css?ver=1231" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/MetroNotifications_7.css" rel="stylesheet">
+    <link href="../stylesheets/upgrade.css" rel="stylesheet" />
+    <link href="../stylesheets/multiUser.css" rel="stylesheet" />
+    <link href="../stylesheets/wizard.css" rel="stylesheet" />
+    <link href="../stylesheets/search-box.css" rel="stylesheet" />
+    <link href="../stylesheets/multiuserstyling.css" rel="stylesheet" />
+    <!--<link href="../stylesheets/loading.css" rel="stylesheet" />-->
+    <link href="../stylesheets/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+    <!--[if lt IE 9]>
+    <script src="../../javascripts/html5shiv.js" type="text/javascript"></script>
+    <script src="../../javascripts/excanvas.js" type="text/javascript"></script>
+    <script src="../../javascripts/iefix.js" type="text/javascript"></script>
+    <link href="../../stylesheets/iefix.css" media="screen" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Login With Google -->
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <!-- Login With Google -->
+
+
+    <style>
+        .bodyOverlay {
+            background-color: rgba(255, 255, 255, 0.2); 
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            overflow-x: hidden;
+        }
+
+        body{
+		color:#1f2129;
+		}
+        .list-group-item {
+            border: none;
+        }
+
+        .button:hover {
+            background: #ededed;
+            text-shadow: rgba(255, 255, 255, 0.5) 0 1px 1px;
+            border: 1px solid lightgrey;
+            box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0 0 inset;
+            background-image: -webkit-linear-gradient(top, #ffffff, #ededed);
+        }
+        .button.blue:hover {
+            text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
+            background: #147cb9;
+            border: 1px solid #126da2;
+        }
+
+        body {
+            font: normal 12px sans-serif;
+            overflow:auto;
+        }
+
+        .breadcrumb > li + li:before {
+            content: "";
+        }
+        input[type="radio"]:checked:before {
+            content: "";
+            display: block;
+            position: relative;
+            top: 3px;
+            left: 3px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #0062FF;
+        }
+        #moveDestination input[type="radio"]:checked:before {
+            left: 13px;
+        }
+        .highlight {
+            margin-left: 10px;
+        }
+        .cloudSpinn{
+            cursor: pointer;
+            margin-top:2px;
+            height: 16px;
+            width: 16px;
+            display: inline-block;
+            background: url(../img/syncCloud.gif) no-repeat;
+            /* float: right; */
+            margin-bottom:2px;
+        }
+        .cloudSpinn1
+        {
+            height: 17px;
+            width: 17px;
+            display: inline-block;
+            background: url(../img/syncCloud1.gif) no-repeat;
+        }
+        .modal-backdrop, .modal-backdrop.fade.in {
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+        }
+        .moveCloudBlock .cf-refresh4
+        {
+            color:#000000 !important;
+        }
+        #moveReportsForUser tr{
+            border-bottom : 1px solid #ccc !important;
+        }
+        #moveReportsForUser .hide-report1{
+            border-bottom : 0px solid #ccc !important;
+        }
+        @-moz-document url-prefix() {
+            .cf-plus5:after,.cf-plus5disabled:after
+            {
+                content: url(../img/down.png);
+            }
+            .cf-minus5:after
+            {
+                content: url(../img/up.png);
+            }
+        }
+
+        .pricing li a
+        {
+            border: 1px solid #000;
+        }
+        .pricing .active a
+        {
+            border:2px solid orange !important;
+        }
+
+        .activeTab{
+            border-bottom: 2px solid #286090;
+            color: #286090;
+        }
+
+        .boxPricing {
+            position: relative;
+        }
+        .ribbonPricing {
+            position: absolute;
+            left: -5px; top: -5px;
+            z-index: 1;
+            overflow: hidden;
+            width: 75px;
+            height: 69px;
+            text-align: right;
+        }
+        .ribbonPricing span {
+            font-size: 10px;
+            font-weight: bold;
+            color: rgb(50, 118, 177);
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 20px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            width: 100px;
+            display: block;
+            border:1px solid #e2e2e2;
+            background: #f2f2f2;
+            box-shadow: 2px 3px 10px -5px rgb(50, 118, 177);
+            position: absolute;
+            top: 19px; left: -21px;
+        }
+        .ribbonPricing span::before {
+            content: "";
+            position: absolute; left: 0px; top: 100%;
+            z-index: -1;
+            border-left: 3px solid rgb(50, 118, 177);
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid rgb(50, 118, 177);
+        }
+        .ribbonPricing span::after {
+            content: "";
+            position: absolute; right: 0px; top: 100%;
+            z-index: -1;
+            border-left: 3px solid transparent;
+            border-right: 3px solid rgb(50, 118, 177);
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid rgb(50, 118, 177);
+        }
+        .btn-group .btn-primary
+        {
+            border: 2px solid #357ebd;
+        }
+        #moveSource .ui-selected { background: #B6DDE6;}
+
+
+        .migrationImage{
+            width: 7%;
+            margin-right: 7px;
+        }
+        .moveReportDetailsTable .col-md-3 div{
+            float: left;
+            font-weight: bold;
+            margin-right: 3%;
+        }
+        .moveSyncReportDetailsTable .col-md-3 div{
+            float: left;
+            font-weight: bold;
+            margin-right: 3%;
+        }
+        .moveReportDetails .reportTable table{
+            width: 90%;
+            margin-left: 2%;
+            border: 1px solid #ccc !important;
+        }
+        .moveReportDetails .reportTable th{
+            background-color: #84B3DC !important;
+        }
+
+
+        /* ... Target Safari ... */
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            ::i-block-chrome,#forPreviousMove{
+                margin-top: 1.3%;
+            }
+            ::i-block-chrome,#forNextMove{
+                margin-top: 21%;
+            }
+        }
+        #preview .col-md-12:nth-child(2) table th,#preview .col-md-12:nth-child(2) table td{
+            text-align: left;
+        }
+        <!--optionspage css-->
+
+
+            form.example input[type=text] {
+                padding: 10px;
+                font-size: 17px;
+                border: 1px solid grey;
+                float: left;
+                width: 80%;
+                background: #f1f1f1;
+            }
+
+        form.example button {
+            padding: 5px;
+            background: white;
+            font-size: 17px;
+            border: 1px solid lightgray;
+            border-left: none;
+            cursor: pointer;
+            margin-left: -4px;
+            margin-top: -10px;
+        }
+
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .optionsDiv1 table tr{
+            border-bottom:none !important;
+
+        }
+
+
+        .sd-container {
+            position: relative;
+            float: left;
+        }
+
+        .sd {
+            border: 1px solid #1cbaa5;
+            padding: 5px 10px;
+            height: 30px;
+            width: 150px;
+        }
+
+        .open-button1{
+            position: absolute;
+            top: 12px;
+            right: 13px;
+            width: 15px;
+            height: 10px;
+            background: #fff;
+            pointer-events: none;
+        }
+
+        .open-button1 calendar-button {
+            border: none;
+            background: transparent;
+        }
+        .dropdown-menu1 li:hover{
+            background-color: lightgray;
+        }
+        .dropdown-menufile li:hover{
+            background-color: lightgray;
+        }
+        .dropdown-menu1job  li:hover{
+            background-color: lightgray;
+        }
+        /* .ui-datepicker {
+             width: 17em;
+             padding: .2em .2em 0;
+             display: none;
+             background:#2F99B4;
+         }
+         .ui-datepicker .ui-datepicker-title {
+             margin: 0 2.3em;
+             line-height: 1.8em;
+             text-align: center;
+             color:#FFFFFF;
+             background:#2F99B4;
+         }
+         .ui-datepicker table {
+             width: 100%;
+             font-size: .7em;
+             border-collapse: collapse;
+             font-family:verdana;
+             margin: 0 0 .4em;
+             color:#000000;
+             background:#9EEFEE;
+         }
+         !*This is date TD *!
+         .ui-datepicker td {
+
+             border: 0;
+             padding: 1px;
+
+
+         }
+         .ui-datepicker td span,
+         .ui-datepicker td a {
+             display: block;
+             padding: .8em;
+             text-align: right;
+             text-decoration: underline;
+         }*/
+        .fromDate1 .ui-datepicker-trigger{
+            position: absolute;
+            top: 12px;
+            right: 14px;
+        }
+        .toDate1 .ui-datepicker-trigger{
+            position: absolute;
+            top: 47px;
+            right: 15px;
+        }
+
+
+
+        .submitBtn{
+            color: #fff;
+            text-transform: uppercase;
+            background: #4fbfe8;;
+            padding: 9px 19px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+        }
+        .submitBtn:hover{
+            background: #fcb315;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        textarea{
+            vertical-align: top;
+            height: 5em;
+        }
+
+        .error{
+            display: none;
+            margin-left: 10px;
+        }
+
+        .error_show{
+            color: red;
+            margin-left: 0%;
+        }
+        #org_name,#org_email,#org_company,#org_phone,#org_message{
+            width: 100%;
+            height: 50px
+        }
+        #org_message{
+            vertical-align: top;
+            height: 8em;
+            width: 100%;
+            margin-left: -9%;
+
+        }
+
+        input.invalid, textarea.invalid{
+            border: 2px solid red;
+        }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .user_navigation{
+            margin-top: 8px;
+        }
+        .user_navigation li {
+            margin-right: 10px;
+        }
+
+/*.btn-primary.disabled{
+background: #FFFFFF 0% 0% no-repeat padding-box!important;
+border: 1px solid #E5E5E5!important;
+border-radius: 4px;
+color:#E5E5E5!important;
+}*/
+.btn-primary.disabled{
+opacity:0.4;
+pointer-events:none;
+}
+#forNextMove {
+    color: #fff;
+    background-color: #0062FF;
+    border-color: #0062FF;
+} 
+input[name=sourceCloud],input[name=dstCloud] { 
+vertical-align: middle;
+float:left;
+margin-right: 5%;
+    margin-top: 20%;
+}
+
+    </style>
+	<link rel="stylesheet" href="../stylesheets/sidebar.css">
+ <link href="../stylesheets/LinIconsPro-Light.css" rel="stylesheet">
+<link href="../stylesheets/LineIcons.css" rel="stylesheet">
+<style>
+	
+	#sidebar i{
+	font-size:20px!important;
+	}
+	.CloudThumb_parent{
+	margin-right: 1.8%;
+	margin-bottom:2%;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	width:115px;
+	height:115px;
+	float:left;
+	}
+	.CloudThumb_parent:hover{
+	box-shadow: 0px 0px 10px #0000001F;
+	}
+	.cloudThumbnail img {
+    height: 45px;
+    width: 45px;
+	}
+	.table td{
+	vertical-align: middle;
+	}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+  border: 1px solid #E5E5E5;
+    border-radius: 4px;
+	left: -15%;
+} 
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #fafafa;color:#0062FF;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+button,input,textarea{
+outline:none!important;
+box-shadow:none!important;
+}
+.table>thead>tr>th{
+border-bottom:none;
+}
+.bg-info{
+padding-top: 0.1rem;
+}
+@media only screen and (min-width: 992px){
+.d-lg-none {
+    display: none!important;
+} 
+}
+.lnil-cross-circle,i{
+    font-size: 14px!important;
+    font-weight: bold!important;
+}
+#sidebar,#content{
+font-family: poppins;
+}
+.rowdiv{
+		width:45%;
+		}
+		#cm-sidebar{
+padding: 0px 5px;
+position: absolute;
+top: 30%;
+right: 5%;
+}
+#cm-topbar{
+padding: 0px 5px;
+position: absolute;
+top: 30%;
+right: 10%;
+}
+ @media only screen and (max-width: 768px){
+#navbarSupportedContent{  
+display:none!important; 
+}
+.flex-row{
+float:right;
+}
+.rowdiv{
+width:100%;
+}
+#cm-sidebar{
+right: 20%;
+}
+#cm-topbar{
+right: 10%;
+} 
+.dropdown-content {
+	right: 0%;
+    left: 50%!important;
+} 
+}
+.btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+element.style {
+    top: 12%;
+    display: block;
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.modal {
+    left: -4%;
+    position: fixed;
+    top: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+}
+.modal.fade .modal-dialog {
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+    -webkit-transform: translate(0,-50px);
+    transform: translate(0,-50px);
+}
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+}
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+.modal-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+}
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+.modal-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: .75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(.3rem - 1px);
+    border-bottom-left-radius: calc(.3rem - 1px);
+}
+.fade {
+    transition: opacity .15s linear;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+	opacity:0.4!important;
+}
+.show {
+    display: block!important;
+    opacity: 1;
+}
+@media (max-width: 768px) and (min-width: 767.9px) {
+#Cf_Mobile{
+width:90%!important;
+}
+svg{
+margin-left:42%!important;
+}
+#cm-sidebar{
+right: 5%;
+}
+#cm-topbar{
+right: 2%;
+}
+.dropdown-content {
+	right: 0%;
+    left: 70%!important;
+}  
+}
+@media (max-width: 420px) and (min-width: 319px) {
+.alertScs,.alertErr{
+width:300px!important;
+min-width:300px!important;  
+} 
+ #policyId{
+ bottom:0%!important;
+ }
+}
+@media (max-height: 620px) {
+
+ #policyId{
+ bottom:-2%!important; 
+ }
+}
+@media (max-width: 1300px) and (min-width: 992px) { 
+ 
+#navbarSupportedContent{
+width:150%!important; 
+} 
+}
+.migrateImg {
+margin-top:-7%;
+}
+.usr-folder1>.dropdown>.dropdown-content {
+min-width:200px;
+}
+.usr-folder1>.dropdown>.dropdown-content>a{
+font-size:13px;
+height:5vh;
+padding:4%; 
+}
+
+ /*for stripe payment*/
+        .StripeElement {
+            box-sizing: border-box;
+            height: 40px;
+            padding: 10px 12px;
+            border: 1px solid #E5E5E5;
+            border-radius: 4px;
+            background-color: white;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            -webkit-transition: box-shadow 150ms ease;
+            transition: box-shadow 150ms ease;
+        }
+
+        .StripeElement--focus {
+            box-shadow: 0 1px 3px 0 #cfd7df;
+        }
+
+        .StripeElement--invalid {
+            border-color: #fa755a;
+        }
+
+        .StripeElement--webkit-autofill {
+            background-color: #fefde5 !important;
+        }
+        /*for stripe payment END*/
+		#UserEntName::placeholder,#couponcode::placeholder {
+  color: #CCCCCC;
+  opacity: 1; /* Firefox */
+} 
+ #ProccesingPopup{
+            background: white;
+            width: 30%;
+            border: 1px solid gray;
+            top: 57%;
+            padding:3% 0 5%;
+            left: 56%;
+        }
+        #ProccesingPopup .container{
+            width: 100%;
+            height: auto;
+            background: white;
+            padding: 8% 4%;
+            border-radius: 2%;
+        }
+        #ProccesingPopup p{
+            font-size: 14px;
+        }
+		 #ThankPop {
+            background: white;
+            width: 35%;
+            border: 1px solid gray;
+            top: 57%;
+            left: 55%;
+            padding: 2% 2% 0; 
+        }
+        #ThankPop img {
+            width: 100px;
+			height: 100px;
+			margin-bottom: 10%;
+        }
+
+
+        #ThankPop a {
+            width: 20%;
+            margin-top: 4%;
+            text-align: center;
+            padding: 2%;
+            color: white;
+            display: block;
+            background-color:#0062FF;
+            margin: 8% auto;
+            font-size: 15px;
+            border: none;
+            border-radius: 3px;
+        }
+        #ThankPop .container{
+            width: 100%;
+            background: white;
+            padding: 5%;
+            border-radius: 2%;
+        }
+		#couponcode {
+    height: 36px;
+    margin-top: 2%;
+    border-right: none;
+    border: 1px solid #e5e5e5;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 2%;
+    width: 15vw;
+}
+#applycouponNew {
+    padding: 0 9px 0 10px;
+    height: 36px;
+    font-size: 12px;
+    float: right;
+    background: #24DFD3 0% 0% no-repeat padding-box;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #24DFD3;
+    width: 10vw;
+    color: #fff;
+    position: absolute;
+    top: 14%;
+    right: 4%;
+}
+#checkoutDiv{
+position:relative;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #E5E5E5;
+border-radius: 5px;
+height:73vh;
+padding: 2%;
+}
+#checkoutChild{
+background: #FCFCFC 0% 0% no-repeat padding-box;
+border: 1px solid #E5E5E5;
+border-radius: 5px;
+width:538px;
+height: 65vh;
+float:left;
+padding:2%;
+max-width:52%;
+}
+#verticalLine{
+border:1px solid #E5E5E5;
+height:58vh;
+float: left;
+left: 53%;
+top:11%;
+background: #e5e5e5;
+position:absolute;
+}
+#checkoutChild2{
+width: 460px;
+height: 55vh;
+background: #FCFCFC 0% 0% no-repeat padding-box;
+border: 1px solid #E5E5E5;
+border-radius: 5px;
+float:right;
+margin-top: 3.5%;
+padding:2%;
+}
+#moveMigrationPrices{
+top: 2%;
+left: -16%;
+}
+#titleModal{
+color: #FFFFFF;
+font-size: 16px;
+width: 100%;
+}
+#closePrice{
+font-size:25px!important;
+color:#fff;
+opacity:1;
+width: 10%;
+text-align:right;
+}
+#bodyModal{
+width:100%;
+}
+#payMonthly{
+margin-right:4px;
+color:#1F2129;
+font-size:16px;
+}
+#payYearly{
+margin-left:4px;
+opacity:0.5;
+color:#1F2129;
+font-size:16px;
+}
+.pricing-plans{ 
+background: #FAFAFF 0% 0% no-repeat padding-box;
+border-radius: 4px;
+padding: 2%;
+}
+#contModal{
+width: 100%;
+border: none;
+}
+#headModal{
+background: #0062FF 0% 0% no-repeat padding-box;
+border-radius: 5px 5px 0px 0px;
+height:9vh;
+width:100%;
+padding-top:2%;
+}
+#ProccesingPopup{
+            background: white;
+            border: 1px solid gray;
+            padding:3% 0 5%;
+			top: 21%;
+			left: 34%;
+			height:47%;
+			width:33%;
+        }
+        #ProccesingPopup .container{ 
+            width: 100%;
+            height: auto;
+            background: white;
+            padding: 8% 4%;
+            border-radius: 2%;
+        }
+        #ProccesingPopup p{
+            font-size: 14px;
+        }
+        #ThankPop {
+            background: white;
+            width: 35%;
+            border: 1px solid gray;
+            padding: 2% 2% 0;
+			top: 12%;
+			left: 32%;
+			height: 65%;
+        }
+       #ThankPop img {
+            width: 100px;
+			height: 100px;
+			margin-bottom: 10%;
+        }
+
+        #ThankPop a {
+            width: 20%;
+            margin-top: 4%;
+            text-align: center;
+            padding: 2%;
+            color: white;
+            display: block;
+            background-color:#0062FF;
+            margin: 8% auto;
+            font-size: 15px;
+            border: none;
+            border-radius: 3px;
+        }
+        #ThankPop .container{
+            width: 100%;
+            background: white;
+            padding: 5%;
+            border-radius: 2%;
+        }
+		
+		
+		table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+.migrationImage#MIRO {
+    width: 27px!important;
+    height: 27px!important;
+    background: url('../img/miro50x50.png');
+    margin-top: 5%;
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+.migrationImage#MURAL {
+    width: 27px!important;
+    height: 27px!important;
+    background: url('../img/mural50x50.png');
+    margin-top: 5%;
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+</style>
+<!--Mural Folder Style Start-->
+<style>
+    .singleSourceHead {
+      background-color: #0062ff;
+      height: 40px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      color: #fff;
+      box-shadow: 0px 0px 10px #0000001f;
+      text-align: center;
+    }
+    .cardBodyMural {
+      height: 55vh;
+      max-height: 55vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+    }
+    #MURAL {
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50%;
+      background: url(https://enterprise9.cloudfuze.com/img/mural50x50.png);
+      background-size: contain;
+      object-fit: cover;
+      background-repeat: no-repeat;
+    }
+    #MIRO {
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50%;
+      background: url(https://enterprise9.cloudfuze.com/img/miro50x50.png);
+      background-size: contain;
+      object-fit: cover;
+      background-repeat: no-repeat;
+    }
+    #workspaceBody {
+      background-color: #f2f3ff;
+      height: 50px;
+    }
+    .sourceWorkspaceImgBg {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    .sourceWorkspaceTitle {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .muralWorkspaces {
+      height: 50px;
+      border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+      border-top: 1px solid rgba(120, 130, 140, 0.13);
+    }
+    .lnil-cross-circle,
+    i {
+      font-size: 14px !important;
+      font-weight: bold !important;
+    }
+    #hierachyIndicator {
+      font-size: 12px;
+      display: flex;
+      color: #9e9e9e;
+    }
+    .openWorkSpace,
+    .openOrganization {
+      border-bottom: 0px !important;
+    }
+    .hratopenWorkspace,
+    .hratopenOrganization {
+      margin-top: 0px;
+      width: 95%;
+    }
+    .fa-folder,
+    .fa-folder-open {
+      color: #f7d26c;
+      margin-left: -83px;
+      font-size: 18px !important;
+    }
+    #viewMural {
+      height: 40px;
+    }
+    .selectMuralSPAN {
+      font-size: 14px;
+      margin-left: -140px;
+    }
+    .selectMiroSPAN {
+      font-size: 14px;
+      margin-left: 61px;
+    }
+    #viewMIROBOARD {
+      margin-top: 5px;
+    }
+    .selectMuralSPAN span {
+      font-size: 14px;
+      margin-left: 5px;
+      margin-top: 1px;
+      position: absolute;
+    }
+    #roomsBody {
+      margin-top: 10px;
+    }
+  </style>
+<!--Mural Folder Style End's-->
+<!--Mural Options Style Start's-->
+<style>
+    .jobcontainer {
+      height: 450px;
+      border-radius: 5px;
+      width: 800px;
+      box-shadow: 0px 0px 10px #0000001f;
+      background-color: #fff;
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+    .jobtitlemural {
+      background-color: #0062ff;
+      height: 30px;
+      color: #fff;
+      padding: 4px 10px;
+      font-weight: 600;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    .selectMuralJobType {
+      border-radius: 5px;
+      border: 1px solid #d5d5d5;
+      padding: 0px 8px;
+      color: #555;
+    }
+    #muralJobOptionsTable {
+      width: 100%;
+      font-size: 14px;
+    }
+    #muralJobOptionsTable tr {
+      height: 50px;
+    }
+    .muralJobName {
+      width: 200px;
+      border: 1px solid #d5d5d5;
+      height: 30px;
+      border-radius: 5px;
+      text-overflow: ellipsis;
+      color: #555;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+    input:focus {
+      border-color: rgba(68, 136, 240, 0.8);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+        0 0 8px rgba(104, 189, 239, 0.6);
+      outline: 0 none;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    .switch #isExportAsPdf {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      height: 24px;
+      width: 50px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 15px;
+      width: 15px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    #isExportAsPdf:checked + .slider {
+      background-color: #2196f3;
+    }
+    #isExportAsPdf:focus + .slider {
+      box-shadow: 0 0 1px #2196f3;
+    }
+    #isExportAsPdf:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    .slider.round {
+      border-radius: 34px;
+    }
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    .switchDisable {
+      color: #d5d5d5;
+    }
+  </style>
+<!--Mural Options Style End's-->
+</head> 
+<body style="display:none;overflow:hidden;" id="movePageMultiUsr"> 
+<div class="g-signin2" data-theme="dark" style="display:none"></div>
+<div class="wrapper d-flex align-items-stretch" style="display:flex!important;align-items: stretch!important;">
+<nav id="sidebar" class="active"> 
+<div style="height:70px;"><a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="30" viewBox="0 0 106.467 53.365" style="margin-bottom: -8%;margin-top: 13%;margin-left: 5%!important;"><defs><style>.a{fill:#FFFFFF;}.b{fill:#FFFFFF;}.c{fill:#FFFFFF;}</style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#156aff"/><stop offset="1" stop-color="#1100f3"/></linearGradient></defs><g transform="translate(-177.95 -15.003)"><g transform="translate(183.48 15)"><path class="a" d="M1938.25,742.731c.161-.688.936-3.794,1.714-2.2-.024-.025,2.081,2.887.617,10.6.024-.082-1.1,3.237-1.807,1.042.024.082-.525-1.454-.525-1.454s-.391-.383-.435.412c-.021-.054,1.536,9.531,3.545,5.19,0,.029,1.1-1.454,1.3-6.673.068.054.549-7.665-.778-11.644,0,.029-1.234-4.23-2.674-1.648a9.667,9.667,0,0,0-1.214,4.173,20.02,20.02,0,0,0-.182,2.2C1937.8,742.7,1938.09,743.419,1938.25,742.731Z" transform="translate(-1917.075 -729.704)"/><path class="a" d="M1938.32,744.66c.185-.872,1.072-4.81,1.963-2.789-.028-.031,2.383,3.661.707,13.442.027-.1-1.256,4.1-2.069,1.321.027.1-.6-1.843-.6-1.843s-.448-.486-.5.522c-.024-.068,1.759,12.084,4.059,6.58,0,.037,1.26-1.843,1.492-8.46.078.068.628-9.718-.891-14.763,0,.037-1.413-5.363-3.062-2.089a13.176,13.176,0,0,0-1.389,5.29,27.807,27.807,0,0,0-.208,2.789C1937.8,744.623,1938.13,745.532,1938.32,744.66Z" transform="translate(-1908.168 -732.64)"/><path class="a" d="M0,5.45S1.035-.447,3.92.027C3.508.007,5.686-.405,7.3,7.433a47.548,47.548,0,0,1,.356,13.6c-.07-.1-.3,5.482-2.408,8.891,0,.029-2.413,3.8-4.62-2.1A18.264,18.264,0,0,1,0,25.964s2.24,2.411,3.343,0c.018.034,1.718-2.908,1.884-8.756.015.071.263-9.357-1.964-12.192a2.151,2.151,0,0,0-3.031.833A4.54,4.54,0,0,1,0,5.45Z" transform="translate(36.978 0.139) rotate(-0.974)"/><path class="b" d="M2152.9,1316.38s-2.781-.969-2.2-5.006c.034-.28,1.183-3.444,5.328-1.951-.1,0,2.158-3.017,5.044-2.984.024,0,3.307-.2,4.42,3.834-.061.058,4.229-3.5,7.43,1.359.009.014.008,2.182,0,1.639v1.183s-.163,1.883-3.174,1.925h-.178C2167.93,1316.35,2152.9,1316.38,2152.9,1316.38Z" transform="translate(-2100.18 -1291.587)"/><path class="b" d="M3223.61,213.09c-.033.022,4.834,0,4.834,0a5.34,5.34,0,0,1-.855-6.648c.061-.061,1.442-2.79,5.417-1.671-.018-.082,2.83-3.425,5.866-3.138a4.974,4.974,0,0,1,4.885,3.54c-.079-.061,3.74-2.722,6.854,1.5.04.021-.8-6.563-7.44-5.044a7.657,7.657,0,0,0-7.15-4.186,8.618,8.618,0,0,0-5.644,3.382c.083-.061-3.81-.979-5.827,1.111a44.3,44.3,0,0,1-.3,6.671C3224.27,208.55,3223.65,213.068,3223.61,213.09Z" transform="translate(-3177.828 -188.413)"/><path class="b" d="M3219.66,431.08a23.151,23.151,0,0,1,1.43,6.7,5.526,5.526,0,0,1,5.391-1.4c.095,0,7.083-8.092,14.139.859.08.03,5.337-1.1,6.842,3.986-.065,0,1-9.046-11.14-9.243-.035.069-4.568-8.6-13.223-1.61a4,4,0,0,0-3.439.711Z" transform="translate(-3174.591 -425.7)"/><path class="b" d="M3163.06,784.33a7.96,7.96,0,0,1,3.833-1.221,32.009,32.009,0,0,1,.24,17.482c.025.069-3.888,0-3.888,0s1.045-8.3,0-14.826Z" transform="translate(-3127.039 -776.302)"/><path class="b" d="M3107.2,812.941l3.24-.246a9.239,9.239,0,0,1,1.41-2.4c.021,0,2.085,4.361,0,12.167a3.679,3.679,0,0,1-1.41-2.477c0-.059-3.383,0-3.383,0l.142-1.184s2.937.355,2.739-.63c-.018-.021.173-.908-2.586-.568V816.54s2.737.6,2.743-.808c0-.021.133-1.524-2.743-.945a18.1,18.1,0,0,0-.152-1.846Z" transform="translate(-3080.385 -799.48)"/><path class="b" d="M2935.35,831.464l22.548-1.68a4.454,4.454,0,0,1,.263,1.589C2958.18,831.4,2935.35,831.464,2935.35,831.464Z" transform="translate(-2935.35 -816.087)"/><path class="b" d="M2954.38,855.123l19.987-1.006a2.038,2.038,0,0,1-.165.9C2974.19,855.049,2954.38,855.123,2954.38,855.123Z" transform="translate(-2951.574 -836.828)"/><path class="b" d="M2994.27,870.418l13.893-.918-.246,1.016Z" transform="translate(-2985.57 -849.941)"/></g></g></svg>
+	<br>CloudFuze</a></div>
+<ul class="list-unstyled components mb-5"> 
+<li> 
+<a href="cloudmanager.html"><i class="lnil lnil-cloud-alt"></i> <br>Clouds</a>
+</li>
+<li>
+<a href="move.html"><i class="lnil lnil-rocket" style="transform: rotate(90deg);"></i> <br> Migrate</a>
+</li>
+<li>
+<a href="backUp.html"><i class="lnil lnil-database" style="margin-top:-5%;"></i> <br> Individual<br>Backup</a>  
+</li>
+<li>
+<a href="teammigration.html" style="padding:12px 0px;"><i class="lnil lnil-users-alt"></i><p style="margin-bottom: -7%;"> Team </p><p> Migration </p></a>
+</li>
+<li>
+<a href="slackmigration.html" style="padding:12px 0px;"><i class="lnil lnil-users-alt"></i><p style="margin-bottom: -7%;"> Slack </p><p> Migration </p></a>
+</li>
+<li class="active">
+<a href="#" style="padding:12px 0px;"><i class="lnil lnil-layout"></i><p style="margin-bottom: -7%;"> Mural </p><p> Migration </p></a>
+</li>
+
+<li>
+<a href="reports.html"><i class="lnil lnil-pie-report"></i><br>Reports</a> 
+</li>
+<li>
+<a href="https://help.cloudfuze.com/" target="_blank"><i class="lnil lnil-question-circle"></i><br>Help</a>
+</li>
+</ul>
+<div id="policyId" style="height:70px;font-size:11px;bottom: 2%;position: absolute;">
+<a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="color:#fff;">Terms of use</a>
+
+<a href="https://www.cloudfuze.com/privacy-policy" target="_blank" style="color:#fff;">Privacy policy</a>
+
+</div>
+</nav>
+
+<div id="content" class="" style="background: #FCFCFC;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:0px;">
+<div class="container-fluid" style="width:100%;">	
+	<div class="rowdiv" style="float:left;">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+      
+    
+   <li id="cm-sidebar" style="margin-right:5%;">
+   <button type="button" id="sidebarCollapse" class="btn btn-primary d-lg-none"> 
+<i class="fa fa-bars"></i>
+<span class="sr-only">Toggle Menu</span>
+   </button></li>
+<li id="cm-topbar" style=""> 
+	<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" id="topbarCollapse">
+<i class="fa fa-bars"></i>
+</button></li>
+   
+    </ul>
+	
+  </div>	
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent" style="width:75%;float:right;">
+<ul class="nav navbar-nav ml-auto1" style="width:100%;margin-right:-6%;">
+  
+<!--<a class="nav-link" href="#" style="font-size:12px;padding: 10px 32px;color:#000000;">Data <span style="color:#0062FF;font-weight: 600;">5GB</span> used of <span style="color:#0062FF;font-weight: 600;">10GB</span></a>-->
+<li class="nav-item" style="text-align: -webkit-right;width:39%; height: 11vh;padding-top: 2.5%;">
+<div style="text-align: -webkit-right;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData" style="color:#0062FF;font-weight: 600;">0GB</span> used of <span id="totalData" style="color:#0062FF;font-weight: 600;">0GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;border:none;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:0%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="width:18%;text-align: -webkit-right;padding-left: 5%; height: 11vh;padding-top: 2.5%;">
+<a class="nav-link" href="settings.html#price" style="color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;padding:1rem;">Upgrade</a>
+</li>
+<li class="nav-item" style="width:43%;text-align: -webkit-left;padding-left: 4%;height: 11vh;padding-top: 2%;"><div class="dropdown" style="width:100%;"> 
+<a class="dropbtn nav-link" href="#" style="padding-top: 4%"><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #0062FF;font-size: 15px;padding: 5px;"></i><span id="dash-uname" style="margin-left: 4%;font-weight:600;color:#1F2129;word-break:break-word;"></span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left:1%;font-weight: 600;"></i></a>
+ <div class="dropdown-content">
+ <a href="settings.html" style="text-align:left;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+ <a class="cf-logout" class="mYaccontlogout" href="#" style="text-align:left;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div> 
+</div>
+</li>
+
+</ul>
+</div>
+<div class="" id="navbarSupportedContent1" style="width: 100%; float: right; background: rgb(255, 255, 255);display:none;">
+<ul class="nav navbar-nav" style="width: 100%;margin-right: -5%;    margin-top: 7%;">
+
+
+<li class="nav-item" style="text-align: -webkit-center;width: 100%;height: 12vh;padding-top: 8%;padding-right: 10%;border-bottom: 1px solid #e5e5e5;">
+<div style="text-align: -webkit-right;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData1" style="color:#0062FF;font-weight: 600;">0 GB</span> used of <span id="totalData1" style="color:#0062FF;font-weight: 600;">0 GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:0%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="width:100%;padding-right: 8%;height: 8vh;padding-top: 2%;border-bottom: 1px solid #e5e5e5;">
+<a class="nav-link" href="settings.html#price" style="float:right;color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;">Upgrade</a> 
+</li>
+<li class="nav-item" style="width: 100%;text-align: -webkit-right;height: 6vh;padding-right: 10%;border-bottom: 1px solid #e5e5e5;"><div class="dropdown" style="width:100%;">
+<a class="dropbtn nav-link" href="#" style="padding-top: 5%"><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #0062FF;font-size: 15px;padding: 5px;"></i><span id="dash-uname1" style="margin-left: 4%;font-weight:600;color:#1F2129;word-break: break-word;"></span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left: 3%;font-weight: 600;"></i></a>
+ <div class="dropdown-content"> 
+ <a href="settings.html" style="text-align:left;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+ <a class="cf-logout" class="mYaccontlogout" href="#" style="text-align:left;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div>
+</div> 
+</li> 
+
+</ul>
+</div>
+</div>
+</nav>
+
+<section id="move-header" style="height:89vh;font-family: 'Poppins', Arial, sans-serif;">
+				    <div class="alertScs hide">
+        <span class="fa fa-check-circle"></span>  
+        <p class="msg"></p> 
+        <div class="close-btnScs">
+          <span class="lnil lnil-cross-circle"></span>
+        </div>
+</div>
+  <div class="alertErr hide"> 
+        <span class="fa fa-times-circle"></span> 
+        <p class="msg"></p>
+        <div class="close-btnErr">
+          <span class="lnil lnil-cross-circle"></span>  
+        </div> 
+</div>
+    <div class="span12" style="position: absolute; margin-left: 40%; display: none;top: 0;" id="spinner2">
+        <img src="../img/ajax.gif" alt="Loading">
+    </div>
+		<div class="span12" id="CF_no_clouds" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 6px #00000014;border: 1px solid #F1F1F1;border-radius: 5px;width: 756px;height: 328px;margin-left: 15%;margin-top: 9%;display: none;">
+        <div class="box">
+            <div class="tab-header" style="background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #0062FF;border-radius: 5px 5px 0px 0px;height:50px;font-size:18px;color:#FFFFFF;text-align: center;padding-top: 1.5%;">
+                Welcome to CloudFuze
+            </div>
+            <div class="padded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="104" height="60.667" viewBox="0 0 104 60.667" style="margin-left: 42%;margin-top: 3%;"><defs>
+	<style> 
+	.cfa,.cfb{fill:#0129ac;}.cfb{font-size:22px;font-family:ProductSans-Bold, Product Sans;font-weight:700;letter-spacing:-0.02em;}</style></defs>
+	<g transform="translate(-2.258 0)"> 
+	<g transform="translate(8.384 0)">
+	<g transform="translate(22.093 0)">
+	<path class="cfa" d="M1938.279,743.2c.172-.733,1-4.042,1.826-2.344-.026-.027,2.217,3.076.657,11.293.026-.087-1.172,3.449-1.925,1.11.026.087-.559-1.549-.559-1.549s-.417-.408-.464.439c-.022-.058,1.636,10.154,3.777,5.529,0,.031,1.172-1.549,1.385-7.109.072.057.585-8.167-.829-12.406,0,.031-1.315-4.507-2.849-1.756a10.3,10.3,0,0,0-1.293,4.446,21.337,21.337,0,0,0-.194,2.344C1937.8,743.17,1938.109,743.935,1938.279,743.2Z" transform="translate(-1937.811 -729.327)"/>
+	<path class="cfa" d="M1938.352,745.258c.2-.929,1.142-5.125,2.091-2.972-.03-.033,2.539,3.9.753,14.321.029-.106-1.338,4.368-2.2,1.407.029.107-.639-1.964-.639-1.964s-.477-.518-.533.556c-.025-.072,1.874,12.875,4.325,7.01,0,.039,1.342-1.964,1.59-9.014.083.072.669-10.354-.949-15.729,0,.04-1.506-5.714-3.263-2.226a14.042,14.042,0,0,0-1.48,5.636,29.721,29.721,0,0,0-.222,2.971C1937.8,745.218,1938.15,746.187,1938.352,745.258Z" transform="translate(-1928.32 -732.455)"/>
+	<path class="cfa" d="M0,5.807S1.1-.476,4.176.029c-.439-.021,1.882-.46,3.6,7.891a50.659,50.659,0,0,1,.379,14.49c-.075-.107-.32,5.841-2.566,9.473,0,.031-2.571,4.049-4.922-2.237A19.458,19.458,0,0,1,0,27.663s2.387,2.569,3.562,0c.019.036,1.83-3.1,2.007-9.329.016.076.28-9.969-2.092-12.99a2.292,2.292,0,0,0-3.229.887A4.837,4.837,0,0,1,0,5.807Z" transform="translate(17.304 0.145) rotate(-0.974)"/></g><g transform="translate(0 2.07)">
+	<path class="cfa" d="M2153.049,1317.03s-2.963-1.032-2.344-5.333c.036-.3,1.26-3.669,5.677-2.079-.107,0,2.3-3.214,5.374-3.179.025,0,3.523-.213,4.709,4.085-.065.062,4.506-3.729,7.916,1.448.01.015.009,2.325,0,1.746v1.26s-.174,2.006-3.382,2.051h-.19C2169.063,1317,2153.049,1317.03,2153.049,1317.03Z" transform="translate(-2096.88 -1292.689)"/>
+	<path class="cfa" d="M3223.612,214.114c-.036.023,5.149,0,5.149,0a5.69,5.69,0,0,1-.911-7.083c.065-.065,1.536-2.972,5.771-1.78-.019-.087,3.015-3.649,6.25-3.343a5.3,5.3,0,0,1,5.2,3.772c-.084-.065,3.985-2.9,7.3,1.6.043.022-.852-6.992-7.927-5.374a8.158,8.158,0,0,0-7.617-4.46,9.182,9.182,0,0,0-6.013,3.6c.088-.065-4.06-1.043-6.208,1.184a47.162,47.162,0,0,1-.32,7.107C3224.314,209.277,3223.653,214.091,3223.612,214.114Z" transform="translate(-3174.835 -189.896)"/>
+	<path class="cfa" d="M3219.661,431.3a24.667,24.667,0,0,1,1.524,7.138,5.888,5.888,0,0,1,5.744-1.492c.1,0,7.546-8.621,15.064.915.085.032,5.686-1.172,7.29,4.247-.069,0,1.065-9.638-11.868-9.848-.037.073-4.867-9.163-14.089-1.715a4.261,4.261,0,0,0-3.664.758Z" transform="translate(-3171.644 -427.646)"/>
+	<path class="cfa" d="M3163.059,784.41a8.485,8.485,0,0,1,4.084-1.3,34.113,34.113,0,0,1,.256,18.626c.026.073-4.143,0-4.143,0s1.113-8.843,0-15.8Z" transform="translate(-3124.682 -777.93)"/>
+	<path class="cfa" d="M3107.209,813.114l3.452-.262a9.826,9.826,0,0,1,1.5-2.557c.022,0,2.221,4.646,0,12.963a3.917,3.917,0,0,1-1.5-2.639c0-.063-3.6,0-3.6,0l.151-1.261s3.129.378,2.918-.671c-.019-.022.185-.967-2.755-.605v-1.133s2.916.639,2.923-.861c0-.022.141-1.624-2.923-1.007A19.28,19.28,0,0,0,3107.209,813.114Z" transform="translate(-3078.64 -800.846)"/>
+	<path class="cfa" d="M2935.351,831.574l24.023-1.79a4.755,4.755,0,0,1,.28,1.693C2959.674,831.506,2935.351,831.574,2935.351,831.574Z" transform="translate(-2935.351 -817.265)"/>
+	<path class="cfa" d="M2954.381,855.189l21.295-1.072a2.166,2.166,0,0,1-.176.959C2975.487,855.11,2954.381,855.189,2954.381,855.189Z" transform="translate(-2951.392 -837.771)"/>
+	<path class="cfa" d="M2994.271,870.478l14.8-.978-.262,1.082Z" transform="translate(-2985.001 -850.735)"/></g></g>
+	<text class="cfb" transform="translate(2.258 54.667)"><tspan x="0" y="0">CloudFuze</tspan></text>
+	</g>
+	</svg>
+                <p style="text-align:center;margin:4%;">To use this CloudFuze feature, you must first add Multi user cloud(s) to CloudFuze <br>
+					by clicking Add Cloud and completing the setup process
+				</p>
+				<a href="cloudmanager.html?ver=1231"  class="button mini rounded blue"  id="AFTWButton" style="width: auto;height: 40px;background: #0062FF 0% 0% no-repeat padding-box!important;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;    margin-left: 36%;">Add Cloud Account</a>
+                
+            </div>
+        </div>
+    </div>
+ 
+			<div class="span12" id="Cf_Mobile" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 6px #00000014;border: 1px solid #F1F1F1;border-radius: 5px;width:270px;height: 328px;margin-left: 8%;margin-top: 9%;display: none;">
+        <div class="box">
+            <div class="tab-header" style="background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #0062FF;border-radius: 5px 5px 0px 0px;height:50px;font-size:18px;color:#FFFFFF;text-align: center;padding-top: 1.5%;">
+                Welcome to CloudFuze
+            </div>
+            <div class="padded">
+              <svg xmlns="http://www.w3.org/2000/svg" width="104" height="60.667" viewBox="0 0 104 60.667" style="margin-top: 3%;margin-left:32%;"><defs>
+	<style> 
+	.cfa,.cfb{fill:#0129ac;}.cfb{font-size:22px;font-family:ProductSans-Bold, Product Sans;font-weight:700;letter-spacing:-0.02em;}</style></defs>
+	<g transform="translate(-2.258 0)"> 
+	<g transform="translate(8.384 0)">
+	<g transform="translate(22.093 0)">
+	<path class="cfa" d="M1938.279,743.2c.172-.733,1-4.042,1.826-2.344-.026-.027,2.217,3.076.657,11.293.026-.087-1.172,3.449-1.925,1.11.026.087-.559-1.549-.559-1.549s-.417-.408-.464.439c-.022-.058,1.636,10.154,3.777,5.529,0,.031,1.172-1.549,1.385-7.109.072.057.585-8.167-.829-12.406,0,.031-1.315-4.507-2.849-1.756a10.3,10.3,0,0,0-1.293,4.446,21.337,21.337,0,0,0-.194,2.344C1937.8,743.17,1938.109,743.935,1938.279,743.2Z" transform="translate(-1937.811 -729.327)"/>
+	<path class="cfa" d="M1938.352,745.258c.2-.929,1.142-5.125,2.091-2.972-.03-.033,2.539,3.9.753,14.321.029-.106-1.338,4.368-2.2,1.407.029.107-.639-1.964-.639-1.964s-.477-.518-.533.556c-.025-.072,1.874,12.875,4.325,7.01,0,.039,1.342-1.964,1.59-9.014.083.072.669-10.354-.949-15.729,0,.04-1.506-5.714-3.263-2.226a14.042,14.042,0,0,0-1.48,5.636,29.721,29.721,0,0,0-.222,2.971C1937.8,745.218,1938.15,746.187,1938.352,745.258Z" transform="translate(-1928.32 -732.455)"/>
+	<path class="cfa" d="M0,5.807S1.1-.476,4.176.029c-.439-.021,1.882-.46,3.6,7.891a50.659,50.659,0,0,1,.379,14.49c-.075-.107-.32,5.841-2.566,9.473,0,.031-2.571,4.049-4.922-2.237A19.458,19.458,0,0,1,0,27.663s2.387,2.569,3.562,0c.019.036,1.83-3.1,2.007-9.329.016.076.28-9.969-2.092-12.99a2.292,2.292,0,0,0-3.229.887A4.837,4.837,0,0,1,0,5.807Z" transform="translate(17.304 0.145) rotate(-0.974)"/></g><g transform="translate(0 2.07)">
+	<path class="cfa" d="M2153.049,1317.03s-2.963-1.032-2.344-5.333c.036-.3,1.26-3.669,5.677-2.079-.107,0,2.3-3.214,5.374-3.179.025,0,3.523-.213,4.709,4.085-.065.062,4.506-3.729,7.916,1.448.01.015.009,2.325,0,1.746v1.26s-.174,2.006-3.382,2.051h-.19C2169.063,1317,2153.049,1317.03,2153.049,1317.03Z" transform="translate(-2096.88 -1292.689)"/>
+	<path class="cfa" d="M3223.612,214.114c-.036.023,5.149,0,5.149,0a5.69,5.69,0,0,1-.911-7.083c.065-.065,1.536-2.972,5.771-1.78-.019-.087,3.015-3.649,6.25-3.343a5.3,5.3,0,0,1,5.2,3.772c-.084-.065,3.985-2.9,7.3,1.6.043.022-.852-6.992-7.927-5.374a8.158,8.158,0,0,0-7.617-4.46,9.182,9.182,0,0,0-6.013,3.6c.088-.065-4.06-1.043-6.208,1.184a47.162,47.162,0,0,1-.32,7.107C3224.314,209.277,3223.653,214.091,3223.612,214.114Z" transform="translate(-3174.835 -189.896)"/>
+	<path class="cfa" d="M3219.661,431.3a24.667,24.667,0,0,1,1.524,7.138,5.888,5.888,0,0,1,5.744-1.492c.1,0,7.546-8.621,15.064.915.085.032,5.686-1.172,7.29,4.247-.069,0,1.065-9.638-11.868-9.848-.037.073-4.867-9.163-14.089-1.715a4.261,4.261,0,0,0-3.664.758Z" transform="translate(-3171.644 -427.646)"/>
+	<path class="cfa" d="M3163.059,784.41a8.485,8.485,0,0,1,4.084-1.3,34.113,34.113,0,0,1,.256,18.626c.026.073-4.143,0-4.143,0s1.113-8.843,0-15.8Z" transform="translate(-3124.682 -777.93)"/>
+	<path class="cfa" d="M3107.209,813.114l3.452-.262a9.826,9.826,0,0,1,1.5-2.557c.022,0,2.221,4.646,0,12.963a3.917,3.917,0,0,1-1.5-2.639c0-.063-3.6,0-3.6,0l.151-1.261s3.129.378,2.918-.671c-.019-.022.185-.967-2.755-.605v-1.133s2.916.639,2.923-.861c0-.022.141-1.624-2.923-1.007A19.28,19.28,0,0,0,3107.209,813.114Z" transform="translate(-3078.64 -800.846)"/>
+	<path class="cfa" d="M2935.351,831.574l24.023-1.79a4.755,4.755,0,0,1,.28,1.693C2959.674,831.506,2935.351,831.574,2935.351,831.574Z" transform="translate(-2935.351 -817.265)"/>
+	<path class="cfa" d="M2954.381,855.189l21.295-1.072a2.166,2.166,0,0,1-.176.959C2975.487,855.11,2954.381,855.189,2954.381,855.189Z" transform="translate(-2951.392 -837.771)"/>
+	<path class="cfa" d="M2994.271,870.478l14.8-.978-.262,1.082Z" transform="translate(-2985.001 -850.735)"/></g></g>
+	<text class="cfb" transform="translate(2.258 54.667)"><tspan x="0" y="0">CloudFuze</tspan></text>
+	</g>
+	</svg>
+                <p style="text-align:center;margin:4%;">Please login to our web application to use this feature for a better experience.
+				</p>
+			
+                
+            </div>
+        </div>
+    </div>
+	
+	
+	 <div id="move_main" style="display: block;overflow-y: unset;padding:1% 3%;">
+        <div class="span12" style="width:96%;">
+            <div id="teamMigrationWidget" class="wizard" style="">
+                <ul class="steps" style="list-style:none;margin-left: -4%;"> 
+                    <li data-target="selection" class="active" data-val="1"><span class="badge badge-info">1</span>Selection<span class="chevron"></span></li>
+                    <li data-target="Mapping" data-val="2"><span class="badge">2</span>Mapping<span class="chevron"></span></li>
+		    <li data-target="options" data-val="3"><span class="badge">3</span>Options<span class="chevron"></span></li>
+             	    <li data-target="Migration" data-val="4"><span class="badge">4</span>Migrate<span class="chevron"></span></li>
+                    </ul>  
+            </div>
+        </div>
+        <div class="" style="text-align: center;">
+            <button data-step="1" class="btn btn-primary flat-button btn-md disabled" id="forNextMove" style="height: 5vh;width:83.5px;margin-left: 92.7%;font-size: 14px;"><span>Next</span> <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+        <div class="" style="text-align: center;margin-top: -5%;">
+            <button data-prev="1" class="btn btn-primary flat-button btn-md disabled" style="width:95.5px;height: 5vh;margin-left: -91.5%;font-size: 14px;" id="forPreviousMove"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</button>
+        </div>
+        <div id="mappingClouds" style=""> 
+            <div style="margin-top: -10px">
+                <div class="col-md-5 col-sm-6 col-xl-3 col-xs-6" style="margin-top: 35px;margin-left: -1%;width:26%">
+                    <div class="card">
+                        <div class="card-block bg-info" style="height:40px;">
+                            <h5 class="text-white card-title" style="margin:10px;">Select Source</h5>
+                        </div>
+                        <div class="card-block" id="srcClouds">
+                            <div class="message-box contact-box">
+                                <div class="message-widget contact-widget" style="">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-md-offset-2" style="width: 36%">
+                    <div class="animation-arrow"></div>
+                    <div class="animation-arrow third-arrow"></div>
+                </div>
+
+                <div class="col-md-5 col-sm-6 col-xl-3 col-xs-6" style="margin-top: 35px;width:26%;float:right;margin-right: -1.3%;">
+                    <div class="card">
+                        <div class="card-block bg-info" style="height:40px;">
+                            <h5 class="text-white card-title" style="margin:10px;">Select Destination</h5>
+                        </div>
+                        <div class="card-block" id="dstClouds">
+                            <div class="message-box contact-box">
+                                <div class="message-widget contact-widget" style="">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+		<div id="mappingPreMigration" style="display:none;"> 
+     
+  
+<div style="margin: 2% 0;width: 100%;">
+ 
+    <div
+      class="row"
+      id="singleUserSelection"
+      style="margin-top: 25px; margin-left: 5px"
+    >
+      <div class="col-md-5 col-sm-6 col-xl-3 col-xs-6">
+        <div class="row justify-content-center">
+          <div class="col singleSourceHead">
+            <p style="padding: 7px">Select Source</p>
+          </div>
+        </div>
+        <div class="row cardBodyMural muralSource">
+          <div class="col">
+            <div class="sourceWorkspaces">
+              <div class="row justify-content-start" id="workspaceBody">
+                <div class="col-2 my-auto">
+                  <div class="sourceWorkspaceImgBg">
+                    <div id="MURAL"></div>
+                  </div>
+                </div>
+                <div class="col-8 my-auto">
+                  <div class="sourceWorkspaceTitle">Mural Workspace</div>
+                </div>
+              </div>
+              <!-- Workspace Start Here -->
+              <div id="appendWorkspaces">
+              <div class="row justify-content-start" id="muralWorkspaces">
+                <div class="col-2 my-auto text-center">
+                  <i
+                    class="lnil lnil-chevron-down-circle"
+                    style="color: #0062ff"
+                    id="openRooms"
+                    wid="product-1"
+                  ></i>
+                </div>
+                <div class="col-7 my-auto">
+                  <span style="margin-left: -20px"> Product-1 </span>
+                </div>
+                <div class="col-1 my-auto" id="hierachyIndicator">
+                  Workspace
+                </div>
+              </div>
+              <hr
+                class="hratopenWorkspace"
+                id="hrproduct-1"
+                style="display: none"
+              />
+              <div id="viewDataproduct-1" style="display: none">
+                <div class="row justify-content-start" id="roomsBody">
+                  <div
+                    class="col-10 my-auto text-center"
+                    id="openRoomsMural"
+                    rid="salesroom"
+                  >
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <span style="font-size: 14px; margin-left: 5px"
+                      >SalesRoom</span
+                    >
+                  </div>
+                  <!-- <div class="col-7 my-auto">Product-1</div> -->
+                  <div class="col-1 my-auto" id="hierachyIndicator">Room</div>
+                </div>
+                <div
+                  class="row justify-content-center"
+                  id="viewMural"
+                  style="display: none"
+                >
+                  <div class="col-10 my-auto text-center">
+                    <span class="selectMuralSPAN">
+                      <input type="checkbox" name="" id="" />
+                      <span>Team Integration</span>
+                    </span>
+                  </div>
+                  <div class="col-2 my-auto" id="hierachyIndicator">Mural</div>
+                </div>
+                <div class="row justify-content-start" id="roomsBody">
+                  <div
+                    class="col-10 my-auto text-center"
+                    id="openRoomsMural"
+                    rid="salesroom"
+                  >
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    <span style="font-size: 14px; margin-left: 5px"
+                      >SalesRoom</span
+                    >
+                  </div>
+                  <!-- <div class="col-7 my-auto">Product-1</div> -->
+                  <div class="col-1 my-auto" id="hierachyIndicator">Room</div>
+                </div>
+              </div>
+              <div class="row justify-content-start" id="muralWorkspaces">
+                <div class="col-2 my-auto text-center">
+                  <i
+                    class="lnil lnil-chevron-down-circle"
+                    style="color: #0062ff"
+                    id="openRooms"
+                    wid="product-2"
+                  ></i>
+                </div>
+                <div class="col-7 my-auto">
+                  <span style="margin-left: -20px"> Product-1 </span>
+                </div>
+                <div class="col-1 my-auto" id="hierachyIndicator">
+                  Workspace
+                </div>
+              </div>
+            </div>
+              <!-- Workspace End's Here -->
+              <!-- Workspace Start Here -->
+
+              <!-- Workspace End's Here -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1 md-none col-sm-6 col-xl-6 col-6"></div>
+      <div
+        class="col-md-5 col-sm-6 col-xl-3 col-xs-6 destCloudAddStart"
+        style="margin-left: -13px"
+      >
+        <div class="row justify-content-center">
+          <div class="col singleSourceHead">
+            <p style="padding: 7px">Select Destination</p>
+          </div>
+        </div>
+        <div class="row cardBodyMural">
+          <div class="col">
+            <div class="sourceWorkspaces">
+              <div class="row justify-content-start" id="workspaceBody">
+                <div class="col-2 my-auto">
+                  <div class="sourceWorkspaceImgBg">
+                    <div id="MIRO"></div>
+                  </div>
+                </div>
+                <div class="col-8 my-auto">
+                  <div class="sourceWorkspaceTitle">CloudFuze Organization</div>
+                </div>
+              </div>
+              <div class="row justify-content-start" id="muralWorkspaces">
+                <div class="col-2 my-auto text-center">
+                  <i
+                    class="lnil lnil-chevron-down-circle"
+                    style="color: #0062ff"
+                    id="openProject"
+                    wid="product"
+                  ></i>
+                </div>
+                <div class="col-7 my-auto">
+                  <span style="margin-left: -20px"> Product </span>
+                </div>
+                <div class="col-1 my-auto" id="hierachyIndicator">
+                  Workspace
+                </div>
+              </div>
+              <hr
+                class="hratopenOrganization"
+                id="hrproduct"
+                style="display: none"
+              />
+              <div
+                class="row justify-content-start"
+                id="viewDataproduct"
+                style="display: none"
+              >
+                <!--<div class="col-1 my-auto">
+                  <input
+                    type="radio"
+                    name="salescheck"
+                    id=""
+                    style="margin-left: 24px; margin-top: 9px"
+                  />
+                </div>-->
+                <div
+                  class="col-8 my-auto text-center"
+                  id="openBoardMiro"
+                  rid="salesproject"
+                >
+		 <input
+                    type="radio"
+                    name="salescheck"
+                    id=""
+                    style="margin-left: -19px;"
+                  />
+
+                  <i
+                    class="fa fa-caret-right"
+                    aria-hidden="true"
+                    style="margin-left: 5px"
+                  ></i>
+                  <span style="font-size: 14px; margin-left: 1px"
+                    >SalesRoom</span
+                  >
+                </div>
+                <!-- <div class="col-7 my-auto">Product-1</div> -->
+                <div
+                  class="col-2 my-auto"
+                  style="margin-left: 40px"
+                  id="hierachyIndicator"
+                >
+                  Project
+                </div>
+              </div>
+              <div id="viewMIROBOARD" style="display: none">
+                <div class="row justify-content-center">
+                  <div class="col-10 my-auto">
+                    <span class="selectMiroSPAN">
+                      <span>Team Integration</span>
+                    </span>
+                  </div>
+                  <div
+                    class="col-2 my-auto"
+                    style="margin-left: -19px"
+                    id="hierachyIndicator"
+                  >
+                    Mural
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-10 my-auto">
+                    <span class="selectMiroSPAN">
+                      <span>Team Migration</span>
+                    </span>
+                  </div>
+                  <div
+                    class="col-2 my-auto"
+                    style="margin-left: -19px"
+                    id="hierachyIndicator"
+                  >
+                    Mural
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+</div>
+<div id="muralJobOptions" style="display:none;">
+<div class="container jobcontainer">
+      <div class="row jobtitlemural">Job Options:</div>
+      <div class="row">
+        <table class="table" id="muralJobOptionsTable">
+          <tbody>
+            <tr>
+              <td>From Cloud Name</td>
+              <td>:</td>
+              <td>Mural</td>
+            </tr>
+            <tr>
+              <td>To Cloud Name</td>
+              <td>:</td>
+              <td>Miro</td>
+            </tr>
+            <tr>
+              <td>Job Type</td>
+              <td>:</td>
+              <td>
+                <select
+                  class="selectMuralJobType"
+                  id="jobType_dropDown"
+                  style="width: 120px; height: 30px; font-size: 14px"
+                  ;
+                >
+                  <option value="One Time">One Time</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Job Name</td>
+              <td>:</td>
+              <td>
+                <input
+                  type="text"
+                  name="jobname"
+                  id="jobNameMural"
+                  class="muralJobName"
+                  value="Mural-Miro-Mar.16.2022-21"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Export As PDF</td>
+              <td>:</td>
+              <td>
+                <div style="float: left; width: 50%">
+                  <p style="float: left" id="exportPdfFalse">No</p>
+                  <label
+                    class="switch"
+                    style="margin-top: -2%; margin-left: 12px"
+                  >
+                    <input type="checkbox" id="isExportAsPdf" />
+                    <span class="slider round"></span>
+                  </label>
+                  <span class="switchDisable" id="exportPdfTrue">Yes</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div> 		
+
+</section>
+
+</div> 
+<!--Core Components-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="../javascripts/vendor/jquery-ui.min.js" type="text/javascript"></script>
+
+<!--Plugins-->
+<script src="../javascripts/timeago.js" type="text/javascript"></script>
+<script src="../javascripts/jquery.twbsPagination.min.js" type="text/javascript"></script>
+
+<!--Static Variables-->
+<script src="../ajaxcalls/config.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/globalVar.js?ver=1231" type="text/javascript"></script>
+
+<!--Entire App Usage-->
+<script src="../ajaxcalls/CFManageCloudAccounts.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/readyDocument.js?ver=1231" type="text/javascript"></script>
+<script src="../javascripts/actionevents.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/paypalpmnt.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/muralTesting.js" type="text/javascript"></script>
+<script src="../ajaxcalls/paypalPayment.js?ver=1231" type="text/javascript"></script>
+<script src="../ajaxcalls/pricing.js?ver=1231" type="text/javascript"></script>
+<script src="https://js.stripe.com/v3/"></script> 
+<!--<script src="../ajaxcalls/multiUsr.js" type="text/javascript"></script>-->
+
+<script>
+	(function($) {
+
+	"use strict";
+
+	var fullHeight = function() {
+
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
+
+	};
+	fullHeight();
+
+	$('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+    $('#topbarCollapse').on('click', function () {
+  if(!$("#navbarSupportedContent1").hasClass('active')){  
+  $("#navbarSupportedContent1").addClass('active');
+      $("#navbarSupportedContent1").css("display","");
+	  $("section").css("margin-top","50%"); 
+	  }
+	  else{
+	   $("#navbarSupportedContent1").removeClass('active');
+      $("#navbarSupportedContent1").css("display","none");
+	  $("section").css("margin-top","2%");
+	  }
+  });
+})(jQuery);
+$(".dropdown").click(function(){
+	if(!($(".dropdown-content").hasClass("active"))){
+	$(".dropdown-content").addClass("active").css("display","none");
+	}
+	else{
+	$(".dropdown-content").removeClass("active").css("display","");
+	}
+	});
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        localStorage.removeItem("csvTeamFolderNo");
+		//activecampaign.eventTrack('Business Migration',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'clicked');
+        sendGAEvents("Clicked on team migration page");
+        $('#upgrdIcon').on('click', function() {
+            window.location.href = "settings.html#move";
+        });
+        if (localStorage.getItem('UserId')) {
+            $('body').show();
+        }
+        else {
+            window.location.href = "index.html?ver=1231";
+        }
+        PageName = 'businessMigration';
+     //   CFManageCloudAccountsAjaxCall.getAllClouds();
+        var length = AllCloudsInfo.length,isExistsBusClouds = false;
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        for(i=0;i<length;i++) {
+            var _cloud = AllCloudsInfo[i];
+			if(_cloud.cloudName == "MURAL" || _cloud.cloudName == "MURAL_STAGING" || _cloud.cloudName == "MIRO"){
+                isExistsBusClouds = true;
+                var _domainName = _cloud.cloudUserId;
+               if(_cloud.cloudName == "MURAL" || _cloud.cloudName == "MURAL_STAGING"){
+				_domainName = _domainName.split("@")[1].split('|')[0];
+				}
+                else if(_domainName.indexOf("@"))
+                    _domainName = _domainName.split("@")[1];
+                else
+                    _domainName = _domainName.split("|")[1];
+                
+                if(_cloud.cloudName == "MIRO"){
+                    if(_cloud.webUrl === null || _cloud.webUrl === undefined){
+                        var webUrl = '-'
+                        _domainName = _domainName+'|'+webUrl
+                    }else{
+                        var webUrl = _cloud.webUrl;
+                        _domainName = _domainName+'|'+webUrl
+                    }
+                }else{
+                    _domainName = _domainName
+                }
+                var _html ='<a> <div class="user-img"> <input type="radio" name="sourceCloud" mail="Email" id="CloudId" CloudName='+_cloud.cloudName+'><div class="migrateImg" style="padding:7%;"><div id="cloudIcon" class="migrationImage"></div></div> </div><div class="mail-contnet"> <h5>userName</h5> <span class="mail-desc" title="'+_domainName+'">domainName</span></div></a>';
+                var _srcHtml = _html.replace("CloudId",_cloud.id).replace("Email",_cloud.cloudUserId.split("|")[1]).replace("cloudIcon",_cloud.cloudName).replace("userName",_cloud.userDisplayName).replace("domainName",_domainName);
+                $("#srcClouds .message-widget").append(_srcHtml);
+                $("#dstClouds .message-widget").append(_srcHtml.replace("sourceCloud","dstCloud"));
+            }
+        }
+        if(!isExistsBusClouds){
+            $("#move_main").css("display","none");
+			
+            $('#CF_no_clouds').css("display","block");
+            if (isMobile) {
+                $("#move_main").css("display","none"); 
+                $('#CF_no_clouds').css("display","none");
+                $('#Cf_Mobile').css('display',''); 
+            }
+        }
+        else{
+            if (isMobile) {
+                $("#move_main").css("display","none");
+                $('#CF_no_clouds').css("display","none");
+                $('#Cf_Mobile').css('display','');
+            }
+        }
+
+        var dispanme = '';
+      //  selectEvent.init();
+        setTimeout(function () { 
+            var height = $(window).height() - $('#FooterLinks').height() - 5 - $('#topHeader').height();
+            $('#moveReportsContainer').css('max-height', height);
+        }, 2000);
+        $(window).resize(function () {
+            $('#moveReportsContainer').css('max-height', $(window).height()); 
+        });
+    });
+	checkUserProgressLimit();
+	$("#contactUsBtn").click(function(){
+	$("#moveMigrationPrices").modal("hide");
+	$('#enterpriseContact').modal('show');
+	$('.modal-backdrop').css('background-color','#0062ff');
+	});
+	$("#thankbutton").click(function(){
+	$("#move_main").css("display","");
+	$('#checkoutpng').css("display","none");
+	});
+	
+	function dwnldUserMapping(){
+	 $.ajax({
+            type: "GET", 
+            url: apicallurl + "/messagemove/user/clouds/download/permissionsreport?sourceCloudId="+localStorage.multiUsrSrcCldId+"&destCloudId="+localStorage.multiUsrDstnCldId,
+            //async: false,
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": CFManageCloudAccountsAjaxCall.getAuthDetails(), 
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS"
+            },
+            success: function (data) {
+			 var fName = 'userMappings.csv';
+				var a = document.createElement('a');
+				var binaryData = [];
+		  binaryData.push(data);
+		  var url = window.URL.createObjectURL(new Blob(binaryData, {type: "application/csv"}))
+		    a.href = url;
+            a.download = fName;
+            document.body.append(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
+			}
+			})
+	}
+</script>
+<!--Mural Testing Script Start-->
+  <script>
+    // TO Open Room
+    $(document).on("click", "#openRooms", function () {
+      // alert($(this).attr("wid"));
+      var wid = $(this).attr("wid");
+      $(`#hr${wid}`).css("display", "");
+      $(`#viewData${wid}`).css("display", "");
+      $(this)
+        .addClass("lnil-chevron-up-circle")
+        .removeClass("lnil-chevron-down-circle");
+      $(this).attr("id", "closeRoom");
+      $(this).parent().parent().addClass("openWorkSpace");
+    });
+    //
+    $(document).on("click", "#closeRoom", function () {
+      var wid = $(this).attr("wid");
+      $(`#hr${wid}`).css("display", "none");
+      $(`#viewData${wid}`).css("display", "none");
+      $(this)
+        .addClass("lnil-chevron-down-circle")
+        .removeClass("lnil-chevron-up-circle");
+      $(this).attr("id", "openRooms");
+      $(this).parent().parent().removeClass("openWorkSpace");
+    });
+    
+    //
+    $(document).on("click", "#openProject", function () {
+      // alert($(this).attr("wid"));
+      var wid = $(this).attr("wid");
+      $(`#hr${wid}`).css("display", "");
+      $(`#viewData${wid}`).css("display", "");
+      $(this)
+        .addClass("lnil-chevron-up-circle")
+        .removeClass("lnil-chevron-down-circle");
+      $(this).attr("id", "closeProject");
+      $(this).parent().parent().addClass("openOrganization");
+    });
+    $(document).on("click", "#closeProject", function () {
+      // alert($(this).attr("wid"));
+      var wid = $(this).attr("wid");
+      $(`#hr${wid}`).css("display", "none");
+      $(`#viewData${wid}`).css("display", "none");
+      $(this)
+        .addClass("lnil-chevron-down-circle")
+        .removeClass("lnil-chevron-up-circle");
+      $(this).attr("id", "openProject");
+      $(this).parent().parent().removeClass("openOrganization");
+    });
+    // To open Board Mirp
+    $(document).on("click", "#openBoardMiro", function () {
+      $(this).attr("id", "closeBoardMiro");
+      $(this).find("i").addClass("fa-caret-down").removeClass("fa-caret-right");
+      $("#viewMIROBOARD").css("display", "");
+    });
+    //
+    $(document).on("click", "#closeBoardMiro", function () {
+      $(this).attr("id", "openBoardMiro");
+      $(this).find("i").addClass("fa-caret-right").removeClass("fa-caret-down");
+      $("#viewMIROBOARD").css("display", "none");
+    });
+    //
+  </script>
+<!--Mural Testing Script End's-->
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649987855');
+    vgo('setTrackByDefault', true);
+	vgo('setEmail', JSON.parse(localStorage.getItem('CFUser')).primaryEmail);
+    vgo('process');
+</script>
+
+</body>
+</html>

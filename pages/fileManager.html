@@ -1,0 +1,892 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.setTimeout(function() {
+
+            window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+                    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+            _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+                $.src='//v2.zopim.com/?2YRVJ9WdqLaWGrAOduJsbu5op02qZFJI';z.t=+new Date;$.
+                        type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+            $zopim(function() {
+                var _usrdtls=JSON.parse(localStorage.getItem("CFUser"));
+                $zopim.livechat.setEmail(_usrdtls.primaryEmail);
+                $zopim.livechat.setName(localStorage.getItem("UserName"));
+            });
+
+        },8000);
+    </script>
+    <!-- Hotjar Tracking Code for http://webapp.cloudfuze.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>CloudFuze</title>
+    <link rel="Shortcut Icon" type="image/ico" href="../img/favicon.png">
+    <link href="../stylesheets/application.css?ver=0502" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/chosen.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/files-style.css?ver=0502" rel="stylesheet" type="text/css" />
+    <link href="../font/cloudfuzefont.css" rel="stylesheet" type="text/css" />
+    <link href="../font/cficons.css?ver=0502" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/MetroNotifications_7.css" rel="stylesheet">
+    <link href="../responsive/fileManager.css" rel="stylesheet">
+    <link href="../stylesheets/magicsuggest-1.3.1.css" rel="stylesheet">
+    <link href="../stylesheets/dropzone.css" rel="stylesheet">
+    <link href="../stylesheets/bootstrap/bootstrap-progressbar-3.1.1.min.css" rel="stylesheet" type="text/css" />
+    <link href="../javascripts/documentViewer/css/style.css" rel="stylesheet" />
+    <link href="../stylesheets/upgrade.css" rel="stylesheet" type="text/css">
+    <style>
+        @media screen and (min-width: 1025px) {
+            .profile-menu{
+                height:1px;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .profile-menu{
+                height:35px;
+            }
+        }
+        #listShowMore{
+            float: right;
+            width: 100%;
+            background-color: #f9f9f9;
+        }
+        input[type="text"],input[type="password"]{
+            border:1px solid black;
+        }
+        audio {
+            margin-left: 25%;
+            background-image: url('../img/music-.jpg');
+            height:250px;
+            width: 500px;
+            padding-bottom: 110px;
+            margin-top:10%;
+        }
+        video {
+            margin-left: 25%;
+        }
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+
+            ::i-block-chrome, .cf_notify{
+                right: 242px;
+            }
+        }
+        #CF_business_clouds
+        {
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 7%;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="../../javascripts/html5shiv.js" type="text/javascript"></script><script src="../../javascripts/excanvas.js" type="text/javascript"></script><script src="../../javascripts/iefix.js" type="text/javascript"></script><link href="../../stylesheets/iefix.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+</head>
+<body>
+<!--File Preview-->
+<div id="filePreview" class="modal hide fade"  data-rel="dialog" aria-hidden="true" style="width:100%;left:0;opacity: 1;background-color:rgba(0,0,0,0.55);top:0;height:100%;margin-top:-1px;margin-left:0%;z-index:999999;">
+    <!-- <div class="modal-dialog"> -->
+    <div class="modal-content">
+        <div class="modal-header" style="background-color:#333;padding:2px 10px 20px 11px;height:40px;">
+            <button type="button" class="close" style="color:white;opacity:2;margin-right: 1%;cursor:pointer;" data-dismiss="modal" aria-hidden="true" id="close_preview_window">&times;</button>
+            <span id="previewFileName" style="color:white;font-size:10pt;margin-top: 9px;float:left;"></span>
+            <div id="PrevNextDiv" style="float:left;margin-left:44%;margin-top:7px;color:white;position:absolute;">
+                <span title="PreviousFile" id="PreviousFile" class="icon-arrow-left" style="cursor:pointer;font-size:12pt;margin-right:12px;"></span>
+                <span id="noOfFiles" style="font-size:12pt;"></span>
+                <span title="NextFile" id="NextFile" class=" icon-arrow-right" style="cursor:pointer;font-size:12pt;margin-left:12px;"></span>
+            </div>
+
+            <div style="display:block;float:right;margin-right: 2%;">
+
+                <a id="PriviewDownload" style="float:right;height:30px;width:48px;margin-left:10px;cursor:pointer;text-align:center;">
+                    <div class="icon-download-alt"  style="color: white;font-size: 15pt;cursor:pointer;width: 32px;height: 20px;"></div>
+                    <div style="color: white;width: 49px;height: 10px;text-align: center;font-size: 10px;">Download</div>
+                </a>
+                <a id="PriviewShare" style="float:right;height:30px;width:48px;margin-left:10px;cursor:pointer;text-align:center;">
+                    <div class="icon-share"  style="color: white;font-size: 15pt;cursor:pointer;width: 32px;height: 20px;"></div>
+                    <div style="color: white;width: 49px;height: 10px;text-align: center;font-size: 10px;">Share</div>
+                </a>
+                <div  class="icon-undo" id="rotateScreen" title="Rotate left" style="float:right;color: white;font-size: 15pt;cursor:pointer;width: 32px;height: 20px;padding-top: 6px;"></div>
+            </div>
+            <a href="" id="embed"></a>
+        </div><!--  -->
+        <div class="modal-body" id="priviewBody" style="max-height:1400px;float:right;margin-right:12.5%;width:75%;opacity:1;overflow:hidden;">
+        </div>
+    </div>
+    <!-- </div> -->
+</div>
+<div id="shareFilesModel" class="black-box modal hide fade in" aria-hidden="true" style="background: white;color: #000;text-shadow: none;top:0px;margin-top:1%;background-color: white;">
+    <div class="tab-header modal-header" style="background: #2bb5d8;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span>Share</span>
+    </div>
+    <div class="modal-body separator sharepopupmain" style="max-height:760px;">
+        <div id="sharedFilesList" style=""></div>
+        <div class="sharepopSettings">
+            <div id="shareSettings" style="overflow-x:hidden;">
+                <div style="float:left;width:100%;" id="shareLink1">
+                    <div style="float:left;font-size:14px;">Share Link:</div>
+                </div>
+                <div style="float:left;width:100%;" id="shareLink2">
+                    <div class="sharepopuplink"><input type="text" style="width:100%" id="shareUrl" style="border:1px solid black;"/></div>
+                    <div style="border:0px; padding-left:20px;float:left">
+                        <button type="button" class="btn1 btn-primary" id="copy">Copy Link</button>
+                    </div>
+                </div>
+                <div style="float:left;width:100%;">
+                    <div style="float:left;font-size:14px;">Share With:</div>
+                </div>
+                <div style="float:left;width:100%;">
+                    <div style="border:0px;width:66%;float:left"><input type="text" id="shareEmailId" style="width:100%;border: 1px solid black;" placeholder="Enter email" tabindex="1"/></div>
+                    <div style="border:0px; padding-left:20px;float:left;">
+                        <button type="button" class="btn1 btn-primary" id="searchShareUser" tabindex="2">Add</button>
+                    </div>
+                </div>
+                <div id="ShareNames" style="width:100%"></div>
+                <div style="float:left;width:100%;">
+                    <div style="float:left;font-size:14px;">Message:</div>
+                </div>
+                <div style="float:left;width:100%;">
+                    <div style="border:0px;width:100%;float:left"><textarea id="messageNotes" type="text" style="width:100%;border: 1px solid black;" rows="3" tabindex="3"></textarea></div>
+                </div>
+                <div class="onoffswitch" style="float:right;">
+                    <input id="publicPrivateCheck" name="onoffswitch" type="checkbox" checked class="onoffswitch-checkbox" style="margin-top:0px"/>
+                    <label class="onoffswitch-label" for="publicPrivateCheck">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </div>
+            <div id="showAdvancedShareSettings" >
+                <span id="advanceIcon" class="icon-plus" style="cursor:pointer;color:rgb(69,139,194);"></span>
+                <span style="cursor:pointer;font-size:14px;font-weight:bold;color:rgb(69,139,194);">Advanced Settings</span>
+            </div>
+            <div id="advancedShareSettings">
+                <div>
+                    <span id="displayMsg" style="color:red;margin-left: 29%;"></span>
+                    <div style="width:100%;margin-top:7px;" id="setPwdSAS">
+                        <span style="width:28%;float:left"><input type="checkbox"  style="margin:0px;border: 1px solid black;"/>&nbsp <span> Set Password</span></span>
+                        <span style="width:36%;float:left"><input style="height:23px;border: 1px solid black;"  class="setPassword" type="password" placeholder="Password" /></span>
+                        <span style="width:36%;float:left"><input  style="height:23px;border: 1px solid black;" class="setPassword" type="password" placeholder="Confirm Password" /></span>
+                    </div>
+                    <br />
+                    <div style="width:100%;margin-top:20px;" id="setExpSAS">
+                        <span style="width:28%;float:left"><input type="checkbox" style="margin:0px;border: 1px solid black;"/>&nbsp <span> Set Expiry Date</span></span>
+							<span style="width:36%;float:left">
+							<input style="height:23px;border: 1px solid black;" id="datetimepicker" class="setExpPassword" type="text" placeholder="MM/DD/YYYY" data-days=""/></span>
+                    </div>
+                    <br />
+                    <div style="width:100%;margin-top:20px;height:23px;" id="setDownCount">
+                        <span style="width:28%;float:left"><input type="checkbox" style="margin:0px;border: 1px solid black;"/>&nbsp <span> Download Count</span></span>
+							<span style="width:36%;float:left">
+							<input style="height:23px; display:none;;border: 1px solid black;" id="downloadCount" class="setdownCount" type="text" placeholder="Download Count"/></span>
+                    </div>
+                </div>
+                <br />
+                <div id="tableHeader">
+                    <span style="width:50%;float:left;font-size: 14px;margin-bottom: 6px;color:rgb(69,139,194);">Access Settings</span>
+                    <!-- <span class="shareAccessAddNewUser" id="addNewShareUser">
+                        <i style="font-style:normal;cursor:pointer;font-size: 14px;font-weight:bold;color:rgb(69,139,194);">+ Add New User</i>
+                    </span> -->
+                </div>
+                <br />
+                <table id="advancedUAS" style="width:100%">
+                    <thead class="shareAccessUserTH">
+                    <tr style="border-bottom:1px solid #eee; height:30px;background: rgb(201, 167, 90);color:rgb(96, 66, 0);">
+                        <td style="width:45%;font-size:14px;text-align:left;padding-left:15px;" class="shareAccessUser">Email</td>
+                        <td style="width:12%;font-size:14px;" class="shareAccessUser">Read</td>
+                        <td style="width:12%;font-size:14px;" class="shareAccessUser">Edit</td>
+                        <td style="width:20%;font-size:14px;" class="shareAccessUser">Co-Owner</td>
+                        <td style="width:15%;font-size:14px;" class="shareAccessUser">Delete</td>
+                    </tr>
+                    </thead>
+                    <tbody id="advancedUASTBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button id="shareSubmit" class="btn1 btn-primary" tabindex="4">Share</button>
+        <button class="btn1 btn-primary" data-dismiss="modal" style="margin-right:20px;" tabindex="5">Cancel</button>
+    </div>
+</div>
+
+<div id="myPasswordModel" class="black-box modal hide fade in" aria-hidden="true" style="background: #ddd;color: #000;text-shadow: none;background-color: white;">
+    <div class="tab-header modal-header" id="CFProtectFile" style="background: #2bb5d8;">
+        <button type="button" class="close" data-dismiss="modal" style="margin: 5px 7px 0px 0px;">&times;</button>
+        <span>Protected File</span>
+    </div>
+    <div class="modal-body" style="font-size:13pt;text-align: center">
+        <p>This File has been password protected while sharing with you, Please enter password to access this file</p>
+        <div class="pull-left pwd" style="margin-top: 5px;margin-left: 31%;">
+            <input type="password" class="form-control" id="sharePswd" placeholder="Enter Password" />
+        </div>
+        <div class="defaultFloat" id="Msg" style="text-align: center">
+            <span class="statusMesg" style="color:red;"></span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="">
+            <a class="button mini rounded light-gray" data-dismiss="modal" id="canceldelete">Cancel</a>
+            <a class="button mini rounded blue " id="CFPwdButton">Ok</a>
+        </div>
+    </div>
+</div>
+<div id="sharePasswordModel" class="black-box modal hide fade in" aria-hidden="true" style="background: #ddd;color: #000;text-shadow: none;background-color: white;">
+    <div class="tab-header modal-header" id="CFProtectFolder" style="background: #2bb5d8;">
+        <button type="button" class="close" data-dismiss="modal" style="margin: 5px 7px 0px 0px;">&times;</button>
+        <span>Protected Folder</span>
+    </div>
+    <div class="modal-body" style="font-size:13pt;text-align: center">
+        <p>This Folder has been password protected while sharing with you, Please enter password to access this folder</p>
+        <div class="pull-left pwd" style="margin-top: 5px;margin-left: 31%;">
+            <input type="password" class="form-control" id="sharePswd" placeholder="Enter Password" />
+        </div>
+        <div class="defaultFloat" id="Msg" style="text-align: center">
+            <span class="statusMesg" style="color:red;"></span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="">
+            <a class="button mini rounded light-gray" data-dismiss="modal" id="_sharePwdClose">Cancel</a>
+            <a class="button mini rounded blue " id="CFSharePwdButton">Ok</a>
+        </div>
+    </div>
+</div>
+
+<div id="myPriviewPasswordModel" class="black-box modal hide fade in" aria-hidden="true" style="background: #ddd;color: #000;text-shadow: none;background-color: white;z-index:999999">
+    <div class="tab-header modal-header" id="CFProtectFile" style="background: #2bb5d8;">
+        <button type="button" class="close" data-dismiss="modal" style="margin: 5px 7px 0px 0px;">&times;</button>
+        <span>Protected File</span>
+    </div>
+    <div class="modal-body ">
+        <p style="font-size:13pt;text-align: center">This File has been password protected while sharing with you, Please enter password to access this file</p>
+        <br>
+        <div class="pull-left pwd" style="margin-left: 30%;">
+            <input type="password" class="form-control" id="priviewPswd" placeholder="Enter Password" />
+        </div>
+        <div class="defaultFloat" id="Msg" style="text-align: center">
+            <span class="statusMesg" style="color:red;"></span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div id="preview_Button">
+            <a class="button mini rounded light-gray" data-dismiss="modal">Cancel</a>
+            <a class="button mini rounded blue CFPriviewPwdok">Ok</a>
+        </div>
+    </div>
+</div>
+<div id="deletemodal" class="black-box modal hide fade in" aria-hidden="true" style="background: #ddd;color: #000;text-shadow: none;background-color: white;">
+    <div class="tab-header modal-header" style="background: #2bb5d8;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span>Delete</span>
+    </div>
+    <div class="modal-body separator">
+        <h4 style="text-align:center;" id="deletesection">Are you sure you want to delete the selected </h4>
+        <p id="deletefilename" style="text-align:center;"></p>
+    </div>
+    <div class="modal-footer">
+        <div class="">
+            <a class="button mini rounded light-gray"  id="canceldelete" data-dismiss="modal">Cancel</a>
+            <a class="button mini rounded blue deletemodalid" id="" data-dismiss="modal">Delete</a>
+        </div>
+    </div>
+</div>
+<div id="mycategorymodel" class="black-box modal hide fade in" aria-hidden="true" style="overflow: initial;width:27%;background: #ddd;color: #000;text-shadow: none;background-color: white;">
+    <div id="CFAddCategory">
+        <div class="tab-header modal-header" style="background: #2bb5d8;">
+            <button type="button" class="close" id="cancelcategory" data-dismiss="modal">&times;</button>
+            <span>Add To Category</span>
+        </div>
+        <div class="modal-body separator" style="height: 98px;padding-top: 7%;overflow: hidden;">
+            <div id="CreateCategory" style="width: 40%;height:30px;display:block;margin-left: 0 auto;"></div>
+        </div>
+        <div class="modal-footer">
+            <div class="">
+                <a class="button mini rounded light-gray" data-dismiss="modal" id="cancelcategory">Cancel</a>
+                <a class="button mini rounded blue" id="CFAddCategoryButton">Ok</a>
+            </div>
+            <div class="DisplayMsg" style="color: red;float:left;"></div>
+        </div>
+    </div>
+</div>
+<div id="myworkspaceModel" class="box modal hide fade in" aria-hidden="true" style="width: 30%;background-color: white;">
+    <div class="tab-header" style="background: #2bb5d8;">
+        <button type="button" class="close" data-dismiss="modal" style="opacity:1;color:#fff;margin: 5px 7px 0px 0px;">&times;</button>
+        <span style="color:white;">Add To Workspace</span>
+    </div>
+    <div class="modal-body separator">
+        <select data-placeholder="Select Category" style="margin-left:23%;width:50%;" class="chosen-select" id="addtoworklist">
+            <option data-placeholder="true">Select Workspace</option>
+        </select>
+    </div>
+    <div class="modal-footer" style="background-color: white;">
+        <div class="">
+            <span id="selectWSEmpty" style="color:red;float:left;font-size:11pt;"></span>
+            <a class="button mini rounded light-gray" data-dismiss="modal" id="cancelWorkspace">Cancel</a>
+            <a class="button mini rounded blue" data-dismiss="modal" id="addtoworkspace">Ok</a>
+        </div>
+    </div>
+</div>
+<div id="CFFileVersions" class="black-box modal hide fade in" aria-hidden="true" style="background: #ddd;color: #000;text-shadow: none;width: 426px;left:54%;background-color: white;">
+    <div class="" style="background: #2bb5d8;height:28px;">
+        <button type="button" class="close" data-dismiss="modal" style="margin: 5px 7px 0px 0px;">&times;</button>
+        <span style="color: white;font-size: 16pt;text-align: center;margin-left: 31%;">Version History</span>
+    </div>
+    <div class="modal-body" style="max-height: 258px;">
+        <div style="max-height: 40%;background-color: white;width: 90%;margin-left: 5%;margin-right: 57%;overflow-y: auto;">
+            <ul id="versionsOfFile" style="border: 1px solid black;">
+            </ul>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="" id="Msg" style="margin-right: 24%;">
+            <a class="button blue" id="CFUploadVersionFiles">Upload New Version</a>
+            <a class="button light-gray" data-dismiss="modal" id="canceldelete">Close</a>
+            <div class="defaultFloat">
+                <span class="statusMesg" style="margin-right:351px;color:red;"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="uploadConfirmModel" class="black-box modal hide fade in" aria-hidden="true" style="background: #ddd;color: #000;text-shadow: none;background-color: white;">
+    <div class="tab-header modal-header" style="background: #2bb5d8;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span>Are you sure you want to leave this page?</span>
+    </div>
+    <div class="modal-body separator">
+        <h4 style="text-align:center;">Upload is in progress. Do you want to leave with out finishing?</h4>
+    </div>
+    <div class="modal-footer">
+        <div class="">
+            <a class="button mini rounded light-gray"  data-dismiss="modal">Stay on this page</a>
+            <a class="button mini rounded blue" id="uploadLeavePage" data-dismiss="modal">Leave this page</a>
+        </div>
+    </div>
+</div>
+<nav id="primary" class="main-nav" style="display: none">
+    <ul>
+        <li class="active"  data-stop="navigation"><a url="fileManager.html?ver=0502"><i class="icon-files"></i>Files
+        </a></li>
+        <li class="" data-stop="navigation" style="position: relative"><a url="cloudmanager.html?ver=0502"><i class="icon-cloud"></i>Clouds</a></li>
+        <li class="" data-stop="navigation"><a url="move.html?ver=0502"><i class="cf-move"></i>Migrate</a></li>
+        <li>
+            <a href="teammigration.html?ver=0502" style="line-height: 1.3">
+                <i class="cf-group2" style="margin-bottom: 13px;"></i> Team<br/>Migration
+            </a>
+        </li>
+        <!--<li class="">
+            <a href="reports.html?ver=0502" style="line-height: 1.3">
+                <i class="cf-file8" style="margin-bottom: 13px;"></i> Reports
+            </a>
+        </li>-->
+    <!--    <li class="">
+            <a href="syncReports.html?ver=0502" style="line-height: 1.3">
+                <i class="cf-file8" style="margin-bottom: 13px;"></i>Sync <br/>Reports
+            </a>
+        </li> -->
+        <!--<li class="" data-stop="navigation"><a url="workspace.html?ver=0502" style="position: relative"><i class="cf-workspace"></i>Workspace<b class="badge"></b></a></li>--->
+    </ul>
+</nav>
+<nav id="secondary" class="main-nav" style="display: none">
+    <div class="profile-menu">
+        <div class="pull-right profile-menu-nav-collapse" style="line-height: 35px;">
+            <button class="button black"><i class="icon-reorder"></i></button>
+        </div>
+    </div>
+
+    <ul class="secondary-nav-menu">
+        <li>
+            <a href="#Recent files" id="CFRecentFilesAndFolders">
+                <i class="cf-time2" style="margin-left: -1px;margin-right: 4px;"></i>Recent files
+            </a>
+        </li>
+        <li class="active">
+            <a href="#My clouds" id="mycloudstogle" class="trigger">
+                <i class="cf-cloudy4"></i> All Files
+            </a>
+            <ul class="submenu" style="max-height:200px;" id="CloudDriveList">
+            </ul>
+        </li>
+        <li>
+            <a href="#Favorites" id="favourite">
+                <i class="cf-heart32"></i> Favorites
+            </a>
+        </li>
+
+        <li>
+            <a href="#Shared by me" id="CFSharedByMe">
+                <i class="cf-share4"></i> Shared by me
+            </a>
+        </li>
+
+        <li>
+            <a href="#Shared with me" id="CFSharedWithMe">
+                <i class="cf-share6"></i> Shared with me
+                <!--<b id="count" class="badge color red"></b>-->
+            </a>
+        </li>
+        <li>
+            <a href="#Category" id="categorytogle" class="trigger">
+                <i class="cf-cabinet3"></i> Category
+            </a>
+            <ul id="categoryList" class="submenu"></ul>
+        </li>
+    </ul>
+
+</nav>
+
+<section id="main" class="fileManager">
+    <div id="page-header" style="display: none">
+        <div class="contentWrapper top-nav" style="height:45px;margin-bottom: 0" id="eyebrowHeader">
+            <div id="user_nav" align="right" style="float:right;">
+                <ul class="user_navigation" style="margin-top: 8px">
+                    <li style="margin-right: 25px">Hello,
+                        <span id="dash-uname" style="font-weight: bold"></span>
+                        <span class="cf_notify">
+                            <i class="cf-bell"></i>
+                            <b id="notify_count" style="display: none;" class="badge"></b>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="settings.html?ver=0502">
+                            <img src="../img/settings.png" style="width: 23px;">
+                        </a>
+                    </li>
+                    <li class="cf_upgrd_btn" onclick="location.href='settings.html#move';" >
+                        <a href="settings.html#move" style="color: #fff">Upgrade</a>
+                    </li>
+                    <li id="cf-logout">
+                        <a href="#" style="color: #fff">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <h4 style="float:left;" id="headerText"></h4>
+            <div style="margin-top: 4px;margin-left: 40%;" class="" id="spinner1">
+                <img src="../img/ajax.gif">
+            </div>
+            <div style="margin-top: 4px;margin-left: 40%;" class="divdisplay" id="creating">
+                <span class="active-link1">Creating...</span>
+            </div>
+            <div style="margin-top: 4px;margin-left: 40%;" class="divdisplay" id="deleting">
+                <span class="active-link1">Deleting...</span>
+            </div>
+            <div id="cf_notification" style="display: none">
+                <ul class="notification_head">
+                    <li style="float: left" class="button mini blue" id="ignore">Ignore All</li>
+                    <li style="float: right" class="button mini blue" id="clear">Clear All</li>
+                </ul>
+                <ul class="notification_body">
+
+                </ul>
+                <ul class="notification_footer">
+                    <button class="button mini blue">Load More</button>
+                </ul>
+            </div>
+            <!--<div style="margin-top: 27%;margin-left: 40%;" class="divdisplay" id="spinner2">
+				&lt;!&ndash; <img src="../img/ajax-loader1.gif"> &ndash;&gt;
+				<img src="../img/ajax.gif">
+			</div>-->
+        </div>
+        <div class="contentWrapper" style="height:auto;margin-bottom:10px;">
+            <!--Breadcrum DIV Start-->
+
+            <div id="CFBreadcrumb" class="breadcrum" style="width:80%;margin-left: 0px;">
+                <ul id="breadCrumbdync" style="font-size: 10.5pt;"><li fileid="Home" cloudid="Home" class="BCRFList" id="Home" style="cursor:pointer;"><a style="cursor:pointer;">Home</a><span class="divider"></span></li></ul>
+            </div>
+            <div class="searchbox" style="width:20%;">
+                <input type="text" id="CFHomeSearch" class="search" placeholder="Search In All Cloud Accounts"><a class="searchstyle" href="#"></a>
+            </div>
+
+        </div>
+        <div id="actionPanel" class="contentWrapper maincontent2" style="padding-left: 1px;">
+            <div class="filecontrols">
+                <a id="openFiles" title="Open" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-eye8"></div>
+                        <div class="filecontrol-title">Preview</div>
+                    </div>
+                </a>
+                <a id="CFDownload" title="Download" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-cloud-download2"></div>
+                        <div class="filecontrol-title">Download</div>
+                    </div>
+                </a>
+                <a class="divdisplay" id="CFDownloadPwd" data-target="#myPasswordModel" data-toggle="modal" title="Share" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-cloud-download2"></div>
+                        <div class="filecontrol-title">Download</div>
+                    </div>
+                </a>
+                <a class="divdisplay" id="CFPriviewPwd" data-target="#myPriviewPasswordModel" data-toggle="modal" title="Share" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-cloud-download2"></div>
+                        <div class="filecontrol-title">Download</div>
+                    </div>
+                </a>
+                <a class="divdisplay" id="FileVersion" data-target="#CFFileVersions" data-toggle="modal" title="Share" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-cloud-download2"></div>
+                        <div class="filecontrol-title">Download</div>
+                    </div>
+                </a>
+                <a id="CFAShare" title="Share" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-share4"></div>
+                        <div class="filecontrol-title">Share</div>
+                    </div>
+                </a>
+                <a id="CFHRename" title="Rename" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-edit3"></div>
+                        <div class="filecontrol-title">Rename</div>
+                    </div>
+                </a>
+                <a data-target="#deletemodal" data-toggle="modal" id="CFHDelete" title="Delete" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-trashcan2"></div>
+                        <div class="filecontrol-title">Delete</div>
+                    </div>
+                </a>
+                <a id="addToCategory" title="Add Files To Category" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-cabinet3"></div>
+                        <div class="filecontrol-title">Category</div>
+                    </div>
+                </a>
+               <!-- <a id="addToWorkspace" title="Add Files To Workspace" href="#">
+                    <div class="filecontrolicon">
+                        <div class="cf-workspace"></div>
+                        <div class="filecontrol-title">Workspace</div>
+                    </div>
+                </a>-->
+            </div>
+            <div class="fileCreatecontrols fm">
+                <div id="btndisable1" class="buttonDisable">
+                    <i title="Create Folder" class="cf-folder-add2" id="CFCreateFolder" style="padding-left: 15px;"></i>
+                    <a style="padding-left: 10px;">Folder</a>
+                </div>
+                <div id="btndisable2" class="buttonDisable">
+                    <i title="Upload File(s)" class="cf-cloud-upload2" id="CFUploadFiles" style="padding-left: 28px;"></i>
+                    <a style="padding-left: 20px;">Upload</a>
+                </div>
+            </div>
+            <!--File View DIV Start-->
+            <div class="fileview" style="margin-right: -5px;">
+                <a class="list" id="LView" title="List View" href="#" style="opacity: 0.2;">&nbsp;</a>
+                <a class="grid" id="GView" title="Grid View" href="#">&nbsp;</a>
+            </div>
+            <!--File View DIV End-->
+        </div>
+        <div style="width:100%;" class="defaultFloat" id="LVContentHeader">
+            <div id="LVHeader" class="panel-data heading">
+                <div class="LVHcheckBox">
+                    <input type="checkbox">
+                </div>
+                <div style="cursor:pointer;" id="CFHSortFileName" class="LVHfileName testSort">
+                    <p class="pull-left">File Name</p>
+                    <span style="margin-left:5px;font-size: 10px;display: inline-block;margin-top: 4px"></span>
+                    <!--  <p class="pull-right" style="margin-right:20px">Details</p> -->
+                </div>
+                <div class="LVHFavorites">Favorites</div>
+                <div style="cursor:pointer;" id="CFHSortfileSize" class="LVHfileSize testSort">File Size<span style="margin-left:5px;font-size: 10px;display: inline-block;margin-top: 4px"></span></div>
+                <div id="CFHSortCloudDrive" class="LVHdrive testSort">Cloud Drive<span style="margin-left:5px;font-size: 10px;display: inline-block;margin-top: 4px"></span></div>
+                <div id="CFHSortAddedOn" class="LVHaddedDate testSort">Added On<span style="margin-left:5px;font-size: 10px;display: inline-block;margin-top: 4px"></span></div>
+                <div id="CFHSortModifiedOn" class="LVHmodifiedDate testSort">Last Edited<span style="margin-left:5px;font-size: 10px;display: inline-block;margin-top: 4px"></span></div>
+            </div>
+        </div>
+        <div id="mainContentWrapper" class="defaultFloat" style="width:99%">
+            <div id="mainContent">
+                <!--Thumbnail Content-->
+                <div id="ThumbnailContent" style="display:none; height:100%;"></div>
+                <div id="dropZone_Upload" class="CfUploadDroparea" style="display: none">
+                    <div class="dropzoneheader">
+                        <i class="cf-upload7"></i><strong>Upload</strong>
+                        <i class="cf-cross3" id="closeUpload"></i>
+                        <i class="cf-minus4" id="panelPosition"></i>
+                    </div>
+                    <form id="my-awesome-dropzone" action="#" class="dropzone" style="margin:0px;height: 300px;overflow-y: auto">
+                        <!--<a id="upload_clear" class="button blue" style="position:absolute;top:0;right:0;cursor: pointer">Clear all</a>-->
+                        <input type="file" name="file" multiple style="display: none">
+                    </form>
+                </div>
+                <div id="CF_no_clouds" style="margin-left: 14px">
+                    <div class="box">
+                        <div class="tab-header" style="background: #2bb5d8; color:white;text-shadow: none;">
+                            Welcome
+                        </div>
+                        <div class="padded">
+                            <h3 style="text-align: center;">Welcome to CloudFuze!</h3>
+                            <h4 style="text-align: center;">To access your files and cloud storage accounts within CloudFuze, you must first add the cloud storage account(s) by clicking Add Cloud and completing the setup process.</h4>
+                            <a href="cloudmanager.html?ver=0502" style="color:#FFFFFF;"><button class="button large blue" style="display:block;background-color:#2BB5D8; color:#FFFFFF;margin:0 auto;margin-top:1.8%;" id="AFTWButton"><h3>Add Cloud Account</h3></button></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="CF_business_clouds" style="display: none">
+                    <div class="box">
+                        <div class="tab-header" style="background: #2bb5d8; color:white;text-shadow: none;border-radius: 0px">
+                            Business Clouds
+                        </div>
+                        <div class="padded" style="background:rgba(255,255,255,0.9);border-radius: 0px;border: 1px solid #ccc;">
+                            <!--<h3 style="text-align: center;">Welcome to CloudFuze!</h3>-->
+                            <h4 style="text-align: center;line-height: 2;">Business Clouds are available only for migrations.<br/> Please click on the Migrate button to start migrations.</h4>
+                            <a href="teammigration.html?ver=0502" style="color:#FFFFFF;"><button class="button large blue" style="display:block;background-color:#2BB5D8; color:#FFFFFF;margin:0 auto;margin-top:1.8%;" ><h3 style="font-size: 20px;line-height: 1;width: 0%;height: 20px;border-radius: 0;">Migrate</h3></button></a>
+                        </div>
+                    </div>
+                </div>
+                <!--List Content-->
+                <div id="ListContent">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <a href="#" class="btn btn-default">
+                                <div class="addcloudbg">&nbsp;</div>Add Files
+                            </a>
+                            <h4 class="panel-title"><strong>Total Files - 255</strong></h4>
+                        </div>
+                        <div id="spinner" class="divdisplay" style="margin-left: 47%;margin-top: 14%;">
+                            <!-- <img src="img/ajax-loader.gif" alt="Loading" /> -->
+                        </div>
+                        <div class="panel-body" id="LVContent"></div>
+                    </div>
+
+                </div>
+                <button id="listShowMore" class="divdisplay button blue"><b>Show more files...</b></button>
+                <div class="loading divdisplay" id="ScrollBarScrolling">Loading&#8230;</div>
+                <!--Work Space-->
+                <div class="contentWrapper" id="WorkspaceContent" style="display:none;"></div>
+            </div>
+        </div>
+        <form id="UploadForm" method="post" enctype="multipart/form-data" class="divdisplay">
+            <input type="file" name="file" multiple id="fileUpload">
+            <input type="submit" value="Submit" id="submitBtn" />
+        </form>
+    </div>
+    <div class="CFfooterLinks" style="color: black;display: none" id="FooterLinks">
+        <a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="color: black">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.cloudfuze.com/privacy-policy/" target="_blank" style="color: black">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://support.cloudfuze.com/home" target="_blank" style="color: black">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;CloudFuze&nbsp;©&nbsp;2019. All rights reserved
+    </div>
+</section>
+
+<!--Core Components-->
+<script src="../javascripts/vendor/jquery-3.0.0.js"></script>
+<script src="../javascripts/vendor/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../javascripts/vendor/bootstrap-3.3.5.js"></script>
+
+<!--Plugins-->
+<script src="../javascripts/ZeroClipboard.js" type="text/javascript"></script>
+<script src="../javascripts/documentViewer/src/plugins.js" type="text/javascript"></script>
+<script src="../javascripts/documentViewer/src/ttw-document-viewer.js" type="text/javascript"></script>
+<script src="../javascripts/dropzone.js?ver=0502" type="text/javascript"></script>
+<script src="../javascripts/getScrollVisible.js" type="text/javascript"></script>
+
+<script src="../javascripts/MetroNotifications_7.js" type="text/javascript"></script>
+<script src="../javascripts/magicsuggest.js" type="text/javascript"></script>
+<script src="../javascripts/chosen-jquery.js" type="text/javascript"></script>
+<script src="../javascripts/timeago.js" type="text/javascript"></script>
+<script src="../javascripts/jQueryRotate.js" type="text/javascript"></script>
+<script src="../javascripts/jquery.noty.packaged.min.js" type="text/javascript"></script>
+
+<!--Theme Specific-->
+<script src="../javascripts/navigation.js" type="text/javascript"></script>
+
+<!--Static Variables-->
+<script src="../ajaxcalls/globalVar.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/config.js?ver=0502" type="text/javascript"></script>
+
+<!--Entire App Usage-->
+<script src="../ajaxcalls/CFManageCloudAccounts.js?ver=0502" type="text/javascript"></script>
+<script src="../javascripts/actionevents.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/CFEvents.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/readyDocument.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/homePageActionEvents.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/preview.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/fileShareMetaData.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/workspace.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/getCategory.js?ver=0502" type="text/javascript"></script>
+
+<!--Page Specific-->
+<script src="../javascripts/script.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/shareFunctionality.js?ver=0502" type="text/javascript"></script>
+<script src="../ajaxcalls/versionControl.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cloudfuze.agilecrm.com/stats/min/agile-min.js"></script>
+<script type="text/javascript" >
+    _agile.set_account('hjfh55r70pg2avebm1hahdb0n4', 'cloudfuze');
+    _agile.track_page_view();
+    _agile_execute_web_rules();
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#upgrdIcon').on('click', function() {
+            window.location.href = "settings.html#move";
+        });
+
+        clipboardURL.on("ready", function () {
+            this.on("aftercopy", function (event) {
+            });
+        });
+
+        if (localStorage.getItem('UserId')) {
+            CFManageCloudAccountsAjaxCall.getAllClouds();
+            if(AllCloudsInfo.length == 0){
+                return window.location.href = 'cloudmanager.html?ver=0502';
+            }
+            CFManageCloudAccountsAjaxCall.getAllCloudTitles();
+            $('body').show();
+        }
+        else {
+            window.location.href = "index.html?ver=0502";
+            return false;
+        }
+
+        $('#spinner1').removeClass('divdisplay');
+
+        var view=sessionStorage.getItem("viewTrack");
+
+        $('#'+view+'').trigger('click');
+
+        $('#CFHSortModifiedOn').children('span').html("&#9650");
+
+        var thumbNails = $('#mainContent').find('#ThumbnailContent .file');
+        var thumbNailsCheck = $('#mainContent').find('#ThumbnailContent input.fileCheck');
+        thumbNails.hover(function () {
+            $(this).addClass('active');
+        }, function () {
+            CFHPthumbnail.UncheckFile();
+        });
+
+        CFHPActions.init();
+
+        var windowLocation = window.location.hash;
+        var urlParams;
+        (window.onpopstate = function () {
+            var match,
+                    pl = /\+/g,
+                    search = /([^&=]+)=?([^&]*)/g,
+                    decode = function (s) {
+                        return decodeURIComponent(s.replace(pl, " "));
+                    },
+                    query = window.location.search.substring(1);
+
+            urlParams = {};
+            while (match = search.exec(query))
+                urlParams[decode(match[1])] = decode(match[2]);
+        })();
+
+        if (urlParams["shared"]) {
+            $('#spinner1').addClass('divdisplay');
+            $('#CFSharedWithMe').trigger("click");
+            $('#ListContent').find('.panel-data').find('.LVfileName[id="' + urlParams["fileId"] + '"]').closest('.panel-data').addClass('panel-dataHoverClass');
+            $('#primary,#secondary,#FooterLinks,#page-header').show();
+        }else if(urlParams["sharebyme"]){
+            $('#spinner1').addClass('divdisplay');
+            $('#CFSharedByMe').trigger("click");
+            $('#ListContent').find('.panel-data').find('.LVfileName[id="' + urlParams["fileId"] + '"]').closest('.panel-data').addClass('panel-dataHoverClass');
+            $('#primary,#secondary,#FooterLinks,#page-header').show();
+        }else if (windowLocation == "#desktopShare") {
+            document.title = "Share";
+            var fileId = localStorage.getItem("fileId");
+            var fileName = localStorage.getItem('fileName');
+            fileId = fileId.split(";");
+            fileName = fileName.split(";");
+            for (var i = 0; i < fileId.length - 1; i++) {
+                var f = fileId[i].split('=');
+                FromfileId.push(f[1]);
+                var n = fileName[i].split('=');
+                FromObjectName.push(n[1]);
+            }
+            $('#shareFilesModel .tab-header').find('button').hide();
+            $('#shareFilesModel').css('margin','0');
+            $('#shareFilesModel').css('left','0');
+            $('.zopim').remove();
+            $('.modal-backdrop').remove();
+            $('#CFAShare').trigger('click');
+            window.onbeforeunload = function (e) {
+                localStorage.clear();
+                window.location = "index.html"
+            }
+        }
+        else if(urlParams["preview"]){
+            $('#main').hide();
+            $('#filePreview').find('.modal-header').hide();
+            FilePreview.preview(decodeURIComponent(urlParams["fileId"]),urlParams["cloudId"]);
+        }
+        else{
+            PageName = "All Files";
+            document.title = "All Files";
+            $('#headerText').text(PageName);
+            setTimeout(function () {
+                var _AllFiles = CFManageCloudAccountsAjaxCall.getAllFiles(PageNumber);
+                CFManageCloudAccountsAjaxCall.getAllFileNames(_AllFiles);
+                $('#mycloudstogle').trigger('click').promise().done(function(){
+                    $('#CloudDriveList').find('a.cltrigger').addClass('trigactive').next().slideDown();
+                });
+            }, 1000);
+            $('#breadCrumbdync').empty();
+            $('#breadCrumbdync').append('<li id="AllFiles" class="BCRFList" cloudId="AllFiles" fileId="AllFiles"><a href="#" style="color:blue;text-decoration: underline;cursor:default;">Files</a><span class="divider" style=" font-size: 8pt;padding-left: 5px;">&#9658;</span><a href="#"> All Files</a></li>');
+            $('#primary,#secondary,#FooterLinks,#page-header').show();
+        }
+        $('ul.submenu').hide();
+
+        if(sessionStorage.getItem('clouds') == "false"){
+            $('#CF_no_clouds').show();
+        }
+        else{
+            if(!$('#CloudDriveList li').length)
+            {
+                if(window.location.href.indexOf("mver") > -1) {
+                    window.location.href = "teammigration.html?ver=0502";
+                }
+                else
+                {
+                    $('#CF_business_clouds').show();
+                }
+            }
+            else
+            {
+                $('#CF_business_clouds').hide();
+            }
+            $('#CF_no_clouds').hide();
+        }
+        disableActionPanel();
+    });
+
+</script>
+<script type="text/javascript">
+    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq ||
+        {widgetcode:"54701193e52b98abae244d52e3b2b8f5f61f3d8e5ff885b97cf4cc96601469b1", values:{},ready:function(){}};
+    var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;
+    s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+</script>
+<script>
+
+    $zoho.salesiq.ready=function(embedinfo)
+
+    {
+        $zoho.salesiq.tracking.domain("webapp.cloudfuze.com");
+    }
+
+
+</script>
+
+</body>
+</html>

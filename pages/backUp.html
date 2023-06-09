@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Hotjar Tracking Code for http://webapp.cloudfuze.com
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script> -->
+    <!--Start of Zopim Live Chat Script--> 
+    <script type="text/javascript">
+        window.setTimeout(function() {
+
+            window.$zopim || (function (d, s) {
+                var z = $zopim = function (c) {
+                    z._.push(c)
+                }, $ = z.s =
+                    d.createElement(s), e = d.getElementsByTagName(s)[0];
+                z.set = function (o) {
+                    z.set.
+                    _.push(o)
+                };
+                z._ = [];
+                z.set._ = [];
+                $.async = !0;
+                $.setAttribute('charset', 'utf-8');
+                $.src = '//v2.zopim.com/?2YRVJ9WdqLaWGrAOduJsbu5op02qZFJI';
+                z.t = +new Date;
+                $.
+                    type = 'text/javascript';
+                e.parentNode.insertBefore($, e)
+            })(document, 'script');
+            $zopim(function(){
+                var _usrdtls=JSON.parse(localStorage.getItem("CFUser"));
+                $zopim.livechat.setEmail(_usrdtls.primaryEmail);
+                $zopim.livechat.setName(localStorage.getItem("UserName"));
+            });
+
+        }, 8000);
+    </script>
+    <!--End of Zopim Live Chat Script-->
+  <meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' www.google-analytics.com *.app-us1.com *.cloudflare.com *.zopim.com *.hotjar.com *.zdassets.com maxcdn.bootstrapcdn.com ajax.googleapis.com apis.google.com *.aspnetcdn.com *.stripe.com; style-src 'self' 'unsafe-inline' cdn.lineicons.com maxcdn.bootstrapcdn.com *.googleapis.com; img-src * 'self' data: google-analytics.com">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <title>CloudFuze</title>
+<link rel="Shortcut Icon" type="image/ico" href="../img/PNG/cfLogo.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com">
+ 
+      <link href="../stylesheets/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../stylesheets/sidebar.css">
+<link rel="stylesheet" href="../stylesheets/move.css">
+<link rel="stylesheet" href="../stylesheets/style.css">
+ <link href="../stylesheets/LinIconsPro-Light.css" rel="stylesheet">
+<link href="../stylesheets/LineIcons.css" rel="stylesheet">
+<style>
+	
+	#sidebar i{
+	font-size:20px;
+	}
+	.CloudThumb_parent{
+	margin-right: 1.8%;
+	margin-bottom:2%;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	width:115px;
+	height:115px;
+	float:left;
+	}
+	.CloudThumb_parent:hover{
+	box-shadow: 0px 0px 10px #0000001F;
+	}
+	.cloudThumbnail img {
+    height: 45px;
+    width: 45px;
+	}
+	.table td{
+	vertical-align: middle;
+	}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+  border: 1px solid #E5E5E5;
+    border-radius: 4px;
+	left: -15%;
+} 
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fafafa,color:#0062FF;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+button{
+outline:none;
+}
+table td{
+border:none;
+}
+button,a{
+cursor:pointer;
+}
+.modal-content{
+width:45vw;
+}
+.modal{
+left:-4%;
+}
+
+ /*for stripe payment*/
+        .StripeElement {
+            box-sizing: border-box;
+            height: 40px;
+            padding: 10px 12px;
+            border: 1px solid #E5E5E5;
+            border-radius: 4px;
+            background-color: white;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            -webkit-transition: box-shadow 150ms ease;
+            transition: box-shadow 150ms ease;
+        }
+
+        .StripeElement--focus {
+            box-shadow: 0 1px 3px 0 #cfd7df;
+        }
+
+        .StripeElement--invalid {
+            border-color: #fa755a;
+        }
+
+        .StripeElement--webkit-autofill {
+            background-color: #fefde5 !important;
+        }
+        /*for stripe payment END*/
+		#UserEntName::placeholder,#couponcode::placeholder {
+  color: #CCCCCC;
+  opacity: 1; /* Firefox */
+} 
+ #ProccesingPopup{
+            background: white;
+            width: 30%;
+            border: 1px solid gray;
+            top: 57%;
+            padding:3% 0 5%;
+            left: 56%;
+        }
+        #ProccesingPopup .container{
+            width: 100%;
+            height: auto;
+            background: white;
+            padding: 8% 4%;
+            border-radius: 2%;
+        }
+        #ProccesingPopup p{
+            font-size: 14px;
+        }
+		 #ThankPop {
+            background: white;
+            width: 35%;
+            border: 1px solid gray;
+            top: 57%;
+            left: 55%;
+            padding: 2% 2% 0; 
+        }
+        #ThankPop img {
+            width: 100px;
+			height: 100px;
+			margin-bottom: 10%;
+        }
+
+
+        #ThankPop a {
+            width: 20%;
+            margin-top: 4%;
+            text-align: center;
+            padding: 2%;
+            color: white;
+            display: block;
+            background-color:#0062FF;
+            margin: 8% auto;
+            font-size: 15px;
+            border: none;
+            border-radius: 3px;
+        }
+        #ThankPop .container{
+            width: 100%;
+            background: white;
+            padding: 5%;
+            border-radius: 2%;
+        }
+		#backupSourceBlock{
+		float:left;
+		margin-left: -1.4%;
+		padding:1% 2%;
+		max-width:51%;
+		}
+		#backupDestinationBlock{
+		float:right;
+		margin-right: -2%;
+		padding:1% 2%;
+		max-width:51%;
+		}
+		.rowdiv{
+		width:45%;
+		}
+		#backUpBtn{
+		margin-top: 2%;
+		width:10vw;
+		}
+		#checkoutDiv{
+position:relative;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #E5E5E5;
+border-radius: 5px;
+height:73vh;
+padding: 2%;
+}
+#checkoutChild{
+background: #FCFCFC 0% 0% no-repeat padding-box;
+border: 1px solid #E5E5E5;
+border-radius: 5px;
+width:538px;
+height: 65vh;
+float:left;
+padding:2%;
+max-width:52%;
+}
+#verticalLine{
+border:1px solid #E5E5E5;
+height:58vh;
+float: left;
+left: 53%;
+top:11%;
+background: #e5e5e5;
+position:absolute;
+}
+#checkoutChild2{
+width: 460px;
+height: 55vh;
+background: #FCFCFC 0% 0% no-repeat padding-box;
+border: 1px solid #E5E5E5;
+border-radius: 5px;
+float:right;
+margin-top: 3.5%;
+padding:2%;
+}
+
+#moveMigrationPrices{
+top: 2%;
+left: -16%;
+}
+#titleModal{
+color: #FFFFFF;
+font-size: 16px;
+width: 90%;
+}
+#closePrice{
+font-size:25px;
+color:#fff;
+opacity:1;
+width: 10%;
+}
+#bodyModal{
+width:87%;
+}
+#payMonthly{
+margin-right:4px;
+color:#1F2129;
+font-size:16px;
+}
+#payYearly{
+margin-left:4px;
+opacity:0.5;
+color:#1F2129;
+font-size:16px;
+}
+.pricing-plans{
+background: #FAFAFF 0% 0% no-repeat padding-box;
+border-radius: 4px;
+padding: 2%;
+}
+#contModal{
+width: 80vw;
+}
+#headModal{
+background: #0062FF 0% 0% no-repeat padding-box;
+border-radius: 5px 5px 0px 0px;
+height:9vh;
+width:87%;
+}
+#couponcode {
+    height: 36px;
+    margin-top: 2%;
+    border-right: none;
+    border: 1px solid #e5e5e5;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 2%;
+    width: 15vw;
+}
+#applycouponNew {
+    padding: 0 9px 0 10px;
+    height: 36px;
+    font-size: 12px;
+    float: right;
+    background: #24DFD3 0% 0% no-repeat padding-box;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #24DFD3;
+    width: 10vw;
+    color: #fff;
+    position: absolute;
+    top: 14%;
+    right: 4%;
+}
+		 @media only screen and (max-width: 768px){
+		 .srcFilesFldrCnt{
+font-size:12px; 
+}
+		 .dropdown-content {
+	right: 0%;
+    left: 50%!important;
+} 
+#CF_no_clouds{
+width:100%!important;
+} 
+.padded > svg{
+margin-left: 36%;
+}
+#AFTWButton{
+margin-left:26%;
+}
+		 #backupSourceBlock{
+		max-width:100%;
+		}
+		 #backupDestinationBlock{
+		
+		max-width:100%;  
+		}
+		#checkoutChild2 {
+    width: 100%;
+    margin-top: 20%;
+	margin-bottom:20%; 
+}
+#checkoutChild{
+max-width:100%; 
+}
+#applycouponNew{
+    width: 66%;
+    top: 10%;
+    right: -46%;
+}
+#couponcode{
+width:80%;
+}
+#brHide{
+display:none; 
+}
+
+#moveMigrationPrices{
+left: 0%;
+}
+#titleModal{
+color: #FFFFFF;
+font-size: 16px;
+width: 90%;
+}
+#closePrice{
+padding-right:13%;
+}
+#bodyModal{
+width:100%;
+}
+#payMonthly{
+font-size:12px!important;
+}
+#payYearly{
+font-size:12px!important;
+}
+#contModal{
+width: 100%;
+}
+#headModal{
+width:100%;
+}
+.plan-price{
+font-size:18px!important;
+}
+.plan-data{
+font-size:10px!important;
+}
+.plan-addlchrgs{
+font-size:6px!important;
+}
+.plan-buynow{
+font-size:12px!important;
+} 
+#checkoutChild{
+height:71vh;
+}
+#verticalLine{
+display:none;
+}
+
+		#backUpBtn{
+		margin-top: 7%;
+    width: auto;
+		} 
+		 .modal-content{
+width:95vw;
+}
+
+.modal{
+left:0%;
+}
+.flex-row{
+float:right;
+}
+.rowdiv{
+width:100%;
+}
+		 }
+@media only screen and (max-width: 768px) and (min-width: 767.8px){
+		 .modal-content{
+width:80vw;
+}
+
+.modal{
+left:-4%;
+}
+ .dropdown-content {
+	right: 0%;
+    left: 70%!important; 
+} 
+}
+@media (max-width: 420px) and (min-width: 319px) {
+.alertScs,.alertErr{
+width:300px!important;
+min-width:300px!important;  
+} 
+ #policyId{
+ bottom:0%!important;
+ }
+ .alertScs .msg, .alertErr .msg {
+ font-size:8px;
+ }
+}
+@media (max-height: 620px) {
+
+ #policyId{
+ bottom:-2%!important; 
+ }
+} 
+@media (max-width: 1300px) and (min-width: 992px) {
+ 
+#navbarSupportedContent{
+width:150%!important; 
+} 
+}  
+</style>
+</head>
+<body style="display:none;overflow-y:hidden;" id="movePageMultiUsr">
+<div class="g-signin2" data-theme="dark" style="display:none"></div>
+<div class="wrapper d-flex align-items-stretch">
+<nav id="sidebar" class="active">
+<div style="height:70px;"><a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="30" viewBox="0 0 106.467 53.365" style="margin-bottom: -8%;margin-top: 13%;margin-left: 5%;"><defs><style>.a{fill:#FFFFFF;}.b{fill:#FFFFFF;}.c{fill:#FFFFFF;}</style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#156aff"/><stop offset="1" stop-color="#1100f3"/></linearGradient></defs><g transform="translate(-177.95 -15.003)"><g transform="translate(183.48 15)"><path class="a" d="M1938.25,742.731c.161-.688.936-3.794,1.714-2.2-.024-.025,2.081,2.887.617,10.6.024-.082-1.1,3.237-1.807,1.042.024.082-.525-1.454-.525-1.454s-.391-.383-.435.412c-.021-.054,1.536,9.531,3.545,5.19,0,.029,1.1-1.454,1.3-6.673.068.054.549-7.665-.778-11.644,0,.029-1.234-4.23-2.674-1.648a9.667,9.667,0,0,0-1.214,4.173,20.02,20.02,0,0,0-.182,2.2C1937.8,742.7,1938.09,743.419,1938.25,742.731Z" transform="translate(-1917.075 -729.704)"/><path class="a" d="M1938.32,744.66c.185-.872,1.072-4.81,1.963-2.789-.028-.031,2.383,3.661.707,13.442.027-.1-1.256,4.1-2.069,1.321.027.1-.6-1.843-.6-1.843s-.448-.486-.5.522c-.024-.068,1.759,12.084,4.059,6.58,0,.037,1.26-1.843,1.492-8.46.078.068.628-9.718-.891-14.763,0,.037-1.413-5.363-3.062-2.089a13.176,13.176,0,0,0-1.389,5.29,27.807,27.807,0,0,0-.208,2.789C1937.8,744.623,1938.13,745.532,1938.32,744.66Z" transform="translate(-1908.168 -732.64)"/><path class="a" d="M0,5.45S1.035-.447,3.92.027C3.508.007,5.686-.405,7.3,7.433a47.548,47.548,0,0,1,.356,13.6c-.07-.1-.3,5.482-2.408,8.891,0,.029-2.413,3.8-4.62-2.1A18.264,18.264,0,0,1,0,25.964s2.24,2.411,3.343,0c.018.034,1.718-2.908,1.884-8.756.015.071.263-9.357-1.964-12.192a2.151,2.151,0,0,0-3.031.833A4.54,4.54,0,0,1,0,5.45Z" transform="translate(36.978 0.139) rotate(-0.974)"/><path class="b" d="M2152.9,1316.38s-2.781-.969-2.2-5.006c.034-.28,1.183-3.444,5.328-1.951-.1,0,2.158-3.017,5.044-2.984.024,0,3.307-.2,4.42,3.834-.061.058,4.229-3.5,7.43,1.359.009.014.008,2.182,0,1.639v1.183s-.163,1.883-3.174,1.925h-.178C2167.93,1316.35,2152.9,1316.38,2152.9,1316.38Z" transform="translate(-2100.18 -1291.587)"/><path class="b" d="M3223.61,213.09c-.033.022,4.834,0,4.834,0a5.34,5.34,0,0,1-.855-6.648c.061-.061,1.442-2.79,5.417-1.671-.018-.082,2.83-3.425,5.866-3.138a4.974,4.974,0,0,1,4.885,3.54c-.079-.061,3.74-2.722,6.854,1.5.04.021-.8-6.563-7.44-5.044a7.657,7.657,0,0,0-7.15-4.186,8.618,8.618,0,0,0-5.644,3.382c.083-.061-3.81-.979-5.827,1.111a44.3,44.3,0,0,1-.3,6.671C3224.27,208.55,3223.65,213.068,3223.61,213.09Z" transform="translate(-3177.828 -188.413)"/><path class="b" d="M3219.66,431.08a23.151,23.151,0,0,1,1.43,6.7,5.526,5.526,0,0,1,5.391-1.4c.095,0,7.083-8.092,14.139.859.08.03,5.337-1.1,6.842,3.986-.065,0,1-9.046-11.14-9.243-.035.069-4.568-8.6-13.223-1.61a4,4,0,0,0-3.439.711Z" transform="translate(-3174.591 -425.7)"/><path class="b" d="M3163.06,784.33a7.96,7.96,0,0,1,3.833-1.221,32.009,32.009,0,0,1,.24,17.482c.025.069-3.888,0-3.888,0s1.045-8.3,0-14.826Z" transform="translate(-3127.039 -776.302)"/><path class="b" d="M3107.2,812.941l3.24-.246a9.239,9.239,0,0,1,1.41-2.4c.021,0,2.085,4.361,0,12.167a3.679,3.679,0,0,1-1.41-2.477c0-.059-3.383,0-3.383,0l.142-1.184s2.937.355,2.739-.63c-.018-.021.173-.908-2.586-.568V816.54s2.737.6,2.743-.808c0-.021.133-1.524-2.743-.945a18.1,18.1,0,0,0-.152-1.846Z" transform="translate(-3080.385 -799.48)"/><path class="b" d="M2935.35,831.464l22.548-1.68a4.454,4.454,0,0,1,.263,1.589C2958.18,831.4,2935.35,831.464,2935.35,831.464Z" transform="translate(-2935.35 -816.087)"/><path class="b" d="M2954.38,855.123l19.987-1.006a2.038,2.038,0,0,1-.165.9C2974.19,855.049,2954.38,855.123,2954.38,855.123Z" transform="translate(-2951.574 -836.828)"/><path class="b" d="M2994.27,870.418l13.893-.918-.246,1.016Z" transform="translate(-2985.57 -849.941)"/></g></g></svg>
+	<br>CloudFuze</a></div>
+<ul class="list-unstyled components mb-5">
+<li>
+<a href="cloudmanager.html?ver=1028"><i class="lnil lnil-cloud-alt"></i> <br>Clouds</a>
+</li>
+<li>
+<a href="move.html?ver=1028"><i class="lnil lnil-rocket" style="transform: rotate(90deg);"></i> <br> Migrate</a>
+</li>
+<li class="active">
+<a href="#" style="padding:12px 0px;"><i class="lnil lnil-database"></i> <p style="margin-bottom: -7%;"> Individual </p><p> Backup </p></a>
+</li>
+<li>
+<a href="teammigration.html?ver=1028"><i class="lnil lnil-users-alt" style="margin-top:-5%;"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Team </p><p> Migration </p></a>
+</li>
+<li>
+<a href="slackmigration.html?ver=1028"><i class="lnil lnil-users-alt" style="margin-top:-5%;"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Slack </p><p> Migration </p></a>
+</li>
+<li>
+<a href="reports.html?ver=1028"><i class="lnil lnil-pie-report"></i><br>Reports</a>
+</li>
+<li>
+<a href="https://help.cloudfuze.com/" target="_blank"><i class="lnil lnil-question-circle"></i><br>Help</a>
+</li>
+</ul>
+<div id="policyId" style="height:70px;font-size:11px;bottom: 2%;position: absolute;"> 
+<a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="color:#fff;">Terms of use</a>
+
+<a href="https://www.cloudfuze.com/privacy-policy" target="_blank" style="color:#fff;">Privacy policy</a>
+
+</div>
+</nav>
+
+<div id="content" class="" style="background: #FCFCFC;"> 
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:0px;">
+<div class="container-fluid">	
+	<div class="rowdiv" style="float:left;">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+      
+    
+   <li id="cm-sidebar" style="margin-right:5%;">
+   <button type="button" id="sidebarCollapse" class="btn btn-primary d-lg-none">
+<i class="fa fa-bars"></i>
+<span class="sr-only">Toggle Menu</span>
+   </button></li>
+<li id="cm-topbar" style=""> 
+	<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" id="topbarCollapse">
+<i class="fa fa-bars"></i>
+</button></li>
+   
+    </ul>
+	
+  </div>	
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent" style="width:65%;float:right;">
+<ul class="nav navbar-nav ml-auto1" style="width:100%;margin-right:-6%;">
+
+<li class="nav-item" style="text-align: -webkit-right;width:39%; height: 11vh;padding-top: 2.5%;">
+<div style="text-align: -webkit-right;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData" style="color:#0062FF;font-weight: 600;">0GB</span> used of <span id="totalData" style="color:#0062FF;font-weight: 600;">0GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:0%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="width:18%;text-align: -webkit-right;padding-left: 5%; height: 11vh;padding-top: 2.5%;">
+<a class="nav-link" href="settings.html#price?ver=1028" style="color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;">Upgrade</a>
+</li>
+<li class="nav-item" style="width:43%;text-align: -webkit-left;padding-left: 3%;height: 11vh;padding-top: 2%;"><div class="dropdown" style="width:100%;">
+<a class="dropbtn nav-link" href="#" style="padding-top: 4%"><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #0062FF;font-size: 15px;padding: 5px;"></i><span id="dash-uname" style="margin-left: 4%;font-weight:600;color:#1F2129;"></span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left: 1%;font-weight: 600;"></i></a>
+ <div class="dropdown-content">
+ <a href="settings.html?ver=1028" style="text-align:left;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+ <a class="cf-logout" class="mYaccontlogout" href="#" style="text-align:left;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div>
+</div>
+</li>
+
+</ul>
+</div>
+
+<div class="" id="navbarSupportedContent1" style="width: 100%; float: right; background: rgb(255, 255, 255);display:none;"> 
+<ul class="nav navbar-nav" style="width: 100%;margin-right: -5%;    margin-top: 7%;">
+<li class="nav-item" style="text-align: -webkit-center;width: 100%;height: 12vh;padding-top: 8%;padding-right: 10%;border-bottom: 1px solid #e5e5e5;">
+<div style="text-align: -webkit-right;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData1" style="color:#0062FF;font-weight: 600;">0 GB</span> used of <span id="totalData1" style="color:#0062FF;font-weight: 600;">0 GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:0%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="width:100%;padding-right: 8%;height: 8vh;padding-top: 2%;border-bottom: 1px solid #e5e5e5;">
+<a class="nav-link cf_upgrd_btn" href="settings.html#price?ver=1028" style="float:right;color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;">Upgrade</a> 
+</li>
+<li class="nav-item" style="width: 100%;text-align: -webkit-right;height: 6vh;padding-right: 10%;border-bottom: 1px solid #e5e5e5;"><div class="dropdown" style="width:100%;">
+<a class="dropbtn nav-link" href="#" style="padding-top: 5%"><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #0062FF;font-size: 15px;padding: 5px;"></i><span id="dash-uname1" style="margin-left: 4%;font-weight:600;color:#1F2129;word-break: break-word;"></span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left: 3%;font-weight: 600;"></i></a>
+ <div class="dropdown-content"> 
+ <a href="settings.html?ver=1028" style="text-align:left;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+ <a class="cf-logout" class="mYaccontlogout" href="#" style="text-align:left;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div>
+</div>
+</li> 
+
+</ul>
+</div>
+</div>
+</nav>
+
+<section id="move-header" style="overflow-y: auto;">
+    	<div id="move_main" style="padding: 2% 3%;">
+					    <div class="alertScs hide">
+        <span class="fa fa-check-circle"></span>  
+        <p class="msg"></p> 
+        <div class="close-btnScs">
+          <span class="lnil lnil-cross-circle"></span>
+        </div>
+</div>
+  <div class="alertErr hide"> 
+        <span class="fa fa-times-circle"></span> 
+        <p class="msg"></p>
+        <div class="close-btnErr">
+          <span class="lnil lnil-cross-circle"></span>  
+        </div> 
+</div>
+	<div class="col-sm-12" style="height: 10vh;padding:0;">
+
+    <div class="col-sm-5" id="migrateButton" style="float: right;">
+      <button class="button mini rounded backupbutton form-control" id="backUpBtn" type="button" style="padding: 0 9px 0 10px;height: 40px;font-size: 15px;margin-right: -3%;float: right;background: #ffffff 0% 0% no-repeat padding-box;border: 1px solid #e5e5e5;border-radius: 5px;color: #1f2129;" disabled="">
+                    BackUp
+                </button>
+            </div>
+    </div>
+	 
+			<div class=="col-sm-12">
+	<div class="col-sm-6" id="backupSourceBlock" style="">
+	<div class="box" style="background:#fff;margin-bottom: 10px;border: 1px solid #E5E5E5;border-radius: 5px;border-top: none;">
+                    <div class="tab-header srcFilesFldrCnt" style="background: #0062FF 0% 0% no-repeat padding-box;color:white;text-shadow: none;height:50px;border: 1px solid #0062FF;border-top-left-radius: 5px;border-top-right-radius: 5px;padding: 2.3%;">
+                        <span style="display: block;float: left;">Source Cloud :</span>
+					<div class="moveHeader"><div class="moveHeaderIcon" id=""></div></div>
+                        <span id="dynamicCloudName" style="margin-left:2%;font-weight: 200"></span>
+                        <span id="totalfiles" style="float:right;margin-right: 30px;" type="BOX"></span>
+                        <i style="font-size:15px;color: #fff;float: right;margin-top: 8px;margin-right: 55px;cursor: pointer;" class="dummySrc"></i>
+                    </div>
+
+                    <div class="tab-content srce" id="moveSource" srcnextpagetoken="" innersrcnextpagetoken="" style="width:100%;height:58vh;max-height: 58vh;overflow-x: hidden;padding:2% 3%;">
+                    </div>
+                    <div id="movePageShowMore" movepagenumber="">Show More</div>
+                </div>
+	</div>
+	<div class="col-sm-6" id="backupDestinationBlock" style="">
+	<div class="box" style="background:#fff;margin-bottom: 10px;border: 1px solid #E5E5E5;border-radius: 5px; border-top: none;">
+                    <div class="tab-header dstnFilesFldrCnt" style="background: #0062FF 0% 0% no-repeat padding-box;color:white;text-shadow: none;height:50px;border: 1px solid #0062FF;border-top-left-radius: 5px;border-top-right-radius: 5px;padding: 2.3%;">
+                        <span style="display: block;float: left;">Destination Cloud :</span>
+					<div class="moveHeader"><div class="moveHeaderIcon" id=""></div></div>
+                        <span id="dynamicDestCloudName" style="margin-left:2%;font-weight: 200"></span>
+                        <span id="totalfilesdestination" style="float:right;margin-right: 30px;" type="BOX"></span>
+                        <i style="font-size:15px;color: #fff;float: right;margin-top: 8px;margin-right: 55px;cursor: pointer;" class="dummySrc"></i>
+                    </div>
+
+                    <div class="tab-content destn" id="moveDestination" dstnnextpagetoken="" innerdstnnextpagetoken="" style="width:100%;height:58vh;max-height: 58vh;overflow-x: hidden;padding:2% 3%;">
+                    </div>
+                    <div id="movePageShowMore" movepagenumber="">Show More</div>
+                </div>
+	</div>
+	</div>
+
+
+    </div>
+	
+	<div id="checkoutpng" style="padding: 2% 3%;display:none;">
+	<div class="col-sm-12" style="height: 10vh;padding:0;">
+	<div class="col-sm-3" style="float: right;float:right">
+	<a id="backtoDiv" style="color:#0062FF;float:right">Back to backup</a>
+	</div>
+    </div>
+<div class="col-sm-11" id="checkoutDiv" style="">
+	<div id="checkoutChild" class="col-sm-6" style="">
+	<h6 style="font-weight:600;color:#1F2129;font-size:18px;margin-bottom: 3%;">Plan Details</h6>
+	<table style="border-collapse: collapse;width:100%;margin-bottom:-2%;" id="pricingTable">
+                    <tbody>
+                    <tr class="summaryTr" style="font-size: 14px;height: 4vh;">
+                        <td style="position:relative;font-weight: 500;width:70%;" id="subscribetypeNew">
+                            <span style="color:#1F2129;">Individual Lite Monthly Subscription</span>
+                            
+                        </td>
+						<td style="font-weight: 600;color:#1F2129;width:10%;">:</td>
+                        <td id="amntNew" style="color:#1F2129;width:20%;">$9.99</td>
+                    </tr>
+                    <tr style="font-size: 12px;border-bottom: 1px solid #f1f1f1;">
+                        <td colspan="3">
+						<a id="plansPopUp" style="color: #0062FF;text-decoration:underline;">Choose a different Plan</a>
+                        </td>
+						
+                    </tr>
+                    <tr class="summaryTr" style="font-size: 14px;height: 7vh;border-bottom: 1px solid #f1f1f1;">
+                        <td style="font-weight: 500;color:#1F2129;" id="DataYearRmonth">Data per Month</td>
+						<td style="font-weight: 600;color:#1F2129;">:</td>
+                        <td id="amntsize" style="color:#1F2129;">50 GB</td>
+                    </tr>
+                    <tr class="summaryTr" style="font-size: 14px;height: 7vh;border-bottom: 1px solid #f1f1f1;">
+                        <td style="font-weight:500;color:#1F2129;">Discount</td>
+						<td style="font-weight: 600;color:#1F2129;">:</td>
+                        <td id="discountNew" style="color:#1F2129;">0</td>
+                    </tr>
+                    <tr class="summaryTr" style="font-size: 14px;height: 7vh;border-bottom: 1px solid #f1f1f1;">
+                        <td style="font-weight: 500;color:#1F2129;">Total amount</td>
+						<td style="font-weight: 600;color:#1F2129;">:</td>
+                        <td id="totalamntNew" style="color:#1F2129;">$9.99</td>
+                    </tr>
+					<tr>
+					<td>
+					<div style="position:relative;">
+				<input class="form-input" name="coupon" type="text" placeholder="Enter coupon code" id="couponcode" style="">
+      <button class="button mini rounded applyCoupon" id="applycouponNew" style="">
+                    Apply Coupon
+                </button>
+				</div>
+					</td>
+					<td>
+					</td>
+					<td>
+					</td>
+					</tr>
+					<tr><td>
+						<div id="couponsmessage" style="font-size: 12px; font-weight: 500; color: green; display: none;"></div>
+						<div id="couponsmessage1" style="font-size: 12px; font-weight: 500; color: rgb(2, 74, 91); display: none;"></div>
+						<div id="couponemessage" style="font-size: 12px;font-weight: 500;color: rgb(255, 153, 0);display: none;"></div>
+						</td><td></td><td></td></tr>
+					<tr>
+					<td colspan="3">
+					<p style="font-size:10px;color:#707070;">**overage charges of $0.75/GB are applicable when migration data exceeds the <br id="brHide"> selected plan</p>
+					</td>
+					</tr>
+                    </tbody>
+                </table>
+				<div style="width:45%;float:left;color:#1f2129;font-size:12px;"><i class="lnil lnil-checkmark" style="color: #24DFD3;margin-right: 2%;font-weight: bold;"></i>Ease of Use</div>
+				<div style="width:55%;float:right;color:#1f2129;font-size:12px;"><i class="lnil lnil-checkmark" style="color: #24DFD3;margin-right: 2%;font-weight: bold;"></i>Super Fast Data Transfers</div>
+				<div style="width:45%;float:left;color:#1f2129;font-size:12px;"><i class="lnil lnil-checkmark" style="color: #24DFD3;margin-right: 2%;font-weight: bold;"></i>Proven 24/5 Support</div>
+				<div style="width:55%;float:right;color:#1f2129;font-size:12px;"><i class="lnil lnil-checkmark" style="color: #24DFD3;margin-right: 2%;font-weight: bold;"></i>Leading Public Cloud Storage Services</div>
+	</div>
+	<div id="verticalLine" style="">
+	</div>
+	<div id="checkoutChild2" class="col-sm-5" style="">
+		
+			<h6 style="font-weight:600;color:#1F2129;font-size:18px;margin-bottom: 3%;">Enter Card Details</h6>
+			<form method="post" id="payment-form">
+                    <table style=" border:none; border-collapse: collapse;width: 100%;">
+                        <tbody>
+                        <tr class="cardTr" style="font-size: 14px;">
+                            <td><span style="font-weight:500;color:#1F2129;">Name on card</span><div><input type="text" id="UserEntName" placeholder="Enter Name on card" style="width: 100%;border-radius: 3px;border: 1px solid #e5e5e5;padding: 0 2%;height:40px;margin-bottom: 3%;" title="Alphabets only" required=""></div>
+                                <div id="EmailErrMsg" style="color:red;margin-top: -3%;font-size: 13px;"></div>
+                            </td>
+                        </tr>
+                      <tr class="cardTr" style="font-size: 13px;">
+                            <td><div><span style="font-weight:500;color:#1F2129;">Card information</span>
+                                <div id="card-element" class="StripeElement StripeElement--empty" style="width:100%;"><div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;"><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame5" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-e7d9a0b87abf9d9de1185df849d57e57.html#hidePostalCode=true&amp;style[base][iconColor]=%23666EE8&amp;style[base][color]=%2331325F&amp;style[base][lineHeight]=16px&amp;style[base][fontWeight]=300&amp;style[base][fontFamily]=%22Helvetica+Neue%22%2C+Helvetica%2C+sans-serif&amp;style[base][fontSize]=15px&amp;style[base][::placeholder][color]=%23CCCCCC&amp;componentName=card&amp;wait=false&amp;rtl=false&amp;keyMode=test&amp;apiKey=pk_test_0bZabDekUemnB2Fhvchcxsic00uWijdciq&amp;origin=https%3A%2F%2Fslwebapp.cloudfuze.com&amp;referrer=https%3A%2F%2Fslwebapp.cloudfuze.com%2Fsree%2Fwebapp%2Fpages%2Fcheckout.html&amp;controllerId=__privateStripeController1" title="Secure card payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; height: 16px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;"></div></div>
+                                <div id="card-errors" role="alert" style="color:red;"></div>
+
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td><img id="cardsImg" src="../images/4cards.png" style="width: 40%;margin-top: 1%;"><span class="card-error-message" style="color:red;"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div style="padding-top: 5%;">
+                        <button type="submit" id="card-button" style="width: 100%;height:40px;margin-left: 0px;padding: 8px;color: white;font-size: 16px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px;border: none;">Subscribe Now</button>
+                    </div>
+                </form>
+			</div>
+	</div>
+				
+	
+	</div>
+	
+		<div class="span12" id="CF_no_clouds" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 6px #00000014;border: 1px solid #F1F1F1;border-radius: 5px;width: 756px;height: 328px;margin-left: 15%;margin-top: 9%;display: none;">
+        <div class="box">
+            <div class="tab-header" style="background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #0062FF;border-radius: 5px 5px 0px 0px;height:50px;font-size:18px;color:#FFFFFF;text-align: center;padding-top: 1.5%;">
+                Welcome to CloudFuze
+            </div>
+            <div class="padded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="104" height="60.667" viewBox="0 0 104 60.667" style="margin-left: 42%;margin-top: 3%;"><defs>
+	<style>
+	.cfa,.cfb{fill:#0129ac;}.cfb{font-size:22px;font-family:ProductSans-Bold, Product Sans;font-weight:700;letter-spacing:-0.02em;}</style></defs>
+	<g transform="translate(-2.258 0)">
+	<g transform="translate(8.384 0)">
+	<g transform="translate(22.093 0)">
+	<path class="cfa" d="M1938.279,743.2c.172-.733,1-4.042,1.826-2.344-.026-.027,2.217,3.076.657,11.293.026-.087-1.172,3.449-1.925,1.11.026.087-.559-1.549-.559-1.549s-.417-.408-.464.439c-.022-.058,1.636,10.154,3.777,5.529,0,.031,1.172-1.549,1.385-7.109.072.057.585-8.167-.829-12.406,0,.031-1.315-4.507-2.849-1.756a10.3,10.3,0,0,0-1.293,4.446,21.337,21.337,0,0,0-.194,2.344C1937.8,743.17,1938.109,743.935,1938.279,743.2Z" transform="translate(-1937.811 -729.327)"/>
+	<path class="cfa" d="M1938.352,745.258c.2-.929,1.142-5.125,2.091-2.972-.03-.033,2.539,3.9.753,14.321.029-.106-1.338,4.368-2.2,1.407.029.107-.639-1.964-.639-1.964s-.477-.518-.533.556c-.025-.072,1.874,12.875,4.325,7.01,0,.039,1.342-1.964,1.59-9.014.083.072.669-10.354-.949-15.729,0,.04-1.506-5.714-3.263-2.226a14.042,14.042,0,0,0-1.48,5.636,29.721,29.721,0,0,0-.222,2.971C1937.8,745.218,1938.15,746.187,1938.352,745.258Z" transform="translate(-1928.32 -732.455)"/>
+	<path class="cfa" d="M0,5.807S1.1-.476,4.176.029c-.439-.021,1.882-.46,3.6,7.891a50.659,50.659,0,0,1,.379,14.49c-.075-.107-.32,5.841-2.566,9.473,0,.031-2.571,4.049-4.922-2.237A19.458,19.458,0,0,1,0,27.663s2.387,2.569,3.562,0c.019.036,1.83-3.1,2.007-9.329.016.076.28-9.969-2.092-12.99a2.292,2.292,0,0,0-3.229.887A4.837,4.837,0,0,1,0,5.807Z" transform="translate(17.304 0.145) rotate(-0.974)"/></g><g transform="translate(0 2.07)">
+	<path class="cfa" d="M2153.049,1317.03s-2.963-1.032-2.344-5.333c.036-.3,1.26-3.669,5.677-2.079-.107,0,2.3-3.214,5.374-3.179.025,0,3.523-.213,4.709,4.085-.065.062,4.506-3.729,7.916,1.448.01.015.009,2.325,0,1.746v1.26s-.174,2.006-3.382,2.051h-.19C2169.063,1317,2153.049,1317.03,2153.049,1317.03Z" transform="translate(-2096.88 -1292.689)"/>
+	<path class="cfa" d="M3223.612,214.114c-.036.023,5.149,0,5.149,0a5.69,5.69,0,0,1-.911-7.083c.065-.065,1.536-2.972,5.771-1.78-.019-.087,3.015-3.649,6.25-3.343a5.3,5.3,0,0,1,5.2,3.772c-.084-.065,3.985-2.9,7.3,1.6.043.022-.852-6.992-7.927-5.374a8.158,8.158,0,0,0-7.617-4.46,9.182,9.182,0,0,0-6.013,3.6c.088-.065-4.06-1.043-6.208,1.184a47.162,47.162,0,0,1-.32,7.107C3224.314,209.277,3223.653,214.091,3223.612,214.114Z" transform="translate(-3174.835 -189.896)"/>
+	<path class="cfa" d="M3219.661,431.3a24.667,24.667,0,0,1,1.524,7.138,5.888,5.888,0,0,1,5.744-1.492c.1,0,7.546-8.621,15.064.915.085.032,5.686-1.172,7.29,4.247-.069,0,1.065-9.638-11.868-9.848-.037.073-4.867-9.163-14.089-1.715a4.261,4.261,0,0,0-3.664.758Z" transform="translate(-3171.644 -427.646)"/>
+	<path class="cfa" d="M3163.059,784.41a8.485,8.485,0,0,1,4.084-1.3,34.113,34.113,0,0,1,.256,18.626c.026.073-4.143,0-4.143,0s1.113-8.843,0-15.8Z" transform="translate(-3124.682 -777.93)"/>
+	<path class="cfa" d="M3107.209,813.114l3.452-.262a9.826,9.826,0,0,1,1.5-2.557c.022,0,2.221,4.646,0,12.963a3.917,3.917,0,0,1-1.5-2.639c0-.063-3.6,0-3.6,0l.151-1.261s3.129.378,2.918-.671c-.019-.022.185-.967-2.755-.605v-1.133s2.916.639,2.923-.861c0-.022.141-1.624-2.923-1.007A19.28,19.28,0,0,0,3107.209,813.114Z" transform="translate(-3078.64 -800.846)"/>
+	<path class="cfa" d="M2935.351,831.574l24.023-1.79a4.755,4.755,0,0,1,.28,1.693C2959.674,831.506,2935.351,831.574,2935.351,831.574Z" transform="translate(-2935.351 -817.265)"/>
+	<path class="cfa" d="M2954.381,855.189l21.295-1.072a2.166,2.166,0,0,1-.176.959C2975.487,855.11,2954.381,855.189,2954.381,855.189Z" transform="translate(-2951.392 -837.771)"/>
+	<path class="cfa" d="M2994.271,870.478l14.8-.978-.262,1.082Z" transform="translate(-2985.001 -850.735)"/></g></g>
+	<text class="cfb" transform="translate(2.258 54.667)"><tspan x="0" y="0">CloudFuze</tspan></text>
+	</g>
+	</svg>
+                <p style="text-align:center;margin:4%;">To use this CloudFuze feature, you must first add storage account(s) to<br>
+                    CloudFuze by clicking Add Cloud and completing the setup process.
+				</p> 
+				<a href="cloudmanager.html?ver=1028"  class="button mini rounded blue"  id="AFTWButton" style="width: auto;height: 40px;background: #0062FF 0% 0% no-repeat padding-box!important;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;    margin-left: 36%;">Add Cloud Account</a>
+                
+            </div>
+        </div>
+    </div> 
+
+
+ <div class="modal fade" id="ThankPop" style="top: 12%;left: 32%;height: 65%;">
+    <div class="container">
+            <img src="../img/PNG/greenTick.png" style="display: block;margin: auto;">
+            <h3 style="text-align: center;color:black;"><b>Payment successful</b></h3>
+            <p style="text-align: center;color:gray;">Thank you for choosing cloudfuze</p>
+            <a type="submit" id="thankbutton">OK</a>
+        </div>
+ </div>
+    
+
+</section>
+</div>
+ <div class="modal fade planPopUp" id="moveMigrationPrices" style=""> 
+    <div class="modal-dialog">
+      <div class="modal-content" id="contModal" style="">
+        <div class="modal-header" id="headModal" style="">
+          <p class="modal-title" id="titleModal" style="">Choose a Plan</p> 
+          <i class="close lnil lnil-cross-circle" id="closePrice" data-dismiss="modal" style=""></i> 
+        </div>
+        <div class="modal-body" id="bodyModal" style="">  
+		<div class="tab-content" style="overflow: unset;">
+				<div id="tab-1" class="pricing-tab-content current">      
+                                <div style="text-align:center;margin-bottom: 10px;">
+									<span style="" class="active" id="payMonthly">Pay monthly</span>
+									<label class="switch">
+										<input type="checkbox" name="toggleBtn">
+										<span class="slider round"></span>
+									</label>
+									<span style="" id="payYearly">Pay annually</span>
+								</div>
+                                
+                                
+                                <div class="pricing-plans" style="">
+                                    <div class="plan-box plan1" style="width: 50%;float: left;">
+                                        <div class="plan-details">
+                                            <p class="plan-title">LITE</p>
+                                            <p class="plan-price">$9.99</p>
+                                            <p class="plan-data">50 GB/Month</p>
+                                            <p class="plan-addlchrgs">($0.75 per additional 1 GB)</p>
+                                            <a class="plan-buynow" id="lite">Subscribe</a>
+                                            
+                                        </div> 
+                                    </div>
+                                    
+                                    <div class="plan-box plan2" style="width: 50%;float: right;">
+                                     <div class="plan-details">
+                                            <p class="plan-title">PRO</p>
+                                            <p class="plan-price">$34.99</p>
+                                            <p class="plan-data">200 GB/Month</p>
+                                            <p class="plan-addlchrgs">($0.75 per additional 1 GB)</p>
+                                            <a class="plan-buynow" id="pro">Subscribe</a>
+                                            
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        </div>
+        
+        
+      </div>
+    </div>
+ </div>
+
+<div id="CFShowLoading" class="modal-backdrop in" style="display: none; padding-left: 0px;">
+    <div class="backdrop" style="position: relative;top: 20%;background: white;border: none;height: 56%;padding:3%;">
+	<div style='text-align: center;font-size: 20px;line-height: 1.5;'>CloudFuze is preparing your files/folders for Backup.</br> Please give us a few moments.</div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<circle cx="50" cy="50" r="30" stroke="#d5d8ff" stroke-width="10" fill="none"/>
+<circle cx="50" cy="50" r="30" stroke="#0062FF" stroke-width="8" stroke-linecap="round" fill="none">
+  <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"/>
+  <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1s" values="18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882" keyTimes="0;0.5;1"/>
+</circle>
+</svg>
+        
+    </div>
+</div>
+
+<div id="OptionsPopUp" class="modal fade" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Backup Options</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+    <div class="modal-body" id="Content">
+            <div style="font-size:12px;">
+            <div style="height: 60px;background: #FCFCFC 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 4px;padding: 3.5% 0% 0% 5%;margin-bottom:3%;">
+                <div style="font-weight: 600;width:30%;float:left;">Job Name</div>
+                <div style="font-weight: 600;width:10%;float:left;">:</div>
+				<div style="width:60%;float:left;">
+					<input type="text" value="" class="conJobName form-control" style="width: 80%;"/>
+				</div>
+            </div>
+            <div style="height: 60px;background: #FCFCFC 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 4px;padding: 3.5% 0% 0% 5%;margin-bottom:3%;">
+                <div style="font-weight: 600; width:30%;float:left;">Sync Options</div>
+                <div style="font-weight: 600; width:10%;float:left;">:</div>
+                <div style=" width:60%;float:left;">
+					<input type="radio" name="sync" value="Cloud Backup" style="margin-top: -1px;margin-right: 3%" checked>Cloud Backup
+				</div>
+            </div>
+            <div style="height: 60px;background: #FCFCFC 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 4px;padding: 3.5% 0% 0% 5%;margin-bottom:3%;">
+                <div style="font-weight: 600; width:30%;float:left;">Frequency</div>
+                <div style="font-weight: 600; width:10%;float:left;">:</div>
+                <div style=" width:60%;float:left;">
+					<input type="radio" name="Freq" value="1 Day" style="margin-top: -1px;margin-right: 3%" checked>1 Day
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+	<a class="button mini rounded light-gray"  data-dismiss="modal" style="width: auto;height: 40px;border: 1px solid #707070;border-radius: 5px;color: #1f2129;padding: 1% 4%;float: left;font-size:16px;">Cancel</a>
+<a class="button mini rounded blue" id="toPreview" style="width: auto;height: 40px;background: #0062FF 0% 0% no-repeat padding-box!important;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;">Next</a>
+    </div>
+	  </div>
+	</div>
+</div>
+<div id="previewPopUp" class="modal fade" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Preview</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+    <div class="modal-body" id="Content">
+            <div style="font-size:12px;">
+            <div style="height: 60px;background: #FCFCFC 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 4px;padding: 3.5% 0% 0% 5%;margin-bottom:3%;">
+                <div style="font-weight: 600;width:30%;float:left;">Job Name</div>
+                <div style="font-weight: 600;width:10%;float:left;">:</div>
+				<div style="width:60%;float:left;">
+					<span class="consumerJobName"></span>
+				</div>
+            </div>
+            <div style="height: 60px;background: #FCFCFC 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 4px;padding: 3.5% 0% 0% 5%;margin-bottom:3%;">
+                <div style="font-weight: 600; width:30%;float:left;">Sync Options</div>
+                <div style="font-weight: 600; width:10%;float:left;">:</div>
+                <div style=" width:60%;float:left;">
+					<span class="SyncOptions"></span>
+				</div>
+            </div>
+            <div style="height: 60px;background: #FCFCFC 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 4px;padding: 3.5% 0% 0% 5%;margin-bottom:3%;">
+                <div style="font-weight: 600; width:30%;float:left;">Frequency</div>
+                <div style="font-weight: 600; width:10%;float:left;">:</div>
+                <div style=" width:60%;float:left;">
+					<span class="Frequency"></span>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+	<a class="button mini rounded light-gray"  data-dismiss="modal" style="width: auto;height: 40px;border: 1px solid #707070;border-radius: 5px;color: #1f2129;padding: 1% 4%;float: left;font-size:16px;">Cancel</a>
+<a class="button mini rounded blue" id="Proceed" style="width: auto;height: 40px;background: #0062FF 0% 0% no-repeat padding-box!important;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;">Proceed</a>
+    </div>
+	  </div>
+	</div>
+</div>
+ 
+
+ <div class="modal fade" id="Restriction" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Contact Support</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body" id="Content">
+		<div style="text-align:left;"> 
+            Backup feature is not ready for the clouds you have selected. Please contact us at <a style="color:#1C47CF;text-shadow: none;" href="mailto:support@cloudfuze.com">support@cloudfuze.com </a> for more details.
+        </div>
+        </div>
+        <div class="modal-footer">
+
+<a class="button mini rounded blue"  data-dismiss="modal" style="width: 73px;height: 40px;background: #0062FF 0% 0% no-repeat padding-box!important;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;">Ok</a>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+
+   <div class="modal fade" id="ProccesingPopup" style="top: 21%;left: 34%;height:47%;width:33%;">
+     <div class="container" >
+
+            <p style="text-align: center;color:black;text-shadow: none;">Please wait while we are confirming your payment...</p>
+            <p style="text-align: center;color:black;text-shadow: none;padding-bottom: 3%;">Do not click on back button or refresh</p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%;background-color: #288ac7 !important;    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)!important;">
+
+                </div>
+            </div>
+
+        </div>
+ </div>
+ 
+
+
+ <div class="modal fade" id="duplicatemigration" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;"> 
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Duplicate Migration</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body" id="Content">
+		<div style="text-align:left;"> 
+            Backup has been already initiated for the selected pair of clouds. 
+        </div>
+        </div>
+        <div class="modal-footer">
+
+<a class="button mini rounded blue" id="duplicate" data-dismiss="modal" style="width: 73px;height: 40px;background: #0062FF 0% 0% no-repeat padding-box!important;border: 1px solid #0062FF;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;">Ok</a>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../javascripts/MetroNotifications_7.js"></script>
+<script src="../javascripts/security/webtoolkit.base64.js"></script>
+<script src="../ajaxcalls/AesUtil.js" type="text/javascript"></script>
+<script src="../javascripts/timeago.js" type="text/javascript"></script>
+<script src="../javascripts/jqueryui.js" type="text/javascript"></script>
+
+<!--Static Variables-->
+<script src="../ajaxcalls/config.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/globalVar.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/pricing.js?ver=1028"></script> 
+<!--Entire App Usage-->
+<script src="https://js.stripe.com/v3/"></script>
+<script src="../ajaxcalls/CFManageCloudAccounts.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/readyDocument.js?ver=1028" type="text/javascript"></script>
+<script src="../javascripts/actionevents.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/fileShareMetaData.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/backUp.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/paypalpmnt.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/paypalPayment.js?ver=1028" type="text/javascript"></script>
+
+
+<script>
+	(function($) {
+
+	"use strict";
+
+	var fullHeight = function() {
+
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
+
+	};
+	fullHeight();
+
+	$('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+  $('#topbarCollapse').on('click', function () {
+  if(!$("#navbarSupportedContent1").hasClass('active')){
+  $("#navbarSupportedContent1").addClass('active');
+      $("#navbarSupportedContent1").css("display","");
+	  if($("#sidebar").hasClass('active')){  
+	  $("#move-header").css("margin-top","70%"); 
+	  $("#checkoutpng").css("margin-top","70%"); 
+	  }
+	  else{ 
+	  $("#move-header").css("margin-top","55%"); 
+	  $("#checkoutpng").css("margin-top","55%"); 
+	  
+	  }
+	  }
+	  else{
+	   $("#navbarSupportedContent1").removeClass('active');
+      $("#navbarSupportedContent1").css("display","none");
+	  $("#move-header").css("margin-top","3%");
+	  $("#checkoutpng").css("margin-top","3%"); 
+	  }
+  });
+})(jQuery);
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+	   if (window.matchMedia('(max-width: 1024px)').matches) {
+            height = window.innerHeight - 70;
+            $("#move-header").css("height", height + 'px');
+        }
+        else{
+            height = window.innerHeight - 70;
+            $("#move-header").css("height", height + 'px');
+        }
+	$("input[name=toggleBtn]").change(function(){
+	$(".slider").addClass('trans');
+	if(this.checked == true){
+			$("#payMonthly").removeClass('active');
+		$("#payYearly").addClass('active');
+	 if (lastsubsresponse !==undefined){
+            if(lastsubsresponse.subscriptionStatus == "ACTIVE") {
+                var _text = lastsubsresponse.subscriptionName;
+                if (_text == "Individual Lite Yearly Subscription") {  
+                    if($("#payYearly").hasClass('active')){
+					$("#lite").text('Cancel Subscription');
+					}
+					else{
+					$("#lite").text('Subscribe');
+					}
+                }
+                else if (_text == "Pro Yearly Subscription") {
+                  if($("#payYearly").hasClass('active')){
+					$("#pro").text('Cancel Subscription');
+					}
+					else{
+					$("#pro").text('Subscribe');
+					}
+                }
+				else if(_text == "Individual Lite Monthly Subscription"||_text == "Pro Monthly Subscription"){
+				$("#lite").text('Subscribe');
+				$("#pro").text('Subscribe');
+				}
+            }
+        }
+		else{
+			$("#lite").text('Subscribe');
+				$("#pro").text('Subscribe');
+			}
+		
+		$("#tab-1").find(".plan-price:eq(0)").text('$99.99');
+		$("#tab-1").find(".plan-price:eq(1)").text('$349.99');
+		$("#tab-1").find(".plan-data:eq(0)").text('600 GB/Year');
+		$("#tab-1").find(".plan-data:eq(1)").text('2400 GB/Year');
+		$("#payMonthly").css('opacity','0.5');
+		$("#payYearly").css('opacity','1');
+
+	}
+	else{
+			$("#payYearly").removeClass('active');
+		$("#payMonthly").addClass('active');
+		 if (lastsubsresponse !==undefined){
+            if(lastsubsresponse.subscriptionStatus == "ACTIVE") {
+                var _text = lastsubsresponse.subscriptionName;
+                if (_text == "Individual Lite Monthly Subscription") {
+                 if($("#payMonthly").hasClass('active')){
+					$("#lite").text('Cancel Subscription');
+					}
+					else{
+					$("#lite").text('Subscribe');
+					}
+                }
+                else if (_text == "Pro Monthly Subscription") {
+                  if($("#payMonthly").hasClass('active')){
+					$("#pro").text('Cancel Subscription');
+					}
+					else{
+					$("#lite").text('Subscribe');
+					}
+                }
+				else if(_text == "Individual Lite Yearly Subscription"||_text == "Pro Yearly Subscription"){
+				$("#lite").text('Subscribe');
+				$("#pro").text('Subscribe');
+				}
+            }
+        }
+		else{
+			$("#lite").text('Subscribe');
+				$("#pro").text('Subscribe');
+			}
+		$("#tab-1").find(".plan-price:eq(0)").text('$9.99');
+		$("#tab-1").find(".plan-price:eq(1)").text('$34.99');
+		$("#tab-1").find(".plan-data:eq(0)").text('50 GB/Month');
+		$("#tab-1").find(".plan-data:eq(1)").text('200 GB/Month');
+		$("#payYearly").css('opacity','0.5');
+		$("#payMonthly").css('opacity','1');
+
+	}
+});
+$(".dropdown").click(function(){
+	if(!($(".dropdown-content").hasClass("active"))){
+	$(".dropdown-content").addClass("active").css("display","none");
+	}
+	else{
+	$(".dropdown-content").removeClass("active").css("display","");
+	}
+	}); 
+$("#lite").click(function(){
+	if($(this).siblings('.plan-price').text() == "$99.99"){
+	  var _a = {
+        "amount":"$99.99",
+        "code":"USD",
+        "data":"600 GB",
+        "success":"paypalsuccess",
+        "cancel":"paypalcancel"
+    }, _b;
+	$("#move_main").css("display","none");
+    $("#checkoutpng").css("display","");
+    localStorage.setItem('YearlyAMNT', 99.99);
+    _b="Individual Lite Yearly Subscription";
+    sendGAEvents("Lite Yearly Subscription upgrade button");
+    localStorage.setItem('CFSubscribtion',_b);
+    localStorage.setItem('CFPrice',_a.amount);
+    localStorage.setItem('CFData',_a.data);
+    $('#couponcode').val('');
+    $("#subscribetypeNew span").text(_b);
+    $("#amntsize").text(_a.data);
+    $("#amntNew").text(_a.amount);
+    $("#totalamntNew").text(_a.amount);
+    $('#discountNew').text('0');
+    $('#couponsmessage').css('display','none');
+    $('#couponsmessage1').css('display','none');
+    $('#couponemessage').css('display','none');
+	if($(this).parents('div').hasClass('planPopUp')){
+        $('.planPopUp ').modal('hide');
+    }
+    couponCheck();
+    var subscriptionName = $('#subsname').text();
+    if(lastsubsresponse !== undefined)
+        var subscriptionStatus = lastsubsresponse.subscriptionStatus;
+    else
+        var subscriptionStatus = 'Active';
+	
+    if(subscriptionName !== 'Free Trial' && subscriptionStatus !== 'INACTIVE'){
+		if($(this).text() == "Cancel Subscription"){
+	 $('#cnclannualsubscribemodal').modal('show').css('display','block');
+	}
+	else{
+        $('#cnclOtherSubscribemodal').modal('show').css('display','block');
+	}
+    }
+    else if(subscriptionName == ''){
+        return false;
+    }
+
+    else{
+        window.location.href = 'checkout.html';
+    }
+	}
+	else{
+		 var _a = {
+        "amount":"$9.99",
+        "code":"USD",
+        "data":"50 GB",
+        "success":"paypalsuccess",
+        "cancel":"paypalcancel"
+    }, _b;
+	$("#move_main").css("display","none");
+    $("#checkoutpng").css("display","");
+	$("#backToDiv").css("display","");
+    localStorage.setItem('MonthlyAMNT', 9.99);
+    _b="Individual Lite Monthly Subscription";
+    sendGAEvents("Lite Monthly Subscription upgrade button");
+    localStorage.setItem('CFSubscribtion',_b);
+    localStorage.setItem('CFPrice',_a.amount);
+    localStorage.setItem('CFData',_a.data);
+    $('#couponcode').val('');
+    $("#subscribetypeNew span").text(_b);
+    $("#amntsize").text(_a.data);
+    $("#DataYearRmonth").text("Data per month");
+    $("#amntNew").text(_a.amount);
+    $("#totalamntNew").text(_a.amount);
+    $('#discountNew').text('0');
+    $('#couponsmessage').css('display','none');
+    $('#couponsmessage1').css('display','none');
+    $('#couponemessage').css('display','none');
+	if($(this).parents('div').hasClass('planPopUp')){
+        $('.planPopUp ').modal('hide');
+    }
+    couponCheck();
+    var subscriptionName = $('#subsname').text();
+    if(lastsubsresponse !== undefined)
+        var subscriptionStatus = lastsubsresponse.subscriptionStatus;
+    else
+        var subscriptionStatus = 'Active';
+    if(subscriptionName !== 'Free Trial' && subscriptionStatus !== 'INACTIVE'){
+       if($(this).text() == "Cancel Subscription"){
+	 $('#cnclmonthlysubscribemodal').modal('show').css('display','block');
+	}
+	else{
+        $('#cnclOtherSubscribemodal').modal('show').css('display','block');
+	}
+    }
+    else if(subscriptionName == ''){
+        return false;
+    }
+
+    else{
+        window.location.href = 'checkout.html';
+    }
+	}
+});
+
+$("#pro").click(function(){
+	if($(this).siblings('.plan-price').text() == "$349.99"){
+	  var _a = {
+        "amount":"$349.99",
+        "code":"USD",
+        "data":"2400 GB",
+        "success":"paypalsuccess",
+        "cancel":"paypalcancel"
+    }, _b;
+	$("#move_main").css("display","none");
+    $("#checkoutpng").css("display","");
+	$("#backToDiv").css("display","");
+    localStorage.setItem('YearlyAMNT', 349.99);
+    _b="Pro Yearly Subscription";
+    sendGAEvents("Advanced Yearly Subscription upgrade button");
+    localStorage.setItem('CFSubscribtion',_b);
+    localStorage.setItem('CFPrice',_a.amount);
+    localStorage.setItem('CFData',_a.data);
+    $('#couponcode').val('');
+    $("#subscribetypeNew span").text(_b);
+    $("#amntsize").text(_a.data);
+    $("#DataYearRmonth").text("Data per year");
+    $("#amntNew").text(_a.amount);
+    $("#totalamntNew").text(_a.amount);
+    $('#discountNew').text('0');
+
+    $('#discountNew').text('0');
+    $('#couponsmessage').css('display','none');
+    $('#couponsmessage1').css('display','none');
+    $('#couponemessage').css('display','none');
+
+    if($(this).parents('div').hasClass('planPopUp')){
+        $('.planPopUp ').modal('hide');
+    } 
+    couponCheck();
+    var subscriptionName = $('#subsname').text();
+    if(lastsubsresponse !== undefined)
+        var subscriptionStatus = lastsubsresponse.subscriptionStatus;
+    else
+        var subscriptionStatus = 'Active';
+    if(subscriptionName !== 'Free Trial' && subscriptionStatus !== 'INACTIVE'){
+      if($(this).text() == "Cancel Subscription"){
+	 $('#cnclannualsubscribemodal').modal('show').css('display','block');
+	}
+	else{
+        $('#cnclOtherSubscribemodal').modal('show').css('display','block');
+	}
+    }
+    else if(subscriptionName == ''){
+        return false;
+    }
+
+    else{
+        window.location.href = 'checkout.html';
+    }
+	}
+	else{
+		 var _a = {
+        "amount":"$34.99",
+        "code":"USD",
+        "data":"200 GB",
+        "success":"paypalsuccess",
+        "cancel":"paypalcancel"
+    }, _b;
+	$("#move_main").css("display","none");
+    $("#checkoutpng").css("display","");
+	$("#backToDiv").css("display","");
+    localStorage.setItem('MonthlyAMNT', 34.99);
+    _b="Pro Monthly Subscription";
+    sendGAEvents("Advanced Monthly Subscription upgrade button");
+    localStorage.setItem('CFSubscribtion',_b);
+    localStorage.setItem('CFPrice',_a.amount);
+    localStorage.setItem('CFData',_a.data);
+    $('#couponcode').val('');
+    $("#subscribetypeNew span").text(_b);
+    $("#amntsize").text(_a.data);
+    $("#DataYearRmonth").text("Data per month");
+    $("#amntNew").text(_a.amount);
+    $("#totalamntNew").text(_a.amount);
+    $('#discountNew').text('0');
+
+    $('#discountNew').text('0');
+    $('#couponsmessage').css('display','none');
+    $('#couponsmessage1').css('display','none');
+    $('#couponemessage').css('display','none');
+    if($(this).parents('div').hasClass('planPopUp')){
+        $('.planPopUp ').modal('hide');
+    }
+    couponCheck();
+    var subscriptionName = $('#subsname').text(); 
+    if(lastsubsresponse !== undefined)
+        var subscriptionStatus = lastsubsresponse.subscriptionStatus;
+    else
+        var subscriptionStatus = 'Active';
+    if(subscriptionName !== 'Free Trial' && subscriptionStatus !== 'INACTIVE'){
+       if($(this).text() == "Cancel Subscription"){
+	 $('#cnclmonthlysubscribemodal').modal('show').css('display','block');
+	}
+	else{
+        $('#cnclOtherSubscribemodal').modal('show').css('display','block');
+	}
+    } 
+    else if(subscriptionName == ''){ 
+        return false;  
+    }
+
+    else{
+        window.location.href = 'checkout.html';
+    }
+
+	}
+});
+ $('#backtoDiv').on('click',function(){
+        $("#checkoutpng").css("display","none");
+        $("#move_main").css("display",""); 
+
+    });
+        $('#upgrdIcon').on('click', function() {
+            window.location.href = "settings.html#move";
+        });
+        $('#thankbutton').on('click', function() {
+            $('#ThankPop').hide();
+            $('#ProccesingPopup').css('display','none');
+			$('.modal-backdrop').remove();
+            $("#checkoutpng").css("display","none"); 
+            $("#move_main").css("display","");
+
+        });
+        if (localStorage.getItem('UserId')) {
+            $('body').show();
+        }
+        else {
+            window.location.href = "index.html?ver=1028";
+        }
+        PageName = 'moveLanding';
+        var locationConsist = localStorage.getItem("movelocation");
+        if (locationConsist === 'schedules') {
+            $('#moveReports').trigger('click');
+        }
+        CFManageCloudAccountsAjaxCall.getAllClouds();
+        var dispanme = '';
+        sessionStorage.setItem('clouds', false);
+        $.each(AllCloudsInfo, function (i, cloud) {
+            var email = cloud.cloudUserId;
+            email = email.split('|');
+            email = email[1];
+            var _warning = cloud.cloudStatus === "INACTIVE" ? "cf-warning" : "";
+            //var cid='sourceCloudId='+cloud.id;
+            //var status=syncStatus(cid);
+
+            if (cloud.userDisplayName != null && (cloud.userDisplayName.trim().length > 0 || cloud.userDisplayName !== '')) {
+                dispanme = cloud.userDisplayName;
+            }
+            else {
+                dispanme = email;
+            }
+            var _msg="";
+			var titleName = dispanme;
+				dispanme = CFManageCloudAccountsAjaxCall.getMaxChars(dispanme,25);
+            if(cloud.cloudName === "ONEDRIVE" && cloud.cloudStatus === "INACTIVE")
+                _msg="OneDrive API has been upgraded. Please re-connect your cloud.";
+            //cloud.cloudName != "BOX_BUSINESS" && cloud.cloudName != "DROPBOX_BUSINESS" && cloud.cloudName != "ONEDRIVE_BUSINESS_ADMIN"
+            if((MultiUserClouds.indexOf(cloud.cloudName) === -1)) // || cloud.userType == "ADMIN"
+            {
+                sessionStorage.setItem('clouds', true);
+                var srcHtml = '<div class="moveCloudBlock button ' + _warning + '" style="padding:0px" title="' + _msg +'">' +
+                    '<input type="radio"  name="srcCld" class="srcCldInput" style="margin: 5px;margin-left:0%;height: 15px;width: 15px;">' +
+                    '<div class="move ' + cloud.cloudName + '" cid="' + cloud.id + '" pid="' + cloud.rootFolderId + '"></div>' +
+                    '<p id="userEmail" title="'+titleName+'">' + dispanme + '</p></div>';
+ 
+               var destHtml = '<div class="moveCloudBlock button ' + _warning + '" style="padding:0px" title="' + _msg +'">' +
+                    '<input type="radio"  name="dstnCld" class="dstnCldInput" style="margin: 5px;margin-left:80%;height: 15px;width: 15px;">' +
+                    '<div class="move ' + cloud.cloudName + '"  cid="' + cloud.id + '" pid="' + cloud.rootFolderId + '" style="margin-top:-15%;"></div>' +
+                    '<p id="userEmail" title="'+titleName+'">' + dispanme + '</i></p></div>';
+					
+				srcHtml = srcHtml.replace('cfIcon',cloud.cloudName);
+				destHtml = destHtml.replace('cfIcon',cloud.cloudName);
+			
+                $('#moveSource').append(srcHtml);
+
+                $('#moveDestination').append(destHtml);
+				if(cloud.cloudName == "EGNYTE_STORAGE" || cloud.cloudName == "ONEDRIVE"){
+					$('#moveDestination').find('.move.'+cloud.cloudName).css('margin-top','-27%');
+					}
+            }
+            $('#moveDestination >div').droppable({
+                greedy: true, drop: dropEventHandler, over: function () {
+                    $(this).addClass('moveCloudBlockDragHover').removeClass('moveCloudBlock');
+                }, out: function () {
+                    $(this).removeClass('moveCloudBlockDragHover').addClass('moveCloudBlock');
+                } 
+            });
+        });
+//        selectEvent.init();
+        setTimeout(function () {
+            var height = $(window).height() - $('#FooterLinks').height() - 5 - $('#topHeader').height();
+            $('#moveSyncReportsContainer').css('max-height', height);
+        }, 2000);
+        $(window).resize(function () {
+            $('#moveSyncReportsContainer').css('max-height', $(window).height());
+        });
+        if (sessionStorage.getItem('clouds') === "false") {
+		if(window.innerWidth < 1023){
+		$(".rowdiv").css("width","95%");
+		$("#CF_no_clouds").css("width","80%");
+		}
+            $('#CF_no_clouds').show();
+            $('#move_main').hide();
+            $('#move_multiUser').hide();
+        }
+        else {
+            $('#CF_no_clouds').hide();
+            $('#move_main').show();
+            $('#move_multiUser').hide();
+        }
+        $('#moveSyncReportsContainer').hide();
+        $('#movecheckModal').prop('disabled', true).removeClass('blue');
+
+        if(localStorage.hasOwnProperty("sourcePayment")){
+            PageName = 'move';
+            $.when(loadMoveSource()).then(loadMoveDestination());
+            localStorage.removeItem("sourcePayment");
+            localStorage.removeItem("popupSourcecld");
+            localStorage.removeItem("popupDestcld");
+        }
+    });
+    $("#yrlyPkg").css("display","none");
+    $("#mnthlyPkg").css("display","block");
+    $('input[name=subscription]:checked').parent().css({"border":"2px solid #3276b1"});
+</script>
+<script>
+ 
+
+</script>
+<!--stripe code start here-->
+<script>
+		
+// Create a Stripe client.
+
+    var stripe = Stripe('pk_live_RDQcISQ4Jo8dvB6Vu6R62ktZ00BIGDPa5r');//pk_test_0bZabDekUemnB2Fhvchcxsic00uWijdciq
+
+    // Create an instance of Elements.
+    var elements = stripe.elements();
+    
+
+    var card = elements.create('card', {
+        hidePostalCode: true,
+        style: {
+            base: {
+                iconColor: '#666EE8',
+                color: '#31325F',
+                lineHeight: '16px',
+                fontWeight: 300,
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSize: '15px',
+
+                '::placeholder': {
+                    color: '#CCCCCC',
+                },
+            },
+        }
+    });
+
+    card.mount('#card-element');
+	
+
+    // Handle real-time validation errors from the card Element.
+    card.addEventListener('change', function (event) {
+        $(".card-error-message").text('');
+        var displayError = document.getElementById('card-errors');
+        if (event.error) {
+            displayError.textContent = event.error.message;
+        } else {
+            displayError.textContent = '';
+        }
+        if(event.empty === true){
+            displayError.textContent = '';
+            $(".card-error-message").text('');
+        }
+    });
+    $(document).on('keyup',"#UserEntName",function(e){
+        var customerEmail = $("#UserEntName").val();
+        if(customerEmail.length < 1){
+            $("#EmailErrMsg").css("display","");
+            $("#UserEntName").focus();
+            $("#EmailErrMsg").text("*Please Enter  Name");
+            return true;
+        }
+        var re = /^[a-zA-Z ]+$/;
+        var is_email=re.test(customerEmail);
+        if(!is_email){
+            $("#EmailErrMsg").css("display","");
+            $("#UserEntName").focus();
+            $("#EmailErrMsg").text("*Please Enter Valid  Name");
+            return true;
+        }
+        else{
+            $("#card-element").focus();
+            $("#UserEntName").focusout();
+            $("#UserEntName").off();
+
+
+            $("#EmailErrMsg").css("display","none");
+        }
+        if (e.which === 9 || e.keyCode === 9) {
+            e.preventDefault();
+
+
+            if(customerEmail.length < 1){
+                $("#EmailErrMsg").css("display","");
+                $("#UserEntName").focus();
+                $("#EmailErrMsg").text("*Please Enter  Name");
+                return false;
+
+            }
+
+            else if (customerEmail.length > 0) {
+
+                var re = /^[a-zA-Z ]+$/;
+                var is_email=re.test(customerEmail);
+                if(!is_email){
+                    $("#EmailErrMsg").css("display","");
+                    $("#UserEntName").focus();
+                    $("#EmailErrMsg").text("*Please Enter Valid  Name");
+
+                    return false;
+                }
+                else{
+                    $("#UserEntName").off();
+                    $(document).find("#card-element").focus();
+                    $(document).find("#UserEntName").focusout();
+                    $("#EmailErrMsg").css("display","none");
+                }
+            }
+        }
+
+    });
+    $("#UserEntName").keydown(function(e){
+     
+        if (e.which == 32) {
+            return false;
+        }
+        var customerEmail = $("#UserEntName").val();
+        if (e.which === 8 || e.keyCode === 8) {
+
+            var customerEmail = $("#UserEntName").val();
+
+            if(customerEmail.length < 1){
+                $("#EmailErrMsg").css("display","");
+                $("#UserEntName").focus();
+                $("#EmailErrMsg").text("*Please Enter  Name");
+                return true;
+
+            }
+
+            else if (customerEmail.length > 0) {
+                var _length = customerEmail.length;
+                var _length2 = _length-1;
+                customerEmail = customerEmail.substring(0,_length2);
+
+                var re = /^[a-zA-Z ]+$/;
+                var is_email=re.test(customerEmail);
+                if(!is_email){
+                    $("#EmailErrMsg").css("display","");
+                    $("#UserEntName").focus();
+                    $("#EmailErrMsg").text("*Please Enter Valid  Name");
+                    return true;
+                }
+                else{
+                    $("#card-element").focus();
+                    $("#UserEntName").focusout();
+                    $("#UserEntName").off();
+
+
+                    $("#EmailErrMsg").css("display","none");
+                    return true;
+                }
+            }
+        }
+
+        $("#UserEntName").focusout();
+
+    });
+
+    // Handle form submission.
+    $('#card-button').click(function (event) {
+        event.preventDefault();
+        $(this).attr('disabled',true);
+        var customerEmail = $("#UserEntName").val();
+        if(customerEmail.length < 1){
+            $("#EmailErrMsg").css("display","");
+            $("#UserEntName").focus();
+            $("#EmailErrMsg").text("*Please Enter Name");
+            $(this).attr('disabled',false);
+            return false;
+
+        }
+
+        else  if(customerEmail.length > 0){
+            var re = /^[a-zA-Z ]+$/;
+            var is_email=re.test(customerEmail);
+            if(!is_email){
+                $("#EmailErrMsg").css("display","");
+                $("#UserEntName").focus();
+                $("#EmailErrMsg").text("*Please Enter Valid Name");
+                $(this).attr('disabled',false);
+                return false;
+            }
+            else{
+                $("#UserEntName").off();
+
+                $("#EmailErrMsg").css("display","none");
+            }
+        }
+
+
+        if(card._parent.className === "StripeElement StripeElement--empty"){
+          $('#ProccesingPopup').css('display','none');//  $("#ProccesingPopup").modal("hide");
+        }
+        else if(card._parent.className === "StripeElement")
+           $('#ProccesingPopup').css('display','none');// $("#ProccesingPopup").modal("hide");
+        else if(card._parent.className === "StripeElement StripeElement--invalid")
+           $('#ProccesingPopup').css('display','none');//  $("#ProccesingPopup").modal("hide");
+        else if(card._parent.className === "StripeElement StripeElement--empty StripeElement--invalid")
+           $('#ProccesingPopup').css('display','none');//  $("#ProccesingPopup").modal("hide");
+        else{ 
+         $('#ProccesingPopup').css('display','none');//   $("#ProccesingPopup").modal("show");
+        } 
+        /*  $("#EmailErrMsg").css("display","none");*/
+        stripe.createToken(card).then(function (result) {
+            if (result.error) {
+                // Inform the user if there was an error.
+                var errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+                $(this).attr('disabled',false);
+                $('#ProccesingPopup').css('display','none');;//$("#ProccesingPopup").modal("hide");
+            } else {
+
+                // Send the token to your server.
+                $("#ProccesingPopup").modal("show");
+                var newToken = result.token;
+                var CustomerName = $('#UserEntName').val();
+                /* var email_Id = $("#UserEntEmail").val();*/ 
+
+                var PlanID, subscriptionType ;
+                var SubscriptionName = localStorage.getItem('CFSubscribtion');
+                if( SubscriptionName == "Individual Lite Monthly Subscription"){
+                    PlanID = "plan_FUOTGUZEODaCDh";//plan_FOkuvnQYOz39OQ
+                    subscriptionType = "PAY_MONTHLY";
+                }
+                else if( SubscriptionName == "Individual Lite Yearly Subscription"){
+                    PlanID = "plan_FUOZLVyZiTfvnU";//plan_FOkt0c6HCkOp9T
+                    subscriptionType = "PAY_YEARLY";
+                }
+                else if( SubscriptionName == "Standard Monthly Subscription"){
+                    PlanID = "plan_FUOacjW43CF9ic";//plan_FOkwiO5Gmgfazn
+                    subscriptionType = "PAY_MONTHLY";
+                }
+                else if( SubscriptionName == "Standard Yearly Subscription"){
+                    PlanID = "plan_FUOawyr66BOpw4";//plan_FOkwHOMmcwDo6j
+                    subscriptionType = "PAY_YEARLY";
+                }
+                else if( SubscriptionName == "Pro Monthly Subscription"){
+                    PlanID = "plan_FUObsGhEDgWyxm";//plan_FOkypZ4HbdHZUw
+                    subscriptionType = "PAY_MONTHLY";
+                }
+                else{
+                    PlanID = "plan_FUOcbZUXm3b5C0";//plan_FOkx1FE83a9Yb2
+                    subscriptionType = "PAY_YEARLY";
+                }
+
+                if($("#applycouponNew").text() == "Remove Coupon"){
+                    var GetTokenVAl = localStorage.getItem('coupon_Id');
+                    var obj1={
+                        'planId': PlanID,
+                        'tranxId': newToken.id,
+                        'customerName': CustomerName,
+                        'subscriptionName':SubscriptionName,
+                        'subscriptionType':subscriptionType,
+                        'coupon':GetTokenVAl
+                    };
+                    setTimeout(function() {
+                        stripeTokenHandler(obj1);
+                    },3000);
+                }
+                else{
+                    var obj2={
+                        'planId': PlanID,
+                        'tranxId': newToken.id,
+                        'customerName': CustomerName,
+                        'subscriptionName':SubscriptionName,
+                        'subscriptionType':subscriptionType,
+                    };
+                    setTimeout(function() {
+                        stripeTokenHandler(obj2);
+                    },3000);
+                }
+            }
+        });
+        setTimeout(function() {
+            $('#card-button').attr('disabled',false);
+        },3000);
+
+    });
+
+
+    // Submit the form with the token ID.
+    function stripeTokenHandler(data) {
+
+        $.ajax({
+            type: 'POST',
+            url: apicallurl+"/stripe/user/payment",
+            async: false,
+            "crossDomain": true,
+
+            data: JSON.stringify(data),
+            headers: {
+                "Authorization": localStorage.getItem('UserAuthDetails'),
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            success: function (data) {
+                //console.log(data);
+                var subscriptionId = data.subscriptionId;
+                var customerEmail = data.custommerEmail;
+                var _amntNew = $("#amntNew").text();
+                var _discountNew = $("#discountNew").text();
+                var _totalamntNew = $("#totalamntNew").text();
+                localStorage.setItem("DisplayAmt",_amntNew);
+                localStorage.setItem("disctAmt",_discountNew);
+                localStorage.setItem("tolAmt",_totalamntNew);
+
+                if(data.status === 'active'){
+				$("#ProccesingPopup").css("display","none");
+                //    $("#ProccesingPopup").modal("hide");
+
+                    var _b=localStorage.getItem('CFSubscribtion');
+                    if(_b.indexOf("Yearly") >= 0){
+                        // addYearlySubscription(customerEmail,subscriptionId);
+                        setTimeout(function() {
+                            $("#ThankPop").modal("show");
+                        },1000);
+
+
+                    }
+                    else if(_b.indexOf("Monthly") >= 0){
+                        //  addMonthlySubscription(customerEmail,subscriptionId);
+                        setTimeout(function() {
+                            $("#ThankPop").modal("show");
+                        },1000);
+                    }
+
+
+                    var subname = _b.replace(/\+/g," ").replace("CloudFuze ","");
+
+                    var _startTime = data.currentPeriodStart*1000;
+                    var _endTime = data.currentPeriodEnd*1000;
+                    _startTime = CFInterConvertTimeUtility.Ptstamptomillsec(_startTime);
+                    if (_endTime < _startTime) { //already expired users
+                        if (subname == "Monthly Recurring") {
+                            _endTime = CFInterConvertTimeUtility.Pincreasethirty(_startTime);
+                        }
+                        if (subname == "Yearly Recurring") {
+                            _endTime = CFInterConvertTimeUtility.Pincreaseyear(_startTime);
+                        }
+                    }
+                    else {
+                        if (subname == "Monthly Recurring") {
+                            _endTime = CFInterConvertTimeUtility.Pincreasethirty(_endTime);
+                        }
+                        if (subname == "Yearly Recurring") {
+                            _endTime = CFInterConvertTimeUtility.Pincreaseyear(_endTime);
+                        }
+                    }
+                    var _pmntObj = {
+                        "subscriptionName": subname,
+                        "userId":  localStorage.getItem('UserId'),
+                        "subscriptionStartDate": CFManageCloudAccountsAjaxCall.getDateConversion(_startTime),
+                        "subscriptionEndDate": CFManageCloudAccountsAjaxCall.getDateConversion(_endTime),
+                        "amountPaid" : $("#totalamntNew").text(),
+                        "discount" : $("#discountNew").text(),
+                        "totAmount" : $("#amntNew").text(),  
+                    };
+                    sendGAEvents('Payment success.');
+				/*	activecampaign.eventTrack('Success',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Payment');
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"recurringPaymentHistory");
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"amountPaid",_pmntObj.amountPaid);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"price",_pmntObj.totAmount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"discount",_pmntObj.discount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"paidDate",_pmntObj.subscriptionStartDate);
+*/
+				
+                //    zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"RecurringHistory");
+                 //   zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,_pmntObj);
+
+
+                    var trailUserRemove = $("#dash-uname").text();
+                    if( trailUserRemove.indexOf("Trial")){
+                        $("#dash-uname").text(trailUserRemove.split("(")[0]);
+                    }
+                }
+                else if(data.status === 'incomplete'){
+                    var paymentIntentSecret = data.clientSecreat;
+                    var startTime = data.currentPeriodStart;
+                    var endTime = data.currentPeriodEnd;
+                    stripe.handleCardPayment(paymentIntentSecret).then(function (result) {
+                        if (result.error) {
+						$("#ProccesingPopup").css("display","none");
+                        //    $("#ProccesingPopup").modal("hide");
+                            $(".card-error-message").text("Your card not accepting payment or insufficient funds.");
+
+
+                            // console.log(result.error);
+
+
+                        } else {
+                            // console.log(result);
+                            if(result.paymentIntent.status === "succeeded"){
+							$("#ProccesingPopup").css("display","none");
+							//		$("#ProccesingPopup").modal("hide");
+
+                                var payment_intentId = result.paymentIntent.id;
+                                var _b=localStorage.getItem('CFSubscribtion');
+                                if(_b.indexOf("Yearly") >= 0){
+                                    addYearlySubscription(customerEmail,subscriptionId,payment_intentId,startTime,endTime);
+                                    setTimeout(function() {
+                                        $("#ThankPop").modal("show");
+                                    },1000);
+
+                                }
+                                else if(_b.indexOf("Monthly") >= 0){
+                                    addMonthlySubscription(customerEmail,subscriptionId,payment_intentId,startTime,endTime);
+                                    setTimeout(function() {
+                                        $("#ThankPop").modal("show");
+                                    },1000);
+                                }
+                                var trailUserRemove = $("#dash-uname").text();
+                                if( trailUserRemove.indexOf("Trial")){
+                                    $("#dash-uname").text(trailUserRemove.split("(")[0]);
+                                }
+                            }
+                        }
+                    })
+                }
+            },
+       
+            complete: function (xhr, statusText) {
+
+
+                if (xhr.status >= 300) {
+				 //   activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"failedPayments",'Yes');
+                //    zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"Failed");
+                    $("#ProccesingPopup").css("display","none");
+				 //$("#ProccesingPopup").modal("hide");
+                    $("#ThankPop").modal("hide");
+
+                    var response = xhr.getResponseHeader("exception").trim();
+
+
+                    var values = response.split(',');
+                    if(values[0].split(":")[2] === 'null' || values[0].split(":")[2] === null || values[0].split(":")[2] === '"null"'){
+                        $(".card-error-message").text("Please enter valid card details.");
+                        return false;
+
+                    }
+
+                    var count = [];
+                    for(var i = 0; i < values.length; i++) {
+                        var hrdValue = values[i].split(': ');
+                        if(hrdValue.length > 1){
+                            count[hrdValue[0].trim()] = hrdValue[1].trim();
+                        }
+                    }
+                    var value = count['"message"'];
+                    /*   var response = xhr.getResponseHeader("exception").trim();
+                       var value =response.split(',')[2].split(':')[1].split('"')[1];*/
+                    if(value){
+                        if(value.includes('"')){
+                            var _value = value.split('"')[1];
+                            $(".card-error-message").text(_value);
+                        }
+                    }
+
+                }
+            },
+            error: function (e) {
+                // console.log(e);
+            }
+        });
+
+    }
+    function addYearlySubscription(customerEmail,subscriptionId,payment_intentId,startTime,endTime){
+        var _b=localStorage.getItem('CFSubscribtion');
+      /*  if(_b.indexOf("Lite") >= 0){
+		activecampaign.eventTrack('Basic Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+            sendGAEvents("99.99 (Basic Monthly)","Pricing Plans");
+		}
+        else if(_b.indexOf("Standard") >= 0){
+		activecampaign.eventTrack('Standard Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+            sendGAEvents("199.99 (Standard Monthly)","Pricing Plans");
+		}
+        else if(_b.indexOf("Pro") >= 0){
+		activecampaign.eventTrack('Advanced Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+            sendGAEvents("349.99 (Advanced Monthly)","Pricing Plans");
+		}*/
+
+        var subname = _b.replace(/\+/g," ").replace("CloudFuze ","");
+        var status1 = "ACTIVE";
+        var stype = "PAY_YEARLY";
+       
+        CreateSubscription(subname, status1, stype, startTime*1000, endTime*1000,customerEmail,subscriptionId,payment_intentId);
+
+        $('#transstatustext').text('Thank you for choosing CloudFuze. Your payment was successful.');
+
+    }
+    function addMonthlySubscription(customerEmail,subscriptionId,payment_intentId,startTime,endTime){
+        var _b=localStorage.getItem('CFSubscribtion');
+     /*   if(_b.indexOf("Lite") >= 0){
+            sendGAEvents("9.99 (Basic Monthly)","Pricing Plans");
+			activecampaign.eventTrack('Basic Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+		}
+        else if(_b.indexOf("Standard") >= 0){
+		activecampaign.eventTrack('Standard Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+            sendGAEvents("19.99 (Standard Monthly)","Pricing Plans");
+		}
+        else if(_b.indexOf("Pro") >= 0){
+		activecampaign.eventTrack('Advanced Monthly',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Pricing Plan');
+            sendGAEvents("34.99 (Advanced Monthly)","Pricing Plans");
+		}*/
+
+        _b=(_b.replace(new RegExp('[+]','g')," ").split('CloudFuze').pop().trim());
+
+        var subname =_b.replace(/\+/g," ").replace("CloudFuze ","");
+        var status1 = "ACTIVE";
+        var stype = "PAY_MONTHLY";
+        /*  var expdate = getuserexpiry.searchuserexpiry(localStorage.getItem('UserId'));
+          var expdate_expiresIn = expdate[0].expiresIn;
+          var expdate_createdDate = expdate[0].createdDate;
+          var etstamp;
+          if (expdate_expiresIn == null) {
+              etstamp = expdate_createdDate + (30 * 24 * 60 * 60 * 1000);
+              CreateSubscription(subname, status1, stype, 1562758483000, etstamp,customerEmail,subscriptionId,payment_intentId);
+          }
+          else {
+              var myDate = new Date();
+              var result = myDate.getTime();
+              etstamp = result + (30 * 24 * 60 * 60 * 1000);
+             CreateSubscription(subname, status1, stype, 1562758483000, etstamp,customerEmail,subscriptionId,payment_intentId);
+          } */
+        CreateSubscription(subname, status1, stype,startTime*1000,endTime*1000,customerEmail,subscriptionId,payment_intentId);
+        $('#transstatustext').text('Thank you for choosing CloudFuze. Your payment was successful.');
+
+    }
+    function CreateSubscription(subname, state, stype, ctstamp, etstamp,customerEmail,subscriptionId,payment_intentId ) {
+        var d = new Date();
+        var _time = d.toISOString();
+        sendGAEvents("creation of user subscription",_time);
+        ctstamp = CFInterConvertTimeUtility.Ptstamptomillsec(ctstamp);
+        var apiUrl = apicallurl + "/subscription/add";
+        if (etstamp < ctstamp) { //already expired users
+            if (subname == "Monthly Recurring") {
+                etstamp = CFInterConvertTimeUtility.Pincreasethirty(ctstamp);
+            }
+            if (subname == "Yearly Recurring") {
+                etstamp = CFInterConvertTimeUtility.Pincreaseyear(ctstamp);
+            }
+        }
+        else {
+            if (subname == "Monthly Recurring") {
+                etstamp = CFInterConvertTimeUtility.Pincreasethirty(etstamp);
+            }
+            if (subname == "Yearly Recurring") {
+                etstamp = CFInterConvertTimeUtility.Pincreaseyear(etstamp);
+            }
+        }
+
+        if(subname == "Monthly Recurring"){
+            subname='Individual Lite Monthly Subscription';
+        }
+        if(subname == "Basic Monthly Subscription"){
+            subname='Individual Lite Monthly Subscription';
+        }
+        if(subname == "Basic Yearly Subscription"){
+            subname='Individual Lite Yearly Subscription';
+        }
+        if(subname == "Standard Yearly Subscription"){
+            subname='Standard Yearly Subscription';
+        }
+        if(subname == "Standard Monthly Subscription"){
+            subname='Standard Monthly Subscription';
+        }
+        if(subname == "Advanced Yearly Subscription"){
+            subname='Pro Yearly Subscription';
+        }
+        if(subname == "Advanced Monthly Subscription"){
+            subname='Pro Monthly Subscription';
+        }
+
+        var subsarray = {"subscriptionName": subname, "userId": {"id": localStorage.getItem('UserId')}, "subscriptionStatus": state, "subscriptionType": stype, "subscriptionStartDate": ctstamp, "subscriptionEndDate": etstamp, "subscriptionId": subscriptionId, "email":customerEmail, "payment_intentId":payment_intentId};
+        var subsarrayjson = JSON.stringify(subsarray);
+        var subsresponse1 = "";
+        $.ajax({
+            type: "PUT",
+            url: apiUrl,
+            data: subsarrayjson,
+            async: false,
+            dataType: "application/json",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": CFManageCloudAccountsAjaxCall.getAuthDetails(),
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,OPTIONS"
+            },
+            success: function (data) {
+                subsresponse1 = data;
+            },
+
+            complete: function (xhr, statusText) {
+                if (xhr.status == 200) {
+                    subsresponse = xhr.responseText;
+                    subsresponse = jQuery.parseJSON(subsresponse);
+
+                    var _pmntObj = {
+                        "subscriptionName": subname,
+                        "userId":  localStorage.getItem('UserId'),
+                        "subscriptionStartDate": CFManageCloudAccountsAjaxCall.getDateConversion(ctstamp),
+                        "subscriptionEndDate": CFManageCloudAccountsAjaxCall.getDateConversion(etstamp),
+                        "amountPaid" : $("#totalamntNew").text(),
+                        "discount" : $("#discountNew").text(),
+                        "totAmount" : $("#amntNew").text()
+                    };
+                    sendGAEvents('Payment success.');
+				/*	activecampaign.eventTrack('Success',JSON.parse(localStorage.getItem('CFUser')).primaryEmail,'Payment');
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"recurringPaymentHistory");
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"amountPaid",_pmntObj.amountPaid);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"price",_pmntObj.totAmount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"discount",_pmntObj.discount);
+					activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"paidDate",_pmntObj.subscriptionStartDate);
+					*/
+                //    zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"RecurringHistory");
+                 //   zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,_pmntObj);
+                }
+                if (xhr.status > 300) {
+                  //  activecampaign.getContact(JSON.parse(localStorage.CFUser).primaryEmail,"failedPayments",'Yes');
+				//	zohoCrm.upgradeSubscribtionRecord(JSON.parse(localStorage.CFUser).primaryEmail,"Failed");
+                }
+            }
+        });
+    }
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        paymentCheck();
+        $('.__PrivateStripeElement input').on('change',function () {
+            if ($('.CardBrandIcon-inner').children[0].SVG_ZOOMANDPAN_DISABLE === 1){
+                $('#cardsImg').css('display', '');
+            } else {
+                $('#cardsImg').css('display', 'none');
+            }
+
+        });
+
+		checkUserProgressLimit();
+        $('#plansPopUp').on('click', function() {
+            $("#moveMigrationPrices").modal("show");
+            $(".supportcontent").css("display","none"); 
+            $("#ProceedToOptions").css("display","none");
+            $("#moveMigrationPrices .upgardeHide").css("display","none");
+            $("##individualTab").css("padding","2% !important");
+
+            getuserexpiry.getLastSubscription();
+            var _text ;
+            if (_text == "Individual Lite Yearly Subscription") {
+                $("#basicannualsubscribe").css("display", "none");
+                $("#cnclbasicannualsubscribe").css("display", "block");
+            }
+            else if (_text == "Yearly Recurring") {
+                $("#basicannualsubscribe").css("display", "none");
+                $("#cnclbasicannualsubscribe").css("display", "block");
+            }
+            else if (_text == "Standard Yearly Subscription") {
+                $("#stndannualsubscribe").css("display", "none");
+                $("#cnclstndannualsubscribe").css("display", "block");
+            }
+            else if (_text == "Pro Yearly Subscription") {
+                $("#advncdannualsubscribe").css("display", "none");
+                $("#cncladvncdannualsubscribe").css("display", "block");
+            }
+            else if (_text == "Basic Monthly Subscription") {
+                $("#basicmonthlysubscribe").css("display", "none");
+                $("#cnclbasicmonthlysubscribe").css("display", "block");
+            }
+            else if (_text == "Individual Lite Monthly Subscription") {
+                $("#basicmonthlysubscribe").css("display", "none");
+                $("#cnclbasicmonthlysubscribe").css("display", "block");
+            }
+            else if (_text == "Standard Monthly Subscription") {
+                $("#stndmonthlysubscribe").css("display", "none");
+                $("#cnclstndmonthlysubscribe").css("display", "block");
+            }
+            else if (_text == "Pro Monthly Subscription") {
+                $("#advncdmonthlysubscribe").css("display", "none");
+                $("#cncladvncdmonthlysubscribe").css("display", "block");
+            }
+
+
+        });
+    });
+    function paymentCheck() {
+        var a = localStorage.getItem("CFSubscribtion"),
+            b = "$" + localStorage.getItem("CFPrice"),
+            c = "$" + localStorage.getItem("MonthlyAMNT"),
+            d = "$" + localStorage.getItem("YearlyAMNT"),
+            e = localStorage.getItem("CFData"),
+            f = "Data per Year",
+            g = "Data per Month";
+
+        if (a === "Individual Lite Yearly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(d);
+            $("#totalamntNew").html(d);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(f);
+        }
+        if (a === "Standard Yearly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(d);
+            $("#totalamntNew").html(d);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(f);
+        }
+        if (a === "Pro Yearly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(d);
+            $("#amntsize").html(e);
+            $("#totalamntNew").html(d);
+            $("#DataYearRmonth").html(f);
+        }
+        if (a === "Pro Monthly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(c);
+            $("#totalamntNew").html(c);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(g);
+        }
+        if (a === "Standard Monthly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(c);
+            $("#totalamntNew").html(c);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(g);
+        }
+        if (a === "Individual Lite Monthly Subscription") {
+            $("#subscribetypeNew span").html(a);
+            $("#amntNew").html(c);
+            $("#totalamntNew").html(c);
+            $("#amntsize").html(e);
+            $("#DataYearRmonth").html(g);
+        }
+        //couponCheck();
+
+    }
+</script>
+<script type="text/javascript" >
+    $('#couponcode').focus(function() {
+        if (window.matchMedia('(max-width: 480px)').matches) {
+            $("#cotab-content .table").css("display", "none");
+        }
+    })
+    $('#couponcode').focusout(function() {
+        if (window.matchMedia('(max-width: 480px)').matches) {
+            $("#cotab-content .table").css("display", "block");
+            $('#applycouponNew').trigger('click');
+        }
+    })
+
+    $("input[name=test1]").on("change",function () {
+
+        if($("input[name=test1]:checked").val()=== 'monthly'){
+            $("#liteMonthly:hidden").show();
+            $("#liteYearly").hide();
+        }
+        else{
+            $("#liteYearly:hidden").show();
+            $("#liteMonthly").hide();
+        }
+        return false;
+    });
+    $("input[name=test2]").on("change",function () {
+
+        if($("input[name=test2]:checked").val()=== 'monthly'){
+            $("#stdMonthly:hidden").show();
+            $("#stdYearly").hide();
+        }
+        else{
+            $("#stdYearly:hidden").show();
+            $("#stdMonthly").hide();
+        }
+        return false;
+    });
+    $("input[name=test3]").on("change",function () {
+
+        if($("input[name=test3]:checked").val()=== 'monthly'){
+            $("#proMnthlychecked:hidden").show();
+            $("#proYearlychecked").hide();
+        }
+        else{
+            $("#proYearlychecked:hidden").show();
+            $("#proMnthlychecked").hide();
+        }
+        return false;
+    });
+	/*    $('#thankbutton').click(function (event) {
+        $("#ProccesingPopup").modal("hide");
+        $("#ThankPop").modal("hide");
+        $("#move_main").css("display",""); 
+    });*/
+</script>
+
+<!--stripe payment script code END-->
+<script>
+    $(document.body).on('click', function() {
+        if(localStorage.getItem("storageVal") == null){
+            alertSuccess("You have been logged out");
+            window.location.href = "index.html";
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649987855');
+    vgo('setTrackByDefault', true);
+	vgo('setEmail', JSON.parse(localStorage.getItem('CFUser')).primaryEmail); 
+    vgo('process');
+</script>
+
+</body>
+</html>

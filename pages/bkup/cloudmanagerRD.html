@@ -1,0 +1,1579 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<!-- Hotjar Tracking Code for http://webapp.cloudfuze.com 
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script> -->
+ <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.setTimeout(function() {
+
+            window.$zopim || (function (d, s) {
+                var z = $zopim = function (c) {
+                    z._.push(c)
+                }, $ = z.s =
+                    d.createElement(s), e = d.getElementsByTagName(s)[0];
+                z.set = function (o) {
+                    z.set._.push(o)
+                };
+                z._ = [];
+                z.set._ = [];
+                $.async = !0;
+                $.setAttribute('charset', 'utf-8');
+                $.src = '//v2.zopim.com/?2YRVJ9WdqLaWGrAOduJsbu5op02qZFJI';
+                z.t = +new Date;
+                $.type = 'text/javascript';
+                e.parentNode.insertBefore($, e)
+            })(document, 'script');
+            $zopim(function() {
+                var _usrdtls=JSON.parse(localStorage.getItem("CFUser"));
+                $zopim.livechat.setEmail(_usrdtls.primaryEmail);
+                $zopim.livechat.setName(localStorage.getItem("UserName"));
+            });
+
+        }, 8000);
+    </script>
+    <!--End of Zopim Live Chat Script-->
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' www.google-analytics.com *.app-us1.com *.cloudflare.com *.zopim.com *.hotjar.com *.zdassets.com maxcdn.bootstrapcdn.com ajax.googleapis.com apis.google.com; style-src 'self' 'unsafe-inline' cdn.lineicons.com maxcdn.bootstrapcdn.com *.googleapis.com; img-src * 'self' data: google-analytics.com">
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <title>CloudFuze</title>
+<link rel="Shortcut Icon" type="image/ico" href="../img/PNG/cfLogo.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com">
+ 
+      <link href="../stylesheets/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../stylesheets/sidebar.css">
+ <link href="../stylesheets/LinIconsPro-Light.css" rel="stylesheet">
+<link href="../stylesheets/LineIcons.css" rel="stylesheet">
+<style>
+	.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  height: 24px;
+    width: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#isAzureFileShare:checked + .slider {
+  background-color: #2196F3;
+}
+
+#isAzureFileShare:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+#isAzureFileShare:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+	#sidebar i{
+	font-size:20px;
+	}
+	.CloudThumb_parent{
+	margin-right: 1.4%;
+	margin-bottom:2%;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	width:113px;
+	height:113px;
+	float:left;
+	}
+	.CloudThumb_parent:hover{
+	box-shadow: 0px 0px 10px #0000001F;
+	font-weight:600;
+	}
+	.cloudThumbnail img {
+    height: 50px; 
+	}
+	.clds > p{
+	margin-left: -14%;
+	}
+	.table td{
+	vertical-align: middle;
+	}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+  border: 1px solid #E5E5E5;
+    border-radius: 4px;
+	left:-15%;
+} 
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+} 
+
+.dropdown-content a:hover{background-color: #fafafa;color:#1220f6!important;}
+
+.light-gray:hover {background-color: #fafafa;color:#1220f6!important;border:1px solid #e5e5e5!important;}
+
+.blue:hover{
+background-color: #24DFD3!important;border:1px solid #24DFD3!important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+button,a{
+cursor:pointer;
+}
+ .cloudSpinn{
+ cursor: pointer;
+    margin-top: 2px;
+    height: 19px;
+    width: 21px;
+    display: inline-block;
+    background: url(../img/syncCloud1.gif) no-repeat; 
+    margin-bottom: 2px; 
+}
+	::-webkit-scrollbar {
+  width: 10px;
+}
+
+#cm-addcloud{
+padding: 0px 9px;
+position: absolute;
+top: 38%;
+}
+#cm-managecloud{
+padding: 0px 9px;
+position: absolute;
+top: 39%;
+left: 11%;
+}
+#cm-sidebar{
+padding: 0px 5px;
+position: absolute;
+top: 30%;
+right: 5%;
+}
+#cm-topbar{
+padding: 0px 5px;
+position: absolute;
+top: 30%;
+right: 10%;
+}
+.modal-content{
+width:45vw;
+}
+.modal{
+left:-4%;
+}
+#manageclouddiv > div{
+width:100%;
+}
+#addHr{
+	width: 87px;
+}
+#manageHr{
+	width:115px;
+}
+/*  responsive */
+@media (max-width: 768px) and (orientation: portrait) {
+#cm-addcloud{
+    left: -2%;
+}
+#cm-managecloud{
+    left: 27%;
+}
+#cm-sidebar{
+right: 13%;
+}
+#cm-topbar{
+right: -2%;
+}    
+#sidebarCollapse{
+font-size:10px; 
+}
+.btn-dark{
+font-size:10px;
+}
+.navbar-nav-scroll .nav-link{
+font-size:10px; 
+}
+.modal-content{
+width:95vw;
+}
+.modal{
+left:0%;
+}
+#manageclouddiv{
+width:75vw; 
+}
+#manageclouddiv > div{
+width:350vw; 
+}
+#addHr{
+	width: 60px;
+}
+#manageHr{
+	width:87px;
+}
+.dropdown-content {
+	right: 0%;
+    left: 50%!important;
+} 
+}
+.dropNav{
+padding-left:3%;
+}
+@media (max-width: 768px) and (min-width: 767.8px) {
+#manageclouddiv > div{
+width:150vw; 
+}
+#cm-addcloud{
+    left: 4%;
+}
+#cm-managecloud{
+    left: 18%;
+}
+#cm-topbar{
+right: 4%;
+}
+.modal-content{
+width:75vw;
+}
+.dupNav{
+margin-top:0%!important;
+}
+.dropdown-content {
+    width:27%;
+    left: 75%!important;
+}
+}
+@media (max-width: 1076px) and (min-width: 992px) {
+#cm-managecloud {
+left:14%!important;
+}
+}
+@media (max-width: 1300px) and (min-width: 992px) {
+.navbar-nav-scroll{
+width: 30%!important;
+}
+#navbarSupportedContent{
+width:70%!important;
+}
+}
+@media (max-width: 1025px) and (min-width: 1024px) { 
+#cm-managecloud{
+    left: 14%;
+}
+/*#navbarSupportedContent{
+margin-top:10%;
+}*/
+
+.dropNav{
+padding-left:7%;
+}
+}
+@media (max-width: 420px) and (min-width: 319px) {
+.alertScs,.alertErr{
+width:300px!important;
+min-width:300px!important;  
+} 
+ #policyId{
+ bottom:0%!important; 
+ }
+}
+@media (max-height: 620px) {
+
+ #policyId{
+ bottom:-2%!important; 
+ }
+}
+
+
+.bg-AMAZON {
+    width: 65px; height: 49px;
+    background: url('../img/css_sprites.png') -190px -10px;
+}
+
+
+.bg-AZURE_OBJECT_STORAGE,.bg-AZURE_FILESHARE_OBJECT_STORAGE {
+    width: 70px; height: 37px;
+    background: url('../img/css_sprites.png') -10px -184px;
+}
+
+
+.bg-BOX {
+    width: 50px; height: 28px;
+    background: url('../img/css_sprites.png') -415px -283px;
+}
+
+.bg-BOX_BUSINESS {
+    width: 50px; height: 28px;
+    background: url('../img/css_sprites.png') -415px -331px;
+}
+
+
+.bg-CIFS {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -190px -79px;
+}
+
+
+.bg-DROP_BOX {
+    width: 50px; height: 47px;
+    background: url('../img/css_sprites.png') -415px -149px;
+}
+
+
+.bg-DROPBOX_BUSINESS {
+    width: 50px; height: 47px;
+    background: url('../img/css_sprites.png') -415px -216px;
+}
+
+.bg-EGNYTE_ADMIN {
+    width: 70px; height: 70px;
+    background: url('../img/css_sprites.png') -10px -10px;
+}
+
+
+.bg-EGNYTE_STORAGE {
+    width: 70px; height: 70px;
+    background: url('../img/css_sprites.png') -100px -10px;
+}
+
+
+.bg-FTP {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -275px -10px;
+}
+
+
+.bg-G_DRIVE {
+   width: 50px;
+   height: 50px;
+   background: url('../images/GSD.png');
+   background-size: 50px 50px;
+}
+
+
+.bg-G_SUITE {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -275px -150px;
+}
+
+
+.bg-GOOGLE_SHARED_DRIVES {
+    width: 50px; 
+    height: 50px;
+    background: url('../images/GSD.png');
+    background-size: 50px 50px;
+}
+
+
+.bg-NETWORK_FILESHARES {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -80px -241px;
+}
+
+
+.bg-NFS {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -150px -241px;
+}
+
+
+.bg-NTLM_STORAGE {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -220px -241px;
+}
+
+.bg-ONEDRIVE {
+    width: 64px; height: 64px;
+    background: url('../img/css_sprites.png') -10px -100px;
+}
+
+
+.bg-ONEDRIVE_BUSINESS {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -345px -10px;
+}
+
+
+.bg-ONEDRIVE_BUSINESS_ADMIN {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -345px -80px;
+}
+
+
+.bg-ONEDRIVE_BUSINESS_ADMIN_HYBRID {
+    width: 64px; height: 64px;
+    background: url('../img/css_sprites.png') -94px -100px;
+}
+
+
+.bg-SHARED_DRIVES {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -345px -150px;
+}
+
+
+.bg-SHAREFILE_BUSINESS {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -345px -220px;
+}
+
+
+.bg-SHAREPOINT_2010 {
+    width: 50px; height: 49px;
+    background: url('../img/css_sprites.png') -415px -80px;
+}
+
+
+.bg-SHAREPOINT_2013 {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -10px -311px;
+}
+
+
+.bg-SHAREPOINT_CONSUMER_HYBRID {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -80px -311px;
+}
+
+
+.bg-SHAREPOINT_ONLINE_BUSINESS {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -150px -311px;
+}
+
+
+.bg-SHAREPOINT_ONLINE_CONSUMER {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -220px -311px;
+}
+
+
+.bg-SHAREPOINT_ONLINE_HYBRID {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -290px -311px;
+}
+
+
+.bg-WASABI {
+    width: 50px; height: 50px;
+    background: url('../img/css_sprites.png') -415px -10px;
+}
+.bg-MICROSOFT_TEAMS {
+    width: 50px; height: 50px;
+    background: url('../img/PNG/MICROSOFT_TEAMS.png') -3px 0px;
+}
+
+.bg-SLACK {
+    width: 50px; height: 50px;
+    background: url('../img/PNG/SLACK.png') -50px;
+}
+.bg-MURAL {
+    width: 50px; height: 50px;
+    background: url('../img/mural.png');
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+.bg-MIRO {
+    width: 50px; height: 50px;
+    background: url('../img/miro.png');
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black; 
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+div#cloudInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div#cloudInfo hr{
+    margin-top: 0% !important;
+}
+
+div#mngCloudSync {
+    padding: 0 !important;
+}
+div#mngCloudSync > img {
+    margin-left: 0 !important;
+}
+div#navbarSupportedContent {
+    display: flex !important;
+    align-items: center;
+    height: 80px;
+    margin: -55px;
+}
+#mngCloudData > div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#mngCloudData > div > span{
+    position: absolute;
+    left: 139px;
+}
+</style>
+</head>
+<body style="overflow:hidden;">
+	<div class="g-signin2" data-theme="dark" style="display:none"></div>
+	<div class="wrapper d-flex align-items-stretch">
+<nav id="sidebar" class="active" >
+<div style="height:70px;"><a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="30" viewBox="0 0 106.467 53.365" style="margin-bottom: -8%;margin-top: 13%;margin-left: 5%;"><defs><style>.a{fill:#FFFFFF;}.b{fill:#FFFFFF;}.c{fill:#FFFFFF;}</style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#156aff"/><stop offset="1" stop-color="#1100f3"/></linearGradient></defs><g transform="translate(-177.95 -15.003)"><g transform="translate(183.48 15)"><path class="a" d="M1938.25,742.731c.161-.688.936-3.794,1.714-2.2-.024-.025,2.081,2.887.617,10.6.024-.082-1.1,3.237-1.807,1.042.024.082-.525-1.454-.525-1.454s-.391-.383-.435.412c-.021-.054,1.536,9.531,3.545,5.19,0,.029,1.1-1.454,1.3-6.673.068.054.549-7.665-.778-11.644,0,.029-1.234-4.23-2.674-1.648a9.667,9.667,0,0,0-1.214,4.173,20.02,20.02,0,0,0-.182,2.2C1937.8,742.7,1938.09,743.419,1938.25,742.731Z" transform="translate(-1917.075 -729.704)"/><path class="a" d="M1938.32,744.66c.185-.872,1.072-4.81,1.963-2.789-.028-.031,2.383,3.661.707,13.442.027-.1-1.256,4.1-2.069,1.321.027.1-.6-1.843-.6-1.843s-.448-.486-.5.522c-.024-.068,1.759,12.084,4.059,6.58,0,.037,1.26-1.843,1.492-8.46.078.068.628-9.718-.891-14.763,0,.037-1.413-5.363-3.062-2.089a13.176,13.176,0,0,0-1.389,5.29,27.807,27.807,0,0,0-.208,2.789C1937.8,744.623,1938.13,745.532,1938.32,744.66Z" transform="translate(-1908.168 -732.64)"/><path class="a" d="M0,5.45S1.035-.447,3.92.027C3.508.007,5.686-.405,7.3,7.433a47.548,47.548,0,0,1,.356,13.6c-.07-.1-.3,5.482-2.408,8.891,0,.029-2.413,3.8-4.62-2.1A18.264,18.264,0,0,1,0,25.964s2.24,2.411,3.343,0c.018.034,1.718-2.908,1.884-8.756.015.071.263-9.357-1.964-12.192a2.151,2.151,0,0,0-3.031.833A4.54,4.54,0,0,1,0,5.45Z" transform="translate(36.978 0.139) rotate(-0.974)"/><path class="b" d="M2152.9,1316.38s-2.781-.969-2.2-5.006c.034-.28,1.183-3.444,5.328-1.951-.1,0,2.158-3.017,5.044-2.984.024,0,3.307-.2,4.42,3.834-.061.058,4.229-3.5,7.43,1.359.009.014.008,2.182,0,1.639v1.183s-.163,1.883-3.174,1.925h-.178C2167.93,1316.35,2152.9,1316.38,2152.9,1316.38Z" transform="translate(-2100.18 -1291.587)"/><path class="b" d="M3223.61,213.09c-.033.022,4.834,0,4.834,0a5.34,5.34,0,0,1-.855-6.648c.061-.061,1.442-2.79,5.417-1.671-.018-.082,2.83-3.425,5.866-3.138a4.974,4.974,0,0,1,4.885,3.54c-.079-.061,3.74-2.722,6.854,1.5.04.021-.8-6.563-7.44-5.044a7.657,7.657,0,0,0-7.15-4.186,8.618,8.618,0,0,0-5.644,3.382c.083-.061-3.81-.979-5.827,1.111a44.3,44.3,0,0,1-.3,6.671C3224.27,208.55,3223.65,213.068,3223.61,213.09Z" transform="translate(-3177.828 -188.413)"/><path class="b" d="M3219.66,431.08a23.151,23.151,0,0,1,1.43,6.7,5.526,5.526,0,0,1,5.391-1.4c.095,0,7.083-8.092,14.139.859.08.03,5.337-1.1,6.842,3.986-.065,0,1-9.046-11.14-9.243-.035.069-4.568-8.6-13.223-1.61a4,4,0,0,0-3.439.711Z" transform="translate(-3174.591 -425.7)"/><path class="b" d="M3163.06,784.33a7.96,7.96,0,0,1,3.833-1.221,32.009,32.009,0,0,1,.24,17.482c.025.069-3.888,0-3.888,0s1.045-8.3,0-14.826Z" transform="translate(-3127.039 -776.302)"/><path class="b" d="M3107.2,812.941l3.24-.246a9.239,9.239,0,0,1,1.41-2.4c.021,0,2.085,4.361,0,12.167a3.679,3.679,0,0,1-1.41-2.477c0-.059-3.383,0-3.383,0l.142-1.184s2.937.355,2.739-.63c-.018-.021.173-.908-2.586-.568V816.54s2.737.6,2.743-.808c0-.021.133-1.524-2.743-.945a18.1,18.1,0,0,0-.152-1.846Z" transform="translate(-3080.385 -799.48)"/><path class="b" d="M2935.35,831.464l22.548-1.68a4.454,4.454,0,0,1,.263,1.589C2958.18,831.4,2935.35,831.464,2935.35,831.464Z" transform="translate(-2935.35 -816.087)"/><path class="b" d="M2954.38,855.123l19.987-1.006a2.038,2.038,0,0,1-.165.9C2974.19,855.049,2954.38,855.123,2954.38,855.123Z" transform="translate(-2951.574 -836.828)"/><path class="b" d="M2994.27,870.418l13.893-.918-.246,1.016Z" transform="translate(-2985.57 -849.941)"/></g></g></svg>
+	<br>CloudFuze</a></div>
+<ul class="list-unstyled components mb-5"> 
+<li class="active">
+<a href="#"><i class="lnil lnil-cloud-alt"></i> <br>Clouds</a>
+</li> 
+<li>
+<a href="move.html?ver=1028"><i class="lnil lnil-rocket" style="transform: rotate(90deg);"></i> <br> Migrate</a>
+</li>
+<li>
+<a href="backUp.html?ver=1028"><i class="lnil lnil-database" style="margin-top:-5%;"></i> <br> Individual<br>Backup</a>
+</li>
+<li>
+<a href="teammigration.html?ver=1028"><i class="lnil lnil-users-alt" style="margin-top:-5%;"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Team </p><p> Migration </p></a>
+</li>
+<li>
+<a href="slackmigration.html?ver=1028"><i class="lnil lnil-users-alt" style="margin-top:-5%;"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Slack </p><p> Migration </p></a>
+</li>
+<li>
+<a href="mural.html?ver=1028"><i class="lnil lnil-layout" style="margin-top:-5%;"></i><p style="margin-bottom: -3%;margin-top: 5%;"> Mural </p><p> Migration </p></a>
+</li>
+
+<li>
+<a href="reports.html?ver=1028"><i class="lnil lnil-pie-report"></i><br>Reports</a>
+</li>
+<li>
+<a href="https://help.cloudfuze.com/" target="_blank"><i class="lnil lnil-question-circle"></i><br>Help</a>
+</li>
+</ul>
+<div id="policyId" style="height:70px;font-size:11px;bottom: -2%;position: absolute;">
+<a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="color:#fff;">Terms of use</a>
+
+<a href="https://www.cloudfuze.com/privacy-policy" target="_blank" style="color:#fff;">Privacy policy</a> 
+
+</div>
+</nav>
+
+<div id="content" class="" style="background: #FCFCFC;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:0px;position: relative;">
+<div class="container-fluid">
+	<div class="navbar-nav-scroll" style="padding-top: 3%; width:45%;">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      
+      <li class="nav-item"  id="cm-addcloud" style="">
+        <a class="nav-link active" href="#">ADD CLOUDS</a>
+		<hr id="addHr" style="margin-top: 0%;">
+      </li>
+	  
+      <li class="nav-item" id="cm-managecloud" style="">
+        <a class="nav-link " href="#">MANAGE CLOUDS</a>
+		<hr id="manageHr"style="display:none;margin-top: 0%;">
+      </li>
+     
+   <li id="cm-sidebar" style="">
+   <button type="button" id="sidebarCollapse" class="btn btn-primary d-lg-none">
+<i class="fa fa-bars"></i>
+<span class="sr-only">Toggle Menu</span>
+   </button></li>
+<li id="cm-topbar" style=""> 
+	<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" id="topbarCollapse">
+<i class="fa fa-bars"></i>
+</button></li>
+   
+    </ul>
+	
+  </div>	
+ 
+<div class="collapse navbar-collapse" id="navbarSupportedContent" style="width:65%;">
+<ul class="nav navbar-nav ml-auto1" style="width:100%;margin-right: -5%;display: flex;align-items: center">
+<li class="nav-item" style="text-align: -webkit-center;width:38%; height: 80px;padding-top: 2.5%;display: flex;align-items: center;justify-content:end;">
+<div style="text-align: -webkit-right;display: flex;flex-direction: column;height: 52px;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData" style="color:#1220F6;font-weight: 600;">0 GB</span> used of <span id="totalData" style="color:#1220F6;font-weight: 600;">0 GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width: 14718%; background: rgb(36, 223, 211); height: 100%; border-radius: 25px;"></div></div></div> 
+</li>
+<li class="nav-item" style="text-align: -webkit-right;padding-left: 4%; height: 80px;display: flex;align-items: center;">
+<a class="nav-link" onclick="location.href='settings.html#price?ver=1028'" style="color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;">Upgrade</a>
+</li>
+<li class="nav-item dropNav" style="width:23%;text-align: -webkit-left; height: 46px;padding-left:5%;display: flex; align-items: flex-end;"><div class="dropdown" style="width:100%;">
+<a class="dropbtn nav-link" href="#" style="padding-top: 4%"><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #1220F6;font-size: 15px;padding: 5px;"></i><span id="dash-uname" style="margin-left: 4%;font-weight:600;color:#1F2129;word-break: break-word;">User</span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left: 1%;font-weight: 600;width: 1%;"></i></a>
+ <div class="dropdown-content">
+ <a href="settings.html?ver=1028" style="text-align:left;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+ <a class="cf-logout" class="mYaccontlogout" href="#" style="text-align:left;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div>
+</div>
+</li>
+
+</ul>
+</div>
+
+<div class="" id="navbarSupportedContent1" style="width: 100%; float: right; background: rgb(255, 255, 255);display:none;">
+<ul class="nav navbar-nav dupNav" style="width: 100%;margin-right: -5%;    margin-top: 7%;">
+<li class="nav-item" style="text-align: -webkit-center;width: 100%;height: 12vh;padding-top: 8%;padding-right: 10%;border-bottom: 1px solid #e5e5e5;">
+<div style="text-align: -webkit-right;" id="incrementProgress"><p id="usersDisplay" style="color: #707070;font-size: 12px;width: 100%;float: left;margin-bottom: 2%;">Data <span id="usedData1" style="color:#0062FF;font-weight: 600;">0 GB</span> used of <span id="totalData1" style="color:#0062FF;font-weight: 600;">0 GB</span> </p>
+	<div class="progress" style="height: 8px;width: 190px;border-radius: 15px;background: #E5E5E5;"><div class="progress-bar progress-bar-success progressGreen" role="progressbar" style="width:0%;background: #24DFD3;height: 100%;border-radius: 25px;"></div></div></div>
+</li>
+<li class="nav-item" style="width:100%;padding-right: 8%;height: 8vh;padding-top: 2%;border-bottom: 1px solid #e5e5e5;">
+<a class="nav-link cf_upgrd_btn" href="settings.html#price?ver=1028" style="float:right;color: #FFFFFF;background: #1220F6 0% 0% no-repeat padding-box;border-radius: 5px;height: 36px;width: 108px;text-align: center;vertical-align: middle;display: table;">Upgrade</a> 
+</li>
+<li class="nav-item" style="width: 100%;text-align: -webkit-right;height: 6vh;padding-right: 10%;border-bottom: 1px solid #e5e5e5;"><div class="dropdown" style="width:100%;">
+<a class="dropbtn nav-link" href="#" style="padding-top: 5%"><i class="lnil lnil-user-alt-1" style="color: #0062FF;margin-top: -8%;border-radius: 14px;border: 0.8999999761581421px solid #0062FF;font-size: 15px;padding: 5px;"></i><span id="dash-uname1" style="margin-left: 4%;font-weight:600;color:#1F2129;word-break: break-word;"></span><i class="lnil lnil-chevron-down" style="font-size: 10px;padding-left: 3%;font-weight: 600;"></i></a>
+ <div class="dropdown-content"> 
+ <a href="settings.html?ver=1028" style="text-align:left;"><i class="lnil lnil-user-alt" style="font-size:16px;margin-right: 3%;font-weight:600;"></i>My Account</a>
+ <a class="cf-logout" class="mYaccontlogout" href="#" style="text-align:left;"><i class="lnil lnil-exit" style="font-size:16px;margin-right: 3%;transform: rotate(180deg);font-weight:600;"></i>Logout</a>
+  </div>
+</div>
+</li> 
+ 
+</ul>
+</div>
+</div>
+</nav>
+<section id="clouds" style="height:93vh;overflow:auto;">
+	<div id="main" style="padding: 1% 3%;">
+	
+	    <div class="alertScs hide">
+        <span class="fa fa-check-circle"></span>
+        <p class="msg"></p>
+        <div class="close-btnScs">
+          <span class="lnil lnil-cross-circle"></span> 
+        </div>
+</div>
+  <div class="alertErr hide">  
+        <span class="fa fa-times-circle"></span>
+        <p class="msg"></p>
+        <div class="close-btnErr">
+          <span class="lnil lnil-cross-circle"></span>
+        </div> 
+</div>
+
+	<div id="addclouddiv" style="margin-top: 2%;">
+	<div id="personalDiv" style="background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 5px;width:100%;height:56vh;margin-bottom:3%;padding: 2% 0% 0% 2%;overflow: auto;">
+	<h6 style="font-weight:500;color:#1F2129;font-size: 18px;">Personal Clouds</h6>
+	<div style="padding:1% 0%">
+	<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgONEDRIVE" style="display: none;"></span>
+							 <div class="bg-ONEDRIVE" style="margin-left: -24%;margin-top: -16%;margin-bottom: -20%;"></div>
+                            </div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;margin-bottom: 0%;margin-left: -14%;">OneDrive</p>
+		<button id="doOauth_SkyDrive" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgONEDRIVE_BUSINESS" style="display: none;"></span>
+                                <div class="bg-ONEDRIVE_BUSINESS"></div>
+                            </div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -35%;margin-bottom: 0%;line-height: 1.5;">OneDrive for<br>business</p>
+		<button id="Onedrive_Business" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgSHAREPOINT_ONLINE_CONSUMER" style="display: none;"></span>
+                                <div class="bg-SHAREPOINT_ONLINE_CONSUMER"></div>
+                            </div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -23%;margin-bottom: 0%;line-height: 1.5;">SharePoint<br>online</p>
+		<button id="sharepoint_online_consumer" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button></div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgSHAREPOINT_CONSUMER_HYBRID" style="display: none;"></span>
+							<div class="bg-SHAREPOINT_CONSUMER_HYBRID"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -42%;margin-bottom: 0%;line-height: 1.5;">SharePoint<br>Online Hybrid</p>
+		<button id="sharepoint_online_hybridconsumer" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button></div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgG_DRIVE" style="display: none;"></span>
+							<div class="bg-G_DRIVE"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -35%;margin-bottom: 0%;line-height: 1.5;">Google Drive</p>
+		<button id="doOauth_GDrive" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button></div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgSHARED_DRIVES" style="display: none;"></span>
+							<div class="bg-SHARED_DRIVES"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -42%;margin-bottom: 0%;line-height: 1.5;">Shared Drives</p>
+		<button id="doOauth_GTeam_singleUsr" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button></div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id=""> 
+                            <div class="cloudThumbnail"><span class="cloudImgDROPBOX" style="display: none;"></span>
+							<div class="bg-DROP_BOX"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-bottom: 0%;margin-left: -6%;">Dropbox</p>
+		<button id="doOauth_dropbox" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button></div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgWASABI" style="display: none;"></span>
+							<div class="bg-WASABI"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -1%;margin-bottom: 0%;">Wasabi</p><button id="wasabiCredntialsvisible" data-toggle="modal" onclick="validations.cleandata()" data-target="#myFTPOauthModel" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				
+					<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgBOX" style="display: none;"></span>
+							<div class="bg-BOX" style="margin-top: 20%;margin-bottom: 28%;"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: 27%;margin-bottom: 0%;">Box</p>
+		<button id="doOauth_Box" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgNTLM_STORAGE" style="display: none;"></span>
+							<div class="bg-NTLM_STORAGE"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -35%;margin-bottom: 0%;line-height: 1.5;">Network File<br>Shares (NFS)</p>
+		<button class="form-control" id="NTLMCloud" data-toggle="modal" onclick="validations.cleandata()" data-target="#myFTPOauthModel" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				
+			<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgFTP" style="display: none;"></span>
+							<div class="bg-FTP"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left:23%;margin-bottom: 0%;">FTP</p>
+		<button id="ftpCredntialsvisible" class="form-control" data-toggle="modal" onclick="validations.cleandata()" data-target="#myFTPOauthModel" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgEGNYTE_STORAGE" style="display: none;"></span>
+							<div class="bg-EGNYTE_STORAGE" style="margin-top: -25%;margin-bottom: -25%;margin-left: -30%;"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: 3%;margin-bottom: 0%;">Egnyte</p>
+		<button id="doOauth_Egnyte" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgAMAZON" style="display: none;"></span>
+							<div class="bg-AMAZON" style="margin-left: -20%;"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-bottom: 0%;margin-left: -23%;">Amazon S3</p>
+		<button id="amazonCredntialsvisible" class="form-control" data-toggle="modal" onclick="validations.cleandata()" data-target="#myFTPOauthModel" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgAMAZON" style="display: none;"></span>
+							<div class="bg-AMAZON" style="margin-left: -20%;"></div>
+							</div>
+                        </a>
+
+				<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -35%;margin-bottom: 0%;line-height: 1.5;">Amazon S3 <br>Glacier</p>
+		<button id="amazonGlacierCredntialsvisible" class="form-control" data-toggle="modal" onclick="validations.cleandata()" data-target="#myFTPOauthModel" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+	</div>
+				
+	</div>
+	<div id="businessDiv"style="background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 5px;width:100%;height:56vh;margin-bottom:3%;padding: 2% 0% 0% 2%;overflow: auto;">
+	<h6 style="font-weight:500;color:#1F2129;font-size: 18px;">Business Clouds</h6>
+	<div style="padding:1% 0;">
+	<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgONEDRIVE_BUSINESS_ADMIN" style="display: none;"></span>
+							 <div class="bg-ONEDRIVE_BUSINESS_ADMIN"></div>
+                            </div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -35%;margin-bottom: 0%;line-height: 1.5;">OneDrive for<br>business</p>
+		<button id="Onedrive_Business_Admin" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgONEDRIVE_BUSINESS_ADMIN_HYBRID" style="display: none;"></span>
+                                <div class="bg-ONEDRIVE_BUSINESS_ADMIN_HYBRID" style="margin-left: -24%;margin-top: -16%;margin-bottom: -20%;"></div>
+                            </div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -55%;margin-bottom: 0%;line-height: 1.5;">OneDrive for<br>business hybrid</p>
+		<button id="onedrive_business_hybrid" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgSHAREPOINT_2013" style="display: none;"></span>
+                              <div class="bg-SHAREPOINT_2013"></div>
+                            </div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -55%;margin-bottom: 0%;">SharePoint 2013</p>
+		<button id="sharepoint_2013" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgSHAREPOINT_2010" style="display: none;"></span>
+                               <div class="bg-SHAREPOINT_2010"></div>
+                            </div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -55%;margin-bottom: 0%;">SharePoint 2010</p>
+		<button id="sharepoint_2010" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgSHAREPOINT_ONLINE_BUSINESS" style="display: none;"></span>
+                               <div class="bg-SHAREPOINT_ONLINE_BUSINESS"></div>
+                            </div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -23%;margin-bottom: 0%;line-height: 1.5;">SharePoint<br>online</p>
+		<button id="sharepoint_online_Admin" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgSHAREPOINT_ONLINE_HYBRID" style="display: none;"></span>
+							<div class="bg-SHAREPOINT_ONLINE_HYBRID"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -42%;margin-bottom: 0%;line-height: 1.5;">SharePoint<br>Online Hybrid</p>
+		<button id="sharepoint_online_hybrid" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgG_SUITE" style="display: none;"></span>
+							<div class="bg-G_SUITE"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: 0%;margin-bottom: 0%;line-height: 1.5;">Google<br/> My Drive</p>
+		<button id="doOauth_GSuite" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgGOOGLE_SHARED_DRIVES" style="display: none;"></span>
+							<div class="bg-GOOGLE_SHARED_DRIVES"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -42%;margin-bottom: 0%;">Shared Drives</p>
+		<button id="doOauth_GTeam" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgDROPBOX_BUSINESS" style="display: none;"></span>
+							<div class="bg-DROPBOX_BUSINESS"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-bottom: 0%;margin-left:-6%;">Dropbox</p>
+		<button id="doOauth_dropbox_business" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+			
+				
+					<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgBOX" style="display: none;"></span>
+							<div class="bg-BOX" style="margin-top: 20%;margin-bottom: 28%;"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: 23%;margin-bottom: 0%;">Box</p>
+		<button id="doOauth_Box_Business" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgAZURE_OBJECT_STORAGE" style="display: none;"></span>
+							<div class="bg-AZURE_OBJECT_STORAGE" style="margin-top: 10%;margin-left: -25%;margin-bottom: 15%;"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: 10%;margin-bottom: 0%;">Azure</p><button id="Azurevisible" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+					<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgEGNYTE_ADMIN" style="display: none;"></span>
+							<div class="bg-EGNYTE_ADMIN" style="margin-top: -25%;margin-bottom: -25%;margin-left: -30%;"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: 2%;margin-bottom: 0%;">Egnyte</p><button id="doOauth_Egnyte_Business" class="form-control" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				
+					<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgNETWORK_FILESHARES" style="display: none;"></span>
+							<div class="bg-NETWORK_FILESHARES"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -35%;margin-bottom: 0%;line-height: 1.5;">Network File<br>Shares (NFS)	</p>
+		<button class="form-control" id="SMBAdmin" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div> 
+                </div>
+				
+			<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgCIFS" style="display: none;"></span>
+							<div class="bg-CIFS"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left:17%;margin-bottom: 0%;">CIFS</p>
+		<button id="CIFSCloud" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+				
+							<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgSHAREFILE_BUSINESS" style="display: none;"></span>
+							<div class="bg-SHAREFILE_BUSINESS" style="margin-left: -10%;"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -35%;margin-bottom: 0%;line-height: 1.5;"> Share File<br>for Business</p>
+		<button class="form-control" id="doOauth_ShareFile_Admin" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div> 
+                </div>
+	<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgAMAZON" style="display: none;"></span>
+							<div class="bg-AMAZON" style="margin-left: -20%;"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-bottom: 0%;margin-left: -23%;">Amazon S3</p>
+		<button id="amazonCredntialsvisible1" class="form-control" data-toggle="modal" onclick="validations.cleandata()" data-target="#myFTPOauthModel" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+
+	<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgSLACK" style="display: none;"></span>
+							<div class="bg-SLACK"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-bottom: 0%;margin-left: 21%;">Slack</p>
+		<button id="slackCloud" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+	<div class="CloudThumb_parent" style="">
+		<div class="clds long" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgMICROSOFT_TEAMS" style="display: none;"></span>
+							<div class="bg-MICROSOFT_TEAMS"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-left: -15%;margin-bottom: 0%;line-height: 1.5;"> Microsoft<br>Teams</p>
+		<button id="teamsCloud" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+		<div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgMural" style="display: none;"></span>
+							<div class="bg-MURAL"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-bottom: 0%;margin-left: 21%;">Mural</p>
+		<button id="muralCloud" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+                <div class="CloudThumb_parent" style="">
+		<div class="clds short" style="padding: 10% 30%;">
+                        <a href="#" id="">
+                            <div class="cloudThumbnail"><span class="cloudImgMiro" style="display: none;"></span>
+							<div class="bg-MIRO"></div>
+							</div>
+                        </a>
+
+		<p style="font-size:12px;color:#1F2129;width: max-content;text-align: center;margin-bottom: 0%;margin-left: 21%;">Miro</p>
+		<button id="miroCloud" class="form-control" onclick="validations.cleandata()" style="height: 19px;width: 73px;background: #0062FF 0% 0% no-repeat padding-box;border-radius: 4px;border: none;color: white;font-size: 8px;padding: 9%;margin-left: -28%;display:none;">Add Cloud</button>
+		</div>
+                </div>
+
+		
+	</div> 
+	</div>
+	</div>
+	<div id="manageclouddiv" class="col-sm-12" style="display:none;height:72vh;margin-top: 2%;">
+	<div style="background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #E5E5E5;border-radius: 5px;margin-bottom:3%;padding: 2%;overflow:auto;"></div>
+	</div>
+	
+	</div>
+	<!-- Modals -->
+
+ <div class="modal fade" id="CFCLdeleteModal" style="top: 12%;"> 
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Delete Cloud Account</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;"> 
+            <p style="font-size:16px;color:#1F2129;">Are you sure you want to delete the selected Cloud?</p>
+        </div>
+        </div>
+        <div class="modal-footer">
+  
+<a class="button mini rounded light-gray" data-dismiss="modal" style="border: 1px solid #707070;width: 98px;height: 40px;padding: 1% 3.5%;float: left; color:#707070;font-size:16px;">Cancel</a> 
+<a class="button mini rounded blue" id="CFCLDelete" data-type="5f1075fae4b06d3196b1e8d8" style="width: 73px;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #1220F6;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;">Yes</a>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+  <div class="modal fade" id="gsuitemarket" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Authentication required</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;">
+            <p style="font-size:16px;color:#1F2129;">Please grant CloudFuze permissions in Google Market Place and once done please click on already done</p>
+        </div>
+        </div>
+        <div class="modal-footer">
+  
+<a class="button mini rounded light-gray form-control" data-action="addgsuite"  style="border: 1px solid #707070;width: auto;height: 40px;padding: 1.3% 4%;float: left;color:#707070;font-size:16px;margin-right: 20px;">Already Done</a>
+<a class="button mini rounded blue" data-action="redirectStore" style="width: auto;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #1220F6;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;">Proceed</a>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+   <div class="modal fade" id="gsuitemarketTeam" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Authentication required</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body">
+		<div style="text-align:center;">
+            <p style="font-size:16px;color:#1F2129;">Please grant CloudFuze permissions in Google Market Place and once done please click on already done</p>
+        </div>
+        </div>
+        <div class="modal-footer">
+  
+<a class="button mini rounded light-gray form-control" data-action="addgteam"  style="border: 1px solid #707070;width: auto;height: 40px;padding: 1.3% 4%;float: left;color:#707070;font-size:16px;margin-right: 20px;">Already Done</a>
+<a class="button mini rounded blue" data-action="redirectStore" style="width: auto;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #1220F6;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;">Proceed</a>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+ <div class="modal fade" id="myFTPOauthModel" style="top: 0%;height:auto;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Authentication required</p>
+          <i class="lnil lnil-cross-circle close" data-dismiss="modal" style="color: #ffffff;opacity: 1;font-size: 25px;"></i>
+        </div>
+        <div class="modal-body" id="appendCloudContent" > 
+        </div>
+        <div class="modal-footer">
+ <div class="" id="OauthButtons">
+            <a class="button mini rounded light-gray form-control" data-dismiss="modal" style="border: 1px solid #707070;width: 98px;height: 40px;padding: 4% 9%;float: left;color:#707070;font-size:16px;margin-right: 20px;">Cancel</a>
+ </div>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+ 
+  <div class="modal fade" id="Model" style="top: 12%;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="">
+        <div class="modal-header" style="background: #0062FF 0% 0% no-repeat padding-box;border-radius: 5px 5px 0px 0px;height:9vh;">
+          <p class="modal-title" style="color: #FFFFFF;font-size: 16px;">Contact Support</p>
+          <i class="close lnil lnil-cross-circle" data-dismiss="modal" style="font-size:25px;color:#fff;opacity:1;"></i>
+        </div>
+        <div class="modal-body" id="Content">
+		<div style="text-align:left;">
+            <p style="font-size:16px;color:#1F2129;">For Azure or CIFS or Egnyte or Google Suite or Network FileShares or<br>SharePoint Online or SharePoint Online-Hybrid or SharePoint 2010 or<br> SharePoint 2013 or Team Drives migrations.<br>Please contact at <a style="color:#1C47CF;text-shadow: none;" href="mailto:support@cloudfuze.com">support@cloudfuze.com </a> or via the chat in the<br> bottom right hand corner of this page. Thanks!                    </p>
+        </div>
+        </div>
+        <div class="modal-footer">
+
+<a class="button mini rounded blue"  data-dismiss="modal" style="width: 73px;height: 40px;background: #0062FF 0% 0% no-repeat padding-box;border: 1px solid #1220F6;border-radius: 5px;color: #fff;padding: 1% 4%;float: left;font-size:16px;">Ok</a>
+        </div>
+        
+      </div>
+    </div>
+ </div>
+ 
+ 
+</section>
+</div>
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="../javascripts/security/webtoolkit.base64.js"></script>
+<script src="../ajaxcalls/AesUtil.js" type="text/javascript"></script>
+<script src="../javascripts/timeago.js" type="text/javascript"></script>
+<script src="../javascripts/jqueryui.js" type="text/javascript"></script>
+<script src="../ajaxcalls/readyDocument.js?ver=1028" type="text/javascript"></script>
+<!--Static Vaiables-->
+<script src="../ajaxcalls/config.js?ver=1028"></script>
+<script src="../ajaxcalls/globalVar.js?ver=1028" type="text/javascript"></script>
+
+<script type="text/javascript" src="../javascripts/navigation.js"></script>
+<script src="../javascripts/actionevents.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/CFManageCloudAccounts.js?ver=1028" type="text/javascript"></script>
+
+<!--<script src="../ajaxcalls/homePageActionEvents.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/common.js?ver=1028" type="text/javascript"></script>
+<script type="text/javascript" src="../javascripts/MetroNotifications_7.js"></script>
+<script src="../ajaxcalls/workspace.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/fileShareMetaData.js?ver=1028" type="text/javascript"></script>-->
+<script src="../ajaxcalls/boxOauth.js?ver=1028" type="text/javascript"></script>
+<script src="../ajaxcalls/cfCloudInsert.js?ver=1028" type="text/javascript"></script>
+<script src="../javascripts/jquery.twbsPagination.min.js" type="text/javascript"></script> 
+<script src="../ajaxcalls/common.js?ver=1028" type="text/javascript"></script>
+<script>
+	(function($) {
+
+	"use strict";
+
+	var fullHeight = function() {
+
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
+
+	};
+	fullHeight();
+
+	$('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+  $('#topbarCollapse').on('click', function () {
+  if(!$("#navbarSupportedContent1").hasClass('active')){
+  $("#navbarSupportedContent1").addClass('active');
+      $("#navbarSupportedContent1").css("display","");
+	  $("#addclouddiv").css("margin-top","54%"); 
+	  $("#manageclouddiv").css("margin-top","54%"); 
+	  }
+	  else{
+	   $("#navbarSupportedContent1").removeClass('active');
+      $("#navbarSupportedContent1").css("display","none");
+	  $("#addclouddiv").css("margin-top","2%");
+	  $("#manageclouddiv").css("margin-top","2%"); 
+	  }
+  });
+
+})(jQuery);
+$(".dropdown").click(function(){
+	if(!($(".dropdown-content").hasClass("active"))){
+	$(".dropdown-content").addClass("active").css("display","none");
+	}
+	else{
+	$(".dropdown-content").removeClass("active").css("display","");
+	}
+	});
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+            height = window.innerHeight - 70;
+            $("#clouds").css("height", height + 'px');
+        }
+        else{
+            height = window.innerHeight - 70;
+            $("#clouds").css("height", height + 'px');
+        }
+
+        $('.black').click(function() {
+            if (window.matchMedia('(max-width: 1024px)').matches) {
+                if ($('.secondary-nav-menu').hasClass('open')) {
+                    height = window.innerHeight - 70;
+                    $("#clouds").css("height", height + 'px');
+                } else {
+                    height = window.innerHeight - 70;
+                    $("#clouds").css("height", height + 'px');
+                }
+            }
+        });
+		
+		$('#userName').text(JSON.parse(localStorage.CFUser).lastName);
+		$('#userEmail').text(JSON.parse(localStorage.CFUser).primaryEmail);
+		$(".long").hover(function(){
+  $(this).css("padding", "4% 30%");
+  $(this).children("button").css("display","");
+  }, function(){
+  $(this).css("padding", "10% 30%");
+   $(this).children("button").css("display","none");
+});
+$(".short").hover(function(){
+  $(this).css("padding", "10% 30%");
+  $(this).children("button").css("display","");
+  }, function(){
+  $(this).css("padding", "10% 30%");
+   $(this).children("button").css("display","none");
+});
+        sendGAEvents("Clicked on cloud migration page");
+        $('#upgrdIcon').on('click', function () {
+            window.location.href = "settings.html#move";
+        });
+
+        if (localStorage.getItem('UserId')) {
+            $('body').show();
+        }
+        else {
+            window.location.href = "index.html?ver=1028";
+        }
+        var hash = window.location.hash.substr(1);
+        if (hash == "desktop") {
+            window.onbeforeunload = function (e) {
+                localStorage.clear();
+                window.location = "index.html?ver=1028"
+            }
+        }
+        else if (hash == "putRequest") {
+            $('body').append('<sript src="../javascripts/putRequest.js?ver=1028" type="text/javascript"></sript>');
+        }
+        else if (hash == "orange") {
+            $('#primary,#secondary,#FooterLinks,.top-nav').show();
+            $('#cm-addcloud').removeClass('active');
+            $('#cm-managecloud').removeClass('active');
+            $('#addclouddiv').addClass('divdisplay');
+            $('#manageclouddiv').addClass('divdisplay');
+            $('#orangelanding').show();
+        }
+        else {
+            $('#orangelanding').hide();
+            $('#primary,#secondary,#FooterLinks,.top-nav').show();
+            $('#cm-addcloud').addClass('active');
+            $('#cm-managecloud').removeClass('active');
+            $('#addclouddiv').removeClass('divdisplay');
+            $('#manageclouddiv').addClass('divdisplay');
+        }
+		/*setTimeout(function(){
+		if(window.navigator.userAgent.includes("Mobile")){
+		activecampaign.getContact(JSON.parse(localStorage.getItem('CFUser')).primaryEmail, 'device','Mobile');
+		}
+		else{
+		activecampaign.getContact(JSON.parse(localStorage.getItem('CFUser')).primaryEmail, 'device','Desktop');
+		}
+		},2000);*/
+    });
+    var mywindow = null;
+    var params = window.location.toString();
+    params = params.split('?');
+    if (params[1] != undefined)
+        var params = params[1].replace('&', '=').split('=');
+    mywindow = window.addEventListener('storage', storageEventHandler, false);
+    function storageEventHandler(evt) {
+        if (evt.key == "OauthProcess") {
+            if (evt.newValue == "Completed") {
+                CFManageCloudAccountsAjaxCall.getAllClouds();
+                $('#cm-managecloud').trigger('click');
+
+
+                alertSuccess('Account added successfully.');
+            }
+            else if (evt.newValue == "alreadyExist") {
+                alertError('This e-mail address is already registered. Please  enter a different e-mail address.');
+            }
+            else if (evt.newValue == "failed") {
+                alertError('Failed registering .Please try once again.');
+            }
+
+            else if (evt.newValue == "restricted") {
+                alertError('This email domain is restricted by admin.');
+            }
+            else if(evt.newValue == 'notadmin'){ 
+                alertError('Please enter Box Admin credentials.');
+            }
+	    else if(evt.newValue == 'Login with Admin credentials'){
+	    alertError('Please Enter ShareFile Admin credentials.');
+	    }
+
+
+        }
+    }
+
+    $('#cm-managecloud').click(function () {
+        sendGAEvents("Clicked on manage clouds in clouds page");
+		localStorage.setItem('manageClouds',true);
+	// activecampaign.eventTrack('Manage Clouds',JSON.parse(localStorage.CFUser).primaryEmail,'clicked');
+        $('#cloudtitle').text('Manage Clouds');
+		$('#cloudtitle').siblings('span').text("A short Description about manage clouds option goes here")
+        $('#addclouddiv').css("display","none");
+		$('#cm-addcloud').removeClass("active");
+		$('#cm-addcloud').children('a').removeClass("active");
+		$('#cm-managecloud').children('a').addClass("active");
+		$('#addHr').css("display","none");
+		$('#manageclouddiv').css("display","");
+		$('#manageHr').css("display","");
+        CFManageCloudAccountsAjaxCall.getAllClouds();
+        CFManageCloudAccountsAjaxCall.getAllCloudTitlesSettings(CloudName, CloudId);
+        var cloudHeight = $('#CloudAlerts').css("height");
+        if (cloudHeight > 350) {
+            $('#CloudAlerts').slimscroll({
+                alwaysVisible: false,
+                height: '350px',
+                width: '757px'
+            });
+        }
+    });
+    (function () {
+       // CFManageCloudAccountsAjaxCall.getAllClouds(CloudName);
+        var count = 0;
+        if (AllCloudsInfo != null || AllCloudsInfo != undefined) {
+            $.each(AllCloudsInfo, function (i, c) {
+                if (c.cloudStatus != "ACTIVE") {
+                    count++;
+                }
+            });
+        }
+        if (count > 0) {
+            $('#primary .active').find('.cf-warning3').remove();
+            $('#cm-managecloud > a').find('.cf-warning3').remove();
+            $('#primary .active > a').append('<i class="cf-warning" style="color: rgb(236, 40, 40);font-size: 15pt;position: absolute;top: -12px;right: -4px;width: 32px;height: 32px;"></i>')
+            $('#cm-managecloud > a').append('<i class="cf-warning3" style="color:rgb(236, 40, 40);font-size:11pt"></i>')
+        }
+    })();
+
+    $('#cm-addcloud').click(function () {
+        sendGAEvents("Clicked on add clouds in clouds page");
+       $('#cloudtitle').text('Add Clouds');
+		$('#cloudtitle').siblings('span').text("Add the Clouds to add them as a source or Destination Clouds");
+        $('#addclouddiv').css("display","");
+		$('#addHr').css("display","");
+		$('#cm-managecloud').children('a').removeClass("active");
+		$('#cm-addcloud').children('a').addClass("active");
+		$('#manageclouddiv').css("display","none");
+		$('#manageHr').css("display","none");
+    });
+
+    $('.table-responsive').height($(window).height() - 70 + 'px');
+	
+		checkUserProgressLimit();
+		
+</script>
+
+<!--<script>
+		setTimeout(function () {
+		$(function(){
+var result = JSON.parse(localStorage.getItem('CFUser'));
+		 var data ={
+                    "name" : result.lastName,
+                    "email" : result.primaryEmail,
+					"phone" : result.mobileNumber
+                };
+		if(localStorage.getItem('signUp') == "true"){
+	activecampaign.createContact(data);
+				activecampaign.getContact(data.email,'contactList');
+			 activecampaign.eventTrack('SignUp',data.email,'clicked');
+				/*activecampaign.getContact(data.email, 'loggedIn','1');
+				 var _chkNonPubEmail = data.email; 
+                    var str = _chkNonPubEmail.split('@').slice(1);
+                    var allowedDomains = ['gmail.com', 'yahoo.com', 'inbox.com',
+                        'iCloud.com', 'mail.com', 'aol.com', 'msn.com', 'hotmail.com', 'outlook.com', 'live.com', 'yopmail.com',
+			'rediff.com', 'gmx.com', 'yandex.com', 'protonmail.com'];
+				if ($.inArray(str[0], allowedDomains) === -1) {
+				activecampaign.getContact(data.email, 'businessEmail','Yes');
+				}
+				else{
+				activecampaign.getContact(data.email, 'businessEmail','No');
+			}*/
+				localStorage.removeItem('signUp');
+				activecampaign.getContact(data.email, 'leadAssignee');
+				}
+				else if(localStorage.getItem('login') == "true"){
+				activecampaign.getContact(data.email, 'loggedIn');
+				activecampaign.eventTrack('Login',data.email,'clicked');
+				localStorage.removeItem('login');
+		}
+});
+		},1000);
+</script>-->
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649987855');
+    vgo('setTrackByDefault', true);
+	vgo('setEmail', JSON.parse(localStorage.getItem('CFUser')).primaryEmail);
+    vgo('process');
+</script>
+</body>
+</html>

@@ -1,0 +1,840 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>CloudFuze Webapp</title>
+
+
+    <!-- Login With Google -->
+   
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-prompt" content="select_account">
+    <meta name="google-signin-client_id" content="483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com">
+
+    <!-- Login With Google -->
+    <link rel="Shortcut Icon" type="image/ico" href="../img/favicon.png">
+    <link href="../stylesheets/applicationresponsive.css?ver=1231" media="screen" rel="stylesheet" type="text/css" />
+
+    <link rel="canonical" href="https://webapp.cloudfuze.com/pages/index.html"/>
+    <link href="../font/cloudfuzefont.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/loginresponsive.css?ver=1231" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../stylesheets/MetroNotifications_7.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="../build/css/intlTelInput.css">
+  <link rel="stylesheet" href="../build/css/demo.css">
+   
+    <style>
+
+        #register-link-d{
+            float: left;
+        }
+
+        .divdisplay{
+            display:none;
+        }
+        .cf-close{
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 30px;
+            color: rgb(102, 165, 237);
+            cursor: pointer;
+        }
+        .cf-close:hover{
+            text-shadow: 0 0 3px;
+        }
+        .login-sso {
+            display: flex;
+        }
+	.iti--allow-dropdown{
+	width:100%;
+	}
+	.iti__country-list{
+	position:fixed;
+	}
+    </style>
+    <!--[if lt IE 9]>
+    <script src="../../javascripts/html5shiv.js" type="text/javascript"></script><script src="../../javascripts/excanvas.js" type="text/javascript"></script><script src="../../javascripts/iefix.js" type="text/javascript"></script><link href="../../stylesheets/iefix.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+</head>
+<body class="login">
+<div class="container-fluid" style="padding: 0">
+    <div class="row-fluid" style="padding: 15px">
+        <!--<div class="span8 hidden-phone" style="margin-top: 1%;">
+
+        </div>-->
+        <div class="span3"></div>
+        <div class="span6 loginspan6"  align="center">
+            <div class="box" style="background:#fff;">
+                <div class="login-wrapper">
+                    <div style="text-align: center;">
+                        <img id="login_logo" src="../img/CF.png" />
+                    </div>
+                    <br />
+                    <div id="login-manager">
+                        <div id="login" class="login-wrapper animated" style="display:none;">
+                            <form>
+                                <div class="input-group">
+                                    <input type="text"  placeholder="Enter email" id="email" class="loginEmail" />
+                                    <p class="statusMesg"  style="color:red;text-align: left;line-height: 12px;"></p>
+                                    <input type="password"  placeholder="Enter password" id="safariChange" />
+                                    <p class="statusMesg1" style="color:red;text-align: left;line-height: 12px;"></p>
+                                </div>
+                                <button id="login-submit" type="button" class="login-button" style="color:white;background-color: #3363f1;border:none;">Log in</button>
+                                <!--<p class="statusMesg" ></p>-->
+                                <i id="resend-link" class="recendConf"></i>
+                                <a class="button mini blue" id="entLoginButton" style="display: none;">Switch To Enterprise Login</a>
+                            </form>
+                        </div>
+
+                        <div id="register" class="login-wrapper animated" style="display: none;">
+
+
+
+
+                            <form>
+                                <div class="input-group">
+                                            <input type="text" placeholder="Enter name *"  id="name"/>
+                                            <p class="statusMesg1" style="color:red;text-align: left;line-height: 5px;"></p>
+                                            <p class="statusMesg6" style="color:red;text-align: left;"></p>
+                                            <input type="text" placeholder="Enter email *"  class="getemail" id="email"/>
+											<input type="tel" id="phone"  class="getPhone" name="phone"/>
+											
+                                            <p class="statusMesg2" style="color:red;text-align: left;line-height: 5px;"></p>
+                                            <p class="statusMesg4" style="color:red;text-align: left;margin:0px;"></p>
+                                            <input type="password" placeholder="Enter password *"  id="pwd" style="margin-top:5%;"/>
+                                            <p class="statusMesg3" style="color:red;text-align: left;line-height: 5px;"></p>
+                                            <p class="statusMesg5" style="color:red;text-align: left;"></p>
+                                            <!--<input type="password" placeholder="Enter confirm password"  id="cpwd"/>-->
+                                        </div>
+
+                                <button id="register-submit" type="button" class="login-button" style="color:white;background-color: #3363f1;border:none;">Sign up</button>
+                                <p class="statusMesg" style="color:red;text-align: left" ></p>
+                                <p id="tAndC" style="font-size: 12px;margin:0;text-align: left;" for="terms_conditons"> By signing up.You agree to our <a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="text-decoration:none;color:#4082ee;font-weight:bold;" >Terms of Use</a> and <a href="https://www.cloudfuze.com/privacy-policy/" style="text-decoration:none;color:#4082ee;font-weight: bold;" target="_blank">Privacy Policy</a>  </p>
+
+                            </form>
+
+
+
+                        </div>
+
+                        <div id="orangeRegister" class="login-wrapper animated" style="display:none">
+                            <form>
+                                <div class="orange-signup">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="Enter Name" name="name">
+                                        <input type="text" placeholder="Enter email" name="email">
+                                        <input type="password" placeholder="Enter Password" name="password">
+                                        <input type="password" placeholder="Enter confirm password" name="cpassword">
+                                    </div>
+                                    <div style="text-align: left;padding-top: 10px;">
+                                        <input type="checkbox" name="terms_conditons" style="height: 16px;width: 16px;margin: 0"/> <label for="terms_conditons" style="font-size: 13px">I agree to the CloudFuze <a href="https://www.cloudfuze.com/terms-of-use/" target="_blank" style="color:#000">Terms of Use.</a></label>
+                                    </div>
+                                    <div class="span12" style="text-align: center;margin:0;padding-top:10px">
+                                        <span id="errormsg" style="color:red"></span>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="login-button" id="_orangeC">Continue</button>
+                                    </div>
+                                </div>
+                                <div class="orange-plans" style="display: none">
+                                    <div class="span12">
+                                        <div class="span6">
+                                            <div class="plan">
+                                                <h5>Monthly Plan</h5>
+                                                <h2>�4.99</h2>
+                                                <a type="button" class="button mini blue" data="4.99" mode="monthly">Choose</a>
+                                            </div>
+                                        </div>
+                                        <div class="span6">
+                                            <div class="plan">
+                                                <h5>Yearly Plan</h5>
+                                                <h2>�49.99</h2>
+                                                <a type="button" class="button mini blue" data="49.99" mode="yearly">Choose</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="orange-user-details" style="display: none">
+                                    <div class="span12">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td class="name"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td class="email"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Plan</td>
+                                                <td><span>�&nbsp;</span><span class="plan">Test Plan</span>&nbsp;&nbsp;<span class="type"></span><a class="change-plan">Change Plan</a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <button class="login-button" type="button" id="pay-for-orange">Pay Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div id="forgot" class="login-wrapper animated" style="display: none;">
+
+                            <form>
+                                <span id="migrateMsg" class="divdisplay" style="font-size:12pt;color:red;margin-bottom:20px;">We have added more security features in CloudFuze 2.0, Please change your password.</span>
+                                <br>
+                                <div class="input-group" style="margin-top:-14px;">
+                                    <input type="text" placeholder="Enter email"  id="email_reset"/>
+                                </div>
+                                <button id="forgot-submit" type="button" class="login-button" style="color:white;background-color: #3363f1;border:none;">Recover</button>
+                                <p class="statusMesg" style="text-align:left;"></p>
+                            </form>
+
+                        </div>
+
+                        <div id="resendlink" class="login-wrapper animated" style="display: none;">
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Enter your email address"  id="email" />
+                                </div>
+                                <button id="resend-submit" type="button" class="login-button">Resend Confirmation Link</button>
+                                <span class="statusMesg"></span>
+                            </form>
+                        </div>
+
+                        <div id="confmsg" class="login-wrapper animated" style="display: none;">
+                            <form id="resetsuccess">
+                                <div id="index-msg" style="margin-top: 3%;padding-bottom: 35px;font-size: 14px;color: #000;"></div>
+                            </form>
+                        </div>
+
+                        <div id="entLogin" class="login-wrapper animated" style="display: none">
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Enter domain"  id="domain" />
+                                </div>
+                                <button id="ent-submit" type="button" class="login-button">Continue</button>
+                                <p style="margin-bottom: 0;text-align:left;" class="statusMesg"></p>
+                                <a class="button mini blue" id="consuLoginButton" style="margin-top: 20px">Switch To Consumer Login</a>
+                            </form>
+                        </div>
+
+                        <div id="loginWrapperFooter">
+                            <div style="font-size:10pt;float:left;" id="SignUplinktext">Already have an account?</div>
+                            <div style="display: block;" id="SignUplink">
+
+                                <a id="link-SignUplink" style="color: #4082ee;font-size:10pt;font-weight: bold;">Login</a>
+                            </div>
+                            <div style="display: none;float: left;" id="login-link-d">
+
+
+                                <div id="login-link" style="color:#4082ee;font-weight: bold;"></div>
+                                <div id="login-link2"></div>
+
+                            </div>
+                            <div style="display: block;" id="register-link-d">
+                                <b style="display: none;font-size:11pt;">Don't have an account?</b>
+                                <a id="register-link" style="color: #4082ee;font-size:10pt;font-weight: bold;">Sign up </a>now for free
+                            </div>
+                            <div style="display: block;float: right;" id="forgot-link-d">
+                                <b style="display: none;font-size:11pt;color:#4082ee;">Forgot  password?</b>
+                                <a id="forgot-link" style="color:#4082ee;font-size:10pt;font-weight: bold;">Forgot  password?</a>
+                            </div>
+
+                        </div>
+                        <div class="login-wrapper1 social-iconstab">
+                            <div class="Orline" style="border-top:1px solid black;position: relative;">
+                                <div class="Orcontent" style="font-weight: bold;">OR</div>
+                            </div>
+
+                            <div id="socialLogin" class="span12" >
+                                <div class="span12" id="socialLoginGoogle" style="margin-bottom: 1%;">
+
+                                    <div id="gSignInWrapper" >
+                                        <div id="customBtn"  class="customGPlusSignIn" style="position:relative;">
+                                        <span class="icon">
+                                            <svg svg-inline="" focusable="false" role="presentation" aria-hidden="true"  viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="d-svg gsvg d-svg__native dt-svg&#45;&#45;logoGoogleGlyph" style="position:absolute;">
+                                        <g fill="none" fill-rule="evenodd">
+                                        <path fill="#FFF" d="M0 0h48v48H0z"></path>
+                                        <path d="M32.64 24.205c0-.639-.057-1.252-.164-1.841H24v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"></path>
+                                        <path d="M24 33c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711h-3.007v2.332A8.997 8.997 0 0 0 24 33z" fill="#34A853"></path>
+                                        <path d="M18.964 25.71a5.41 5.41 0 0 1-.282-1.71c0-.593.102-1.17.282-1.71v-2.332h-3.007A8.996 8.996 0 0 0 15 24c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"></path>
+                                        <path d="M24 18.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C28.463 15.891 26.426 15 24 15a8.997 8.997 0 0 0-8.043 4.958l3.007 2.332c.708-2.127 2.692-3.71 5.036-3.71z" fill="#EA4335"></path>
+                                        <path d="M15 15h18v18H15z"></path>
+                                        </g>
+                                      </svg></span>
+                                            <span class="buttonText" style="font: normal 12px HelveticaNeue, Helvetica, Arial;font-size: 1rem;">Log in with Google</span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="span12" style="margin-bottom: 1%;">
+                                    <!--       <img id="login_SkyDrive" src="../images/signin.jpg" >-->
+                                    <button type="button" class="login-btn--o365" id="login_SkyDrive">
+                                    <span class="login-btn--o365__icon">
+                                        <svg svg-inline="" focusable="false" role="presentation" aria-hidden="true" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="d-svg d-svg__native dt-svg--logoO365Glyph">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path fill="#FFF" d="M0 0h48v48H0z"></path>
+                                                <path d="M16.372 29.965v-11.75l10.395-3.842 5.649 1.808v15.818l-5.65 1.703-10.394-3.737 10.395 1.251v-13.68l-6.78 1.583v9.265z" fill="#EB3C00" fill-rule="nonzero"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                        <span class="login-btn--o365__label">Log in with Office 365</span>
+                                    </button>
+                                </div>
+
+
+                                <p id="expiredAccount" style="display: none;color:red;">Your subscription with Office365 is no longer active Please login with other Email-Id</p>
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+                    <div style="display:none;text-align: center; height: 35px;padding: 0;padding-top: 10px;margin: 0;margin-top: 30px;border: 2px solid #178DAB;"  class="well">
+                        <a id="notYourDomain" href="" style="color: blue;font-weight: bold">Not Your company?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span3"></div>
+        <div id="login_error" class="span7" style="background:rgba(255, 255, 255, 0.9);text-align: center;padding: 100px;display:none;position: absolute;z-index: 99999;top:10%;left:15%;max-height: 500px;height: 500px">
+            <i class="cf-close" id="close_login_error"></i>
+            <div style="text-shadow: 1px 1px 1px">
+                <h1>Oops! You caught us doing maintanance.</h1>
+                <h3>Our site is undergoing a brief bit of maintenance that shouldn't last more than 15 minutes.</h3>
+                <h3>Apologies for any inconvenience, we'll have things back in working order ASAP.</h3>
+            </div>
+        </div>
+    </div>
+    <div class="CFfooterLinks" style="color: black" id="FooterLinks">
+        <a href="https://www.cloudfuze.com/terms-of-use" target="_blank" style="color:black;" >Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.cloudfuze.com/privacy-policy/" target="_blank" style="color:black;">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://support.cloudfuze.com/hc/en-us" target="_blank" style="color: black">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;CloudFuze&nbsp;&copy;&nbsp;2020. All rights reserved
+    </div>
+</div>
+ <!-- Hotjar Tracking Code for http://webapp.cloudfuze.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:252069,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+ <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+	    <script src="https://apis.google.com/js/api:client.js"></script>
+		
+		 <script>
+        var googleUser = {};
+        var startApp = function() {
+            gapi.load('auth2', function(){
+                // Retrieve the singleton for the GoogleAuth library and set up the client.
+                auth2 = gapi.auth2.init({
+                    client_id: '483376530012-36iglcsbhbmbbtq905llaqedgmv4n2ov.apps.googleusercontent.com',
+                    cookiepolicy: 'single_host_origin',
+                    // Request scopes in addition to 'profile' and 'email'
+                    //scope: 'additional_scope'
+                });
+                attachSignin(document.getElementById('customBtn'));
+            });
+        };
+
+        function attachSignin(element) {
+            //console.log(element.id);
+            auth2.attachClickHandler(element, {},
+                function(googleUser) {
+                    var name =  googleUser.getBasicProfile().getName();
+                    idg_token = googleUser.getAuthResponse().id_token;
+                    createContact();
+                    localStorage.setItem('storageVal', true);
+                    localStorage.setItem("socialLogin","gloginSoc");
+
+                    var form = new FormData();
+                    form.append("idToken",idg_token);
+                    form.append("authType", "SOCIAL_GMAIL");
+                    form.append("genPassword", CryptoJS.MD5(generatedPassword ) );
+                    outlook(form);
+                    //console.log(idg_token);
+
+                }, function(error) {
+                    //alert(JSON.stringify(error, undefined, 2));
+                });
+        }
+    </script>
+<!--Core Components-->
+<script src="../javascripts/vendor/jquery-3.0.0.js"></script>
+<script src="../javascripts/vendor/bootstrap-3.3.5.js"></script>
+
+
+<!--Plugins-->
+<script src="../javascripts/MetroNotifications_7.js"></script>
+<script src="../javascripts/security/md5.js" type="text/javascript"></script>
+<script src="../javascripts/security/webtoolkit.base64.js" type="text/javascript"></script>
+
+<!--Theme Specific-->
+<script src="../javascripts/login.js?ver=1231" type="text/javascript"></script>
+
+<!--Static Variables-->
+<script src="../ajaxcalls/config.js?ver=1231" type="text/javascript"></script>
+
+
+<!--Module Specific-->
+<script src="../javascripts/cfvalidations.js"></script>
+<script src="../ajaxcalls/loginflow.js?ver=1231" type="text/javascript"></script>
+
+<!--Payments Related-->
+<script src="../ajaxcalls/pcrds.js"></script>
+<script src="../ajaxcalls/paypalpmnt.js"></script>
+
+<script type="text/javascript" src="https://cloudfuze.agilecrm.com/stats/min/agile-min.js"></script>
+<script type="text/javascript" >
+    _agile.set_account('hjfh55r70pg2avebm1hahdb0n4', 'cloudfuze');
+    _agile.track_page_view();
+    _agile_execute_web_rules();
+</script>
+<script>startApp();</script>
+<script type="text/javascript">
+    var _googleCode;
+    $(document).ready(function() {
+        const uA = navigator.userAgent;
+        const vendor = navigator.vendor;
+        if (/Safari/i.test(uA) && /Apple Computer/.test(vendor) && !/Mobi|Android/i.test(uA)) {
+            $("#email").attr("placeholder", "                              Enter email");
+            $("#safariChange").attr("placeholder", "                            Enter password");
+            $("#name").attr("placeholder", "                              Enter name");
+            $(".getemail").attr("placeholder", "                              Enter email")
+            $("#pwd").attr("placeholder", "                            Enter password");
+
+        }
+        if (localStorage.getItem("UserId")){
+            window.location.href = "/pages/cloudmanager.html?ver=1231";
+            return false;
+        }
+        $('#host').text(window.location.hostname);
+        $('#enterprise_login').on('click',function(){
+            var url = "https://"+$('#company').val()+"."+window.location.hostname;
+            window.location.href = url;
+        });
+        var isiDevice = false;// /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        var isAndroid = false;// /android/i.test(navigator.userAgent.toLowerCase());
+        var iphone = '<div id="iphone" class="SmallBox" style="background:#2bb5d8;top:0;height:30px;text-align: center"><i class="cf-cross22" id="close_float_window"></i><div class="textoFull"><span>Download iOS App</span></div><div style="display: block;width:93%;float: left;font-size: 14px"><a href="https://itunes.apple.com/app/cloudfuze/id694718661?mt=8" style="color:#fff">Click Here</a></div></div>';
+        var android = '<div id="android" class="SmallBox" style="background:#2bb5d8;top:0;height:30px;text-align: center"><i class="cf-cross22" id="close_float_window"></i><div class="textoFull"><span>Download Android App</span></div><div style="display: block;width:93%;float: left;font-size: 14px"><a href="https://play.google.com/store/apps/details?id=com.cloudfuze.main" style="color:#fff">Click Here</a></div></div>';
+        if (isiDevice){
+            $('body').prepend(iphone);
+            $('#close_float_window').on('click',function(){
+                $(this).closest('.SmallBox').remove();
+            });
+        }
+        else if(isAndroid){
+            $('body').prepend(android);
+            $('#close_float_window').on('click',function(){
+                $(this).closest('.SmallBox').remove();
+            });
+        }
+        $('#entLoginButton').on('click',function(){
+            $('#login').addClass('loginHide').delay(800).fadeIn(function(){
+                $('#login').hide();
+            }).promise().done(function(){
+                $('#entLogin').removeClass('loginHide');
+                $('#entLogin').show();
+            });
+            $('#entLogin').find('.statusMesg').text('');
+        });
+        $('#consuLoginButton').on('click',function(){
+            $('body').find('input').each(function(){
+                $(this).val('');
+            });
+            $('#entLogin').addClass('loginHide').delay(800).fadeIn(function(){
+                $('#entLogin').hide();
+            }).promise().done(function(){
+                $('#login').removeClass('loginHide');
+                $('#login').show();
+            });
+            $('#login').find('.statusMesg').text('');
+        });
+$('#phone').val('+1');
+        var urlParams;
+        (window.onpopstate = function () {
+            var match,
+                pl = /\+/g,
+                search = /([^&=]+)=?([^&]*)/g,
+                decode = function (s) {
+                    return decodeURIComponent(s.replace(pl, " "));
+                },
+                query = window.location.search.substring(1);
+            urlParams = {};
+            while (match = search.exec(query))
+                urlParams[decode(match[1])] = decode(match[2]);
+        })();
+        _googleCode = urlParams["code"];
+        var signup = urlParams["signup"];
+        var upgrade = urlParams["upgrade"];
+        if(_googleCode !== undefined){
+            getToken_gmail(_googleCode);
+        }
+        if (upgrade) {
+            $('#login').hide();
+            $('#register').hide();
+            $('#forgot').show();
+            $('#resendlink').hide();
+            $('#forgot-link').hide();
+            $('#register-link').show();
+            $('#login-link').show();
+            $('#confmsg').hide();
+            $('#migrateMsg').removeClass("divdisplay");
+        }
+    });
+    $('#forgot-submit').click(function() {
+        var urlParams;
+        (window.onpopstate = function () {
+            var match,
+                pl = /\+/g,
+                search = /([^&=]+)=?([^&]*)/g,
+                decode = function (s) {
+                    return decodeURIComponent(s.replace(pl, " "));
+                },
+                query = window.location.search.substring(1);
+            urlParams = {};
+            while (match = search.exec(query))
+                urlParams[decode(match[1])] = decode(match[2]);
+        })();
+        var upgrade = urlParams["upgrade"];
+        if (upgrade) {
+            localStorage.setItem("oldUser", 1);
+        }
+    });
+    $('#close_login_error').on('click',function(){
+        $('#login_error').fadeOut();
+    });
+    $('#register-submit').click(function() {
+        createContact()
+        localStorage.setItem('storageVal', true);
+    });
+</script>
+<script>
+    function createContact() {
+        var contact = {};
+        var email_received=$(".getemail").val();
+        var _name=$("#name").val();
+        if (/\s/.test(_name)) {
+            contact.first_name= _name.split(' ')[0];
+            contact.last_name= _name.split(' ')[1];
+        }
+        else {
+            contact.first_name = _name;
+        }
+        contact.email = email_received;
+        _agile.create_contact(contact, {
+            success: function (data) {
+                _agile.set_email(email_received);
+                //console.log("success");
+                //console.log("Response = "+data);
+            },
+            error: function (data) {
+                //console.log("error");
+                //console.log("Error Cause = "+data);
+            }
+        });
+    }
+</script>
+
+
+<!--<script type="text/javascript">
+    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq ||
+        {widgetcode:"54701193e52b98abae244d52e3b2b8f5f61f3d8e5ff885b97cf4cc96601469b1", values:{},ready:function(){}};
+    var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;
+    s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+</script>-->
+  <script src="../build/js/intlTelInput.js"></script>
+  <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      utilsScript: "../build/js/utils.js",
+    });
+  </script>
+<script>
+
+   /* $zoho.salesiq.ready=function(embedinfo)
+
+    {
+        $zoho.salesiq.tracking.domain("webapp.cloudfuze.com");
+   }*/
+
+
+
+    /*Login With Google */
+    var idg_token;
+    var authLogin = " ";
+
+
+
+    function onSuccess(googleUser) {
+        //console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+        //console.log(error);
+    }
+    function renderButton() {
+        gapi.signin2.render('my-signin2', {
+            'scope': 'profile email',
+            'width': 100,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSuccess,
+            'onfailure': onFailure
+        });
+    }
+    /*Login With Google completed */
+
+
+    function generatePassword() {
+        var length = 12,
+            charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+            retVal = "";
+        for (var i = 0, n = charset.length; i < length; ++i) {
+            retVal += charset.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal;
+    };
+    var generatedPassword = generatePassword();
+
+    function BasicAuth(a, b) {
+        var c = a + ':' + b;
+        c = Base64.encode(c);
+        return "Basic " + c;
+    };
+
+    function refreshcloud (a,auth,uid) {
+
+        var apiUrl = apicallurl + "/filefolder/refresh/cache/user/" + uid + "/cloud/" + a;
+        $.ajax({
+            type: "post",
+            url: apiUrl,
+            async:true,
+            headers: {
+                "Authorization": auth
+            },
+            success: function (data) {
+            }
+        });
+    };
+
+
+    var _clientId;
+    $("#login_SkyDrive").click(function (oneUser) {
+        authLogin = "OfficeLogin";
+        createContact()
+        localStorage.setItem('storageVal', true);
+        localStorage.setItem("socialLogin","loginSoc");
+
+        callClient();
+        function callClient() {
+            $.ajax({
+                method: "GET",
+                async:false,
+                url: "https://webapp.cloudfuze.com/proxyservices/v1/auth/oauthkeys?cloudName=SOCIAL_OUTLOOK",
+                success: function (data) {
+                    //console.log(data);
+                    _clientId = data[0].clientId
+                },
+                error: function (data) {
+                    //console.log(data);
+                }
+            });
+        }
+
+        window.open('https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id= '+_clientId+' &response_type=id_token&redirect_uri=https://webapp.cloudfuze.com/pages/index.html&response_mode=fragment&scope=openid profile email offline_access&state=1234&nonce=678910&prompt=select_account','_self', 'width=500px,height=500px,scrollbars=1');
+    });
+
+    $(document).ready(function () {
+        var urlParams;
+        (function () {
+            var match,
+                pl = /\+/g,  // Regex for replacing addition symbol with a space
+                search = /([^&=]+)=?([^&]*)/g,
+                decode = function (s) {
+                    return decodeURIComponent(s.replace(pl, " "));
+                },
+                query = window.location.hash;
+            urlParams = {};
+            while (match = search.exec(query)) {
+                urlParams[decode(match[1])] = decode(match[2]);
+            }
+        })();
+        var idToken = urlParams["#id_token"];
+        var form = new FormData();
+        form.append("idToken", idToken);
+        form.append("authType", "SOCIAL_OUTLOOK");
+        form.append("genPassword", CryptoJS.MD5(generatedPassword ) );
+        if ( idToken !== undefined){
+            outlook(form);
+        }
+
+        //  outlook(form);
+        //  parent.window.close();
+    });
+    function outlook(form){
+        $.ajax({
+            "url": "https://webapp.cloudfuze.com/proxyservices/v1/auth/add/SocialMailUser",
+            "method": "POST",
+            "processData": false,
+            "contentType": false,
+            "data": form,
+            success:function(data){
+                if (data != null) {
+                    if (sessionStorage != undefined && sessionStorage != null) {
+                        sessionStorage.setItem('CFUser', JSON.stringify(data));
+                    }
+                    var passwordStoredIs = data.signUp;
+                    if (passwordStoredIs === null){
+                        localStorage.setItem("UserAuthDetails", BasicAuth(data.id, CryptoJS.MD5( generatedPassword)));
+                    }else{
+                        localStorage.setItem("UserAuthDetails", BasicAuth(data.id, passwordStoredIs));
+                    }
+                    var userDetails = JSON.parse(sessionStorage.getItem('CFUser'));
+                    if (userDetails.enabled == true) {
+                        var passwordStored = userDetails.signUp;
+                        if (passwordStored === null){
+                            var _data ={
+                                "name" : userDetails.lastName,
+                                "email" : userDetails.primaryEmail
+                            };
+                         //   zohoCrm.createRecord(_data);
+			   activecampaign.createContact(data);
+			   if(userDetails.socialAuth.authtype == "SOCIAL_GMAIL"){
+			   activecampaign.eventTrack('Login with Google',userDetails.primaryEmail,'clicked');
+			   }
+			   else if(userDetails.socialAuth.authtype == "SOCIAL_OUTLOOK"){
+			   activecampaign.eventTrack('Login with Office 365',userDetails.primaryEmail,'clicked');
+			   }
+			//	activecampaign.eventTrack('SignUp',data.email,'clicked');
+                           sendPageView(window.location.pathname + "?signedup=true");
+                            
+                            localStorage.setItem("UserAuthDetails", BasicAuth(userDetails.id, CryptoJS.MD5( generatedPassword)));
+                        }else{
+						activecampaign.getContact(userDetails.primaryEmail, 'loggedIn');
+				if(userDetails.socialAuth.authtype == "SOCIAL_GMAIL"){
+			   activecampaign.eventTrack('Login with Google',userDetails.primaryEmail,'clicked');
+			   }
+			   else if(userDetails.socialAuth.authtype == "SOCIAL_OUTLOOK"){
+			   activecampaign.eventTrack('Login with Office 365',userDetails.primaryEmail,'clicked');
+			   }
+			 //  zohoCrm.upgradeSubscribtionRecord(userDetails.primaryEmail, 'loggedIn');
+                            localStorage.setItem("UserAuthDetails", BasicAuth(userDetails.id, passwordStored));
+                        }
+                        localStorage.setItem("UserId", userDetails.id);
+                        if (passwordStored === null){
+                            refreshcloud('all',BasicAuth(userDetails.id, CryptoJS.MD5(generatedPassword)),userDetails.id);
+                        }else{
+                            refreshcloud('all',BasicAuth(userDetails.id, passwordStored),userDetails.id);
+                        }
+                        localStorage.setItem("UserName", userDetails.lastName);
+                        localStorage.setItem('CFUser', sessionStorage.getItem('CFUser'));
+                        sessionStorage.removeItem('CFUser');
+                        var serverDate = userDetails.createdDate;
+                        var expiresIn = userDetails.expiresIn;
+                        var url = sessionStorage.getItem("url");
+                        var url1 = sessionStorage.getItem("url1");
+                        var pmnt = sessionStorage.getItem("pmnt");
+                        if (pmnt != null) {
+                            window.location.href = pmnt;
+                        } else if (url != null) {
+                            window.location.href = url;
+                        } else if (url1 != null) {
+                            window.location.href = url1;
+                        } else if (expiresIn < serverDate) {
+                            var isCusUser = checkIsaCustomUserForLogin(userDetails.id);
+                            if ( serverDate - expiresIn > (3 * 24 * 60 * 60 * 1000)) {
+                                //alert("Expired user");
+                                if(isCusUser == true){
+                                    window.location.href = "/pages/cloudmanager.html?ver=0403";
+                                }
+                                else{
+                                    window.location.href = "../pages/settings.html#price?pinfo=true";
+                                }
+
+                            } else {
+                                window.location.href = "/pages/cloudmanager.html?ver=0403";
+                            }
+                        }else {
+
+                            window.location.href = "/pages/cloudmanager.html?ver=0403";
+                        }
+                        return false;
+                    } else {
+                        wrapper = $("#login-manager  .login-wrapper");
+                        wrapper.addClass("wobble");
+                        $("#login-submit").text('Login');
+                        $("#login-manager .statusMesg").html('<p>Please confirm your email address to activate your account</p>');
+                        $("#login-manager i#resend-link").text("Resend confirmation link");
+                        return wrapper.bind("webkitAnimationEnd animationEnd mozAnimationEnd", function () {
+                            wrapper.off("webkitAnimationEnd");
+                            return wrapper.removeClass("wobble");
+                        });
+                    }
+
+                }
+                //console.log(data);
+            },
+            error:function(xhr){
+                if(xhr.status === 404){
+                    var test = xhr.getResponseHeader('exception');
+                    if(test === "EmailId is empty in IdToken"){
+                        $('#expiredAccount').css('display','');
+                    }
+                }
+                else if(xhr.status === 401){
+                    wrapper = $("#login-manager .login-wrapper");
+                    $('#login-submit').text('Login');
+                    wrapper.addClass("wobble");
+                    $("#login-manager .statusMesg1").css("display","");
+                    $("#login-manager .statusMesg1").text('*Password  you entered is incorrect. Please try again!');
+                    $("#login-manager #email").focusout();
+                    $("#login-manager #safariChange").focus();
+                    return wrapper.bind("webkitAnimationEnd animationEnd mozAnimationEnd", function () {
+                        wrapper.off("webkitAnimationEnd");
+                        return wrapper.removeClass("wobble");
+                    });
+
+                }
+            }
+
+        });
+    }
+
+</script>
+<!-- Ravi Poli Code 24Apr2020-->
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649987855');
+    vgo('setTrackByDefault', true);
+
+ 
+
+    vgo('process');
+</script>
+</body>
+</html>
